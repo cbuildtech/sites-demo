@@ -1,58 +1,1155 @@
+<html lang="tr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuğba Karakuş Güzellik | Ümraniye İstanbul – Cilt Bakımı, Lazer Epilasyon, Kalıcı Makyaj</title>
+<meta name="description" content="Ümraniye'nin en prestijli güzellik salonu Tuğba Karakuş Güzellik. Cilt bakımı, lazer epilasyon, kaş &amp; kirpik, kalıcı makyaj, el ve ayak bakımı. Alemdağ Caddesi, İstanbul.">
+<meta name="keywords" content="güzellik salonu ümraniye, lazer epilasyon ümraniye, cilt bakımı ümraniye istanbul, kalıcı makyaj ümraniye, kaş kirpik ümraniye, güzellik merkezi ümraniye">
+<meta property="og:title" content="Tuğba Karakuş Güzellik | Ümraniye İstanbul">
+<meta property="og:description" content="Ümraniye'nin en prestijli güzellik salonu. Profesyonel, hijyenik, güvenilir.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tugbakarakusguzellik.com">
 
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuğba Karakuş Güzellik - Demo Site</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1f1c2c, #928DAB);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .hero {
-            margin-top: 100px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            max-width: 800px;
-            width: 90%;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-        .contact {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-    </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Tuğba Karakuş Güzellik","description":"Ümraniye İstanbul'da profesyonel cilt bakımı, lazer epilasyon, kalıcı makyaj ve güzellik hizmetleri","url":"https://tugbakarakusguzellik.com","telephone":"+905393090190","address":{"@type":"PostalAddress","streetAddress":"İstiklal, Alemdağ Cd No:226 D:2","addressLocality":"Ümraniye","addressRegion":"İstanbul","postalCode":"34762","addressCountry":"TR"},"geo":{"@type":"GeoCoordinates","latitude":41.0182,"longitude":29.1204},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:30"}],"priceRange":"₺₺","hasMap":"https://maps.google.com/?q=Alemdağ+Cd+No:226+Ümraniye+İstanbul"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;family=Montserrat:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#8B6914;--gold-faint:rgba(201,168,76,0.08);
+  --black:#080808;--black-2:#101010;--black-3:#181818;--black-4:#202020;
+  --white:#F5F0E8;--white-dim:rgba(245,240,232,0.65);--white-muted:rgba(245,240,232,0.35);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:var(--black)}
+::-webkit-scrollbar-thumb{background:var(--gold-dark)}
+
+/* CURSOR */
+.cursor{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+.cursor-ring{position:fixed;width:40px;height:40px;border:1px solid rgba(201,168,76,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .1s ease}
+.cursor.grow{width:16px;height:16px;background:transparent;border:1px solid var(--gold)}
+.cursor-ring.grow{width:60px;height:60px;opacity:0.3}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:500;display:flex;align-items:center;background:#25D366;border-radius:50px;overflow:hidden;cursor:none;transition:all .4s cubic-bezier(.34,1.56,.64,1);max-width:58px;box-shadow:0 8px 32px rgba(37,211,102,.3)}
+.wa-float:hover{max-width:240px;box-shadow:0 8px 40px rgba(37,211,102,.5)}
+.wa-icon{width:58px;height:58px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.wa-label{font-family:var(--sans);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;padding:0 20px 0 2px;letter-spacing:.05em;opacity:0;transition:opacity .25s .1s}
+.wa-float:hover .wa-label{opacity:1}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s}
+nav.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.1)}
+.nav-logo{font-family:var(--serif);font-size:19px;font-weight:300;letter-spacing:.18em;color:var(--gold-light);text-decoration:none}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--white-dim);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:11px 24px;cursor:none;transition:background .3s;text-decoration:none}
+.nav-cta:hover{background:var(--gold-light)}
+
+/* ========== HERO ========== */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;padding:120px 32px 100px}
+.hero-photo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=2200&q=92') center 42%/cover no-repeat;opacity:.32;transform:scale(1.04);animation:heroZoom 12s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1.1)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,.45) 0%,rgba(8,8,8,.1) 40%,rgba(8,8,8,.7) 100%)}
+.hero-grain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.hero-line-v{position:absolute;top:0;left:50%;width:1px;height:0;background:linear-gradient(to bottom,transparent,rgba(201,168,76,.4),transparent);animation:lineDown 2s ease forwards .4s}
+@keyframes lineDown{to{height:100vh}}
+.hero-content{position:relative;z-index:2}
+.hero-ornament{font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);opacity:0;animation:fadeUp .8s ease forwards .7s}
+.hero-eyebrow{margin:20px 0 0;font-family:var(--serif);font-size:clamp(13px,1.6vw,16px);letter-spacing:.4em;text-transform:uppercase;color:rgba(201,168,76,.8);font-style:italic;opacity:0;animation:fadeUp .8s ease forwards .9s}
+.hero-title{font-family:var(--serif);font-size:clamp(64px,11vw,140px);font-weight:300;line-height:.92;letter-spacing:-.02em;color:var(--white);opacity:0;animation:fadeUp 1s ease forwards 1.1s;margin-top:12px}
+.hero-title em{font-style:italic;color:var(--gold-light);display:block}
+.hero-sub-row{display:flex;align-items:center;justify-content:center;gap:20px;margin:32px 0 0;opacity:0;animation:fadeUp .8s ease forwards 1.5s}
+.hero-sub-row span{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--white-muted)}
+.hero-sub-row i{color:var(--gold-dark);font-style:normal;font-size:8px}
+.hero-actions{display:flex;gap:16px;justify-content:center;margin-top:44px;opacity:0;animation:fadeUp .8s ease forwards 1.8s}
+.btn-gold{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:16px 40px;text-decoration:none;cursor:none;transition:background .3s}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--white);background:transparent;border:1px solid rgba(201,168,76,.4);padding:16px 40px;text-decoration:none;cursor:none;transition:all .3s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-light)}
+.hero-scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeUp .8s ease forwards 2.2s}
+.hero-scroll-hint span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--white-muted)}
+.scroll-bar{width:1px;height:52px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.marquee-strip{background:var(--gold);padding:13px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:marquee 24s linear infinite}
+.marquee-inner span{font-family:var(--serif);font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--black);padding:0 28px}
+.marquee-inner span::before{content:'◆';margin-right:28px;font-size:7px;vertical-align:middle}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ========== COMMON ========== */
+section{padding:120px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 48px}
+.section-label{font-size:9px;letter-spacing:.55em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-title{font-family:var(--serif);font-size:clamp(40px,5.5vw,72px);font-weight:300;line-height:1.05;color:var(--white)}
+.section-title em{font-style:italic;color:var(--gold-light)}
+.gold-rule{width:52px;height:1px;background:var(--gold);margin:28px 0}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay{transition-delay:.15s}
+.reveal-delay2{transition-delay:.3s}
+
+/* ========== INTRO ========== */
+.intro-split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.intro-text-side{padding:80px 72px 80px 0}
+.intro-text-side p{font-size:15px;line-height:2;color:var(--white-dim);margin-bottom:18px}
+.intro-text-side p strong{color:var(--gold-light);font-weight:400}
+.intro-img-side{position:relative;min-height:560px;overflow:hidden}
+.intro-img-side img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.intro-img-side:hover img{transform:scale(1.04)}
+.intro-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,8,.3),transparent)}
+.intro-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,.15);margin-top:0}
+.stat-box{background:var(--black-3);padding:36px 24px;text-align:center;transition:background .3s}
+.stat-box:hover{background:var(--black-4)}
+.stat-num{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--gold-light);line-height:1}
+.stat-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--white-muted);margin-top:8px}
+
+/* ========== SERVICES GRID ========== */
+.services-header{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:end;margin-bottom:64px}
+.services-header p{font-size:14px;line-height:1.9;color:var(--white-dim)}
+.svc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(201,168,76,.12)}
+.svc-card{background:var(--black-3);padding:40px 24px 36px;cursor:none;transition:background .35s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.svc-card:hover{background:var(--black-4)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card img{width:100%;height:140px;object-fit:cover;margin-bottom:24px;opacity:.75;transition:opacity .35s}
+.svc-card:hover img{opacity:1}
+.svc-num{font-family:var(--serif);font-size:36px;font-weight:300;color:rgba(201,168,76,.2);line-height:1;margin-bottom:12px}
+.svc-name{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--white);margin-bottom:12px;line-height:1.3}
+.svc-desc{font-size:11px;line-height:1.9;color:var(--white-muted);flex:1}
+
+/* ========== SERVICE DETAILS ========== */
+.svc-detail-wrap{padding:72px 0;border-bottom:1px solid rgba(201,168,76,.08)}
+.svc-detail-wrap:last-of-type{border-bottom:none}
+.svc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.svc-detail-grid.rev{direction:rtl}
+.svc-detail-grid.rev>*{direction:ltr}
+.svc-photo{position:relative;overflow:hidden}
+.svc-photo img{width:100%;height:420px;object-fit:cover;display:block;transition:transform 6s ease}
+.svc-photo:hover img{transform:scale(1.05)}
+.svc-photo-badge{position:absolute;bottom:0;left:0;background:var(--gold);padding:12px 20px;font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--black)}
+.svc-detail-content h3{font-family:var(--serif);font-size:clamp(32px,4vw,50px);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:20px}
+.svc-detail-content h3 em{font-style:italic;color:var(--gold-light)}
+.svc-detail-content p{font-size:14px;line-height:2;color:var(--white-dim);margin-bottom:16px}
+.svc-benefits{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:9px}
+.svc-benefits li{font-size:12px;color:var(--white-dim);padding-left:18px;position:relative;line-height:1.7}
+.svc-benefits li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+
+/* ========== GALLERY STRIP ========== */
+.gallery-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:0}
+.gallery-item{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:none}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease,opacity .4s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .g-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top,rgba(8,8,8,.85),transparent);font-family:var(--serif);font-size:14px;letter-spacing:.15em;color:var(--gold-light);transform:translateY(8px);opacity:0;transition:all .35s}
+.gallery-item:hover .g-label{transform:translateY(0);opacity:1}
+
+/* ========== WHY US ========== */
+.whyus-bg{background:var(--black-2)}
+.whyus-split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;margin-top:64px}
+.whyus-photo{position:relative;min-height:520px;overflow:hidden}
+.whyus-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.whyus-photo-caption{position:absolute;bottom:32px;right:32px;font-family:var(--serif);font-size:18px;font-style:italic;color:var(--gold-light);text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.whyus-cards{padding:0 0 0 64px;display:flex;flex-direction:column;justify-content:center;gap:2px;background:rgba(201,168,76,.06)}
+.why-card{background:var(--black-3);padding:32px 36px;transition:background .3s;display:flex;align-items:flex-start;gap:20px}
+.why-card:hover{background:var(--black-4)}
+.why-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.why-card h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);margin-bottom:8px}
+.why-card p{font-size:12px;line-height:1.85;color:var(--white-muted)}
+
+/* ========== TESTIMONIALS ========== */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,.1);margin-top:64px}
+.test-card{background:var(--black-3);padding:44px 36px;position:relative;overflow:hidden}
+.test-card::before{content:'"';position:absolute;top:-10px;left:24px;font-family:var(--serif);font-size:140px;color:rgba(201,168,76,.05);line-height:1;pointer-events:none}
+.test-stars{color:var(--gold);letter-spacing:4px;font-size:12px;margin-bottom:18px}
+.test-text{font-family:var(--serif);font-size:17px;font-weight:300;font-style:italic;line-height:1.85;color:var(--white);margin-bottom:22px}
+.test-author{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+.test-photo{width:40px;height:40px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:1px solid var(--gold-dark)}
+
+/* ========== FAQ ========== */
+.faq-wrap{margin-top:56px}
+.faq-item{border-bottom:1px solid rgba(201,168,76,.12);padding:26px 0;cursor:none}
+.faq-q{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);display:flex;justify-content:space-between;align-items:center;gap:20px;transition:color .3s}
+.faq-item:hover .faq-q{color:var(--gold-light)}
+.faq-toggle{font-size:22px;color:var(--gold);flex-shrink:0;transition:transform .3s;line-height:1}
+.faq-a{font-size:14px;line-height:2;color:var(--white-dim);margin-top:14px;display:none;padding-right:40px}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-item.open .faq-a{display:block}
+
+/* ========== LOCATION ========== */
+.location-bg{background:var(--black-2)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;margin-top:64px}
+.location-info{padding-right:72px}
+.location-info h3{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--white);margin-bottom:36px;line-height:1.3}
+.loc-detail{display:flex;align-items:flex-start;gap:18px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(201,168,76,.08)}
+.loc-detail:last-child{border-bottom:none}
+.loc-icon{width:44px;height:44px;border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;transition:background .3s}
+.loc-detail:hover .loc-icon{background:var(--gold-faint)}
+.loc-text strong{display:block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:5px}
+.loc-text{font-size:14px;line-height:1.75;color:var(--white-dim)}
+.loc-text a{color:var(--gold-light);text-decoration:none;transition:color .3s}
+.loc-text a:hover{color:var(--white)}
+.map-container{position:relative;height:100%;min-height:480px}
+.map-container iframe{width:100%;height:100%;border:0;filter:grayscale(100%) invert(92%) contrast(83%) sepia(20%);display:block}
+.map-container:hover iframe{filter:grayscale(40%) contrast(90%);transition:filter .6s}
+.map-badge{position:absolute;top:20px;left:20px;background:var(--black);border:1px solid var(--gold-dark);padding:10px 18px;font-family:var(--serif);font-size:13px;letter-spacing:.15em;color:var(--gold-light);pointer-events:none}
+
+/* ========== CTA BAND ========== */
+.cta-band{position:relative;overflow:hidden;text-align:center;padding:120px 0}
+.cta-band-photo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80&fit=crop') center/cover no-repeat;opacity:.12}
+.cta-band-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 50%,rgba(8,8,8,.2),rgba(8,8,8,.9))}
+.cta-band-content{position:relative;z-index:2}
+.cta-band-content h2{font-family:var(--serif);font-size:clamp(44px,7vw,90px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:20px}
+.cta-band-content h2 em{font-style:italic;color:var(--gold-light)}
+.cta-band-content p{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--white-muted);margin-bottom:48px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ========== FOOTER ========== */
+footer{background:var(--black);border-top:1px solid rgba(201,168,76,.12);padding:64px 0 36px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.footer-brand{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--gold-light);margin-bottom:14px}
+.footer-tagline{font-size:12px;line-height:1.9;color:var(--white-muted);max-width:280px}
+.footer-col h5{font-size:9px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.footer-col ul{list-style:none}
+.footer-col ul li{font-size:13px;color:var(--white-muted);margin-bottom:10px;line-height:1.65}
+.footer-col ul li a{color:inherit;text-decoration:none;transition:color .3s}
+.footer-col ul li a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(201,168,76,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:11px;color:rgba(245,240,232,.22);letter-spacing:.08em}
+.footer-credit{font-size:10px;color:rgba(201,168,76,.35);letter-spacing:.12em}
+.footer-credit strong{color:rgba(201,168,76,.6);font-weight:400}
+
+
+/* MOBILE MENU */
+.hamburger{
+  display:none;
+  width:46px;
+  height:42px;
+  border:1px solid rgba(201,168,76,.35);
+  background:rgba(8,8,8,.68);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:6px;
+  cursor:none;
+  z-index:260;
+}
+.hamburger span{
+  width:20px;
+  height:1px;
+  background:var(--gold-light);
+  transition:transform .25s ease,opacity .25s ease;
+}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  z-index:240;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .28s ease;
+  background:rgba(8,8,8,.68);
+  backdrop-filter:blur(12px);
+}
+.mobile-menu.open{
+  pointer-events:auto;
+  opacity:1;
+}
+.mobile-menu-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(88vw,390px);
+  height:100%;
+  background:linear-gradient(180deg,var(--black-2),var(--black));
+  border-left:1px solid rgba(201,168,76,.22);
+  padding:24px;
+  transform:translateX(105%);
+  transition:transform .36s cubic-bezier(.16,.88,.18,1);
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  box-shadow:-30px 0 80px rgba(0,0,0,.42);
+}
+.mobile-menu.open .mobile-menu-panel{transform:translateX(0)}
+.mobile-menu-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-bottom:22px;
+  border-bottom:1px solid rgba(201,168,76,.18);
+  margin-bottom:18px;
+}
+.mobile-menu-head span{
+  font-family:var(--serif);
+  color:var(--gold-light);
+  font-size:24px;
+  letter-spacing:.08em;
+}
+.mobile-close{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(201,168,76,.35);
+  background:transparent;
+  color:var(--gold-light);
+  font-size:30px;
+  line-height:1;
+  cursor:none;
+}
+.mobile-menu-panel>a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(201,168,76,.1);
+  color:var(--white);
+  text-decoration:none;
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:300;
+}
+.mobile-menu-panel>a::after{
+  content:'→';
+  color:var(--gold);
+  font-family:var(--sans);
+  font-size:16px;
+}
+.mobile-menu-actions{
+  margin-top:auto;
+  display:grid;
+  gap:12px;
+  padding-top:26px;
+}
+.mobile-menu-actions a{
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border:1px solid rgba(201,168,76,.35);
+  color:var(--black);
+  background:var(--gold);
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.mobile-menu-actions a:last-child{
+  color:var(--white);
+  background:transparent;
+}
+body.menu-open{overflow:hidden}
+
+/* IMAGE FALLBACKS */
+img{
+  background:
+    radial-gradient(circle at 30% 20%,rgba(201,168,76,.18),transparent 32%),
+    linear-gradient(135deg,var(--black-3),var(--black));
+}
+img[data-fallback-applied="true"]{
+  object-fit:cover;
+  padding:0;
+}
+
+/* safer background layers */
+.hero-photo{
+  background:
+    linear-gradient(135deg,rgba(8,8,8,.18),rgba(8,8,8,.78)),
+    radial-gradient(circle at 50% 28%,rgba(201,168,76,.22),transparent 30%),
+    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=2200&q=92') center 42%/cover no-repeat;
+}
+.cta-band-photo{
+  background:
+    linear-gradient(135deg,rgba(8,8,8,.24),rgba(8,8,8,.82)),
+    radial-gradient(circle at 50% 30%,rgba(201,168,76,.2),transparent 34%),
+    url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1800&q=88') center 36%/cover no-repeat;
+}
+
+/* touch devices should not lose native cursor/tap behaviour */
+@media (pointer:coarse){
+  body{cursor:auto}
+  .cursor,.cursor-ring{display:none}
+  a,button,.svc-card,.gallery-item,.faq-item,.wa-float{cursor:pointer}
+}
+
+
+/* CURATED IMAGE TREATMENT */
+.hero-photo{filter:saturate(.82) contrast(1.06)}
+.intro-img-side::after,
+.svc-photo::after,
+.whyus-photo::after,
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 60% 16%,rgba(232,201,122,.12),transparent 28%),
+    linear-gradient(180deg,transparent 55%,rgba(8,8,8,.24));
+}
+.svc-card img,
+.svc-photo img,
+.gallery-item img,
+.intro-img-side img,
+.whyus-photo img{
+  filter:saturate(.86) contrast(1.04);
+}
+.svc-card:hover img,
+.svc-photo:hover img,
+.gallery-item:hover img{
+  filter:saturate(.98) contrast(1.08);
+}
+.test-photo{
+  filter:saturate(.84) contrast(1.05);
+}
+img{
+  transition:opacity .35s ease, transform .8s ease, filter .35s ease;
+}
+img:not([data-loaded="true"]){
+  opacity:.01;
+}
+img[data-loaded="true"]{
+  opacity:1;
+}
+
+
+/* Laser epilation images: keep device and treatment visible */
+img[alt="Lazer Epilasyon Ümraniye"]{
+  object-position:center center;
+}
+.svc-card img[alt="Lazer Epilasyon Ümraniye"]{
+  object-position:center 42%;
+}
+.svc-photo img[alt="Lazer Epilasyon Ümraniye"]{
+  object-position:center 45%;
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .intro-split,.svc-detail-grid,.svc-detail-grid.rev,.whyus-split,.location-grid{grid-template-columns:1fr;gap:0}
+  .svc-detail-grid.rev{direction:ltr}
+  .intro-text-side{padding:60px 0}
+  .whyus-cards{padding:0}
+  .location-info{padding-right:0;margin-bottom:40px}
+  .gallery-strip{grid-template-columns:repeat(2,1fr)}
+  .services-header{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:36px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:768px){
+  nav{padding:18px 20px}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .container{padding:0 20px}
+  section{padding:80px 0}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .test-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .map-container{min-height:340px}
+}
+@media(max-width:480px){
+  .svc-grid{grid-template-columns:1fr}
+  .intro-stats{grid-template-columns:1fr 1fr}
+  .gallery-strip{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:768px){
+  body{cursor:auto}
+  .hero{padding:110px 20px 82px;min-height:100svh}
+  .hero-sub-row{flex-wrap:wrap;gap:10px 14px}
+  .hero-sub-row span{font-size:9px;letter-spacing:.22em}
+  .hero-title{font-size:clamp(58px,17vw,86px)}
+  .btn-gold,.btn-ghost{width:100%;justify-content:center;padding:15px 20px;line-height:1.4}
+  .wa-float{
+    bottom:18px;
+    right:18px;
+    max-width:56px;
+    border-radius:999px;
+  }
+  .wa-float:hover{max-width:56px}
+  .wa-icon{width:56px;height:56px}
+  .wa-label{display:none}
+  .svc-card img{height:180px}
+  .intro-img-side{min-height:420px}
+  .svc-photo img{height:360px}
+  .whyus-photo{min-height:420px}
+}
+@media(max-width:520px){
+  .hero-sub-row i:nth-of-type(3), .hero-sub-row span:nth-of-type(4){display:none}
+  .section-title{font-size:clamp(38px,12vw,58px)}
+  .stat-box{padding:28px 14px}
+  .stat-num{font-size:42px}
+  .gallery-item .g-label{opacity:1;transform:none}
+  .mobile-menu-panel>a{font-size:26px}
+}
+
+</style>
 </head>
-<body>
-    <div class="hero">
-        <h1>Tuğba Karakuş Güzellik</h1>
-        <p>İstanbul, Ümraniye</p>
-        <div class="contact">
-            <p>📍 İstiklal, Alemdağ Cd No:226 D:2, 34762 Ümraniye/İstanbul </p>
-            <p>📞 05393090190</p>
-        </div>
-        <p><i>(Bu, geçerli bir API anahtarı olmadığında oluşturulan dummy bir sayfadır.)</i></p>
+<body class="">
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor" style="left: 1220px; top: 554px;"></div>
+<div class="cursor-ring" id="cursorRing" style="left: 1220px; top: 554px;"></div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp ile randevu al" id="waBtn" style="transform: scale(1);">
+  <div class="wa-icon">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.523 5.855L.057 23.882a.5.5 0 0 0 .61.61l6.098-1.464A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.073-1.387l-.361-.215-3.742.898.914-3.67-.236-.376A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"></path>
+    </svg>
+  </div>
+  <span class="wa-label">Randevu Al</span>
+</a>
+
+<!-- NAV -->
+<nav id="mainNav" class="scrolled">
+  <a href="#" class="nav-logo">TUĞBA KARAKUŞ</a>
+  <ul class="nav-links">
+    <li><a href="#hizmetler">Hizmetler</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#neden-biz">Fark</a></li>
+    <li><a href="#yorumlar">Yorumlar</a></li>
+    <li><a href="#sss">SSS</a></li>
+    <li><a href="#konum">Konum</a></li>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menüyü aç" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="tel:+905393090190" class="nav-cta">Randevu Al</a>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-head">
+      <span>Tuğba Karakuş</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Menüyü kapat">×</button>
     </div>
-</body>
-</html>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#neden-biz">Fark</a>
+    <a href="#yorumlar">Yorumlar</a>
+    <a href="#sss">SSS</a>
+    <a href="#konum">Konum</a>
+    <div class="mobile-menu-actions">
+      <a href="tel:+905393090190">Ara: 0539 309 01 90</a>
+      <a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp Randevu</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-photo"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-line-v"></div>
+
+  <div class="hero-content">
+    <p class="hero-ornament">✦ Est. Ümraniye · İstanbul ✦</p>
+    <p class="hero-eyebrow">Güzellik · Özen · Prestij</p>
+    <h1 class="hero-title">
+      <em>Tuğba</em>
+      Karakuş<br>Güzellik
+    </h1>
+    <div class="hero-sub-row">
+      <span>Cilt Bakımı</span>
+      <i>◆</i>
+      <span>Lazer Epilasyon</span>
+      <i>◆</i>
+      <span>Kalıcı Makyaj</span>
+      <i>◆</i>
+      <span>Kaş &amp; Kirpik</span>
+    </div>
+    <div class="hero-actions">
+      <a href="tel:+905393090190" class="btn-gold">📞 Hemen Ara: 0539 309 01 90</a>
+      <a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-ghost">WhatsApp ile Randevu</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>Keşfet</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Cilt Bakımı</span><span>Lazer Epilasyon</span><span>Kaş &amp; Kirpik</span><span>Kalıcı Makyaj</span><span>El &amp; Ayak Bakımı</span><span>Profesyonel Ekip</span><span>Ümraniye İstanbul</span><span>Hijyenik Ortam</span>
+    <span>Cilt Bakımı</span><span>Lazer Epilasyon</span><span>Kaş &amp; Kirpik</span><span>Kalıcı Makyaj</span><span>El &amp; Ayak Bakımı</span><span>Profesyonel Ekip</span><span>Ümraniye İstanbul</span><span>Hijyenik Ortam</span>
+  </div>
+</div>
+
+<!-- ========== INTRO ========== -->
+<section id="hakkinda" style="padding:0">
+  <div class="intro-split">
+    <div class="intro-text-side container reveal visible" style="max-width:none;padding-left:clamp(20px,4vw,80px)">
+      <p class="section-label">Bizi Tanıyın</p>
+      <h2 class="section-title">Güzellik bir<br>ayrıcalık değil,<br><em>bir hak</em></h2>
+      <div class="gold-rule"></div>
+      <p>Ümraniye'nin kalbinde, <strong>Alemdağ Caddesi</strong> üzerindeyiz. Modern estetik anlayışı ile geleneksel bakım ritüellerini harmanlayan, İstanbul'un Anadolu yakasının köklü güzellik merkezlerinden biri olmaktan gurur duyuyoruz.</p>
+      <p>Her danışanımıza özel hazırlanan bakım protokolleri, medikal sınıf ekipmanlar ve uzman kadromuzla; siz kendinizi en iyi hissettiğiniz versiyonunuza kavuşurken biz de en yüksek mesleki standartta hizmet sunuyoruz.</p>
+      <p><strong>Hijyen, güvenilirlik ve profesyonellik</strong> — bu üçü asla ödün vermediğimiz değerlerimiz. Ümraniye ve çevresinden gelen her müşterimizi kapıdan içeri adım attığı andan itibaren kendine özel bir deneyimin parçası yapıyoruz.</p>
+    </div>
+    <div class="intro-img-side reveal reveal-delay visible">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1200&amp;q=88" alt="Tuğba Karakuş Güzellik Salonu İçi Ümraniye" loading="lazy" data-loaded="true">
+      <div class="intro-img-overlay"></div>
+    </div>
+  </div>
+  <div class="intro-stats reveal visible">
+    <div class="stat-box"><div class="stat-num">8+</div><div class="stat-label">Yıllık Deneyim</div></div>
+    <div class="stat-box"><div class="stat-num">5K+</div><div class="stat-label">Memnun Müşteri</div></div>
+    <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Hizmet Dalı</div></div>
+    <div class="stat-box"><div class="stat-num">%98</div><div class="stat-label">Tavsiye Oranı</div></div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section style="background:var(--black-2)" id="hizmetler">
+  <div class="container">
+    <div class="services-header reveal visible">
+      <div>
+        <p class="section-label">Hizmetlerimiz</p>
+        <h2 class="section-title">Beş <em>uzmanlık</em> alanı</h2>
+      </div>
+      <div>
+        <div class="gold-rule"></div>
+        <p>Ümraniye'de güzellik salonu arayışınızın sonucu olduk. Cilt bakımından lazer epilasyona, kalıcı makyajdan el-ayak bakımına kadar beş hizmet kategorisinde İstanbul'un en güncel teknolojileriyle hizmet veriyoruz.</p>
+      </div>
+    </div>
+    <div class="svc-grid reveal visible">
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Cilt Bakımı Ümraniye" data-loaded="true">
+        <div class="svc-num">01</div>
+        <h3 class="svc-name">Cilt Bakımı</h3>
+        <p class="svc-desc">Derin temizlik, peeling, nemlendirme ve özel serum uygulamaları ile cildinizi yenileyin.</p>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1720424643389-87a9b43e2db3?auto=format&amp;fit=crop&amp;w=1100&amp;q=88" alt="Lazer Epilasyon Ümraniye" data-loaded="true">
+        <div class="svc-num">02</div>
+        <h3 class="svc-name">Lazer Epilasyon</h3>
+        <p class="svc-desc">FDA onaylı teknoloji ile kalıcı tüy azaltma. Tüm cilt tiplerine uygun protokollerle.</p>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Kaş Kirpik Ümraniye" data-loaded="true">
+        <div class="svc-num">03</div>
+        <h3 class="svc-name">Kaş &amp; Kirpik</h3>
+        <p class="svc-desc">Yüz hatlarına özel kaş tasarımı, laminasyon, kirpik lifting ve renklendirme.</p>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Kalıcı Makyaj Ümraniye" data-loaded="true">
+        <div class="svc-num">04</div>
+        <h3 class="svc-name">Kalıcı Makyaj</h3>
+        <p class="svc-desc">Microblading ve dijital tekniklerle aylarca süren doğal görünümlü uygulamalar.</p>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="El Ayak Bakımı Ümraniye" data-loaded="true">
+        <div class="svc-num">05</div>
+        <h3 class="svc-name">El &amp; Ayak Bakımı</h3>
+        <p class="svc-desc">Manikür, pedikür, jel oje ve özel bakım rituelleri ile el ve ayaklara özel ilgi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICE DETAILS ========== -->
+<section id="cilt-bakimi">
+  <div class="container">
+
+    <div class="svc-detail-wrap reveal visible">
+      <div class="svc-detail-grid">
+        <div class="svc-photo">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Cilt Bakımı Ümraniye İstanbul" data-loaded="true">
+          <div class="svc-photo-badge">Cilt Bakımı</div>
+        </div>
+        <div class="svc-detail-content">
+          <p class="section-label">Hizmet 01</p>
+          <h3>Cilt <em>Bakımı</em><br>&amp; Tedavisi</h3>
+          <div class="gold-rule"></div>
+          <p>Ümraniye'de profesyonel cilt bakımı arıyorsanız, doğru adrestesiniz. Her danışanımıza özel hazırladığımız protokoller; cilt tipinize, mevsim koşullarına ve bireysel ihtiyaçlarınıza göre şekillenir. İstanbul'un kentsel yaşam koşullarının cildiniz üzerindeki olumsuz etkilerini tersine çevirmek için çalışıyoruz.</p>
+          <p>Derin gözenek temizliği, medikal karbon peeling, hyalüronik asit nemlendirme, C vitamini aydınlatma serumu ve leke giderici tedaviler başlıca hizmetlerimiz arasında yer alır. Tüm ürünler dermatologlar tarafından test edilmiş hipoalerjenik formüllerden oluşur.</p>
+          <ul class="svc-benefits">
+            <li>Akne ve sivilce iz tedavisi</li>
+            <li>Derin nemlendirme ve beslenme</li>
+            <li>Leke ve ton eşitsizliği giderme</li>
+            <li>Yaşlanma karşıtı anti-aging protokolü</li>
+            <li>Hassas cilt için hipoalerjenik bakım</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-detail-wrap reveal visible">
+      <div class="svc-detail-grid rev">
+        <div class="svc-photo">
+          <img src="https://images.unsplash.com/photo-1720424643389-87a9b43e2db3?auto=format&amp;fit=crop&amp;w=1100&amp;q=88" alt="Lazer Epilasyon Ümraniye" data-loaded="true">
+          <div class="svc-photo-badge">Lazer Epilasyon</div>
+        </div>
+        <div class="svc-detail-content">
+          <p class="section-label">Hizmet 02</p>
+          <h3>Lazer <em>Epilasyon</em><br>&amp; İnce Tüy</h3>
+          <div class="gold-rule"></div>
+          <p>FDA ve CE onaylı Diode Lazer teknolojisi ile tüm cilt tonlarına uygun protokollerle kalıcı tüy azaltma sağlıyoruz. Seans öncesi ücretsiz test uygulamasıyla cilt tipinizi belirliyor, kişiye özel enerji ayarlarıyla güvenli bir deneyim sunuyoruz.</p>
+          <p>Bacak, koltuk altı, bikini, yüz, sırt bölgelerinde ortalama 6–8 seans ile %80 üzeri kalıcı tüy azaltımı hedefleniyor. Ümraniye ve çevre ilçelerden gelen müşterilerimiz sonuçlardan son derece memnun.</p>
+          <ul class="svc-benefits">
+            <li>Diode Lazer — tüm cilt tiplerine uyumlu</li>
+            <li>Soğutma sistemi ile ağrısız uygulama</li>
+            <li>Ücretsiz test seansı ve danışmanlık</li>
+            <li>Erkek ve kadın lazer epilasyon paketleri</li>
+            <li>Yüz, vücut ve bikini bölgesi uygulaması</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-detail-wrap reveal visible">
+      <div class="svc-detail-grid">
+        <div class="svc-photo">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Kaş Kirpik Tasarımı Ümraniye" data-loaded="true">
+          <div class="svc-photo-badge">Kaş &amp; Kirpik</div>
+        </div>
+        <div class="svc-detail-content">
+          <p class="section-label">Hizmet 03</p>
+          <h3>Kaş &amp; Kirpik<br><em>Tasarımı</em></h3>
+          <div class="gold-rule"></div>
+          <p>Yüzün çerçevesi olan kaş ve kirpikler, doğru şekillendirme ile ifadenizi tamamen dönüştürür. Yüz analizinizi yaptıktan sonra yüz tipinize ve kişisel tarzınıza en uygun tasarımı belirliyoruz.</p>
+          <p>Kaş laminasyon, kirpik lifting, kirpik renklendirme ve doğal görünümlü kaş tasarımı hizmetlerimizin öne çıkanları arasında yer almaktadır. İstanbul genelinden gelen müşterilerimiz doğallık ve kalıcılık konusunda en yüksek puanları veriyor.</p>
+          <ul class="svc-benefits">
+            <li>Yüz tipine özel kaş tasarımı</li>
+            <li>Kirpik lifting ve laminasyon</li>
+            <li>Kaş laminasyon (2–3 ay kalıcı)</li>
+            <li>Kirpik renklendirme ve uzatma</li>
+            <li>Erkek kaş şekillendirme</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-detail-wrap reveal visible">
+      <div class="svc-detail-grid rev">
+        <div class="svc-photo">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Kalıcı Makyaj Microblading Ümraniye" data-loaded="true">
+          <div class="svc-photo-badge">Kalıcı Makyaj</div>
+        </div>
+        <div class="svc-detail-content">
+          <p class="section-label">Hizmet 04</p>
+          <h3>Kalıcı <em>Makyaj</em><br>&amp; Microblading</h3>
+          <div class="gold-rule"></div>
+          <p>Sabah kalktığınızda hazır ve bakımlı görünmenin en pratik yolu. Microblading, ombre kaş, eyeliner ve dudak kontürü gibi uygulamalarda doğal sonuçlar elde etmek için özel teknikler kullanıyoruz.</p>
+          <p>Tüm uygulamalarımızda tek kullanımlık steril ekipmanlar kullanılmakta, işlem sonrası iyileşme süreci boyunca ücretsiz danışmanlık sunulmaktadır. Ortalama 12–18 ay kalıcılık sağlıyoruz.</p>
+          <ul class="svc-benefits">
+            <li>Microblading — tüy tüy doğal kaş</li>
+            <li>Ombre &amp; Powder kaş teknikleri</li>
+            <li>Kalıcı eyeliner (üst &amp; alt)</li>
+            <li>Dudak kontürü ve renklendirme</li>
+            <li>Ücretsiz rötuş danışmanlığı</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-detail-wrap reveal visible">
+      <div class="svc-detail-grid">
+        <div class="svc-photo">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="El Ayak Bakımı Manikür Pedikür Ümraniye" data-loaded="true">
+          <div class="svc-photo-badge">El &amp; Ayak Bakımı</div>
+        </div>
+        <div class="svc-detail-content">
+          <p class="section-label">Hizmet 05</p>
+          <h3>El &amp; Ayak<br><em>Bakımı</em></h3>
+          <div class="gold-rule"></div>
+          <p>El ve ayak bakımı, günlük hayatın yorgunluğunu üzerinizden atmak için en etkili ritüellerden biri. Manikür ve pedikür hizmetlerimiz; peeling, nemlendiriciler, masaj ve uzun süre dayanıklı oje uygulamalarını kapsayan bütünsel bir deneyimdir.</p>
+          <p>Jel oje, kalıcı oje, tırnak uzatma ve nail art de hizmet menümüzde yer almaktadır. Kalıcı ojelerimiz ortalama 3–4 hafta soyulmadan kalıcılık sağlamaktadır.</p>
+          <ul class="svc-benefits">
+            <li>Klasik ve SPA manikür / pedikür</li>
+            <li>Jel ve kalıcı oje uygulamaları</li>
+            <li>Tırnak uzatma ve onarım</li>
+            <li>Nail art — özel tasarım</li>
+            <li>El ve ayak masajı ile bakım ritueli</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== GALLERY STRIP ========== -->
+<section id="galeri" style="padding:0">
+  <div class="reveal visible">
+    <div style="padding:60px 48px 32px">
+      <p class="section-label">Atmosfer</p>
+      <h2 class="section-title">Salon<br><em>deneyimi</em></h2>
+    </div>
+  </div>
+  <div class="gallery-strip reveal visible">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Güzellik Salonu Ümraniye" data-loaded="true">
+      <div class="g-label">Bakım Odası</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Cilt Bakımı Masası" data-loaded="true">
+      <div class="g-label">Cilt Bakımı</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Makyaj Aynası" data-loaded="true">
+      <div class="g-label">Makyaj &amp; Stil</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&amp;fit=crop&amp;w=900&amp;q=88" alt="Spa Bakımı" data-loaded="true">
+      <div class="g-label">Dinginlik</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US ========== -->
+<section class="whyus-bg" id="neden-biz">
+  <div class="container">
+    <div class="reveal visible">
+      <p class="section-label">Neden Biz</p>
+      <h2 class="section-title">Farkımız<br><em>detaylarda</em></h2>
+    </div>
+  </div>
+  <div class="whyus-split reveal visible">
+    <div class="whyus-photo">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&amp;fit=crop&amp;w=1200&amp;q=88" alt="Profesyonel Güzellik Uzmanı Ümraniye" data-loaded="true">
+      <div class="whyus-photo-caption">"Her dokunuşta fark edilir özen."</div>
+    </div>
+    <div class="whyus-cards container" style="max-width:none;padding:0 clamp(20px,4vw,64px)">
+      <div class="why-card reveal visible">
+        <div class="why-icon">✦</div>
+        <div>
+          <h4>Medikal Hijyen</h4>
+          <p>Tek kullanımlık malzemeler, otoklav sterilizasyon ve ISO standartlarında temizlik protokolleri. Her müşteri için sıfırdan hazırlık, sıfır ödün.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay visible">
+        <div class="why-icon">◈</div>
+        <div>
+          <h4>Sertifikalı Uzman Kadro</h4>
+          <p>Tüm uzmanlarımız sertifikalı ve düzenli eğitim alan profesyonellerdir. Uyguladıkları teknolojilerde sürekli gelişim içindedirler.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay visible">
+        <div class="why-icon">◇</div>
+        <div>
+          <h4>Kişiye Özel Protokol</h4>
+          <p>Cilt tipi, yaşam tarzı ve hedeflerinize özel tasarlanmış hizmet planları. Tek beden herkese uymaz — bizim felsefemiz bu.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay2 visible">
+        <div class="why-icon">❋</div>
+        <div>
+          <h4>Merkezi Konum</h4>
+          <p>Alemdağ Caddesi üzerinde Ümraniye merkezinde. Kadıköy, Maltepe, Kartal, Pendik ve Sancaktepe'den kolayca ulaşabilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section id="yorumlar">
+  <div class="container">
+    <div class="reveal visible">
+      <p class="section-label">Müşteri Yorumları</p>
+      <h2 class="section-title">Deneyimler<br><em>konuşuyor</em></h2>
+    </div>
+    <div class="test-grid reveal visible">
+      <div class="test-card">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=85" alt="Müşteri" class="test-photo" data-loaded="true">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Ümraniye'de yıllardır güzellik salonu aradım. Tuğba Hanım ve ekibi hem el bakımı hem de kaş uygulamasında o kadar titiz ki bir daha başka yere gitmedim."</p>
+        <p class="test-author">— Selin A. · Ümraniye</p>
+      </div>
+      <div class="test-card">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=85" alt="Müşteri" class="test-photo" data-loaded="true">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Lazer epilasyon için çok araştırdım. Uzman ekibin güven verici yaklaşımı beni buraya çekti. 6 seans sonucu inanılmaz. Kesinlikle tavsiye ediyorum."</p>
+        <p class="test-author">— Merve K. · Çekmeköy</p>
+      </div>
+      <div class="test-card">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=85" alt="Müşteri" class="test-photo" data-loaded="true">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Microblading için İstanbul'da çok yer gezdim. Tuğba Karakuş Güzellik'te bulduğum sonuç tam istediğim gibi: doğal, dolgun, çerçeveli."</p>
+        <p class="test-author">— Zeynep T. · Kadıköy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="sss" style="background:var(--black-2)">
+  <div class="container">
+    <div class="reveal visible">
+      <p class="section-label">Sık Sorulan Sorular</p>
+      <h2 class="section-title">Merak<br><em>ettikleriniz</em></h2>
+    </div>
+    <div class="faq-wrap reveal visible">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Lazer epilasyon için kaç seans gerekir?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">Lazer epilasyonda seans sayısı kişiden kişiye değişmekle birlikte 6 ile 10 seans arasında optimum sonuç elde edilir. Tüy kalınlığı, rengi, hormonal faktörler ve uygulanan bölge seans sayısını doğrudan etkiler. Ümraniye salonumuzda ilk seans öncesinde ücretsiz test uygulaması ve danışmanlık gerçekleştiriyoruz.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Kalıcı makyaj ne kadar süre dayanır?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">Kalıcı makyaj uygulamaları ortalama 12–24 ay arasında kalıcılığını korur. Cilt tipine, güneş maruziyetine ve kullanılan cilt bakım ürünlerine göre değişir. Uygulamadan 4–6 hafta sonra bir rötuş seansı uzun ömürlü sonuç için önerilir.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Cilt bakımı öncesi ve sonrasında nelere dikkat etmeliyim?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">Bakımdan 24–48 saat önce aktif retinol, AHA/BHA içerikli ürünler ve exfoliant kullanımını bırakmanız önerilir. Makyajsız gelmeniz işlemi kolaylaştırır. Bakım sonrasında 24 saat makyaj uygulamayın, sauna ve havuzdan kaçının, SPF kullanın.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Salonunuza nasıl ulaşabilirim?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">İstanbul Ümraniye'de, İstiklal Mahallesi Alemdağ Caddesi No:226 D:2 adresindeyiz. Metrobüs ve otobüs güzergahlarına yakın, araçla gelenler için çevre otopark mevcut. Kadıköy, Maltepe, Kartal, Pendik, Çekmeköy ve Sancaktepe'den kolaylıkla ulaşılabilir.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Randevu almak için ne yapmalıyım?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">0539 309 01 90 numaralı telefonumuzu arayabilir ya da WhatsApp üzerinden mesaj atabilirsiniz. Haftanın her günü 10:00–20:30 saatleri arasında çalışıyoruz. Randevular yoğunluğa göre dolabildiği için gitmeden önce telefon veya WhatsApp üzerinden müsaitlik sormanız önerilir.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span>Kaş tasarımında hangi yöntemler uygulanıyor?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">Altın oran ölçüm teknikleriyle yüz geometrinize en uygun kaş şeklini belirliyoruz. Şekillendirme için iplik, ağda veya lazer tercih edilir. Kalıcı çözüm isteyenler için laminasyon (2–3 ay) ve microblading (12–18 ay) seçenekleri mevcuttur.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOCATION + MAP ========== -->
+<section class="location-bg" id="konum">
+  <div class="container">
+    <div class="reveal visible">
+      <p class="section-label">Bizi Bulun</p>
+      <h2 class="section-title">Ümraniye'nin<br><em>merkezinde</em><br>sizi bekliyoruz</h2>
+    </div>
+  </div>
+  <div class="location-grid reveal visible" style="margin-top:64px">
+    <div class="location-info container" style="max-width:none;padding-left:clamp(20px,4vw,80px);padding-right:clamp(20px,4vw,60px)">
+      <h3>İletişim &amp; Ulaşım</h3>
+      <div class="loc-detail">
+        <div class="loc-icon">📍</div>
+        <div class="loc-text">
+          <strong>Adres</strong>
+          <a href="https://maps.google.com/?q=Alemdağ+Cd+No:226+Ümraniye+İstanbul" target="_blank">İstiklal, Alemdağ Cd No:226 D:2<br>34762 Ümraniye / İstanbul</a>
+        </div>
+      </div>
+      <div class="loc-detail">
+        <div class="loc-icon">📞</div>
+        <div class="loc-text">
+          <strong>Telefon &amp; WhatsApp</strong>
+          <a href="tel:+905393090190">0539 309 01 90</a>
+        </div>
+      </div>
+      <div class="loc-detail">
+        <div class="loc-icon">💬</div>
+        <div class="loc-text">
+          <strong>WhatsApp Randevu</strong>
+          <a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">Mesaj Gönder →</a>
+        </div>
+      </div>
+      <div class="loc-detail">
+        <div class="loc-icon">⏰</div>
+        <div class="loc-text">
+          <strong>Çalışma Saatleri</strong>
+          Pazartesi–Pazar: 10:00 – 20:30<br>Pazar: Kapalı
+        </div>
+      </div>
+      <div class="loc-detail">
+        <div class="loc-icon">🚇</div>
+        <div class="loc-text">
+          <strong>Ulaşım</strong>
+          Metrobüs ve Ümraniye otobüs duraklarına yürüme mesafesinde. Çevre otopark imkânı mevcut.
+        </div>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=%C4%B0stiklal%2C%20Alemda%C4%9F%20Cd%20No%3A226%20D%3A2%2C%2034762%20%C3%9Cmraniye%2F%C4%B0stanbul&amp;z=16&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tuğba Karakuş Güzellik Salonu Konumu Ümraniye İstanbul">
+      </iframe>
+      <div class="map-badge">Alemdağ Cd No:226 · Ümraniye</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band">
+  <div class="cta-band-photo"></div>
+  <div class="cta-band-overlay"></div>
+  <div class="cta-band-content container reveal visible">
+    <h2>Güzelliğiniz<br>için <em>bir adım</em><br>yeterli</h2>
+    <p>Randevunuzu alın, gerisini bize bırakın — Ümraniye, İstanbul</p>
+    <div class="cta-btns">
+      <a href="tel:+905393090190" class="btn-gold">📞 Hemen Ara: 0539 309 01 90</a>
+      <a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-ghost">WhatsApp ile Randevu Al</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Tuğba Karakuş Güzellik</div>
+        <p class="footer-tagline">Ümraniye'nin kalbinde, Alemdağ Caddesi üzerinde. Profesyonel güzellik, hijyenik ortam, kişiye özel hizmet.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Hizmetler</h5>
+        <ul>
+          <li><a href="#cilt-bakimi">Cilt Bakımı</a></li>
+          <li><a href="#hizmetler">Lazer Epilasyon</a></li>
+          <li><a href="#hizmetler">Kaş &amp; Kirpik</a></li>
+          <li><a href="#hizmetler">Kalıcı Makyaj</a></li>
+          <li><a href="#hizmetler">El &amp; Ayak Bakımı</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>İletişim</h5>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Alemdağ+Cd+No:226+Ümraniye+İstanbul" target="_blank" rel="noopener">Alemdağ Cd No:226 D:2<br>Ümraniye / İstanbul</a></li>
+          <li><a href="tel:+905393090190">0539 309 01 90</a></li>
+          <li><a href="https://wa.me/905393090190?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" style="color:var(--gold-light)">WhatsApp ile Yaz</a></li>
+          <li>Pazartesi–Pazar: 10:00 – 20:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Tuğba Karakuş Güzellik · Ümraniye İstanbul · Tüm hakları saklıdır.</p>
+      <p class="footer-credit">Bu site Tuğba Karakuş için <strong>CBuildTech</strong> tarafından demo olarak hazırlanmıştır.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});}
+function animCursor(){
+  rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
+  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
+}
+animCursor();
+if(window.matchMedia('(pointer:fine)').matches){document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.classList.add('grow');ring.classList.add('grow')});
+  el.addEventListener('mouseleave',()=>{cursor.classList.remove('grow');ring.classList.remove('grow')});
+});}
+
+// Nav scroll
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+});
+
+// Scroll reveal
+const revEls=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.08});
+revEls.forEach(r=>obs.observe(r));
+
+// FAQ
+function toggleFaq(el){
+  const open=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open)el.classList.add('open');
+}
+
+
+// Mobile menu
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu(){
+  if(!mobileMenu || !hamburgerBtn) return;
+  mobileMenu.classList.add('open');
+  hamburgerBtn.classList.add('active');
+  hamburgerBtn.setAttribute('aria-expanded','true');
+  mobileMenu.setAttribute('aria-hidden','false');
+  document.body.classList.add('menu-open');
+}
+function closeMobileMenu(){
+  if(!mobileMenu || !hamburgerBtn) return;
+  mobileMenu.classList.remove('open');
+  hamburgerBtn.classList.remove('active');
+  hamburgerBtn.setAttribute('aria-expanded','false');
+  mobileMenu.setAttribute('aria-hidden','true');
+  document.body.classList.remove('menu-open');
+}
+if(hamburgerBtn) hamburgerBtn.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu());
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+if(mobileMenu){
+  mobileMenu.addEventListener('click', (event) => {
+    if(event.target === mobileMenu) closeMobileMenu();
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+}
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') closeMobileMenu();
+});
+
+// Broken image fallback
+const fallbackSvg = encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#181818"/>
+      <stop offset=".52" stop-color="#101010"/>
+      <stop offset="1" stop-color="#2b210f"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".68" cy=".25" r=".56">
+      <stop offset="0" stop-color="#c9a84c" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="650" fill="url(#g)"/>
+  <rect width="900" height="650" fill="url(#r)"/>
+  <circle cx="450" cy="315" r="170" fill="none" stroke="#c9a84c" stroke-opacity=".26" stroke-width="1"/>
+  <path d="M300 430 C390 260 510 240 610 430" fill="none" stroke="#e8c97a" stroke-opacity=".35" stroke-width="3"/>
+  <text x="50%" y="52%" text-anchor="middle" fill="#e8c97a" fill-opacity=".85" font-family="Georgia,serif" font-size="42" letter-spacing="6">TUĞBA KARAKUŞ</text>
+  <text x="50%" y="60%" text-anchor="middle" fill="#f5f0e8" fill-opacity=".58" font-family="Arial,sans-serif" font-size="15" letter-spacing="7">GÜZELLİK SALONU</text>
+</svg>`);
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => {
+    if(img.dataset.fallbackApplied === 'true') return;
+    img.dataset.fallbackApplied = 'true';
+    img.src = `data:image/svg+xml;charset=UTF-8,${fallbackSvg}`;
+  });
+});
+
+
+// Image load polish
+document.querySelectorAll('img').forEach(img => {
+  if(img.complete && img.naturalWidth > 0) img.dataset.loaded = 'true';
+  img.addEventListener('load', () => img.dataset.loaded = 'true');
+});
+
+// WA pulse
+const wa=document.getElementById('waBtn');
+setTimeout(()=>{
+  wa.style.transform='scale(1.12)';
+  setTimeout(()=>{wa.style.transform='scale(1)'},300);
+},3500);
+</script>
+
+</body></html>
