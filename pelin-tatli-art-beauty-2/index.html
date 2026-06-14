@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pelin Tatlı Art Beauty – İstanbul Ataşehir'de premium güzellik salonu. Kalıcı makyaj, cilt bakımı, kaş tasarımı ve estetik uygulamalar. Metropol İstanbul'da profesyonel güzellik deneyimi.">
+<meta name="keywords" content="Pelin Tatlı Art Beauty, güzellik salonu İstanbul, Ataşehir güzellik merkezi, kalıcı makyaj, cilt bakımı, kaş tasarımı, Metropol İstanbul, estetik bakım, lüks güzellik salonu">
+<meta name="author" content="Pelin Tatlı Art Beauty">
+<meta property="og:title" content="Pelin Tatlı Art Beauty | Premium Güzellik Salonu İstanbul">
+<meta property="og:description" content="Ataşehir Metropol İstanbul'da lüks güzellik deneyimi. Kalıcı makyaj, cilt bakımı ve kişisel estetik hizmetleri.">
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="tr_TR">
+<link rel="canonical" href="https://www.pelintatlisanat.com">
+
+<!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Pelin Tatlı Art Beauty",
+  "description": "İstanbul Ataşehir'de premium güzellik ve estetik hizmetleri sunan lüks güzellik salonu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Atatürk Mah. Ertuğrul Gazi Sk, Daire:214 Metropol İstanbul No:2 B C1 Blok",
+    "addressLocality": "Ataşehir",
+    "addressRegion": "İstanbul",
+    "postalCode": "34758",
+    "addressCountry": "TR"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"}
+  ],
+  "geo": {"@type":"GeoCoordinates","latitude":"40.9869","longitude":"29.1239"},
+  "priceRange": "₺₺₺"
+}
+</script>
+
+<title>Pelin Tatlı Art Beauty | Lüks Güzellik Salonu – Metropol İstanbul Ataşehir</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<!-- GSAP + ScrollTrigger + Lenis -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<style>
+  :root {
+    --noir: #060606;
+    --charcoal: #111111;
+    --smoke: #1a1a1a;
+    --gold: #c9a96e;
+    --gold-light: #e8c98a;
+    --gold-pale: #f0deb8;
+    --cream: #f8f3ec;
+    --text-muted: #6b6b6b;
+    --text-dim: #3a3a3a;
+    --whatsapp: #25D366;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: auto; }
+
+  body {
+    background: var(--noir);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    position: fixed; top:0; left:0; z-index:9999;
+    pointer-events: none;
+  }
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.1s;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(201,169,110,0.5);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.25s ease, width 0.3s, height 0.3s, border-color 0.3s;
+  }
+  body:hover .cursor-ring { opacity:1; }
+
+  /* PRELOADER */
+  #preloader {
+    position: fixed; inset:0; z-index:10000;
+    background: var(--noir);
+    display: flex; flex-direction:column; align-items:center; justify-content:center;
+    gap: 24px;
+  }
+  .preloader-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    opacity: 0;
+  }
+  .preloader-line {
+    width: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transition: none;
+  }
+  .preloader-counter {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--text-muted);
+    font-weight: 200;
+  }
+
+  /* CANVAS */
+  #canvas3d {
+    position: fixed; inset: 0; z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed; top:0; left:0; right:0; z-index:1000;
+    padding: 28px 60px;
+    display: flex; align-items:center; justify-content:space-between;
+    opacity: 0;
+    mix-blend-mode: normal;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 40px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .nav-links a:hover { opacity:1; color: var(--gold); }
+  .nav-cta {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,169,110,0.4);
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: all 0.4s;
+    background: transparent;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--noir); }
+
+  /* HERO */
+  #hero {
+    position: relative; z-index: 10;
+    height: 100vh;
+    display: flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 9vw, 130px);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .hero-title span { display:block; }
+  .hero-title .accent {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-subtitle {
+    font-size: clamp(11px, 1.2vw, 13px);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 56px;
+    opacity: 0;
+  }
+  .hero-scroll-hint {
+    position: absolute; bottom: 40px; left:50%; transform: translateX(-50%);
+    display: flex; flex-direction:column; align-items:center; gap: 12px;
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--text-muted);
+    opacity: 0;
+  }
+  .scroll-line {
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+  @keyframes scrollPulse {
+    0%,100% { opacity:0.3; transform: scaleY(1); }
+    50% { opacity:1; transform: scaleY(1.2); }
+  }
+  .hero-img {
+    position: absolute; inset:0;
+    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80') center/cover;
+    opacity: 0.07;
+    transform: scale(1.1);
+    z-index:-1;
+  }
+
+  /* SECTIONS */
+  section { position: relative; z-index:10; }
+
+  /* INTRO */
+  #intro {
+    padding: 140px 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    border-top: 1px solid var(--text-dim);
+  }
+  .intro-label {
+    font-size: 9px; letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+  }
+  .intro-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+  .intro-text {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    margin-bottom: 40px;
+  }
+  .intro-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 560px;
+  }
+  .intro-img-wrap img {
+    width:100%; height:100%; object-fit:cover;
+    transform: scale(1.1);
+    transition: transform 8s ease;
+  }
+  .intro-img-wrap:hover img { transform: scale(1.0); }
+  .intro-img-badge {
+    position: absolute; bottom:24px; right:24px;
+    background: rgba(6,6,6,0.9);
+    border: 1px solid rgba(201,169,110,0.3);
+    padding: 16px 24px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  .btn-primary {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--noir);
+    background: var(--gold);
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.4s;
+    border: 1px solid var(--gold);
+  }
+  .btn-primary:hover { background: transparent; color: var(--gold); }
+  .btn-outline {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,169,110,0.4);
+    padding: 16px 40px;
+    text-decoration: none;
+    margin-left: 16px;
+    transition: all 0.4s;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--noir); }
+  .btn-whatsapp {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: #ffffff;
+    background: var(--whatsapp);
+    border: 1px solid var(--whatsapp);
+    padding: 16px 34px;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+  .btn-whatsapp:hover { background: transparent; color: var(--whatsapp); }
+  .hero-actions, .cta-actions {
+    display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .intro-actions {
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .whatsapp-float {
+    position: fixed; right: 24px; bottom: 24px; z-index: 1200;
+    width: 62px; height: 62px; border-radius: 50%;
+    background: var(--whatsapp); color:#0a2813;
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none; font-size: 26px; font-weight:700;
+    box-shadow: 0 18px 38px rgba(37,211,102,0.28);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .whatsapp-float:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 22px 42px rgba(37,211,102,0.35); }
+
+  /* SERVICES */
+  #services {
+    padding: 120px 10vw;
+    background: var(--charcoal);
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .section-tag {
+    font-size: 9px; letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.5vw, 64px);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--text-dim);
+  }
+  .service-card {
+    background: var(--charcoal);
+    padding: 56px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s;
+  }
+  .service-card::before {
+    content:'';
+    position:absolute; top:0; left:0; right:0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--smoke); }
+  .service-img {
+    width: 100%; height: 220px;
+    object-fit: cover;
+    margin-bottom: 32px;
+    filter: grayscale(20%);
+    transition: filter 0.5s;
+  }
+  .service-card:hover .service-img { filter: grayscale(0%); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; letter-spacing: 0.2em;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 400;
+    margin-bottom: 16px; line-height: 1.2;
+  }
+  .service-desc {
+    font-size: 12px; line-height: 1.9;
+    color: var(--text-muted); letter-spacing: 0.03em;
+  }
+  .service-arrow {
+    display: inline-block; margin-top: 24px;
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+  }
+  .service-arrow::after { content: ' →'; }
+
+  /* GALLERY */
+  #gallery {
+    padding: 120px 10vw;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 12px;
+    margin-top: 60px;
+  }
+  .gallery-item { overflow:hidden; position:relative; }
+  .gallery-item img {
+    width:100%; height:100%; object-fit:cover;
+    transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.5s;
+    filter: grayscale(15%);
+  }
+  .gallery-item:hover img { transform: scale(1.08); filter: grayscale(0%); }
+  .g1 { grid-column: span 5; }
+  .g2 { grid-column: span 4; }
+  .g3 { grid-column: span 3; }
+  .g4 { grid-column: span 3; }
+  .g5 { grid-column: span 5; }
+  .g6 { grid-column: span 4; }
+  .gallery-overlay {
+    position:absolute; inset:0;
+    background: linear-gradient(to top, rgba(6,6,6,0.6), transparent);
+    opacity:0; transition: opacity 0.4s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity:1; }
+
+  /* STATS */
+  #stats {
+    padding: 100px 10vw;
+    background: var(--smoke);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+    border-top: 1px solid var(--text-dim);
+    border-bottom: 1px solid var(--text-dim);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .stat-label {
+    font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* LOCATION */
+  #location {
+    padding: 120px 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .location-info { }
+  .hours-list { list-style:none; margin-top:32px; }
+  .hours-list li {
+    display: flex; justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  .hours-list .day { color: var(--text-muted); }
+  .hours-list .time { color: var(--gold); }
+  .hours-list .closed { color: var(--text-muted); font-style: italic; }
+  .map-placeholder {
+    height: 500px;
+    background: var(--smoke);
+    position: relative;
+    border: 1px solid var(--text-dim);
+    overflow: hidden;
+  }
+  .map-placeholder iframe {
+    width:100%; height:100%; border:0; filter: grayscale(80%) invert(90%) contrast(0.9);
+  }
+
+  /* TESTIMONIALS */
+  #testimonials {
+    padding: 120px 10vw;
+    background: var(--charcoal);
+    text-align: center;
+  }
+  .testimonial-wrap {
+    max-width: 800px; margin: 60px auto 0;
+    position: relative;
+  }
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--cream);
+    margin-bottom: 32px;
+  }
+  .testimonial-author {
+    font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold);
+  }
+  .testimonial-stars {
+    color: var(--gold); font-size: 16px; margin-bottom: 24px;
+    letter-spacing: 4px;
+  }
+
+  /* CTA SECTION */
+  #cta-section {
+    padding: 160px 10vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-bg {
+    position: absolute; inset:0;
+    background: url('https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1600&q=80') center/cover;
+    opacity: 0.08;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+  .cta-title em { font-style: italic; color: var(--gold); }
+  .cta-sub {
+    font-size: 13px; letter-spacing: 0.15em; color: var(--text-muted);
+    margin-bottom: 56px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #030303;
+    padding: 80px 10vw 40px;
+    border-top: 1px solid var(--text-dim);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--text-dim);
+    margin-bottom: 40px;
+  }
+  .footer-brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .footer-desc {
+    font-size: 12px; line-height: 2; color: var(--text-muted); max-width: 320px;
+  }
+  .footer-col-title {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+  }
+  .footer-links { list-style:none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a {
+    font-size: 12px; color: var(--text-muted); text-decoration:none; letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom {
+    display: flex; justify-content:space-between; align-items:center;
+    font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em;
+  }
+  .footer-credit a {
+    color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,169,110,0.3);
+    transition: border-color 0.3s;
+  }
+  .footer-credit a:hover { border-color: var(--gold); }
+
+  /* REVEAL CLASSES */
+  .reveal { opacity:0; transform: translateY(40px); }
+  .reveal-left { opacity:0; transform: translateX(-60px); }
+  .reveal-right { opacity:0; transform: translateX(60px); }
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    nav { padding: 20px 24px; }
+    .nav-links, .nav-cta { display:none; }
+    #intro { grid-template-columns:1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .g1,.g2,.g3,.g4,.g5,.g6 { grid-column: span 1; }
+    #stats { grid-template-columns: 1fr 1fr; }
+    #location { grid-template-columns:1fr; }
+    .footer-top { grid-template-columns:1fr; }
+    .footer-bottom { flex-direction:column; gap:12px; text-align:center; }
+    .hero-actions, .intro-actions, .cta-actions { flex-direction: column; align-items: stretch; }
+    .hero-actions a, .intro-actions a, .cta-actions a { width: 100%; text-align:center; margin-left:0; }
+    .whatsapp-float { width:56px; height:56px; right:16px; bottom:16px; }
+  }
+
+/* PREMIUM BUTTON + MOBILE MENU POLISH */
+:root {
+  --button-shadow: 0 18px 46px rgba(201,169,110,.18);
+  --button-shadow-strong: 0 24px 70px rgba(201,169,110,.28);
+}
+
+.btn-primary,
+.btn-outline,
+.btn-whatsapp,
+.nav-cta,
+.service-arrow {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 999px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.btn-primary,
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), #a77b38);
+  border: 1px solid rgba(232,201,138,.72);
+  color: var(--noir);
+  box-shadow: var(--button-shadow);
+}
+
+.btn-outline {
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(201,169,110,.38);
+  color: var(--gold);
+  backdrop-filter: blur(12px);
+  margin-left: 0;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #18b957);
+  border: 1px solid rgba(37,211,102,.72);
+  color: #082512;
+  box-shadow: 0 18px 46px rgba(37,211,102,.22);
+}
+
+.service-arrow {
+  width: fit-content;
+  padding: 12px 18px;
+  border: 1px solid rgba(201,169,110,.25);
+  background: rgba(201,169,110,.08);
+}
+
+.btn-primary::before,
+.btn-outline::before,
+.btn-whatsapp::before,
+.nav-cta::before,
+.service-arrow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.32) 45%, transparent 72%);
+  transform: translateX(-120%);
+  transition: transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.btn-primary:hover::before,
+.btn-outline:hover::before,
+.btn-whatsapp:hover::before,
+.nav-cta:hover::before,
+.service-arrow:hover::before {
+  transform: translateX(120%);
+}
+
+.btn-primary:hover,
+.nav-cta:hover {
+  transform: translateY(-3px);
+  color: var(--noir);
+  box-shadow: var(--button-shadow-strong);
+}
+
+.btn-outline:hover,
+.service-arrow:hover {
+  transform: translateY(-3px);
+  background: var(--gold);
+  color: var(--noir);
+  border-color: var(--gold);
+  box-shadow: var(--button-shadow);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #31e475, #20c662);
+  color: #082512;
+  box-shadow: 0 24px 62px rgba(37,211,102,.32);
+}
+
+.hero-actions,
+.intro-actions,
+.cta-actions {
+  gap: 14px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,110,.36);
+  background: rgba(6,6,6,.42);
+  backdrop-filter: blur(14px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: var(--gold);
+  transition: transform .28s ease, opacity .28s ease;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: rgba(6,6,6,.72);
+}
+
+body.menu-open .nav-toggle span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+body.menu-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+body.menu-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(201,169,110,.15), transparent 32%),
+    rgba(6,6,6,.94);
+  backdrop-filter: blur(22px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+body.menu-open .mobile-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-inner {
+  width: min(420px, 100%);
+  border: 1px solid rgba(201,169,110,.16);
+  background: rgba(255,255,255,.035);
+  border-radius: 32px;
+  padding: 28px;
+  box-shadow: 0 28px 90px rgba(0,0,0,.32);
+}
+
+.mobile-menu-brand {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mobile-menu-links {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.mobile-menu-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(201,169,110,.12);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,.035);
+}
+
+.mobile-menu-links a::after {
+  content: '→';
+  color: var(--gold);
+  letter-spacing: 0;
+}
+
+.mobile-menu-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-menu-actions a {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-contact-bar {
+  display: none;
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 1300;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mobile-contact-bar a {
+  min-height: 50px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mobile-contact-bar a:first-child {
+  background: rgba(255,255,255,.92);
+  color: var(--noir);
+  box-shadow: 0 18px 42px rgba(0,0,0,.20);
+}
+
+.mobile-contact-bar a:last-child {
+  background: linear-gradient(135deg, #25D366, #18b957);
+  color: #082512;
+  box-shadow: 0 18px 42px rgba(37,211,102,.22);
+}
+
+@media(max-width:900px){
+  body {
+    cursor: auto;
+    padding-bottom: 82px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  nav {
+    padding: 16px 18px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+    letter-spacing: .14em;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none !important;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .hero-actions,
+  .intro-actions,
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(360px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions a,
+  .intro-actions a,
+  .cta-actions a {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-whatsapp {
+    min-height: 52px;
+    padding: 15px 20px;
+    letter-spacing: .22em;
+  }
+
+  .mobile-contact-bar {
+    display: grid;
+  }
+
+  .whatsapp-float {
+    display: none;
+  }
+
+  #hero {
+    min-height: 100svh;
+    height: auto;
+    padding: 112px 18px 96px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 18vw, 76px);
+  }
+
+  .hero-subtitle {
+    line-height: 1.8;
+    margin-bottom: 34px;
+  }
+
+  #intro,
+  #services,
+  #gallery,
+  #stats,
+  #testimonials,
+  #location,
+  #cta-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor">
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+</div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-logo" id="preloaderLogo">PELIN TATLI</div>
+  <div class="preloader-line" id="preloaderLine"></div>
+  <div class="preloader-counter" id="preloaderCounter">0%</div>
+</div>
+
+<!-- THREE.JS CANVAS -->
+<canvas id="canvas3d"></canvas>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">PT · ART BEAUTY</a>
+  <ul class="nav-links">
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#testimonials">Yorumlar</a></li>
+    <li><a href="#location">Konum</a></li>
+  </ul>
+  <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="nav-cta" target="_blank" rel="noopener">WhatsApp’tan Randevu</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-brand">Pelin Tatlı<br><em>Art Beauty</em></div>
+    <ul class="mobile-menu-links">
+      <li><a href="#services">Hizmetler</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#testimonials">Yorumlar</a></li>
+      <li><a href="#location">Konum</a></li>
+    </ul>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp’tan Randevu</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Pelin%20Tatlı%20Art%20Beauty%20Metropol%20İstanbul%20Ataşehir" class="btn-outline" target="_blank" rel="noopener">Yol Tarifi</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-eyebrow" id="heroEyebrow">Metropol İstanbul · Ataşehir</div>
+  <h1 class="hero-title">
+    <span class="hero-line1">Pelin Tatlı</span>
+    <span class="hero-line2 accent">Art Beauty</span>
+  </h1>
+  <p class="hero-subtitle" id="heroSubtitle">Güzelliğin Sanata Dönüştüğü Yer</p>
+  <div class="hero-actions" id="heroActions" style="opacity:0;"><a href="#services" class="btn-primary" id="heroCta" style="text-decoration:none;">Hizmetleri İncele</a><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp’tan Randevu</a></div>
+  <div class="hero-scroll-hint" id="scrollHint">
+    <div class="scroll-line"></div>
+    <span>Kaydır</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro">
+  <div>
+    <p class="intro-label reveal">Hakkımızda</p>
+    <h2 class="intro-heading reveal">Her Detayda <em style="font-style:italic;color:var(--gold)">Kusursuzluk</em></h2>
+    <p class="intro-text reveal">Pelin Tatlı Art Beauty, İstanbul'un prestijli Metropol kompleksinde, güzelliği bir sanat anlayışıyla harmanlayan premium bir deneyim sunar. On yılı aşan uzmanlık ve yüzlerce memnun müşterinin güveniyle, her ziyareti bir dönüşüm yolculuğuna çeviriyoruz.</p>
+    <p class="intro-text reveal">Kalıcı makyajdan derin cilt bakımına, estetik uygulamalardan kişisel stil danışmanlığına kadar her hizmetimizde uluslararası standartları ve birebir kişisel ilgiyi esas alıyoruz.</p>
+    <div class="reveal intro-actions">
+      <a href="#services" class="btn-primary">Hizmetlerimiz</a>
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp’tan Randevu</a>
+      <a href="#location" class="btn-outline">Yol Tarifi</a>
+    </div>
+  </div>
+  <div class="intro-img-wrap reveal-right">
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Pelin Tatlı Art Beauty - Premium cilt bakımı uygulaması İstanbul Ataşehir" loading="lazy">
+    <div class="intro-img-badge">Cilt Bakımı · Ataşehir</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <p class="section-tag reveal">Uzmanlık Alanları</p>
+    <h2 class="section-title reveal">Özenle Tasarlanmış <br><em style="font-style:italic;color:var(--gold)">Güzellik Ritüelleri</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <img class="service-img" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80" alt="Kalıcı makyaj ve kaş tasarımı uygulaması Ataşehir İstanbul">
+      <p class="service-num">01</p>
+      <h3 class="service-name">Kalıcı Makyaj & Kaş Tasarımı</h3>
+      <p class="service-desc">Yüz hatlarınıza en uygun kaş formunu Microblading, Powder Brow ve Combo tekniklerle oluşturuyoruz. Doğal ve uzun ömürlü sonuçlar için titiz bir yaklaşım.</p>
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="service-arrow" target="_blank" rel="noopener">Randevu Oluştur</a>
+    </div>
+    <div class="service-card reveal">
+      <img class="service-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Cilt bakımı ve yüz bakım uygulamaları İstanbul">
+      <p class="service-num">02</p>
+      <h3 class="service-name">Premium Cilt Bakımı</h3>
+      <p class="service-desc">HydraFacial, kimyasal peeling ve mezoterapi uygulamalarıyla cildinizi derinlemesine yeniliyoruz. Her cilt tipine özel protokollerle parlaklık, sıkılık ve tazelik.</p>
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="service-arrow" target="_blank" rel="noopener">Randevu Oluştur</a>
+    </div>
+    <div class="service-card reveal">
+      <img class="service-img" src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=900&q=80" alt="İpek kirpik ve kirpik lifting uygulamaları Ataşehir">
+      <p class="service-num">03</p>
+      <h3 class="service-name">İpek Kirpik & Kirpik Lifting</h3>
+      <p class="service-desc">Bakışlara daha belirgin ve etkileyici bir görünüm kazandıran ipek kirpik ve kirpik lifting uygulamalarını kişiye özel planlıyor, doğal duruşu ön planda tutuyoruz.</p>
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="service-arrow" target="_blank" rel="noopener">Randevu Oluştur</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header">
+    <p class="section-tag reveal">Portfolyo</p>
+    <h2 class="section-title reveal">Sanatın İzleri</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item g1 reveal">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80" alt="Profesyonel makyaj ürünleri ve güzellik salonu detayları">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g2 reveal">
+      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Cilt bakım uygulaması ve doğal sonuçlar">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g3 reveal">
+      <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=900&q=80" alt="Ataşehir güzellik salonunda bakım deneyimi">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g4 reveal">
+      <img src="https://images.unsplash.com/photo-1498843053639-170ff2122f35?auto=format&fit=crop&w=900&q=80" alt="Premium makyaj ve bakım uygulaması">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g5 reveal">
+      <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=900&q=80" alt="Kaş ve kirpik uygulaması sonuçları Ataşehir">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g6 reveal">
+      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80" alt="Makyaj ve güzellik uygulama detayları">
+      <div class="gallery-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="reveal">
+    <div class="stat-num" data-target="2500">0</div>
+    <div class="stat-label">Mutlu Müşteri</div>
+  </div>
+  <div class="reveal">
+    <div class="stat-num" data-target="10">0</div>
+    <div class="stat-label">Yıllık Deneyim</div>
+  </div>
+  <div class="reveal">
+    <div class="stat-num" data-target="15">0</div>
+    <div class="stat-label">Uzman Hizmet</div>
+  </div>
+  <div class="reveal">
+    <div class="stat-num" data-target="98">0</div>
+    <div class="stat-label">Memnuniyet Oranı %</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header">
+    <p class="section-tag reveal">Müşteri Yorumları</p>
+    <h2 class="section-title reveal">Deneyimleyen<br><em style="font-style:italic;color:var(--gold)">Söylüyor</em></h2>
+  </div>
+  <div class="testimonial-wrap">
+    <div class="testimonial-stars reveal">★★★★★</div>
+    <blockquote class="testimonial-quote reveal">"Pelin Hanım'ın ellerinden çıkan kaş tasarımım hayatımı değiştirdi. Yıllardır hayal ettiğim doğal ve kusursuz görünüme kavuştum. Her detay o kadar özenli işlenmiş ki, bu yer gerçekten sanat atölyesi gibi."</blockquote>
+    <p class="testimonial-author reveal">— Selin K. · Google Yorumu · ★★★★★</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="location-info">
+    <p class="intro-label reveal">Bizi Bulun</p>
+    <h2 class="intro-heading reveal">Metropol İstanbul<br><em style="font-style:italic;color:var(--gold)">Ataşehir</em></h2>
+    <p class="intro-text reveal">Atatürk Mah. Ertuğrul Gazi Sk, Daire:214<br>Metropol İstanbul No:2 B C1 Blok<br>34758 Ataşehir/İstanbul</p>
+    <ul class="hours-list reveal">
+      <li><span class="day">Pazartesi – Cuma</span><span class="time">10:00 – 20:00</span></li>
+      <li><span class="day">Cumartesi</span><span class="time">10:00 – 20:00</span></li>
+      <li><span class="day">Pazar</span><span class="closed">Kapalı</span></li>
+    </ul>
+  </div>
+  <div class="map-placeholder reveal-right">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.127!2d29.1239!3d40.9869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzEyLjgiTiAyOcKwMDcnMjYuMCJF!5e0!3m2!1str!2str!4v1234567890" loading="lazy" title="Pelin Tatlı Art Beauty Konum"></iframe>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-section">
+  <div class="cta-bg"></div>
+  <p class="section-tag reveal">Randevu</p>
+  <h2 class="cta-title reveal">Dönüşümünüz<br><em>Bir Adım Uzakta</em></h2>
+  <p class="cta-sub reveal">WhatsApp üzerinden hızlıca randevu talebi oluşturabilir, güzellik hizmetleri hakkında bilgi alabilirsiniz.</p>
+  <div class="cta-actions reveal"><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp’tan Randevu</a><a href="#location" class="btn-outline">Yol Tarifi</a></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Pelin Tatlı Art Beauty</div>
+      <p class="footer-desc">İstanbul'un kalbinde, Metropol'de güzelliği sanat anlayışıyla buluşturan premium güzellik deneyimi. Her müşterimize özgün bir dönüşüm yolculuğu sunuyoruz.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Hizmetler</p>
+      <ul class="footer-links">
+        <li><a href="#">Kalıcı Makyaj</a></li>
+        <li><a href="#">Kaş Tasarımı</a></li>
+        <li><a href="#">Cilt Bakımı</a></li>
+        <li><a href="#">HydraFacial</a></li>
+        <li><a href="#">Saç Bakımı</a></li>
+        <li><a href="#">Mezoterapi</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">İletişim</p>
+      <ul class="footer-links">
+        <li><a href="#">Metropol İstanbul</a></li>
+        <li><a href="#">C1 Blok, Daire 214</a></li>
+        <li><a href="#">Ataşehir / İstanbul</a></li>
+        <li><a href="#">Pzt–Cmt: 10:00–20:00</a></li>
+        <li><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan Randevu</a></li>
+        <li><a href="#">Pazar: Kapalı</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Pelin Tatlı Art Beauty. Tüm hakları saklıdır.</span>
+    <span class="footer-credit">Bu site <a href="https://www.cbuildtech.com" target="_blank" rel="noopener">cbuildtech</a> tarafından sizin için demo olarak hazırlanmıştır.</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp’tan Randevu">✆</a>
+<div class="mobile-contact-bar">
+  <a href="https://www.google.com/maps/search/?api=1&query=Pelin%20Tatlı%20Art%20Beauty%20Metropol%20İstanbul%20Ataşehir" target="_blank" rel="noopener">Yol Tarifi</a>
+  <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+// THREE.JS PARTICLE SYSTEM
+const canvas = document.getElementById('canvas3d');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
+// Gold particles
+const particleCount = window.innerWidth < 768 ? 1200 : 3000;
+const positions = new Float32Array(particleCount * 3);
+const colors = new Float32Array(particleCount * 3);
+for(let i=0; i<particleCount; i++){
+  positions[i*3]   = (Math.random()-0.5)*20;
+  positions[i*3+1] = (Math.random()-0.5)*20;
+  positions[i*3+2] = (Math.random()-0.5)*10;
+  const gold = Math.random();
+  colors[i*3]   = 0.78 + gold*0.1;
+  colors[i*3+1] = 0.66 + gold*0.08;
+  colors[i*3+2] = 0.43 + gold*0.05;
+}
+const geo = new THREE.BufferGeometry();
+geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+// Star-shaped particle texture — kare görünümü yerine yumuşak yıldız formu
+function createStarTexture(){
+  const size = 96;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  const cx = size / 2;
+  const cy = size / 2;
+
+  // Soft glow
+  const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, size / 2);
+  glow.addColorStop(0, 'rgba(255,255,255,0.95)');
+  glow.addColorStop(0.22, 'rgba(232,201,138,0.55)');
+  glow.addColorStop(0.55, 'rgba(201,169,110,0.16)');
+  glow.addColorStop(1, 'rgba(201,169,110,0)');
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, 0, size, size);
+
+  // 4-point luxury star
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.beginPath();
+  ctx.moveTo(0, -38);
+  ctx.quadraticCurveTo(5, -5, 38, 0);
+  ctx.quadraticCurveTo(5, 5, 0, 38);
+  ctx.quadraticCurveTo(-5, 5, -38, 0);
+  ctx.quadraticCurveTo(-5, -5, 0, -38);
+  ctx.closePath();
+
+  const starGradient = ctx.createRadialGradient(0, 0, 0, 0, 0, 38);
+  starGradient.addColorStop(0, 'rgba(255,255,255,1)');
+  starGradient.addColorStop(0.32, 'rgba(232,201,138,0.92)');
+  starGradient.addColorStop(1, 'rgba(201,169,110,0)');
+  ctx.fillStyle = starGradient;
+  ctx.fill();
+
+  // Small center shine
+  ctx.beginPath();
+  ctx.arc(0, 0, 4.5, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(255,255,255,0.9)';
+  ctx.fill();
+  ctx.restore();
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.needsUpdate = true;
+  return texture;
+}
+
+const starTexture = createStarTexture();
+const mat = new THREE.PointsMaterial({
+  size: 0.105,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.72,
+  sizeAttenuation: true,
+  depthWrite: false,
+  blending: THREE.AdditiveBlending,
+  map: starTexture,
+  alphaTest: 0.02
+});
+const particles = new THREE.Points(geo, mat);
+scene.add(particles);
+
+// Floating ring
+const ringGeo = new THREE.TorusGeometry(2, 0.005, 16, 200);
+const ringMat = new THREE.MeshBasicMaterial({ color: 0xc9a96e, transparent:true, opacity:0.10 });
+const ring = new THREE.Mesh(ringGeo, ringMat);
+scene.add(ring);
+const ring2 = new THREE.Mesh(new THREE.TorusGeometry(3.2, 0.003, 16, 200), new THREE.MeshBasicMaterial({color:0xc9a96e, transparent:true, opacity:0.055}));
+scene.add(ring2);
+
+let mouseX=0, mouseY=0;
+document.addEventListener('mousemove', e=>{
+  mouseX = (e.clientX/window.innerWidth - 0.5)*2;
+  mouseY = (e.clientY/window.innerHeight - 0.5)*2;
+});
+
+let scrollY = 0;
+window.addEventListener('scroll', ()=>{ scrollY = window.scrollY; });
+
+let raf;
+function animate(t=0){
+  raf = requestAnimationFrame(animate);
+  particles.rotation.y = t*0.00005 + mouseX*0.1;
+  particles.rotation.x = mouseY*0.05 + scrollY*0.0001;
+  ring.rotation.z = t*0.0002;
+  ring.rotation.x = 0.3 + mouseY*0.05;
+  ring2.rotation.z = -t*0.00015;
+  ring2.rotation.y = mouseX*0.04;
+  camera.position.y = -scrollY*0.001;
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', ()=>{
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// CURSOR
+const cursorRing = document.getElementById('cursorRing');
+const cursorDot = document.getElementById('cursorDot');
+let cx=0,cy=0,rx=0,ry=0;
+document.addEventListener('mousemove', e=>{
+  cx=e.clientX; cy=e.clientY;
+  cursorDot.style.left=cx+'px'; cursorDot.style.top=cy+'px';
+});
+function animateCursor(){
+  rx += (cx-rx)*0.1; ry += (cy-ry)*0.1;
+  cursorRing.style.left=rx+'px'; cursorRing.style.top=ry+'px';
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    cursorRing.style.width='60px'; cursorRing.style.height='60px';
+    cursorRing.style.borderColor='rgba(201,169,110,0.8)';
+  });
+  el.addEventListener('mouseleave',()=>{
+    cursorRing.style.width='36px'; cursorRing.style.height='36px';
+    cursorRing.style.borderColor='rgba(201,169,110,0.5)';
+  });
+});
+
+// GSAP + SCROLLTRIGGER
+gsap.registerPlugin(ScrollTrigger);
+
+// PRELOADER
+const tl = gsap.timeline({
+  onComplete: ()=>{
+    document.body.style.overflow='auto';
+    startHeroAnimation();
+  }
+});
+let progress=0;
+const interval = setInterval(()=>{
+  progress += Math.random()*12;
+  if(progress>=100){ progress=100; clearInterval(interval); }
+  document.getElementById('preloaderCounter').textContent = Math.floor(progress)+'%';
+  gsap.to('#preloaderLine', {width:(progress/100)*200+'px', duration:0.3, ease:'power2.out'});
+},80);
+
+tl.to('#preloaderLogo', {opacity:1, y:0, duration:0.8, ease:'power3.out'}, 0.3)
+  .to('#preloaderLine', {width:'200px', duration:1.5, ease:'power2.inOut'}, 0.5)
+  .to('#preloader', {yPercent:-100, duration:1, ease:'power3.inOut', delay:0.5})
+  .to('#canvas3d', {opacity:1, duration:1.5}, '-=0.5')
+  .to('#mainNav', {opacity:1, y:0, duration:0.6, ease:'power2.out'}, '-=0.5');
+
+function startHeroAnimation(){
+  gsap.to('#heroEyebrow', {opacity:1, y:0, duration:0.8, ease:'power3.out'});
+  // Line by line title reveal
+  const lines = document.querySelectorAll('.hero-line1, .hero-line2');
+  gsap.fromTo(lines,
+    {y:'100%', opacity:0},
+    {y:'0%', opacity:1, duration:1.2, stagger:0.15, ease:'power3.out', delay:0.2}
+  );
+  gsap.to('#heroSubtitle', {opacity:1, y:0, duration:0.8, ease:'power2.out', delay:0.6});
+  gsap.to('#heroActions', {opacity:1, y:0, duration:0.6, ease:'power2.out', delay:0.9});
+  gsap.to('#scrollHint', {opacity:1, duration:0.6, delay:1.5});
+  // Cinematic hero image zoom
+  gsap.fromTo('.hero-img', {scale:1.3, opacity:0}, {scale:1.05, opacity:0.07, duration:2.5, ease:'power2.out', delay:0.2});
+}
+
+// SCROLL REVEALS
+ScrollTrigger.batch('.reveal', {
+  onEnter: els => gsap.fromTo(els, {opacity:0,y:50}, {opacity:1,y:0,duration:0.9,stagger:0.12,ease:'power3.out'}),
+  start:'top 85%'
+});
+ScrollTrigger.batch('.reveal-left', {
+  onEnter: els => gsap.fromTo(els, {opacity:0,x:-60}, {opacity:1,x:0,duration:1,ease:'power3.out'}),
+  start:'top 80%'
+});
+ScrollTrigger.batch('.reveal-right', {
+  onEnter: els => gsap.fromTo(els, {opacity:0,x:60}, {opacity:1,x:0,duration:1,ease:'power3.out'}),
+  start:'top 80%'
+});
+
+// COUNTER ANIMATION
+ScrollTrigger.create({
+  trigger:'#stats', start:'top 75%',
+  once: true,
+  onEnter: ()=>{
+    document.querySelectorAll('[data-target]').forEach(el=>{
+      const target = +el.dataset.target;
+      gsap.fromTo({v:0},{v:target},{
+        duration:2, ease:'power2.out',
+        onUpdate: function(){ el.textContent = Math.round(this.targets()[0].v); }
+      });
+    });
+  }
+});
+
+// PARALLAX HERO
+gsap.to('.hero-img', {
+  yPercent: 20,
+  ease:'none',
+  scrollTrigger:{ trigger:'#hero', start:'top top', end:'bottom top', scrub:true }
+});
+
+// SCROLL NAV BACKDROP
+ScrollTrigger.create({
+  start: 100,
+  onEnter: ()=>{ document.getElementById('mainNav').style.background='rgba(6,6,6,0.9)'; document.getElementById('mainNav').style.backdropFilter='blur(20px)'; },
+  onLeaveBack: ()=>{ document.getElementById('mainNav').style.background='transparent'; document.getElementById('mainNav').style.backdropFilter='none'; }
+});
+
+
+// MOBILE MENU
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+function closeMobileMenu(){
+  document.body.classList.remove('menu-open');
+  if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+  if(mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
+}
+
+function openMobileMenu(){
+  document.body.classList.add('menu-open');
+  if(navToggle) navToggle.setAttribute('aria-expanded', 'true');
+  if(mobileMenu) mobileMenu.setAttribute('aria-hidden', 'false');
+}
+
+if(navToggle && mobileMenu){
+  navToggle.addEventListener('click', () => {
+    document.body.classList.contains('menu-open') ? closeMobileMenu() : openMobileMenu();
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeMobileMenu();
+  });
+}
+
+document.body.style.overflow='hidden';
+</script>
+</body>
+</html>
