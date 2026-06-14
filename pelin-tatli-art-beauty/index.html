@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pelin Tatlı Art Beauty – Ataşehir Metropol İstanbul’da saç, tırnak, makyaj, ağda, kaş, cilt bakımı ve estetik güzellik hizmetleri.">
+<meta name="keywords" content="Pelin Tatlı Art Beauty, Ataşehir güzellik salonu, Metropol İstanbul güzellik merkezi, fön Ataşehir, manikür pedikür, protez tırnak, kaş alma, kaş kontürü, ağda, makyaj, cilt bakımı">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Pelin Tatlı Art Beauty | Güzellik Salonu – Ataşehir Metropol İstanbul">
+<meta property="og:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200">
+<link rel="canonical" href="https://www.pelintatlisanat.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Pelin Tatlı Art Beauty",
+  "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
+  "description": "Metropol İstanbul Ataşehir’de saç, tırnak, makyaj, kaş, ağda ve cilt bakımı hizmetleri sunan güzellik salonu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Atatürk Mah. Ertuğrul Gazi Sk, Daire:214 Metropol İstanbul No:2 B C1 Blok",
+    "addressLocality": "Ataşehir", "addressRegion": "İstanbul",
+    "postalCode": "34758", "addressCountry": "TR"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"5","reviewCount":"147"}
+}
+</script>
+
+<title>Pelin Tatlı Art Beauty | Güzellik & Estetik Merkezi Metropol İstanbul Ataşehir</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<style>
+:root {
+  --ivory: #fdf9f5;
+  --cream: #f7f0e8;
+  --blush: #f0ddd6;
+  --rose: #c4857a;
+  --rose-dark: #a8685d;
+  --rose-light: #e8b4ad;
+  --taupe: #9a8880;
+  --charcoal: #2a2220;
+  --mid: #6b5c58;
+  --warm-white: #fefcfa;
+  --whatsapp: #25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{overflow-x:hidden;}
+body{
+  background:var(--ivory);
+  color:var(--charcoal);
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+/* PRELOADER */
+#preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--charcoal);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+}
+.pl-mark{
+  width:72px;height:72px;
+  border:1px solid rgba(196,133,122,0.4);
+  border-radius:50%;
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.pl-mark::before{
+  content:'';position:absolute;inset:-8px;
+  border:1px solid rgba(196,133,122,0.15);border-radius:50%;
+  animation:spin 3s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.pl-initial{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-style:italic;color:var(--rose);
+}
+.pl-name{
+  font-size:11px;letter-spacing:0.5em;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);font-weight:200;
+}
+.pl-bar{
+  width:160px;height:1px;background:rgba(196,133,122,0.15);
+  position:relative;overflow:hidden;
+}
+.pl-fill{
+  position:absolute;left:0;top:0;height:100%;
+  background:var(--rose);width:0;
+}
+
+/* THREE CANVAS */
+#bg3d{
+  position:fixed;inset:0;z-index:0;
+  pointer-events:none;opacity:0;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:24px 7vw;
+  display:flex;align-items:center;justify-content:space-between;
+  opacity:0;
+  transition:background 0.5s;
+}
+.nav-logo-wrap{display:flex;flex-direction:column;align-items:flex-start;}
+.nav-logo-main{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:400;letter-spacing:0.08em;
+  color:var(--charcoal);line-height:1;
+}
+.nav-logo-sub{
+  font-size:8px;letter-spacing:0.45em;text-transform:uppercase;
+  color:var(--rose);margin-top:3px;
+}
+.nav-menu{display:flex;gap:36px;list-style:none;}
+.nav-menu a{
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--mid);text-decoration:none;
+  transition:color 0.3s;
+}
+.nav-menu a:hover{color:var(--rose);}
+.nav-btn{
+  font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+  background:var(--rose);color:#fff;
+  border:none;padding:12px 28px;cursor:pointer;
+  transition:background 0.3s;text-decoration:none;
+  display:inline-block;
+}
+.nav-btn:hover{background:var(--rose-dark);}
+
+/* HERO */
+#hero{
+  position:relative;z-index:10;
+  height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 8vw 0 7vw;
+}
+.hero-tag{
+  font-size:9px;letter-spacing:0.55em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:28px;opacity:0;
+  display:flex;align-items:center;gap:16px;
+}
+.hero-tag::before{content:'';width:32px;height:1px;background:var(--rose);}
+h1.hero-heading{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,5.5vw,78px);
+  font-weight:300;line-height:1.05;
+  margin-bottom:28px;
+}
+.hero-heading .line{overflow:hidden;display:block;}
+.hero-heading .inner{display:block;transform:translateY(100%);}
+.hero-heading em{font-style:italic;color:var(--rose);}
+.hero-body{
+  font-size:14px;line-height:2;color:var(--mid);
+  max-width:420px;margin-bottom:48px;opacity:0;
+}
+.hero-actions{display:flex;gap:16px;align-items:center;opacity:0;}
+.btn-rose{
+  display:inline-block;
+  font-size:10px;letter-spacing:0.3em;text-transform:uppercase;
+  background:var(--rose);color:#fff;
+  padding:16px 36px;text-decoration:none;
+  transition:all 0.4s;
+}
+.btn-rose:hover{background:var(--rose-dark);transform:translateY(-2px);}
+.btn-text{
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--rose);text-decoration:none;
+  border-bottom:1px solid rgba(196,133,122,0.4);padding-bottom:2px;
+  transition:border-color 0.3s;
+}
+.btn-text:hover{border-color:var(--rose);}
+.btn-whatsapp{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  background:var(--whatsapp);color:#0a2d16;
+  padding:16px 32px;text-decoration:none;font-weight:500;
+  transition:all 0.35s;border:1px solid var(--whatsapp);
+}
+.btn-whatsapp:hover{background:transparent;color:var(--whatsapp);transform:translateY(-2px);}
+.hero-actions,.cta-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.whatsapp-float{
+  position:fixed;right:24px;bottom:24px;z-index:1200;
+  width:62px;height:62px;border-radius:50%;
+  background:var(--whatsapp);color:#0a2d16;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:26px;font-weight:700;
+  box-shadow:0 18px 44px rgba(37,211,102,0.32);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.whatsapp-float:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 24px 54px rgba(37,211,102,0.38);}
+.mobile-contact-bar{
+  display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:1300;
+  grid-template-columns:1fr 1fr;gap:10px;
+}
+.mobile-contact-bar a{
+  padding:14px 12px;text-align:center;text-decoration:none;
+  font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+}
+.mobile-contact-bar a:first-child{background:var(--warm-white);color:var(--charcoal);box-shadow:0 12px 28px rgba(42,34,32,.12);}
+.mobile-contact-bar a:last-child{background:var(--whatsapp);color:#0a2d16;box-shadow:0 12px 28px rgba(37,211,102,.22);}
+.hero-right{
+  position:relative;overflow:hidden;
+}
+.hero-right-img{
+  width:100%;height:100%;object-fit:cover;
+  transform:scale(1.15);
+  transform-origin:center center;
+}
+.hero-right-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--ivory) 0%,transparent 30%);
+}
+.hero-scroll{
+  position:absolute;bottom:40px;left:7vw;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  font-size:8px;letter-spacing:0.4em;text-transform:uppercase;color:var(--taupe);
+  opacity:0;writing-mode:vertical-lr;
+}
+.scroll-dot{
+  width:4px;height:4px;border-radius:50%;background:var(--rose);
+  animation:bounce 2s infinite;
+}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+/* MARQUEE */
+.marquee-wrap{
+  background:var(--rose);
+  padding:18px 0;overflow:hidden;
+  position:relative;z-index:10;
+}
+.marquee-track{
+  display:flex;gap:60px;white-space:nowrap;
+  animation:marquee 20s linear infinite;
+}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.marquee-item{
+  font-size:10px;letter-spacing:0.4em;text-transform:uppercase;
+  color:rgba(255,255,255,0.85);
+}
+.marquee-item span{color:rgba(255,255,255,0.45);margin:0 24px;}
+
+/* ABOUT */
+#about{
+  padding:140px 7vw;
+  display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;
+}
+.about-imgs{
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;
+  gap:16px;
+}
+.about-img-main{
+  grid-column:span 2;height:340px;overflow:hidden;
+}
+.about-img-main img,.about-img-small img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.about-img-main:hover img,.about-img-small:hover img{transform:scale(1.05);}
+.about-img-small{height:180px;overflow:hidden;}
+.about-badge{
+  background:var(--rose);
+  height:180px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:24px;
+}
+.about-badge-num{
+  font-family:'Playfair Display',serif;
+  font-size:52px;font-weight:300;color:#fff;line-height:1;
+}
+.about-badge-text{
+  font-size:9px;letter-spacing:0.35em;text-transform:uppercase;
+  color:rgba(255,255,255,0.75);margin-top:8px;
+}
+.section-kicker{
+  font-size:9px;letter-spacing:0.5em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:20px;
+  display:flex;align-items:center;gap:16px;
+}
+.section-kicker::before{content:'';flex:0 0 28px;height:1px;background:var(--rose);}
+h2.section-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,3.5vw,50px);font-weight:300;
+  line-height:1.2;margin-bottom:28px;
+}
+h2.section-h em{font-style:italic;color:var(--rose);}
+.section-body{
+  font-size:14px;line-height:2;color:var(--mid);margin-bottom:20px;
+}
+.feature-list{
+  list-style:none;margin:28px 0 40px;
+}
+.feature-list li{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:14px 0;border-bottom:1px solid rgba(196,133,122,0.15);
+  font-size:13px;color:var(--mid);
+}
+.feature-list li::before{
+  content:'✦';color:var(--rose);flex-shrink:0;margin-top:1px;
+}
+
+/* SERVICES */
+#services{
+  padding:120px 7vw;
+  background:var(--cream);
+}
+.services-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:70px;
+}
+.srv-list{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+}
+.srv-card{
+  background:var(--warm-white);
+  display:grid;grid-template-columns:200px 1fr;
+  overflow:hidden;
+  transition:box-shadow 0.4s;
+  border:1px solid rgba(196,133,122,0.1);
+}
+.srv-card:hover{box-shadow:0 20px 60px rgba(196,133,122,0.12);}
+.srv-card-img{height:220px;overflow:hidden;}
+.srv-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s;}
+.srv-card:hover .srv-card-img img{transform:scale(1.08);}
+.srv-card-body{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;}
+.srv-num{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:13px;color:var(--rose);margin-bottom:12px;
+}
+.srv-name{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:400;margin-bottom:14px;line-height:1.2;
+}
+.srv-desc{font-size:12px;line-height:1.9;color:var(--mid);}
+.srv-link{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:20px;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--rose);text-decoration:none;
+  transition:gap 0.3s;
+}
+.srv-link:hover{gap:16px;}
+.srv-whatsapp{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:12px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:#128C3A;text-decoration:none;
+}
+.srv-whatsapp::after{content:'↗';}
+
+/* PROCESS */
+#process{
+  padding:120px 7vw;
+  background:var(--charcoal);
+  color:var(--ivory);
+}
+.process-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:48px;
+  margin-top:70px;
+}
+.process-step{padding-top:36px;border-top:1px solid rgba(240,221,214,0.2);}
+.process-step-num{
+  font-family:'Playfair Display',serif;
+  font-size:52px;font-weight:300;font-style:italic;
+  color:rgba(196,133,122,0.3);line-height:1;margin-bottom:20px;
+}
+.process-step-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:300;margin-bottom:16px;
+}
+.process-step-desc{font-size:12px;line-height:2;color:rgba(255,255,255,0.45);}
+
+/* GALLERY */
+#gallery{padding:120px 7vw;}
+.gallery-masonry{
+  columns:3;column-gap:16px;margin-top:60px;
+}
+.gal-item{
+  break-inside:avoid;margin-bottom:16px;
+  overflow:hidden;position:relative;
+}
+.gal-item img{
+  width:100%;display:block;
+  transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94),filter 0.4s;
+  filter:saturate(0.85);
+}
+.gal-item:hover img{transform:scale(1.04);filter:saturate(1.1);}
+.gal-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(42,34,32,0.7),transparent);
+  padding:24px 20px 16px;
+  transform:translateY(100%);transition:transform 0.4s;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#fff;
+}
+.gal-item:hover .gal-cap{transform:translateY(0);}
+
+/* REVIEWS */
+#reviews{
+  padding:120px 7vw;
+  background:var(--blush);
+}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  margin-top:60px;
+}
+.review-card{
+  background:var(--warm-white);padding:40px 32px;
+  border-bottom:3px solid var(--rose);
+}
+.review-stars{color:var(--rose);font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+.review-text{
+  font-family:'Playfair Display',serif;
+  font-size:15px;font-style:italic;font-weight:300;
+  line-height:1.8;color:var(--charcoal);margin-bottom:24px;
+}
+.review-author{
+  font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--taupe);
+}
+
+/* LOCATION */
+#location{
+  padding:120px 7vw;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.loc-detail{margin-top:40px;}
+.loc-row{
+  display:flex;justify-content:space-between;
+  padding:18px 0;
+  border-bottom:1px solid rgba(196,133,122,0.15);
+  font-size:13px;
+}
+.loc-row .lbl{color:var(--taupe);letter-spacing:0.05em;}
+.loc-row .val{color:var(--charcoal);font-weight:400;}
+.loc-row .closed{color:rgba(160,120,115,0.5);font-style:italic;}
+.map-box{
+  height:520px;overflow:hidden;
+  border:1px solid rgba(196,133,122,0.15);
+}
+.map-box iframe{width:100%;height:100%;border:0;filter:saturate(0.6);}
+
+/* CTA */
+#cta{
+  position:relative;overflow:hidden;
+  padding:160px 7vw;text-align:center;
+}
+.cta-img{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1600&q=85') center/cover;
+  opacity:0.12;
+}
+.cta-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,5.5vw,80px);font-weight:300;line-height:1.1;
+  margin-bottom:24px;
+}
+.cta-h em{font-style:italic;color:var(--rose);}
+.cta-p{font-size:13px;letter-spacing:0.1em;color:var(--mid);margin-bottom:48px;}
+
+/* FOOTER */
+footer{
+  background:var(--charcoal);
+  color:rgba(255,255,255,0.5);
+  padding:80px 7vw 40px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;
+  padding-bottom:60px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+  margin-bottom:36px;
+}
+.footer-brand{
+  font-family:'Playfair Display',serif;
+  font-size:26px;font-weight:300;color:var(--ivory);
+  margin-bottom:16px;letter-spacing:0.05em;
+}
+.footer-tagline{
+  font-size:9px;letter-spacing:0.4em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:20px;
+}
+.footer-about{font-size:12px;line-height:2;max-width:300px;}
+.footer-h{
+  font-size:9px;letter-spacing:0.45em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:24px;
+}
+.footer-ul{list-style:none;}
+.footer-ul li{margin-bottom:12px;}
+.footer-ul a{
+  font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;
+  transition:color 0.3s;
+}
+.footer-ul a:hover{color:var(--rose);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:10px;letter-spacing:0.05em;
+}
+.footer-credit a{color:var(--rose);text-decoration:none;}
+.footer-credit a:hover{text-decoration:underline;}
+
+.reveal{opacity:0;transform:translateY(40px);}
+.reveal-l{opacity:0;transform:translateX(-40px);}
+.reveal-r{opacity:0;transform:translateX(40px);}
+.reveal-scale{opacity:0;transform:scale(0.95);}
+
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  #about{grid-template-columns:1fr;}
+  .about-imgs{order:-1;}
+  .srv-list{grid-template-columns:1fr;}
+  .srv-card{grid-template-columns:1fr;}
+  .srv-card-img{height:200px;}
+  .process-steps{grid-template-columns:1fr 1fr;}
+  .gallery-masonry{columns:2;}
+  .reviews-grid{grid-template-columns:1fr;}
+  #location{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  nav{padding:16px 24px;}
+  .nav-menu,.nav-btn{display:none;}
+  .hero-actions{align-items:stretch;}
+  .hero-actions a,.cta-actions a{width:100%;text-align:center;}
+  .mobile-contact-bar{display:grid;}
+  .whatsapp-float{display:none;}
+  body{padding-bottom:76px;}
+}
+
+/* PREMIUM POLISH — buttons, cards, CTA */
+:root{
+  --premium-shadow: 0 22px 54px rgba(164, 94, 84, .22);
+  --premium-shadow-soft: 0 18px 46px rgba(42, 34, 32, .10);
+}
+
+.nav-btn,
+.btn-rose,
+.btn-whatsapp,
+.btn-text,
+.srv-link{
+  position: relative;
+  isolation: isolate;
+}
+
+.nav-btn,
+.btn-rose{
+  border-radius: 999px;
+  border: 1px solid rgba(196,133,122,.42);
+  background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+  color: #fff;
+  box-shadow: var(--premium-shadow);
+  overflow: hidden;
+}
+
+.nav-btn::before,
+.btn-rose::before,
+.btn-whatsapp::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.34) 42%, transparent 72%);
+  transform: translateX(-120%);
+  transition: transform .65s cubic-bezier(.22,.61,.36,1);
+}
+
+.nav-btn:hover::before,
+.btn-rose:hover::before,
+.btn-whatsapp:hover::before{
+  transform: translateX(120%);
+}
+
+.nav-btn:hover,
+.btn-rose:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 28px 70px rgba(164, 94, 84, .28);
+}
+
+.btn-whatsapp{
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25D366, #17b956);
+  color: #092b15;
+  box-shadow: 0 20px 48px rgba(37,211,102,.26);
+  overflow:hidden;
+}
+
+.btn-whatsapp:hover{
+  color:#092b15;
+  background: linear-gradient(135deg, #2be070, #18bd5b);
+  box-shadow: 0 26px 62px rgba(37,211,102,.34);
+}
+
+.btn-text{
+  border: 1px solid rgba(196,133,122,.28);
+  border-radius: 999px;
+  padding: 13px 22px;
+  background: rgba(255,255,255,.46);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(42,34,32,.05);
+}
+
+.btn-text:hover{
+  background: var(--charcoal);
+  color: var(--ivory);
+  border-color: var(--charcoal);
+}
+
+.hero-actions{
+  gap: 14px;
+}
+
+.hero-actions .btn-text{
+  padding: 15px 25px;
+}
+
+.srv-card{
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(42,34,32,.07);
+  background: rgba(254,252,250,.86);
+  backdrop-filter: blur(10px);
+}
+
+.srv-card:hover{
+  box-shadow: 0 30px 80px rgba(196,133,122,.18);
+  transform: translateY(-4px);
+}
+
+.srv-card-img{
+  position: relative;
+}
+
+.srv-card-img::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, transparent 48%, rgba(42,34,32,.24));
+  pointer-events:none;
+}
+
+.srv-card-body{
+  position: relative;
+}
+
+.srv-num{
+  display:inline-flex;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background: rgba(196,133,122,.10);
+  border: 1px solid rgba(196,133,122,.18);
+}
+
+.srv-name{
+  letter-spacing: -.015em;
+}
+
+.srv-link{
+  width: fit-content;
+  border: 1px solid rgba(196,133,122,.22);
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,.62), rgba(240,221,214,.42));
+  box-shadow: 0 12px 28px rgba(196,133,122,.08);
+}
+
+.srv-link:hover{
+  background: var(--rose);
+  color:#fff;
+  border-color: var(--rose);
+  gap: 10px;
+}
+
+#cta{
+  background: linear-gradient(135deg, rgba(253,249,245,.94), rgba(247,240,232,.88));
+}
+
+#cta::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(760px, 90vw);
+  height:min(760px, 90vw);
+  transform:translate(-50%,-50%);
+  background: radial-gradient(circle, rgba(196,133,122,.16), transparent 62%);
+  pointer-events:none;
+}
+
+#cta > *{
+  position: relative;
+  z-index: 2;
+}
+
+.cta-actions{
+  justify-content:center;
+}
+
+.whatsapp-float{
+  border: 1px solid rgba(255,255,255,.45);
+}
+
+.whatsapp-float::after{
+  content:'';
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+  border:1px solid rgba(37,211,102,.22);
+  animation: waPulse 1.8s ease-out infinite;
+}
+
+@keyframes waPulse{
+  0%{transform:scale(.86);opacity:.85}
+  100%{transform:scale(1.24);opacity:0}
+}
+
+.mobile-contact-bar{
+  backdrop-filter: blur(14px);
+}
+
+.mobile-contact-bar a{
+  border-radius: 18px;
+}
+
+@media(max-width:900px){
+  .btn-rose,
+  .btn-whatsapp,
+  .btn-text{
+    justify-content:center;
+  }
+  .srv-card{
+    border-radius: 24px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pl-mark">
+    <div class="pl-initial">P</div>
+  </div>
+  <div class="pl-name">Pelin Tatlı Art Beauty</div>
+  <div class="pl-bar"><div class="pl-fill" id="plFill"></div></div>
+</div>
+
+<!-- THREE.JS CANVAS -->
+<canvas id="bg3d"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo-wrap">
+    <div class="nav-logo-main">Pelin Tatlı</div>
+    <div class="nav-logo-sub">Art Beauty · Ataşehir</div>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="#about">Hakkımızda</a></li>
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#location">İletişim</a></li>
+  </ul>
+  <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="nav-btn">WhatsApp’tan Randevu</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag" id="heroTag">Premium Güzellik Merkezi</div>
+    <h1 class="hero-heading">
+      <span class="line"><span class="inner">Güzelliği</span></span>
+      <span class="line"><span class="inner"><em>Sanata</em></span></span>
+      <span class="line"><span class="inner">Çeviriyoruz</span></span>
+    </h1>
+    <p class="hero-body" id="heroBody">Metropol İstanbul’daki stüdyomuzda saç, tırnak, makyaj, kaş, ağda ve cilt bakımı hizmetlerini randevulu, özenli ve kişiye özel bir yaklaşımla sunuyoruz.</p>
+    <div class="hero-actions" id="heroActions">
+      <a href="#services" class="btn-rose">Hizmetleri İncele</a>
+      <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-whatsapp">WhatsApp’tan Randevu</a>
+      <a href="#about" class="btn-text">Salonu Tanı</a>
+    </div>
+    <div class="hero-scroll" id="heroScroll">
+      <div class="scroll-dot"></div>
+      <span>Keşfet</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-right-img" id="heroImg" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1100&q=85" alt="Pelin Tatlı Art Beauty - premium güzellik salonu Ataşehir İstanbul">
+    <div class="hero-right-overlay"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Tırnak Bakımı<span>·</span></span>
+    <span class="marquee-item">Cilt Bakımı<span>·</span></span>
+    <span class="marquee-item">Bakım Ürünleri<span>·</span></span>
+    <span class="marquee-item">HydraFacial<span>·</span></span>
+    <span class="marquee-item">Microblading<span>·</span></span>
+    <span class="marquee-item">Saç Bakımı<span>·</span></span>
+    <span class="marquee-item">Mezoterapi<span>·</span></span>
+    <span class="marquee-item">Tırnak Bakımı<span>·</span></span>
+    <span class="marquee-item">Cilt Bakımı<span>·</span></span>
+    <span class="marquee-item">Bakım Ürünleri<span>·</span></span>
+    <span class="marquee-item">HydraFacial<span>·</span></span>
+    <span class="marquee-item">Microblading<span>·</span></span>
+    <span class="marquee-item">Saç Bakımı<span>·</span></span>
+    <span class="marquee-item">Mezoterapi<span>·</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-imgs">
+    <div class="about-img-main reveal-scale">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85" alt="Pelin Tatlı Art Beauty - özel cilt bakımı seans" loading="lazy">
+    </div>
+    <div class="about-img-small reveal-scale" style="transition-delay:0.1s">
+      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=85" alt="Güzellik salonu İstanbul - makyaj uygulaması" loading="lazy">
+    </div>
+    <div class="about-badge reveal-scale" style="transition-delay:0.2s">
+      <div class="about-badge-num">10+</div>
+      <div class="about-badge-text">Yıllık<br>Uzmanlık</div>
+    </div>
+  </div>
+  <div>
+    <p class="section-kicker reveal">Salonu Tanı</p>
+    <h2 class="section-h reveal">Her Kadın <em>Güzel</em><br>Hissedebilir</h2>
+    <p class="section-body reveal">Pelin Tatlı Art Beauty, günlük bakım ihtiyaçlarından özel gün hazırlıklarına kadar geniş bir hizmet yelpazesi sunar. Ataşehir Metropol İstanbul’daki stüdyo atmosferinde fön, manikür, pedikür, protez tırnak, kaş uygulamaları, ağda, makyaj ve cilt bakımı hizmetleri randevulu ve özenli bir akışla planlanır.</p>
+    <p class="section-body reveal">Her misafirin bakım ihtiyacı farklıdır. Bu yüzden hizmet seçimi; günlük kullanım alışkanlığı, cilt yapısı, el-ayak bakım ihtiyacı, kaş formu ve özel gün beklentilerine göre sade şekilde netleştirilir.</p>
+    <ul class="feature-list">
+      <li class="reveal">Fön, makyaj ve özel gün hazırlıklarında özenli görünüm planlaması</li>
+      <li class="reveal">Manikür, pedikür ve protez tırnak uygulamalarında temiz işçilik</li>
+      <li class="reveal">Kaş alma, kaş boyama ve kaş kontüründe yüz formuna uygun yaklaşım</li>
+      <li class="reveal">Cilt bakımı ve ağda hizmetlerinde hijyenik, randevulu hizmet akışı</li>
+    </ul>
+    <a href="#services" class="btn-rose reveal">Hizmetlerimiz</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <p class="section-kicker reveal">Hizmetlerimiz</p>
+      <h2 class="section-h reveal">Bakım ve <em>Güzellik</em> Hizmetleri</h2>
+    </div>
+    <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-text reveal" style="white-space:nowrap;">Randevu Oluştur →</a>
+  </div>
+
+  <div class="srv-list">
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=85" alt="Saç hizmetleri ve fön uygulaması Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">i.</p>
+        <h3 class="srv-name">Saç Hizmetleri</h3>
+        <p class="srv-desc">Günlük kullanım, davet ya da özel gün hazırlığı için saçın formuna ve istenen görünüme göre fön ve şekillendirme hizmetleri sunulur. Doğal, temiz ve bakımlı görünüm hedeflenir.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85" alt="Manikür pedikür protez tırnak hizmetleri Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">ii.</p>
+        <h3 class="srv-name">Tırnak Hizmetleri</h3>
+        <p class="srv-desc">Manikür, pedikür ve protez tırnak uygulamalarında temiz görünüm, düzgün form ve zarif sonuç ön planda tutulur. El ve ayak bakımında hijyenik, özenli ve randevulu hizmet verilir.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=85" alt="Makyaj hizmetleri Ataşehir Metropol İstanbul" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">iii.</p>
+        <h3 class="srv-name">Makyaj Hizmetleri</h3>
+        <p class="srv-desc">Günlük makyaj, davet makyajı ve özel gün hazırlıklarında yüz hatlarını öne çıkaran, abartıdan uzak ve kişinin tarzıyla uyumlu makyaj uygulamaları yapılır.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=700&q=85" alt="Kaş alma kaş boyama kaş kontürü Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">iv.</p>
+        <h3 class="srv-name">Kaş Hizmetleri</h3>
+        <p class="srv-desc">Kaş alma, kaş boyama ve kaş kontürü uygulamalarında yüz ifadesi, kaş formu ve doğal görünüm birlikte değerlendirilir. Amaç, bakışları daha net ve dengeli göstermektir.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=85" alt="Estetik ve güzellik hizmetleri Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">v.</p>
+        <h3 class="srv-name">Estetik ve Güzellik Hizmetleri</h3>
+        <p class="srv-desc">Kişisel bakım ihtiyacına göre planlanan güzellik uygulamalarında sade, doğal ve bakımlı görünüm hedeflenir. Hizmet öncesinde beklenti dinlenir ve en uygun uygulama önerilir.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=700&q=85" alt="Ağda hizmetleri bölgesel ağda Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">vi.</p>
+        <h3 class="srv-name">Ağda Hizmetleri</h3>
+        <p class="srv-desc">Dudak üstü ve bölgesel ağda hizmetlerinde hijyen, konfor ve hızlı randevu akışı önemsenir. Uygulama bölgesine göre süreç sade ve dikkatli şekilde ilerletilir.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=85" alt="Cilt bakımı hizmetleri Ataşehir Metropol İstanbul" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">vii.</p>
+        <h3 class="srv-name">Cilt Bakımı Hizmetleri</h3>
+        <p class="srv-desc">Cilt bakımında cilt tipi, nem dengesi, gözenek görünümü ve günlük bakım ihtiyacı dikkate alınır. Daha temiz, canlı ve bakımlı bir cilt görünümü için kişiye uygun bakım planlanır.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-card-img">
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85" alt="Sık kullanılan güzellik hizmetleri Ataşehir" loading="lazy">
+      </div>
+      <div class="srv-card-body">
+        <p class="srv-num">viii.</p>
+        <h3 class="srv-name">Sık Kullanılan Hizmetler</h3>
+        <p class="srv-desc">Fön, manikür, pedikür, kaş alma, dudak üstü, bölgesel ağda, kaş kontürü, protez tırnak ve kaş boyama gibi en çok tercih edilen işlemler için hızlı randevu oluşturabilirsiniz.</p>
+        <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="srv-link">Randevu Oluştur →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div>
+    <p class="section-kicker reveal" style="color:var(--rose);">Nasıl Çalışıyoruz</p>
+    <h2 class="section-h reveal" style="color:var(--ivory);">Dört Adımda <em>Bakım Süreci</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="process-step-num">01</div>
+      <h3 class="process-step-name" style="color:var(--ivory);">Ön Görüşme</h3>
+      <p class="process-step-desc">İhtiyaç ve beklentilerinizi konuşuyor, size en uygun hizmet planını birlikte netleştiriyoruz.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-step-num">02</div>
+      <h3 class="process-step-name" style="color:var(--ivory);">Hizmet Seçimi</h3>
+      <p class="process-step-desc">Yüz hatlarınıza ve cilt yapınıza özel bir uygulama tasarlanır. Saç, tırnak, makyaj, kaş, ağda ya da cilt bakımı ihtiyacına göre en uygun hizmet seçilir.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-step-num">03</div>
+      <h3 class="process-step-name" style="color:var(--ivory);">Titiz Uygulama</h3>
+      <p class="process-step-desc">Uygulama, hijyenik ve konforlu bir ortamda dikkatli bir şekilde gerçekleştirilir.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-step-num">04</div>
+      <h3 class="process-step-name" style="color:var(--ivory);">Bakım Önerisi</h3>
+      <p class="process-step-desc">Uygulama sonrasında bakımın daha uzun süre korunması için pratik öneriler paylaşılır.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div style="text-align:center">
+    <p class="section-kicker reveal" style="justify-content:center;">Çalışmalarımız</p>
+    <h2 class="section-h reveal" style="text-align:center;">Sanattan <em>İzler</em></h2>
+  </div>
+  <div class="gallery-masonry">
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=85" alt="Makyaj sanatı portfolyo İstanbul">
+      <div class="gal-cap">Makyaj</div>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=800&q=85" alt="Kaş kirpik uygulamaları Ataşehir">
+      <div class="gal-cap">Kaş Hizmetleri</div>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=85" alt="Kalıcı makyaj uygulama detayları">
+      <div class="gal-cap">Tırnak Bakımı</div>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=85" alt="Cilt bakımı sonuçları">
+      <div class="gal-cap">Cilt Bakımı</div>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85" alt="Güzellik salonu bakım ritüelleri">
+      <div class="gal-cap">Güzellik Bakımı</div>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=85" alt="Profesyonel bakım ürünleri">
+      <div class="gal-cap">Bakım Ürünleri</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div style="text-align:center">
+    <p class="section-kicker reveal" style="justify-content:center;">Müşteri Deneyimi</p>
+    <h2 class="section-h reveal" style="text-align:center;">Misafirlerimizin <em>Deneyimi</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Randevu süreci çok rahattı. İşlem öncesinde ne istediğim dikkatle dinlendi, sonuç doğal ve temiz oldu."</p>
+      <p class="review-author">— Misafir yorumu</p>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Manikür ve bakım hizmeti için tercih ettim. Ortam temiz, hizmet özenliydi. Tekrar randevu oluşturmayı düşünüyorum."</p>
+      <p class="review-author">— Misafir yorumu</p>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Metropol İstanbul konumu çok pratik. İş çıkışı uğrayabildiğim, randevu akışı düzenli bir salon."</p>
+      <p class="review-author">— Misafir yorumu</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div>
+    <p class="section-kicker reveal">Bizi Ziyaret Edin</p>
+    <h2 class="section-h reveal">Metropol İstanbul<br><em>Ataşehir</em></h2>
+    <p class="section-body reveal" style="margin-top:8px;">Atatürk Mah. Ertuğrul Gazi Sk<br>Daire:214, Metropol İstanbul No:2 B<br>C1 Blok, 34758 Ataşehir/İstanbul</p>
+    <div class="loc-detail">
+      <div class="loc-row reveal"><span class="lbl">Pazartesi – Cuma</span><span class="val">10:00 – 20:00</span></div>
+      <div class="loc-row reveal"><span class="lbl">Cumartesi</span><span class="val">10:00 – 20:00</span></div>
+      <div class="loc-row reveal"><span class="lbl">Pazar</span><span class="closed">Kapalı</span></div>
+    </div>
+    <div class="hero-actions reveal" style="margin-top:36px;"><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-whatsapp">WhatsApp’tan Randevu</a><a href="https://www.google.com/maps/search/?api=1&query=Pelin%20Tatlı%20Art%20Beauty%20Metropol%20İstanbul%20Ataşehir" target="_blank" rel="noopener" class="btn-text">Yol Tarifi Al</a></div>
+  </div>
+  <div class="map-box reveal-r">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.127!2d29.1239!3d40.9869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzEyLjgiTiAyOcKwMDcnMjYuMCJF!5e0!3m2!1str!2str!4v1234567890" loading="lazy" title="Pelin Tatlı Art Beauty harita konumu"></iframe>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-img"></div>
+  <p class="section-kicker reveal" style="justify-content:center;color:var(--rose);">Hazır mısınız?</p>
+  <h2 class="cta-h reveal">Bakım Randevunuz<br><em>Hazır</em></h2>
+  <p class="cta-p reveal">Fön, tırnak, makyaj, kaş, ağda ve cilt bakımı hizmetleri hakkında bilgi almak ya da randevu oluşturmak için WhatsApp üzerinden mesaj gönderebilirsiniz.</p>
+  <div class="cta-actions reveal"><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-whatsapp">WhatsApp’tan Randevu</a><a href="https://www.google.com/maps/search/?api=1&query=Pelin%20Tatlı%20Art%20Beauty%20Metropol%20İstanbul%20Ataşehir" target="_blank" rel="noopener" class="btn-text">Yol Tarifi Al</a></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Pelin Tatlı Art Beauty</div>
+      <div class="footer-tagline">Premium Güzellik · Metropol İstanbul</div>
+      <p class="footer-about">İstanbul Ataşehir’de, Metropol İstanbul’da saç, tırnak, makyaj, kaş, ağda ve cilt bakımı hizmetleri sunan güzellik stüdyosu.</p>
+    </div>
+    <div>
+      <p class="footer-h">Hizmetler</p>
+      <ul class="footer-ul">
+        <li><a href="#">Tırnak Bakımı</a></li>
+        <li><a href="#">Bakım Ürünleri</a></li>
+        <li><a href="#">HydraFacial</a></li>
+        <li><a href="#">Cilt Bakımı</a></li>
+        <li><a href="#">İpek Kirpik</a></li>
+        <li><a href="#">HydraFacial</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-h">Ulaşın</p>
+      <ul class="footer-ul">
+        <li><a href="#">C1 Blok, Daire:214</a></li>
+        <li><a href="#">Metropol İstanbul</a></li>
+        <li><a href="#">Ataşehir, İstanbul</a></li>
+        <li><a href="#">Pzt–Cmt: 10:00–20:00</a></li>
+        <li><a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan Randevu</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Pelin Tatlı Art Beauty</span>
+    <span class="footer-credit">Bu bir demo web sitesi tasarımıdır.</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp’tan Randevu">✆</a>
+<div class="mobile-contact-bar">
+  <a href="https://www.google.com/maps/search/?api=1&query=Pelin%20Tatlı%20Art%20Beauty%20Metropol%20İstanbul%20Ataşehir" target="_blank" rel="noopener">Yol Tarifi</a>
+  <a href="https://wa.me/?text=Merhaba%20Pelin%20Tatlı%20Art%20Beauty%20için%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// THREE.JS - Soft floating orbs
+const canvas = document.getElementById('bg3d');
+const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.5));
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+cam.position.z = 8;
+
+// Floating luxury star/petal shapes
+const orbGroup = new THREE.Group();
+const orbCount = window.innerWidth < 768 ? 9 : 18;
+
+function createStarShape(){
+  const shape = new THREE.Shape();
+  const points = 8;
+  for(let i=0; i<points*2; i++){
+    const radius = i % 2 === 0 ? 0.34 : 0.075;
+    const angle = (Math.PI / points) * i - Math.PI / 2;
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+    if(i === 0) shape.moveTo(x, y);
+    else shape.lineTo(x, y);
+  }
+  shape.closePath();
+  return shape;
+}
+
+const starShape = createStarShape();
+for(let i=0; i<orbCount; i++){
+  const geo = new THREE.ShapeGeometry(starShape);
+  const mat = new THREE.MeshBasicMaterial({
+    color: i%3===0 ? 0xc4857a : i%3===1 ? 0xe8b4ad : 0xf0ddd6,
+    transparent:true,
+    opacity: 0.035 + Math.random()*0.055,
+    side: THREE.DoubleSide,
+    depthWrite:false
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  const scale = 0.35 + Math.random()*0.85;
+  mesh.scale.set(scale, scale, scale);
+  mesh.position.set((Math.random()-0.5)*14,(Math.random()-0.5)*10,(Math.random()-0.5)*4);
+  mesh.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, Math.random()*Math.PI);
+  mesh.userData = {
+    speedX: (Math.random()-0.5)*0.004,
+    speedY: (Math.random()-0.5)*0.003,
+    speedZ: (Math.random()-0.5)*0.003,
+    offsetT: Math.random()*Math.PI*2
+  };
+  orbGroup.add(mesh);
+}
+scene.add(orbGroup);
+
+let mx=0, my=0;
+document.addEventListener('mousemove', e=>{ mx=(e.clientX/window.innerWidth-0.5); my=(e.clientY/window.innerHeight-0.5); });
+
+let t3=0;
+function anim3(){
+  requestAnimationFrame(anim3);
+  t3 += 0.008;
+  orbGroup.children.forEach((m, i)=>{
+    m.position.y += Math.sin(t3+m.userData.offsetT)*0.003;
+    m.rotation.x += m.userData.speedX;
+    m.rotation.y += m.userData.speedY;
+    m.rotation.z += m.userData.speedZ;
+  });
+  orbGroup.rotation.y += (mx*0.02 - orbGroup.rotation.y)*0.03;
+  orbGroup.rotation.x += (my*0.015 - orbGroup.rotation.x)*0.03;
+  renderer.render(scene, cam);
+}
+anim3();
+
+window.addEventListener('resize',()=>{
+  cam.aspect=window.innerWidth/window.innerHeight;
+  cam.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth,window.innerHeight);
+});
+
+// PRELOADER
+let pct=0;
+const fillEl=document.getElementById('plFill');
+const timer=setInterval(()=>{
+  pct+=Math.random()*15;
+  if(pct>=100){pct=100;clearInterval(timer);}
+  gsap.to(fillEl,{width:pct+'%',duration:0.3,ease:'power2.out'});
+},100);
+
+gsap.timeline({delay:0.2}).to('#preloader',{
+  opacity:0, duration:0.8, ease:'power2.inOut', delay:1.2,
+  onComplete:()=>{
+    document.getElementById('preloader').style.display='none';
+    document.body.style.overflow='auto';
+    gsap.to('#bg3d',{opacity:1,duration:1});
+    gsap.to('#nav',{opacity:1,y:0,duration:0.7,ease:'power3.out'});
+    // hero
+    setTimeout(()=>{
+      gsap.to('#heroTag',{opacity:1,x:0,duration:0.6,ease:'power2.out'});
+      gsap.from('.inner',{yPercent:100,duration:1,stagger:0.12,ease:'power3.out',delay:0.1});
+      gsap.to('#heroBody',{opacity:1,y:0,duration:0.8,ease:'power2.out',delay:0.5});
+      gsap.to('#heroActions',{opacity:1,y:0,duration:0.6,ease:'power2.out',delay:0.7});
+      gsap.to('#heroScroll',{opacity:0.6,duration:0.5,delay:1.2});
+      gsap.fromTo('#heroImg',{scale:1.2},{scale:1.0,duration:2.5,ease:'power2.out'});
+    },100);
+  }
+});
+
+// SCROLL
+ScrollTrigger.batch('.reveal',{
+  onEnter:b=>gsap.fromTo(b,{opacity:0,y:44},{opacity:1,y:0,duration:0.9,stagger:0.1,ease:'power3.out'}),
+  start:'top 86%'
+});
+ScrollTrigger.batch('.reveal-l',{
+  onEnter:b=>gsap.fromTo(b,{opacity:0,x:-40},{opacity:1,x:0,duration:0.9,ease:'power3.out'}),
+  start:'top 85%'
+});
+ScrollTrigger.batch('.reveal-r',{
+  onEnter:b=>gsap.fromTo(b,{opacity:0,x:40},{opacity:1,x:0,duration:0.9,ease:'power3.out'}),
+  start:'top 85%'
+});
+ScrollTrigger.batch('.reveal-scale',{
+  onEnter:b=>gsap.fromTo(b,{opacity:0,scale:0.93},{opacity:1,scale:1,duration:1,stagger:0.12,ease:'power3.out'}),
+  start:'top 85%'
+});
+
+// Parallax hero
+gsap.to('#heroImg',{yPercent:15,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+
+// Nav scroll style
+ScrollTrigger.create({
+  start:80,
+  onEnter:()=>{ document.getElementById('nav').style.cssText+='background:rgba(253,249,245,0.95);backdrop-filter:blur(16px);box-shadow:0 2px 32px rgba(196,133,122,0.08);'; },
+  onLeaveBack:()=>{ document.getElementById('nav').style.background='transparent'; document.getElementById('nav').style.backdropFilter='none'; document.getElementById('nav').style.boxShadow='none'; }
+});
+
+document.body.style.overflow='hidden';
+</script>
+</body>
+</html>
