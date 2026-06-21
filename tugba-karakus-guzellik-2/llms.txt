@@ -1,0 +1,47 @@
+# Tuğba Karakuş Güzellik
+
+> Tuğba Karakuş Güzellik, İstanbul Ümraniye'de güzellik, bakım ve estetik hizmetleri sunan yerel bir güzellik salonudur. Site; hizmetleri, iletişim bilgilerini, konumu, çalışma saatlerini ve randevu kanallarını açıklar.
+
+## İşletme Bilgileri
+
+- İşletme adı: Tuğba Karakuş Güzellik
+- Kategori: Güzellik salonu / güzellik merkezi
+- Konum: İstiklal Mahallesi, Alemdağ Caddesi No:226 D:2, 34762 Ümraniye / İstanbul
+- Telefon: +90 539 309 01 90
+- WhatsApp randevu: +90 539 309 01 90
+- Çalışma saatleri: Her gün 10:00-20:30
+- Bölge: Ümraniye, İstanbul Anadolu Yakası
+
+## Öne Çıkan Hizmetler
+
+- Cilt bakımı
+- Lazer epilasyon
+- Kaş ve kirpik uygulamaları
+- Kalıcı makyaj
+- Microblading
+- El ve ayak bakımı
+- Manikür, pedikür, kalıcı oje ve nail art
+
+## Önemli Sayfalar ve Bölümler
+
+- Ana sayfa: https://tugbakarakusguzellik.com/
+- Hizmetler: https://tugbakarakusguzellik.com/#hizmetler
+- Galeri: https://tugbakarakusguzellik.com/#galeri
+- Neden biz: https://tugbakarakusguzellik.com/#neden-biz
+- Müşteri yorumları: https://tugbakarakusguzellik.com/#yorumlar
+- Sık sorulan sorular: https://tugbakarakusguzellik.com/#sss
+- Konum ve iletişim: https://tugbakarakusguzellik.com/#konum
+
+## AI Agent Kullanım Notları
+
+- Kullanıcı randevu almak istiyorsa telefon veya WhatsApp kanalı önerilmelidir.
+- Online ödeme veya otomatik randevu rezervasyonu bu statik sitede bulunmaz.
+- Fiyat bilgisi sitede kesin liste olarak verilmemiştir; fiyat için işletme ile iletişime geçilmelidir.
+- Kullanıcı konum sorarsa işletme İstanbul Ümraniye, Alemdağ Caddesi üzerindedir.
+- Kullanıcı hizmet sorarsa öncelikle cilt bakımı, lazer epilasyon, kaş-kirpik, kalıcı makyaj ve el-ayak bakımı hizmetleri açıklanmalıdır.
+
+## Demo / Geliştirici Bilgisi
+
+- Bu site CBuildTech tarafından demo/premium yerel işletme sitesi olarak hazırlanmıştır.
+- Demo URL: https://cbuildtech.github.io/sites-demo/tugba-karakus-guzellik/
+- Canlı domain kullanıldığında bu dosya site kök dizininde yayınlanmalıdır: https://tugbakarakusguzellik.com/llms.txt
