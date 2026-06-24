@@ -1,0 +1,31 @@
+# Duas Güzellik Merkezi
+
+Duas Güzellik Merkezi, Ataşehir/İstanbul bölgesinde GÜZELLİK MERKEZİ hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Duas Güzellik Merkezi
+- Category: GÜZELLİK MERKEZİ
+- Location: Ataşehir, İstanbul
+- Address: Barbaros, Mimar Sinan Cd. No:163/A, 34750 Ataşehir/İstanbul 
+- Phone: 05333439891
+- Website: https://example.com/
+
+## Services
+
+- Profesyonel Hizmet
+- Müşteri Danışmanlığı
+- Randevu Sistemi
+- Yerinde Hizmet
+- Online İletişim
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
