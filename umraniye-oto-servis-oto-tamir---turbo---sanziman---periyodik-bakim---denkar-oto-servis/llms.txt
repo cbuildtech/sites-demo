@@ -1,0 +1,31 @@
+# Ümraniye Oto Servis | Oto Tamir - Turbo - Şanzıman - Periyodik Bakım - Denkar Oto Servis
+
+Ümraniye Oto Servis | Oto Tamir - Turbo - Şanzıman - Periyodik Bakım - Denkar Oto Servis, Ümraniye/İstanbul bölgesinde ümraniye oto servis hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Ümraniye Oto Servis | Oto Tamir - Turbo - Şanzıman - Periyodik Bakım - Denkar Oto Servis
+- Category: ümraniye oto servis
+- Location: Ümraniye, İstanbul
+- Address: Ihlamurkuyu, Taşkent Sk No:41A, 34771 Ümraniye/İstanbul 
+- Phone: 05385011129
+- Website: https://example.com/
+
+## Services
+
+- İç Dış Yıkama
+- Detaylı İç Temizlik
+- Motor Yıkama
+- Cilalama ve Pasta
+- Boya Koruma
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
