@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ümraniye Oto Servis | Güvenilir Tamir, Bakım ve Turbo Uzmanı</title>
+    <style>
+        :root {
+            --color-primary-dark: #1A1A1A; /* Koyu Gri / Neredeyse Siyah */
+            --color-primary-light: #F8F8F8; /* Hafif Gri Beyaz */
+            --color-secondary-blue: #2A63D9; /* Derin Mavi */
+            --color-accent-orange: #FF7F00; /* Canlı Turuncu */
+            --color-text-body: #4F4F4F; /* Koyu Gri Metin */
+            --color-text-light: #E0E0E0; /* Açık Gri Metin */
+            --color-border-subtle: #ECECEC; /* Çok Açık Gri Sınır */
+
+            --font-heading: 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            --spacing-xxl: 8rem;
+
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 16px;
+
+            --header-height: 70px;
+            --sticky-contact-height: 60px;
+
+            /* Z-index values */
+            --z-floating-cta: 1000;
+            --z-modal: 1010;
+            --z-overlay: 1005;
+            --z-header: 900;
+            --z-menu-mobile: 950;
+        }
+
+        /* prefers-reduced-motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-text-body);
+            background-color: var(--color-primary-light);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-primary-dark);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); }
+        h2 { font-size: clamp(2.2rem, 5.5vw, 4rem); }
+        h3 { font-size: clamp(1.6rem, 4vw, 2.8rem); }
+        h4 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
+        p { font-size: clamp(1rem, 2vw, 1.15rem); }
+
+        a {
+            color: var(--color-secondary-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-accent-orange);
+        }
+
+        button, .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-heading);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent-orange);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 127, 0, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: #e67300; /* slightly darker accent */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 127, 0, 0.45);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-secondary-blue);
+            color: white;
+            box-shadow: 0 5px 15px rgba(42, 99, 217, 0.35);
+        }
+
+        .btn-secondary:hover {
+            background-color: #2452b3; /* slightly darker blue */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(42, 99, 217, 0.45);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary-dark);
+            border: 2px solid var(--color-primary-dark);
+            padding: 0.7rem 2rem;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-primary-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        section {
+            padding: var(--spacing-xxl) 0;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--color-primary-light);
+        }
+
+        /* Scroll reveal */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-item.delay-1 { transition-delay: 0.1s; }
+        .reveal-item.delay-2 { transition-delay: 0.2s; }
+        .reveal-item.delay-3 { transition-delay: 0.3s; }
+        .reveal-item.delay-4 { transition-delay: 0.4s; }
+        .reveal-item.delay-5 { transition-delay: 0.5s; }
+        .reveal-item.delay-6 { transition-delay: 0.6s; }
+
+        /* Background Noise/Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.04;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJuIj4KICAgICAgICA8ZmVUdXJidWJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjciIG51bU9jdGF2ZXM9IjEiIHN0aXRjaFRpbGVzPSJzcGF0aWFjaERhaW4iLz4KICAgIDwvZmlsdGVyPgogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodGg9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0iLjIiLz4KPC9zdmc+');
+            background-size: 100px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-sm) 0;
+            z-index: var(--z-header);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header.sticky {
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-primary-dark);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--color-accent-orange);
+        }
+
+        /* Inferred Navigation Styles for consistency */
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: var(--spacing-md);
+        }
+        .main-nav a {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            padding: var(--spacing-xs) 0;
+            position: relative;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent-orange);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .menu-toggle { /* For mobile */
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--color-primary-dark);
+            padding: 0; /* Adjust padding */
+            margin-left: var(--spacing-md); /* Space from logo */
+            z-index: var(--z-menu-mobile);
+        }
+
+        /* Styles for the new "Why Choose Us" section */
+        .why-choose-us .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        .why-choose-us .card {
+            background-color: white;
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .why-choose-us .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        .why-choose-us .card .icon {
+            font-size: 3rem;
+            color: var(--color-accent-orange);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1; /* Ensure emoji icons are centered vertically */
+        }
+        .why-choose-us .card h4 {
+            color: var(--color-secondary-blue);
+            margin-bottom: var(--spacing-xs);
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem); /* Consistent with other h3/h4 usage */
+        }
+        .why-choose-us .card p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: var(--color-text-body);
+            flex-grow: 1; /* Ensures cards with different text lengths look consistent */
+        }
+
+        /* General styles for consistent headings and paragraphs */
+        .text-center {
+            text-align: center;
+        }
+        .lead-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            max-width: 900px;
+            margin: var(--spacing-md) auto;
+            color: var(--color-text-body);
+        }
+        .hero .lead-text { /* specific for hero section */
+            color: white;
+        }
+
+        /* Responsive adjustments for mobile menu */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 var(--spacing-md);
+            }
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(5px);
+                padding: var(--spacing-md) 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                border-top: 1px solid var(--color-border-subtle);
+            }
+            .main-nav.active {
+                display: flex;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                width: 100%;
+            }
+            .main-nav li {
+                width: 100%;
+            }
+            .main-nav a {
+                padding: var(--spacing-sm) var(--spacing-md);
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid var(--color-border-subtle);
+            }
+            .main-nav li:last-child a {
+                border-bottom: none;
+            }
+            .main-nav a::after {
+                height: 1px;
+                bottom: 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-actions {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+            .btn-secondary {
+                margin-left: 0 !important; /* Override inline style */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo reveal-item">Ümraniye Oto<span>Servis</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" class="reveal-item delay-1">Anasayfa</a></li>
+                    <li><a href="#about" class="reveal-item delay-2">Hakkımızda</a></li>
+                    <li><a href="#services" class="reveal-item delay-3">Hizmetler</a></li>
+                    <li><a href="#why-choose-us" class="reveal-item delay-4">Neden Biz?</a></li>
+                    <li><a href="#testimonials" class="reveal-item delay-5">Yorumlar</a></li>
+                    <li><a href="#contact" class="reveal-item delay-6">İletişim</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">&#9776;</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080/2A63D9/FFFFFF?text=Oto+Servis+Arka+Plan') no-repeat center center / cover; color: white; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-top: var(--header-height);">
+            <div class="container">
+                <h1 class="reveal-item delay-1">Aracınız Güvenli Ellerle Yola Çıksın</h1>
+                <p class="lead-text reveal-item delay-2" style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); max-width: 800px; margin: var(--spacing-md) auto;">Ümraniye Oto Servis olarak, aracınızın her türlü tamir, bakım ve turbo uzmanlık ihtiyaçlarını profesyonelce karşılıyoruz. Güvenliğiniz ve memnuniyetiniz bizim önceliğimizdir.</p>
+                <div class="hero-actions reveal-item delay-3">
+                    <a href="#services" class="btn btn-primary">Hizmetlerimizi Keşfedin</a>
+                    <a href="#contact" class="btn btn-secondary" style="margin-left: var(--spacing-md);">Randevu Alın</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="text-center reveal-item">Ümraniye Oto Servis Farkı</h2>
+                <p class="text-center lead-text reveal-item delay-1" style="max-width: 900px; margin: var(--spacing-md) auto;">
+                    Yılların tecrübesiyle Ümraniye ve çevresine hizmet veren Ümraniye Oto Servis, son teknoloji ekipmanları ve uzman kadrosuyla araçlarınıza en iyi bakımı sunar. Güvenilir çözümler ve müşteri odaklı hizmet anlayışımızla tanışın.
+                </p>
+                <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                    <div class="about-card reveal-item delay-2" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h3 style="color: var(--color-secondary-blue);">Uzman Kadro</h3>
+                        <p>Deneyimli teknisyenlerimiz, aracınızın sorunlarını hızlı ve doğru bir şekilde teşhis eder ve çözer.</p>
+                    </div>
+                    <div class="about-card reveal-item delay-3" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h3 style="color: var(--color-secondary-blue);">Modern Ekipman</h3>
+                        <p>En güncel teşhis ve tamir ekipmanlarıyla, aracınızın her parçasını titizlikle inceleriz.</p>
+                    </div>
+                    <div class="about-card reveal-item delay-4" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h3 style="color: var(--color-secondary-blue);">Müşteri Memnuniyeti</h3>
+                        <p>Hizmet kalitemiz ve şeffaf iletişimimizle müşteri memnuniyetini en üst düzeyde tutarız.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services" style="background-color: var(--color-primary-light);">
+            <div class="container">
+                <h2 class="text-center reveal-item">Hizmetlerimiz</h2>
+                <p class="text-center lead-text reveal-item delay-1" style="max-width: 800px; margin: var(--spacing-md) auto;">
+                    Aracınızın tüm ihtiyaçları için kapsamlı çözümler sunuyoruz. İşte başlıca hizmetlerimiz:
+                </p>
+                <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                    <div class="service-card reveal-item delay-2" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/FF7F00/FFFFFF?text=T" alt="Motor Bakımı" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Motor Bakımı ve Tamiri</h3>
+                        <p>Periyodik motor bakımı ve her türlü motor arızası onarım hizmetleri.</p>
+                    </div>
+                    <div class="service-card reveal-item delay-3" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/2A63D9/FFFFFF?text=F" alt="Fren Sistemleri" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Fren Sistemleri</h3>
+                        <p>Fren balata, disk değişimi ve sistem kontrolü ile güvenli sürüşler.</p>
+                    </div>
+                    <div class="service-card reveal-item delay-4" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/1A1A1A/FFFFFF?text=T" alt="Turbo Onarımı" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Turbo Bakım ve Onarım</h3>
+                        <p>Turbo sistemlerinin uzman tamiri ve performans optimizasyonu.</p>
+                    </div>
+                    <div class="service-card reveal-item delay-5" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/FF7F00/FFFFFF?text=A" alt="Lastik Hizmetleri" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Lastik Hizmetleri</h3>
+                        <p>Lastik değişimi, rot balans ayarı ve onarım hizmetleri.</p>
+                    </div>
+                    <div class="service-card reveal-item delay-6" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/2A63D9/FFFFFF?text=E" alt="Egzoz Sistemleri" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Egzoz Sistemleri</h3>
+                        <p>Egzoz tamiri, değişimi ve performans egzoz çözümleri.</p>
+                    </div>
+                    <div class="service-card reveal-item delay-7" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <img src="https://via.placeholder.com/80x80/1A1A1A/FFFFFF?text=G" alt="Genel Bakım" style="width: 80px; height: 80px; margin-bottom: var(--spacing-sm);">
+                        <h3>Genel Periyodik Bakım</h3>
+                        <p>Aracınızın uzun ömürlü olması için detaylı periyodik bakımlar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New section: Why Choose Us (Added to address "tasarla kardo bişeyler" in a compliant way) -->
+        <section id="why-choose-us" class="why-choose-us" style="background-color: var(--color-primary-light);">
+            <div class="container">
+                <h2 class="text-center reveal-item">Neden Bizi Tercih Etmelisiniz?</h2>
+                <p class="text-center lead-text reveal-item delay-1" style="max-width: 800px; margin: var(--spacing-md) auto;">
+                    Müşteri memnuniyetini ön planda tutan hizmet anlayışımızla, aracınıza hak ettiği değeri veriyoruz.
+                </p>
+                <div class="cards-grid">
+                    <div class="card reveal-item delay-2">
+                        <div class="icon">&#128736;</div> <!-- Wrench icon -->
+                        <h4>Uzman Kadro</h4>
+                        <p>Deneyimli ve sertifikalı teknisyenlerimizle aracınız emin ellerde.</p>
+                    </div>
+                    <div class="card reveal-item delay-3">
+                        <div class="icon">&#128295;</div> <!-- Hammer & Wrench icon -->
+                        <h4>Modern Ekipman</h4>
+                        <p>En yeni teknolojiye sahip cihazlarla hızlı ve doğru teşhis.</p>
+                    </div>
+                    <div class="card reveal-item delay-4">
+                        <div class="icon">&#128172;</div> <!-- Speech bubble icon -->
+                        <h4>Şeffaf İletişim</h4>
+                        <p>Her adımda bilgilendirme ve onayınız olmadan işlem yapmama garantisi.</p>
+                    </div>
+                    <div class="card reveal-item delay-5">
+                        <div class="icon">&#128170;</div> <!-- Flexed biceps icon -->
+                        <h4>Hızlı ve Etkili Çözümler</h4>
+                        <p>Zamanınızın değerli olduğunu biliyoruz, işlemlerimizi titizlikle tamamlarız.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="cta" class="cta" style="background: var(--color-secondary-blue); color: white; text-align: center;">
+            <div class="container">
+                <h2 class="reveal-item" style="color: white;">Hemen Randevu Alın!</h2>
+                <p class="lead-text reveal-item delay-1" style="max-width: 700px; margin: var(--spacing-md) auto; color: var(--color-text-light);">
+                    Aracınızın bakımı veya onarımı için güvenilir bir adres arıyorsanız, doğru yerdesiniz. Bizimle iletişime geçin ve uzman ekibimizden destek alın.
+                </p>
+                <a href="#contact" class="btn btn-primary reveal-item delay-2">İletişime Geç</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials" style="background-color: var(--color-primary-light);">
+            <div class="container">
+                <h2 class="text-center reveal-item">Müşterilerimiz Ne Diyor?</h2>
+                <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                    <div class="testimonial-card reveal-item delay-1" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <p style="font-style: italic; margin-bottom: var(--spacing-sm);">"Aracımın turbo tamiri için geldim, gerçekten çok profesyonel ve hızlı çalıştılar. Kesinlikle tavsiye ederim!"</p>
+                        <h4 style="color: var(--color-accent-orange);">- Ayşe Yılmaz</h4>
+                    </div>
+                    <div class="testimonial-card reveal-item delay-2" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <p style="font-style: italic; margin-bottom: var(--spacing-sm);">"Fren bakımı için geldim. Şeffaf bilgilendirme ve uygun fiyatlarıyla harika bir servis."</p>
+                        <h4 style="color: var(--color-accent-orange);">- Mehmet Demir</h4>
+                    </div>
+                    <div class="testimonial-card reveal-item delay-3" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <p style="font-style: italic; margin-bottom: var(--spacing-sm);">"Periyodik bakım için sürekli buraya geliyorum. Her zaman güvenilir ve kaliteli hizmet alıyorum."</p>
+                        <h4 style="color: var(--color-accent-orange);">- Zeynep Kaya</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="text-center reveal-item">Sıkça Sorulan Sorular</h2>
+                <div class="faq-list" style="margin-top: var(--spacing-xl);">
+                    <div class="faq-item reveal-item delay-1" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-md); margin-bottom: var(--spacing-sm); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <h3 class="faq-question" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            Hangi marka araçlara hizmet veriyorsunuz? <span style="font-size: 1.5rem;">+</span>
+                        </h3>
+                        <p class="faq-answer" style="display: none; margin-top: var(--spacing-sm); border-top: 1px solid var(--color-border-subtle); padding-top: var(--spacing-sm);">Tüm marka ve model araçlara profesyonel servis hizmeti sunmaktayız.</p>
+                    </div>
+                    <div class="faq-item reveal-item delay-2" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-md); margin-bottom: var(--spacing-sm); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <h3 class="faq-question" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            Yedek parça temini yapıyor musunuz? <span style="font-size: 1.5rem;">+</span>
+                        </h3>
+                        <p class="faq-answer" style="display: none; margin-top: var(--spacing-sm); border-top: 1px solid var(--color-border-subtle); padding-top: var(--spacing-sm);">Evet, orijinal ve eşdeğer yedek parçaların teminini ve montajını yapmaktayız.</p>
+                    </div>
+                    <div class="faq-item reveal-item delay-3" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-md); margin-bottom: var(--spacing-sm); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <h3 class="faq-question" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+                            Ödeme seçenekleriniz nelerdir? <span style="font-size: 1.5rem;">+</span>
+                        </h3>
+                        <p class="faq-answer" style="display: none; margin-top: var(--spacing-sm); border-top: 1px solid var(--color-border-subtle); padding-top: var(--spacing-sm);">Nakit, banka kartı ve tüm kredi kartlarıyla ödeme imkanı sunmaktayız.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" style="background-color: var(--color-secondary-blue); color: white;">
+            <div class="container">
+                <h2 class="text-center reveal-item" style="color: white;">Bize Ulaşın</h2>
+                <p class="text-center lead-text reveal-item delay-1" style="max-width: 800px; margin: var(--spacing-md) auto; color: var(--color-text-light);">
+                    Aracınızla ilgili her türlü soru, sorun veya randevu talebiniz için bizimle iletişime geçmekten çekinmeyin.
+                </p>
+                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                    <div class="contact-info reveal-item delay-2" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); color: var(--color-primary-dark);">
+                        <h3 style="color: var(--color-secondary-blue);">Adres</h3>
+                        <p>Atatürk Mahallesi, Cumhuriyet Caddesi No: 123, Ümraniye/İstanbul</p>
+                        <h3 style="color: var(--color-secondary-blue); margin-top: var(--spacing-md);">Telefon</h3>
+                        <p><a href="tel:+902161234567" style="color: var(--color-primary-dark); text-decoration: underline;">+90 (216) 123 45 67</a></p>
+                        <h3 style="color: var(--color-secondary-blue); margin-top: var(--spacing-md);">E-posta</h3>
+                        <p><a href="mailto:info@umraniyeotoservis.com" style="color: var(--color-primary-dark); text-decoration: underline;">info@umraniyeotoservis.com</a></p>
+                    </div>
+                    <div class="contact-form reveal-item delay-3" style="background-color: white; border-radius: var(--border-radius-md); padding: var(--spacing-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.08); color: var(--color-primary-dark);">
+                        <h3 style="color: var(--color-secondary-blue);">Mesaj Gönderin</h3>
+                        <form style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                            <input type="text" placeholder="Adınız Soyadınız" style="padding: var(--spacing-sm); border: 1px solid var(--color-border-subtle); border-radius: var(--border-radius-sm);">
+                            <input type="email" placeholder="E-posta Adresiniz" style="padding: var(--spacing-sm); border: 1px solid var(--color-border-subtle); border-radius: var(--border-radius-sm);">
+                            <input type="tel" placeholder="Telefon Numaranız" style="padding: var(--spacing-sm); border: 1px solid var(--color-border-subtle); border-radius: var(--border-radius-sm);">
+                            <textarea placeholder="Mesajınız" rows="5" style="padding: var(--spacing-sm); border: 1px solid var(--color-border-subtle); border-radius: var(--border-radius-sm); resize: vertical;"></textarea>
+                            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-embed reveal-item delay-4" style="margin-top: var(--spacing-xl); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.682800183141!2d29.116674315392283!3d40.99220997930107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac253d2d2a45d%3A0xc3f1f3e7a3f4e2f!2s%C3%9Csk%C3%BCdar%2FOtomat%C4%B0k%20Kap%C4%B1%20Servisi!5e0!3m2!1str!2str!4v1678912345678!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="background-color: var(--color-primary-dark); color: var(--color-text-light); padding: var(--spacing-xl) 0;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+            <div class="footer-about reveal-item">
+                <a href="#" class="logo" style="color: white; margin-bottom: var(--spacing-sm);">Ümraniye Oto<span>Servis</span></a>
+                <p>Aracınızın tüm ihtiyaçları için güvenilir ve profesyonel çözümler sunuyoruz.</p>
+                <div class="social-links" style="margin-top: var(--spacing-md); display: flex; gap: var(--spacing-sm);">
+                    <a href="#" style="color: var(--color-text-light); font-size: 1.5rem;"><img src="https://via.placeholder.com/24/FFFFFF?text=F" alt="Facebook" style="width:24px; height:24px;"></a>
+                    <a href="#" style="color: var(--color-text-light); font-size: 1.5rem;"><img src="https://via.placeholder.com/24/FFFFFF?text=I" alt="Instagram" style="width:24px; height:24px;"></a>
+                    <a href="#" style="color: var(--color-text-light); font-size: 1.5rem;"><img src="https://via.placeholder.com/24/FFFFFF?text=X" alt="X (Twitter)" style="width:24px; height:24px;"></a>
+                </div>
+            </div>
+            <div class="footer-links reveal-item delay-1">
+                <h4 style="color: white;">Hızlı Bağlantılar</h4>
+                <ul style="list-style: none; margin-top: var(--spacing-sm);">
+                    <li><a href="#hero" style="color: var(--color-text-light); padding: var(--spacing-xs) 0; display: block;">Anasayfa</a></li>
+                    <li><a href="#about" style="color: var(--color-text-light); padding: var(--spacing-xs) 0; display: block;">Hakkımızda</a></li>
+                    <li><a href="#services" style="color: var(--color-text-light); padding: var(--spacing-xs) 0; display: block;">Hizmetler</a></li>
+                    <li><a href="#why-choose-us" style="color: var(--color-text-light); padding: var(--spacing-xs) 0; display: block;">Neden Biz?</a></li>
+                    <li><a href="#contact" style="color: var(--color-text-light); padding: var(--spacing-xs) 0; display: block;">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact reveal-item delay-2">
+                <h4 style="color: white;">İletişim</h4>
+                <p style="margin-top: var(--spacing-sm);">Adres: Atatürk Mahallesi, Cumhuriyet Caddesi No: 123, Ümraniye/İstanbul</p>
+                <p>Telefon: <a href="tel:+902161234567" style="color: var(--color-text-light);">+90 (216) 123 45 67</a></p>
+                <p>E-posta: <a href="mailto:info@umraniyeotoservis.com" style="color: var(--color-text-light);">info@umraniyeotoservis.com</a></p>
+            </div>
+        </div>
+        <div class="copyright text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--spacing-md); margin-top: var(--spacing-xl);">
+            <p>&copy; 2023 Ümraniye Oto Servis. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp button (example of a sticky contact) -->
+    <a href="https://wa.me/905321234567" class="floating-whatsapp" target="_blank" aria-label="WhatsApp üzerinden iletişime geçin" style="position: fixed; bottom: var(--spacing-md); right: var(--spacing-md); background-color: #25D366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: var(--z-floating-cta);">
+        &#9990; <!-- Generic phone icon, WhatsApp icon would be an SVG/image -->
+    </a>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offset = document.querySelector('.header').offsetHeight; // Account for fixed header
+                    window.scrollTo({
+                        top: targetElement.offsetTop - offset,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header sticky effect
+        const header = document.querySelector('.header');
+        const heroSection = document.getElementById('hero');
+        // Initial header height might be tricky if hero is not full height at start
+        // Using a predefined header height from CSS variables is safer
+        const headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--header-height').replace('px', '') || 70;
+
+
+        // Function to check if header should be sticky
+        function checkStickyHeader() {
+            if (window.scrollY > (heroSection ? heroSection.offsetHeight - headerHeight : 100)) { // Make sticky after scrolling past hero or after a default scroll
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        }
+
+        window.addEventListener('scroll', checkStickyHeader);
+        window.addEventListener('resize', checkStickyHeader); // Re-check on resize
+
+        // Initial check on page load
+        checkStickyHeader();
+
+
+        // Scroll reveal animation
+        const revealItems = document.querySelectorAll('.reveal-item');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        revealItems.forEach(item => {
+            observer.observe(item);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('span');
+
+                // Close other open FAQs
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer && otherAnswer.style.display === 'block') {
+                        otherAnswer.style.display = 'none';
+                        otherAnswer.previousElementSibling.querySelector('span').innerHTML = '+';
+                    }
+                });
+
+                // Toggle current FAQ
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.innerHTML = '+';
+                } else {
+                    answer.style.display = 'block';
+                    icon.innerHTML = '-';
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.innerHTML = mainNav.classList.contains('active') ? '&times;' : '&#9776;'; // Change icon
+        });
+
+        // Close menu when a nav link is clicked (on mobile)
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) { // Only close on mobile
+                    mainNav.classList.remove('active');
+                    menuToggle.innerHTML = '&#9776;';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
