@@ -1,0 +1,31 @@
+# Lorovas Güzellik
+
+Lorovas Güzellik, Avcılar/İstanbul bölgesinde GÜZELLİK MERKEZİ hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Lorovas Güzellik
+- Category: GÜZELLİK MERKEZİ
+- Location: Avcılar, İstanbul
+- Address: Merkez, Marmara Cd. erenler 2 iş merkezi no 24 office76, 34310 Avcılar/İstanbul 
+- Phone: 05059762213
+- Website: https://example.com/
+
+## Services
+
+- Profesyonel Hizmet
+- Müşteri Danışmanlığı
+- Randevu Sistemi
+- Yerinde Hizmet
+- Online İletişim
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
