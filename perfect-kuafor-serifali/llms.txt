@@ -1,0 +1,31 @@
+# Perfect Kuaför şerifali
+
+Perfect Kuaför şerifali, Ümraniye/İstanbul bölgesinde Kuaför hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Perfect Kuaför şerifali
+- Category: Kuaför
+- Location: Ümraniye, İstanbul
+- Address: Tatlısu, Elalmış Cd. No36/a, 34775 Ümraniye/İstanbul 
+- Phone: 02163134335
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
