@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatlıcım Pastanesi — Butik Lezzetler</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES & BASE STYLES
+       ========================================================================== */
+    :root {
+      --bg-cream: #FDFBF7;
+      --bg-cream-soft: #F7F3EC;
+      --burgundy: #58121A;
+      --burgundy-hover: #3F0A11;
+      --chocolate: #231B18;
+      --chocolate-light: #524743;
+      --pastel-pink: #EBDAD6;
+      --border-color: rgba(35, 27, 24, 0.12);
+      
+      --font-serif: 'Bodoni Moda', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      
+      --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--chocolate);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Typography Helpers */
+    .serif {
+      font-family: var(--font-serif);
+      font-weight: 500;
+    }
+
+    /* Reveal Animation Class */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       2. HEADER & NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: padding 0.4s var(--transition-smooth), background-color 0.4s var(--transition-smooth), border-color 0.4s var(--transition-smooth);
+      border-bottom: 1px solid transparent;
+    }
+
+    .navbar.scrolled {
+      padding: 1.2rem 4rem;
+      background-color: rgba(253, 251, 247, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--burgundy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--chocolate);
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: var(--burgundy);
+      transition: width 0.3s var(--transition-smooth);
+    }
+
+    .nav-links a:hover {
+      color: var(--burgundy);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--burgundy);
+      color: var(--bg-cream);
+      padding: 0.9rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--burgundy);
+      transition: all 0.4s var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--burgundy);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION (EDITORIAL STYLE)
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 10rem 4rem 4rem 4rem;
+      display: grid;
+      grid-template-columns: 12fr;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3.5rem, 7vw, 6.5rem);
+      line-height: 0.95;
+      color: var(--burgundy);
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--chocolate);
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--chocolate-light);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      max-width: 380px;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      height: 75vh;
+      width: 110%;
+      right: 10%;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+      box-shadow: 20px 20px 60px rgba(35, 27, 24, 0.05);
+    }
+
+    /* ==========================================================================
+       4. PRODUCTS (ASYMMETRIC EDITORIAL GRID)
+       ========================================================================== */
+    .section-products {
+      padding: 8rem 4rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      color: var(--burgundy);
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .grid-item-1 { grid-column: 1 / 8; height: 600px; }
+    .grid-item-2 { grid-column: 8 / 13; height: 450px; margin-top: -4rem; }
+    .grid-item-3 { grid-column: 1 / 6; height: 480px; }
+    .grid-item-4 { grid-column: 6 / 13; height: 550px; margin-top: 2rem; }
+
+    .grid-item-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s var(--transition-smooth);
+    }
+
+    .grid-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(35, 27, 24, 0.6) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+      color: var(--bg-cream);
+      transition: background 0.4s ease;
+    }
+
+    .grid-item-num {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .grid-item-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .grid-item-arrow {
+      font-style: normal;
+      font-size: 1.5rem;
+      transform: translateX(-10px);
+      opacity: 0;
+      transition: all 0.4s var(--transition-smooth);
+    }
+
+    .grid-item:hover .grid-item-img {
+      transform: scale(1.05);
+    }
+
+    .grid-item:hover .grid-item-arrow {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       5. SPECIAL SECTION (FULL WIDTH)
+       ========================================================================== */
+    .special-section {
+      background-color: var(--bg-cream-soft);
+      padding: 10rem 4rem;
+      position: relative;
+      margin: 4rem 0;
+      overflow: hidden;
+    }
+
+    .special-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .special-image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .special-img {
+      width: 85%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .special-bg-accent {
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      background-color: var(--pastel-pink);
+      opacity: 0.5;
+      top: 15%;
+      left: 15%;
+      border-radius: 50%;
+      filter: blur(40px);
+      z-index: 1;
+    }
+
+    .special-content {
+      max-width: 500px;
+    }
+
+    .special-title {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: var(--burgundy);
+      margin-bottom: 1.5rem;
+    }
+
+    .special-desc {
+      color: var(--chocolate-light);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    /* ==========================================================================
+       6. DAILY PRODUCTION
+       ========================================================================== */
+    .daily-section {
+      padding: 8rem 4rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .daily-big-text {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 8vw, 7.5rem);
+      line-height: 0.9;
+      color: var(--burgundy);
+      margin-bottom: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .daily-desc {
+      font-size: 1.2rem;
+      color: var(--chocolate-light);
+      max-width: 420px;
+      font-weight: 300;
+      border-left: 2px solid var(--burgundy);
+      padding-left: 1.5rem;
+    }
+
+    .daily-image-wrapper {
+      height: 550px;
+      position: relative;
+    }
+
+    .daily-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+       7. BEST SELLERS (CAROUSEL)
+       ========================================================================== */
+    .bestseller-section {
+      padding: 6rem 0 8rem 4rem;
+      overflow: hidden;
+    }
+
+    .bestseller-carousel {
+      display: flex;
+      gap: 2.5rem;
+      overflow-x: auto;
+      padding-right: 4rem;
+      padding-bottom: 2rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .bestseller-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-card {
+      flex: 0 0 340px;
+      scroll-snap-align: start;
+    }
+
+    .product-card-img-wrap {
+      height: 420px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .product-card-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s var(--transition-smooth);
+    }
+
+    .product-card:hover .product-card-img {
+      transform: scale(1.04);
+    }
+
+    .product-card-name {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--chocolate);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-card-desc {
+      font-size: 0.85rem;
+      color: var(--chocolate-light);
+      font-weight: 300;
+      margin-bottom: 0.6rem;
+    }
+
+    .product-card-price {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--burgundy);
+    }
+
+    /* ==========================================================================
+       8. SOCIAL PROOF (EDITORIAL TESTIMONIALS)
+       ========================================================================== */
+    .testimonials-section {
+      background-color: var(--bg-cream-soft);
+      padding: 8rem 4rem;
+      text-align: center;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--chocolate);
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.3;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--burgundy);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       9. INSTAGRAM & PRE-FOOTER
+       ========================================================================== */
+    .instagram-section {
+      padding: 8rem 4rem 4rem 4rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .insta-item {
+      height: 320px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .insta-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s var(--transition-smooth);
+    }
+
+    .insta-item:hover .insta-img {
+      transform: scale(1.08);
+    }
+
+    .pre-footer {
+      padding: 10rem 4rem;
+      text-align: center;
+      background-color: var(--bg-cream);
+    }
+
+    .pre-footer-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      color: var(--burgundy);
+      line-height: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       10. FOOTER
+       ========================================================================== */
+    .footer {
+      background-color: var(--chocolate);
+      color: var(--bg-cream);
+      padding: 6rem 4rem 3rem 4rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-grid {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 6rem;
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bg-cream);
+      margin-bottom: 1rem;
+    }
+
+    .footer-address {
+      color: rgba(253, 251, 247, 0.7);
+      font-weight: 300;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 300px;
+    }
+
+    .footer-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--pastel-pink);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: rgba(253, 251, 247, 0.7);
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--bg-cream);
+    }
+
+    .footer-bottom {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(253, 251, 247, 0.4);
+    }
+
+    /* ==========================================================================
+       11. MOBILE STICKY ACTIONS & RESPONSIVE DESIGN
+       ========================================================================== */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--chocolate);
+      z-index: 999;
+      padding: 0.8rem 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255,255,255,0.05);
+      color: var(--bg-cream);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.8rem 0;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .mobile-action-btn.highlight {
+      background-color: var(--burgundy);
+    }
+
+    @media (max-width: 1024px) {
+      .navbar { padding: 1.5rem 2rem; }
+      .hero { padding: 8rem 2rem 4rem 2rem; }
+      .hero-container { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-image-wrapper { width: 100%; right: 0; height: 50vh; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .grid-item-1, .grid-item-2, .grid-item-3, .grid-item-4 {
+        grid-column: span 1;
+        height: 380px;
+        margin-top: 0;
+      }
+      .special-container { grid-template-columns: 1fr; gap: 3rem; }
+      .daily-section { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .insta-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .navbar .btn-primary { display: none; }
+      .section-products, .daily-section, .testimonials-section, .instagram-section, .pre-footer, .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .bestseller-section { padding-left: 1.5rem; }
+      .hero-title { font-size: 3.2rem; }
+      .special-title { font-size: 2.5rem; }
+      .daily-big-text { font-size: 4rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .mobile-sticky-bar { display: grid; }
+      body { padding-bottom: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">Tatlıcım</a>
+    <ul class="nav-links">
+      <li><a href="#about">Ana Sayfa</a></li>
+      <li><a href="#menu">Lezzetlerimiz</a></li>
+      <li><a href="#special">Özel Pastalar</a></li>
+      <li><a href="#daily">Hakkımızda</a></li>
+      <li><a href="#contact">İletişim</a></li>
+    </ul>
+    <a href="tel:05446563637" class="btn-primary">Sipariş Ver</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <h1 class="hero-title">
+          TATLI BİR<br>
+          MOLAYI<br>
+          <span>HAK ETTİN.</span>
+        </h1>
+        <p class="hero-subtitle">Günün her anına biraz mutluluk katan, özenle hazırlanmış butik lezzetler.</p>
+        <a href="#menu" class="btn-primary">Lezzetleri Keşfet</a>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85" alt="Özel Pasta" class="hero-img" id="heroImg">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-products" id="menu">
+    <div class="section-header reveal">
+      <h2 class="section-title">Koleksiyonlarımız</h2>
+      <span style="color: var(--chocolate-light); font-size: 0.9rem; letter-spacing: 0.1em;">01 — 04</span>
+    </div>
+
+    <div class="editorial-grid">
+      <div class="grid-item grid-item-1 reveal">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1000&q=85" alt="Pastalar" class="grid-item-img">
+        <div class="grid-item-overlay">
+          <span class="grid-item-num">01</span>
+          <div class="grid-item-title">
+            PASTALAR
+            <i class="grid-item-arrow">→</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item grid-item-2 reveal">
+        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85" alt="Tatlılar" class="grid-item-img">
+        <div class="grid-item-overlay">
+          <span class="grid-item-num">02</span>
+          <div class="grid-item-title">
+            TATLILAR
+            <i class="grid-item-arrow">→</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item grid-item-3 reveal">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85" alt="Kurabiyeler" class="grid-item-img">
+        <div class="grid-item-overlay">
+          <span class="grid-item-num">03</span>
+          <div class="grid-item-title">
+            KURABİYELER
+            <i class="grid-item-arrow">→</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item grid-item-4 reveal">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85" alt="Tuzlular" class="grid-item-img">
+        <div class="grid-item-overlay">
+          <span class="grid-item-num">04</span>
+          <div class="grid-item-title">
+            TUZLULAR
+            <i class="grid-item-arrow">→</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="special-section" id="special">
+    <div class="special-container reveal">
+      <div class="special-image-container">
+        <div class="special-bg-accent"></div>
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85" alt="Kişiye Özel Pasta" class="special-img">
+      </div>
+      <div class="special-content">
+        <h2 class="special-title">En güzel anların<br>en tatlı bahanesi.</h2>
+        <p class="special-desc">Doğum günü, kutlama ve tüm özel günleriniz için konseptinize uygun, tamamen kişiselleştirilmiş tasarım pastalar hazırlıyoruz.</p>
+        <a href="https://wa.me/905446563637" class="btn-primary">Özel Pasta Siparişi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="daily-section" id="daily">
+    <div class="reveal">
+      <h2 class="daily-big-text">HER GÜN<br>TAZE.</h2>
+      <p class="daily-desc">Tatlılarımız, pastalarımız ve fırından çıkan tüm lezzetlerimiz her sabah taze malzemelerle günlük olarak hazırlanır.</p>
+    </div>
+    <div class="daily-image-wrapper reveal">
+      <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="Üretim Süreci" class="daily-img">
+    </div>
+  </section>
+
+  <section class="bestseller-section">
+    <div style="padding-right: 4rem; margin-bottom: 3rem;" class="reveal">
+      <h2 class="section-title">Öne Çıkanlar</h2>
+    </div>
+    <div class="bestseller-carousel">
+      <div class="product-card reveal">
+        <div class="product-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=85" alt="Belçika Çikolatalı San Sebastian" class="product-card-img">
+        </div>
+        <h3 class="product-card-name">San Sebastian</h3>
+        <p class="product-card-desc">Akışkan Belçika çikolatası eşliğinde fırınlanmış özel çizkek.</p>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=85" alt="Çilekli Tart" class="product-card-img">
+        </div>
+        <h3 class="product-card-name">Çilekli Tart</h3>
+        <p class="product-card-desc">Çıtır tart hamuru, diplomat kreması ve taze mevsim çilekleri.</p>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=85" alt="Tereyağlı Kruvasan" class="product-card-img">
+        </div>
+        <h3 class="product-card-name">Tereyağlı Kruvasan</h3>
+        <p class="product-card-desc">Fransız tereyağı ile kat kat açılmış taze katmanlar.</p>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=85" alt="Fıstıklı Makaron" class="product-card-img">
+        </div>
+        <h3 class="product-card-name">Makaron Seçkisi</h3>
+        <p class="product-card-desc">Antep fıstıklı, böğürtlenli ve tuzlu karamelli Fransız usulü.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="reveal">
+      <blockquote class="testimonial-quote">
+        “Araç'ta böyle bir lezzet kalitesi ve sunum estetiği bulabilmek gerçekten harika. Her özel günümüzde tek tercihimiz.”
+      </blockquote>
+      <div class="testimonial-author">Gözde Y. — Google Yorumu</div>
+    </div>
+  </section>
+
+  <section class="instagram-section">
+    <div class="section-header reveal">
+      <h2 class="section-title">Bugün Vitrinde Ne Var?</h2>
+      <a href="https://instagram.com" target="_blank" style="color: var(--burgundy); font-weight: 500;">@tatlicimpastanesi</a>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item reveal">
+        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=85" alt="Insta Post 1" class="insta-img">
+      </div>
+      <div class="insta-item reveal">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=85" alt="Insta Post 2" class="insta-img">
+      </div>
+      <div class="insta-item reveal">
+        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=85" alt="Insta Post 3" class="insta-img">
+      </div>
+      <div class="insta-item reveal">
+        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=85" alt="Insta Post 4" class="insta-img">
+      </div>
+    </div>
+  </section>
+
+  <div class="pre-footer reveal">
+    <h2 class="pre-footer-title">Canın tatlı çektiyse,<br>doğru yerdesin.</h2>
+  </div>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Tatlıcım Pastanesi</div>
+        <p class="footer-address">
+          Yeni Mahalle No: 113/A<br>
+          (Araç Hükümet Konağı Konumu)<br>
+          37800 Araç / Kastamonu
+        </p>
+      </div>
+      <div>
+        <div class="footer-title">Çalışma Saatleri</div>
+        <ul class="footer-links">
+          <li>Pazartesi - Pazar</li>
+          <li>08:00 — 00:00</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">İletişim</div>
+        <ul class="footer-links">
+          <li><a href="tel:05446563637">0544 656 36 37</a></li>
+          <li><a href="https://wa.me/905446563637">WhatsApp Hattı</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Sosyal Medya</div>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="https://maps.google.com/?q=Araç,Kastamonu" target="_blank">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Tatlıcım Pastanesi. Tüm hakları saklıdır.</div>
+      <div>Editorial Boutique Bakery Design</div>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/905446563637" class="mobile-action-btn highlight">WhatsApp</a>
+    <a href="tel:05446563637" class="mobile-action-btn">Ara</a>
+    <a href="https://maps.google.com/?q=Araç,Kastamonu" target="_blank" class="mobile-action-btn">Yol Tarifi</a>
+  </div>
+
+  <script>
+    // Sticky Navbar Transition
+    const navbar = id = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Parallax Effect for Hero Image
+    const heroImg = document.getElementById('heroImg');
+    window.addEventListener('scroll', () => {
+      const scrollValue = window.scrollY;
+      if (scrollValue < window.innerHeight) {
+        heroImg.style.transform = `translateY(${scrollValue * 0.12}px)`;
+      }
+    });
+
+    // Scroll Reveal Intersection Observer
+    const observerOptions = {
+      root: null,
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
