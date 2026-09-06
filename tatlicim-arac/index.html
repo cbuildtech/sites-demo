@@ -1,975 +1,490 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tatlıcım Pastanesi — Butik Lezzetler</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7efe5" />
+  <title>Tatlıcım Pastanesi</title>
+  <meta name="description" content="Tatlıcım Pastanesi — her gün taze, her lokmada biraz daha mutlu." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================================================
-       1. VARIABLES & BASE STYLES
-       ========================================================================== */
-    :root {
-      --bg-cream: #FDFBF7;
-      --bg-cream-soft: #F7F3EC;
-      --burgundy: #58121A;
-      --burgundy-hover: #3F0A11;
-      --chocolate: #231B18;
-      --chocolate-light: #524743;
-      --pastel-pink: #EBDAD6;
-      --border-color: rgba(35, 27, 24, 0.12);
-      
-      --font-serif: 'Bodoni Moda', serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
-      
-      --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      background-color: var(--bg-cream);
-      color: var(--chocolate);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* Typography Helpers */
-    .serif {
-      font-family: var(--font-serif);
-      font-weight: 500;
-    }
-
-    /* Reveal Animation Class */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ==========================================================================
-       2. HEADER & NAVBAR
-       ========================================================================== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 2rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: padding 0.4s var(--transition-smooth), background-color 0.4s var(--transition-smooth), border-color 0.4s var(--transition-smooth);
-      border-bottom: 1px solid transparent;
-    }
-
-    .navbar.scrolled {
-      padding: 1.2rem 4rem;
-      background-color: rgba(253, 251, 247, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .logo {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--burgundy);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 3rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--chocolate);
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: var(--burgundy);
-      transition: width 0.3s var(--transition-smooth);
-    }
-
-    .nav-links a:hover {
-      color: var(--burgundy);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background-color: var(--burgundy);
-      color: var(--bg-cream);
-      padding: 0.9rem 2rem;
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid var(--burgundy);
-      transition: all 0.4s var(--transition-smooth);
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background-color: transparent;
-      color: var(--burgundy);
-    }
-
-    /* ==========================================================================
-       3. HERO SECTION (EDITORIAL STYLE)
-       ========================================================================== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      padding: 10rem 4rem 4rem 4rem;
-      display: grid;
-      grid-template-columns: 12fr;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .hero-container {
-      position: relative;
-      width: 100%;
-      max-width: 1600px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero-content {
-      z-index: 2;
-    }
-
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: clamp(3.5rem, 7vw, 6.5rem);
-      line-height: 0.95;
-      color: var(--burgundy);
-      margin-bottom: 2rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-title span {
-      display: block;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--chocolate);
-    }
-
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: var(--chocolate-light);
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-      max-width: 380px;
-    }
-
-    .hero-image-wrapper {
-      position: relative;
-      height: 75vh;
-      width: 110%;
-      right: 10%;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      will-change: transform;
-      box-shadow: 20px 20px 60px rgba(35, 27, 24, 0.05);
-    }
-
-    /* ==========================================================================
-       4. PRODUCTS (ASYMMETRIC EDITORIAL GRID)
-       ========================================================================== */
-    .section-products {
-      padding: 8rem 4rem;
-      max-width: 1600px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 2rem;
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      color: var(--burgundy);
-    }
-
-    .editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .grid-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .grid-item-1 { grid-column: 1 / 8; height: 600px; }
-    .grid-item-2 { grid-column: 8 / 13; height: 450px; margin-top: -4rem; }
-    .grid-item-3 { grid-column: 1 / 6; height: 480px; }
-    .grid-item-4 { grid-column: 6 / 13; height: 550px; margin-top: 2rem; }
-
-    .grid-item-img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.8s var(--transition-smooth);
-    }
-
-    .grid-item-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(35, 27, 24, 0.6) 0%, transparent 60%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 3rem;
-      color: var(--bg-cream);
-      transition: background 0.4s ease;
-    }
-
-    .grid-item-num {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      opacity: 0.8;
-      margin-bottom: 0.5rem;
-    }
-
-    .grid-item-title {
-      font-family: var(--font-serif);
-      font-size: 2.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .grid-item-arrow {
-      font-style: normal;
-      font-size: 1.5rem;
-      transform: translateX(-10px);
-      opacity: 0;
-      transition: all 0.4s var(--transition-smooth);
-    }
-
-    .grid-item:hover .grid-item-img {
-      transform: scale(1.05);
-    }
-
-    .grid-item:hover .grid-item-arrow {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
-    /* ==========================================================================
-       5. SPECIAL SECTION (FULL WIDTH)
-       ========================================================================== */
-    .special-section {
-      background-color: var(--bg-cream-soft);
-      padding: 10rem 4rem;
-      position: relative;
-      margin: 4rem 0;
-      overflow: hidden;
-    }
-
-    .special-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-
-    .special-image-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .special-img {
-      width: 85%;
-      height: auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .special-bg-accent {
-      position: absolute;
-      width: 70%;
-      height: 70%;
-      background-color: var(--pastel-pink);
-      opacity: 0.5;
-      top: 15%;
-      left: 15%;
-      border-radius: 50%;
-      filter: blur(40px);
-      z-index: 1;
-    }
-
-    .special-content {
-      max-width: 500px;
-    }
-
-    .special-title {
-      font-family: var(--font-serif);
-      font-size: 3.5rem;
-      line-height: 1.1;
-      color: var(--burgundy);
-      margin-bottom: 1.5rem;
-    }
-
-    .special-desc {
-      color: var(--chocolate-light);
-      font-size: 1.1rem;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-
-    /* ==========================================================================
-       6. DAILY PRODUCTION
-       ========================================================================== */
-    .daily-section {
-      padding: 8rem 4rem;
-      max-width: 1600px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-
-    .daily-big-text {
-      font-family: var(--font-serif);
-      font-size: clamp(4rem, 8vw, 7.5rem);
-      line-height: 0.9;
-      color: var(--burgundy);
-      margin-bottom: 2rem;
-      letter-spacing: -0.03em;
-    }
-
-    .daily-desc {
-      font-size: 1.2rem;
-      color: var(--chocolate-light);
-      max-width: 420px;
-      font-weight: 300;
-      border-left: 2px solid var(--burgundy);
-      padding-left: 1.5rem;
-    }
-
-    .daily-image-wrapper {
-      height: 550px;
-      position: relative;
-    }
-
-    .daily-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* ==========================================================================
-       7. BEST SELLERS (CAROUSEL)
-       ========================================================================== */
-    .bestseller-section {
-      padding: 6rem 0 8rem 4rem;
-      overflow: hidden;
-    }
-
-    .bestseller-carousel {
-      display: flex;
-      gap: 2.5rem;
-      overflow-x: auto;
-      padding-right: 4rem;
-      padding-bottom: 2rem;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-    }
-
-    .bestseller-carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .product-card {
-      flex: 0 0 340px;
-      scroll-snap-align: start;
-    }
-
-    .product-card-img-wrap {
-      height: 420px;
-      width: 100%;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-    }
-
-    .product-card-img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s var(--transition-smooth);
-    }
-
-    .product-card:hover .product-card-img {
-      transform: scale(1.04);
-    }
-
-    .product-card-name {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      color: var(--chocolate);
-      margin-bottom: 0.4rem;
-    }
-
-    .product-card-desc {
-      font-size: 0.85rem;
-      color: var(--chocolate-light);
-      font-weight: 300;
-      margin-bottom: 0.6rem;
-    }
-
-    .product-card-price {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--burgundy);
-    }
-
-    /* ==========================================================================
-       8. SOCIAL PROOF (EDITORIAL TESTIMONIALS)
-       ========================================================================== */
-    .testimonials-section {
-      background-color: var(--bg-cream-soft);
-      padding: 8rem 4rem;
-      text-align: center;
-    }
-
-    .testimonial-quote {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      color: var(--chocolate);
-      max-width: 900px;
-      margin: 0 auto 2rem auto;
-      line-height: 1.3;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--burgundy);
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       9. INSTAGRAM & PRE-FOOTER
-       ========================================================================== */
-    .instagram-section {
-      padding: 8rem 4rem 4rem 4rem;
-      max-width: 1600px;
-      margin: 0 auto;
-    }
-
-    .insta-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .insta-item {
-      height: 320px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .insta-img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s var(--transition-smooth);
-    }
-
-    .insta-item:hover .insta-img {
-      transform: scale(1.08);
-    }
-
-    .pre-footer {
-      padding: 10rem 4rem;
-      text-align: center;
-      background-color: var(--bg-cream);
-    }
-
-    .pre-footer-title {
-      font-family: var(--font-serif);
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      color: var(--burgundy);
-      line-height: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    /* ==========================================================================
-       10. FOOTER
-       ========================================================================== */
-    .footer {
-      background-color: var(--chocolate);
-      color: var(--bg-cream);
-      padding: 6rem 4rem 3rem 4rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .footer-grid {
-      max-width: 1600px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 6rem;
-    }
-
-    .footer-brand {
-      font-family: var(--font-serif);
-      font-size: 2.2rem;
-      color: var(--bg-cream);
-      margin-bottom: 1rem;
-    }
-
-    .footer-address {
-      color: rgba(253, 251, 247, 0.7);
-      font-weight: 300;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      max-width: 300px;
-    }
-
-    .footer-title {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: var(--pastel-pink);
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.8rem;
-    }
-
-    .footer-links a {
-      color: rgba(253, 251, 247, 0.7);
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--bg-cream);
-    }
-
-    .footer-bottom {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: rgba(253, 251, 247, 0.4);
-    }
-
-    /* ==========================================================================
-       11. MOBILE STICKY ACTIONS & RESPONSIVE DESIGN
-       ========================================================================== */
-    .mobile-sticky-bar {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: var(--chocolate);
-      z-index: 999;
-      padding: 0.8rem 1rem;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .mobile-action-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255,255,255,0.05);
-      color: var(--bg-cream);
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.8rem 0;
-      border: none;
-      transition: background 0.3s ease;
-    }
-
-    .mobile-action-btn.highlight {
-      background-color: var(--burgundy);
-    }
-
-    @media (max-width: 1024px) {
-      .navbar { padding: 1.5rem 2rem; }
-      .hero { padding: 8rem 2rem 4rem 2rem; }
-      .hero-container { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-image-wrapper { width: 100%; right: 0; height: 50vh; }
-      .editorial-grid { grid-template-columns: 1fr; }
-      .grid-item-1, .grid-item-2, .grid-item-3, .grid-item-4 {
-        grid-column: span 1;
-        height: 380px;
-        margin-top: 0;
-      }
-      .special-container { grid-template-columns: 1fr; gap: 3rem; }
-      .daily-section { grid-template-columns: 1fr; gap: 3rem; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-      .insta-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .navbar .btn-primary { display: none; }
-      .section-products, .daily-section, .testimonials-section, .instagram-section, .pre-footer, .footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-      .bestseller-section { padding-left: 1.5rem; }
-      .hero-title { font-size: 3.2rem; }
-      .special-title { font-size: 2.5rem; }
-      .daily-big-text { font-size: 4rem; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .mobile-sticky-bar { display: grid; }
-      body { padding-bottom: 50px; }
+    :root{
+      --cream:#f7efe5;
+      --cream-2:#fffaf3;
+      --ink:#2c1a16;
+      --muted:#7b675f;
+      --wine:#8e2035;
+      --wine-2:#b43d54;
+      --brown:#4b2a22;
+      --dark:#241410;
+      --gold:#b89463;
+      --line:rgba(44,26,22,.12);
+      --shadow:0 24px 70px rgba(71,40,29,.14);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"DM Sans",sans-serif;
+      color:var(--ink);
+      background:var(--cream);
+      overflow-x:hidden;
+    }
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+
+    .noise{
+      position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.055;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+    }
+
+    .wrap{width:min(1240px,calc(100% - 48px));margin:auto}
+
+    .nav{
+      position:fixed;left:50%;top:18px;transform:translateX(-50%);
+      width:min(1240px,calc(100% - 28px));z-index:1000;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 18px 14px 22px;border:1px solid transparent;border-radius:999px;
+      transition:.35s ease;
+    }
+    .nav.scrolled{
+      background:rgba(255,250,243,.88);backdrop-filter:blur(18px);
+      border-color:var(--line);box-shadow:0 12px 40px rgba(46,24,17,.08);
+    }
+    .brand{
+      font-family:"Playfair Display",serif;font-size:26px;font-weight:700;letter-spacing:-.7px
+    }
+    .brand span{color:var(--wine)}
+    .nav-links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}
+    .nav-links a{position:relative}
+    .nav-links a:after{
+      content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--wine);transition:.25s
+    }
+    .nav-links a:hover:after{width:100%}
+    .nav-cta{
+      background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;
+      display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:14px
+    }
+    .menu-btn{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+
+    .hero{
+      min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 0 60px;
+      overflow:hidden;background:
+      radial-gradient(circle at 77% 35%,rgba(180,61,84,.12),transparent 28%),
+      linear-gradient(180deg,#fffaf3 0%,#f7efe5 100%);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+    .eyebrow{
+      display:inline-flex;gap:10px;align-items:center;font-size:12px;text-transform:uppercase;
+      letter-spacing:.18em;color:var(--wine);font-weight:800;margin-bottom:22px
+    }
+    .eyebrow:before{content:"";width:34px;height:1px;background:currentColor}
+    h1{
+      font-family:"Playfair Display",serif;font-size:clamp(62px,7vw,112px);
+      line-height:.88;letter-spacing:-.055em;margin:0 0 28px;
+    }
+    h1 em{color:var(--wine);font-weight:600}
+    .hero-copy p{max-width:560px;font-size:18px;line-height:1.7;color:var(--muted);margin:0 0 32px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:52px;padding:0 22px;border-radius:999px;border:1px solid var(--ink);
+      transition:.25s;cursor:pointer;font-weight:700
+    }
+    .btn.primary{background:var(--wine);border-color:var(--wine);color:white}
+    .btn.primary:hover{transform:translateY(-2px);background:#75172a}
+    .btn.ghost:hover{background:var(--ink);color:white;transform:translateY(-2px)}
+
+    .hero-visual{position:relative;min-height:620px}
+    .hero-card{
+      position:absolute;inset:20px 0 10px 40px;border-radius:46% 46% 34px 34px;overflow:hidden;
+      box-shadow:var(--shadow);transform:rotate(2.3deg);
+    }
+    .hero-card:after{
+      content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(26,11,7,.28));
+    }
+    .hero-badge{
+      position:absolute;right:-6px;top:78px;width:122px;height:122px;border-radius:50%;
+      background:var(--wine);color:white;display:grid;place-items:center;text-align:center;
+      font-family:"Playfair Display",serif;font-size:18px;line-height:1.15;transform:rotate(8deg);
+      box-shadow:0 12px 34px rgba(142,32,53,.25)
+    }
+    .hero-stamp{
+      position:absolute;left:0;bottom:40px;background:#fffaf3;border:1px solid var(--line);
+      padding:18px 20px;border-radius:18px;box-shadow:0 12px 38px rgba(44,26,22,.12);
+      transform:rotate(-4deg)
+    }
+    .hero-stamp b{display:block;font-family:"Playfair Display",serif;font-size:26px}
+    .hero-stamp small{color:var(--muted)}
+
+    .marquee{background:var(--wine);color:white;overflow:hidden;border-y:1px solid rgba(255,255,255,.15)}
+    .track{display:flex;width:max-content;animation:marq 23s linear infinite}
+    .track span{padding:18px 28px;font-family:"Playfair Display",serif;font-size:20px;white-space:nowrap}
+    .track i{font-style:normal;opacity:.45}
+    @keyframes marq{to{transform:translateX(-50%)}}
+
+    section{padding:110px 0}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:50px}
+    .kicker{color:var(--wine);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+    h2{
+      font-family:"Playfair Display",serif;font-size:clamp(44px,5vw,72px);
+      letter-spacing:-.045em;line-height:.95;margin:8px 0 0
+    }
+    .section-head p{max-width:440px;color:var(--muted);line-height:1.7;margin:0}
+
+    .categories{background:var(--cream-2)}
+    .cat-grid{
+      display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:330px 330px;gap:18px
+    }
+    .cat{
+      position:relative;overflow:hidden;border-radius:var(--radius);min-height:260px;isolation:isolate
+    }
+    .cat:nth-child(1){grid-row:1/3}
+    .cat:nth-child(4){grid-column:2/4}
+    .cat img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+    .cat:hover img{transform:scale(1.06)}
+    .cat:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(21,10,7,.74))}
+    .cat-info{position:absolute;left:26px;right:26px;bottom:22px;color:white;z-index:2}
+    .cat-info span{font-size:11px;text-transform:uppercase;letter-spacing:.15em;opacity:.75}
+    .cat-info h3{font-family:"Playfair Display",serif;font-size:30px;margin:5px 0 0}
+
+    .signature{background:var(--dark);color:white;position:relative;overflow:hidden}
+    .signature:before{
+      content:"";position:absolute;width:560px;height:560px;border-radius:50%;
+      background:radial-gradient(circle,rgba(180,61,84,.34),transparent 66%);
+      right:-120px;top:-80px
+    }
+    .sig-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+    .sig-copy p{color:#cbb8b0;line-height:1.8;max-width:520px}
+    .sig-copy .btn{border-color:#f4e7df;color:#fff;margin-top:14px}
+    .sig-copy .btn:hover{background:#fff;color:var(--dark)}
+    .sig-photo{height:620px;border-radius:40px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.32)}
+    .sig-number{
+      font-family:"Playfair Display",serif;font-size:120px;color:rgba(255,255,255,.08);
+      position:absolute;right:6%;bottom:2%;font-weight:700
+    }
+
+    .specials{background:var(--cream)}
+    .special-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+    .special-copy{
+      padding:48px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.32);
+      display:flex;flex-direction:column;justify-content:center
+    }
+    .special-copy h3{
+      font-family:"Playfair Display",serif;font-size:54px;line-height:1;margin:0 0 20px;letter-spacing:-.04em
+    }
+    .special-copy p{color:var(--muted);line-height:1.8;margin-bottom:28px}
+    .special-photo{height:650px;border-radius:var(--radius);overflow:hidden}
+
+    .story{background:#eadbcf}
+    .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+    .story-photo{height:600px;border-radius:160px 160px 28px 28px;overflow:hidden}
+    .story-copy p{font-size:18px;line-height:1.85;color:#684f45}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+    .fact{padding:18px 0;border-top:1px solid rgba(44,26,22,.2)}
+    .fact b{font-family:"Playfair Display",serif;font-size:31px;display:block}
+    .fact small{color:#765f55}
+
+    .visit{background:var(--cream-2)}
+    .visit-card{
+      border-radius:36px;background:var(--wine);color:#fff;padding:54px;
+      display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;overflow:hidden;position:relative
+    }
+    .visit-card:after{
+      content:"TATLıCıM";position:absolute;right:15px;bottom:-45px;
+      font-family:"Playfair Display",serif;font-size:120px;opacity:.07;font-weight:700
+    }
+    .visit h2{margin:0;color:#fff}
+    .visit p{color:#f2cfd7;max-width:620px;line-height:1.7}
+    .visit .btn{background:white;border-color:white;color:var(--wine);position:relative;z-index:2}
+
+    footer{background:#1f120e;color:#cdbdb5;padding:68px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:40px}
+    .footer-brand{font-family:"Playfair Display",serif;color:white;font-size:34px}
+    .footer-grid h4{color:#fff;margin:0 0 16px}
+    .footer-grid p,.footer-grid a{color:#ae9e96;line-height:1.8;font-size:14px}
+    .footer-grid a{display:block}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;margin-top:44px;font-size:12px}
+
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    .mobile-panel{
+      display:none;position:fixed;inset:0;background:var(--cream-2);z-index:999;
+      padding:100px 30px 30px
+    }
+    .mobile-panel.open{display:block}
+    .mobile-panel a{
+      display:block;font-family:"Playfair Display",serif;font-size:42px;
+      padding:12px 0;border-bottom:1px solid var(--line)
+    }
+
+    @media (max-width: 980px){
+      .nav-links,.nav .nav-cta{display:none}.menu-btn{display:block}
+      .hero-grid,.sig-grid,.special-grid,.story-grid{grid-template-columns:1fr}
+      .hero{padding-top:130px}.hero-visual{min-height:540px}.hero-card{inset:20px 22px 10px}
+      .cat-grid{grid-template-columns:1fr 1fr;grid-template-rows:360px 300px 300px}
+      .cat:nth-child(1){grid-row:auto;grid-column:1/3}
+      .cat:nth-child(4){grid-column:1/3}
+      .sig-photo,.special-photo,.story-photo{height:520px}
+      .story-grid{gap:40px}
+      .visit-card{grid-template-columns:1fr}.visit-card .btn{justify-self:start}
+    }
+
+    @media (max-width: 640px){
+      .wrap{width:min(100% - 28px,1240px)}
+      .nav{top:10px}
+      .hero{min-height:auto;padding-bottom:40px}
+      h1{font-size:60px}
+      .hero-copy p{font-size:16px}
+      .hero-visual{min-height:460px;margin-top:10px}
+      .hero-card{left:10px;right:10px;border-radius:120px 120px 28px 28px}
+      .hero-badge{width:98px;height:98px;right:0;font-size:15px}
+      .hero-stamp{left:6px;bottom:15px}
+      section{padding:80px 0}
+      .section-head{align-items:start;flex-direction:column}
+      .cat-grid{display:grid;grid-template-columns:1fr;grid-template-rows:none}
+      .cat,.cat:nth-child(1),.cat:nth-child(4){grid-column:auto;grid-row:auto;height:360px}
+      .sig-photo,.special-photo,.story-photo{height:460px}
+      .special-copy{padding:28px}
+      .special-copy h3{font-size:42px}
+      .facts{grid-template-columns:1fr}
+      .visit-card{padding:34px 26px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
     }
   </style>
 </head>
 <body>
+  <div class="noise"></div>
 
-  <nav class="navbar" id="navbar">
-    <a href="#" class="logo">Tatlıcım</a>
-    <ul class="nav-links">
-      <li><a href="#about">Ana Sayfa</a></li>
-      <li><a href="#menu">Lezzetlerimiz</a></li>
-      <li><a href="#special">Özel Pastalar</a></li>
-      <li><a href="#daily">Hakkımızda</a></li>
-      <li><a href="#contact">İletişim</a></li>
-    </ul>
-    <a href="tel:05446563637" class="btn-primary">Sipariş Ver</a>
+  <nav class="nav" id="nav">
+    <a class="brand" href="#home">Tatlı<span>cım</span></a>
+    <div class="nav-links">
+      <a href="#lezzetler">Lezzetler</a>
+      <a href="#imza">İmza Lezzet</a>
+      <a href="#ozel">Özel Pastalar</a>
+      <a href="#hikaye">Hikâyemiz</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+    <a class="nav-cta" href="#iletisim">Sipariş Ver ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç">☰</button>
   </nav>
 
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-content reveal">
-        <h1 class="hero-title">
-          TATLI BİR<br>
-          MOLAYI<br>
-          <span>HAK ETTİN.</span>
-        </h1>
-        <p class="hero-subtitle">Günün her anına biraz mutluluk katan, özenle hazırlanmış butik lezzetler.</p>
-        <a href="#menu" class="btn-primary">Lezzetleri Keşfet</a>
-      </div>
-      <div class="hero-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85" alt="Özel Pasta" class="hero-img" id="heroImg">
-      </div>
-    </div>
-  </section>
-
-  <section class="section-products" id="menu">
-    <div class="section-header reveal">
-      <h2 class="section-title">Koleksiyonlarımız</h2>
-      <span style="color: var(--chocolate-light); font-size: 0.9rem; letter-spacing: 0.1em;">01 — 04</span>
-    </div>
-
-    <div class="editorial-grid">
-      <div class="grid-item grid-item-1 reveal">
-        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1000&q=85" alt="Pastalar" class="grid-item-img">
-        <div class="grid-item-overlay">
-          <span class="grid-item-num">01</span>
-          <div class="grid-item-title">
-            PASTALAR
-            <i class="grid-item-arrow">→</i>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-item grid-item-2 reveal">
-        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85" alt="Tatlılar" class="grid-item-img">
-        <div class="grid-item-overlay">
-          <span class="grid-item-num">02</span>
-          <div class="grid-item-title">
-            TATLILAR
-            <i class="grid-item-arrow">→</i>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-item grid-item-3 reveal">
-        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85" alt="Kurabiyeler" class="grid-item-img">
-        <div class="grid-item-overlay">
-          <span class="grid-item-num">03</span>
-          <div class="grid-item-title">
-            KURABİYELER
-            <i class="grid-item-arrow">→</i>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-item grid-item-4 reveal">
-        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85" alt="Tuzlular" class="grid-item-img">
-        <div class="grid-item-overlay">
-          <span class="grid-item-num">04</span>
-          <div class="grid-item-title">
-            TUZLULAR
-            <i class="grid-item-arrow">→</i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="special-section" id="special">
-    <div class="special-container reveal">
-      <div class="special-image-container">
-        <div class="special-bg-accent"></div>
-        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85" alt="Kişiye Özel Pasta" class="special-img">
-      </div>
-      <div class="special-content">
-        <h2 class="special-title">En güzel anların<br>en tatlı bahanesi.</h2>
-        <p class="special-desc">Doğum günü, kutlama ve tüm özel günleriniz için konseptinize uygun, tamamen kişiselleştirilmiş tasarım pastalar hazırlıyoruz.</p>
-        <a href="https://wa.me/905446563637" class="btn-primary">Özel Pasta Siparişi</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="daily-section" id="daily">
-    <div class="reveal">
-      <h2 class="daily-big-text">HER GÜN<br>TAZE.</h2>
-      <p class="daily-desc">Tatlılarımız, pastalarımız ve fırından çıkan tüm lezzetlerimiz her sabah taze malzemelerle günlük olarak hazırlanır.</p>
-    </div>
-    <div class="daily-image-wrapper reveal">
-      <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="Üretim Süreci" class="daily-img">
-    </div>
-  </section>
-
-  <section class="bestseller-section">
-    <div style="padding-right: 4rem; margin-bottom: 3rem;" class="reveal">
-      <h2 class="section-title">Öne Çıkanlar</h2>
-    </div>
-    <div class="bestseller-carousel">
-      <div class="product-card reveal">
-        <div class="product-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=85" alt="Belçika Çikolatalı San Sebastian" class="product-card-img">
-        </div>
-        <h3 class="product-card-name">San Sebastian</h3>
-        <p class="product-card-desc">Akışkan Belçika çikolatası eşliğinde fırınlanmış özel çizkek.</p>
-      </div>
-
-      <div class="product-card reveal">
-        <div class="product-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=85" alt="Çilekli Tart" class="product-card-img">
-        </div>
-        <h3 class="product-card-name">Çilekli Tart</h3>
-        <p class="product-card-desc">Çıtır tart hamuru, diplomat kreması ve taze mevsim çilekleri.</p>
-      </div>
-
-      <div class="product-card reveal">
-        <div class="product-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=85" alt="Tereyağlı Kruvasan" class="product-card-img">
-        </div>
-        <h3 class="product-card-name">Tereyağlı Kruvasan</h3>
-        <p class="product-card-desc">Fransız tereyağı ile kat kat açılmış taze katmanlar.</p>
-      </div>
-
-      <div class="product-card reveal">
-        <div class="product-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=85" alt="Fıstıklı Makaron" class="product-card-img">
-        </div>
-        <h3 class="product-card-name">Makaron Seçkisi</h3>
-        <p class="product-card-desc">Antep fıstıklı, böğürtlenli ve tuzlu karamelli Fransız usulü.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials-section">
-    <div class="reveal">
-      <blockquote class="testimonial-quote">
-        “Araç'ta böyle bir lezzet kalitesi ve sunum estetiği bulabilmek gerçekten harika. Her özel günümüzde tek tercihimiz.”
-      </blockquote>
-      <div class="testimonial-author">Gözde Y. — Google Yorumu</div>
-    </div>
-  </section>
-
-  <section class="instagram-section">
-    <div class="section-header reveal">
-      <h2 class="section-title">Bugün Vitrinde Ne Var?</h2>
-      <a href="https://instagram.com" target="_blank" style="color: var(--burgundy); font-weight: 500;">@tatlicimpastanesi</a>
-    </div>
-    <div class="insta-grid">
-      <div class="insta-item reveal">
-        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=85" alt="Insta Post 1" class="insta-img">
-      </div>
-      <div class="insta-item reveal">
-        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=85" alt="Insta Post 2" class="insta-img">
-      </div>
-      <div class="insta-item reveal">
-        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=85" alt="Insta Post 3" class="insta-img">
-      </div>
-      <div class="insta-item reveal">
-        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=85" alt="Insta Post 4" class="insta-img">
-      </div>
-    </div>
-  </section>
-
-  <div class="pre-footer reveal">
-    <h2 class="pre-footer-title">Canın tatlı çektiyse,<br>doğru yerdesin.</h2>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#lezzetler">Lezzetler</a>
+    <a href="#imza">İmza Lezzet</a>
+    <a href="#ozel">Özel Pastalar</a>
+    <a href="#hikaye">Hikâyemiz</a>
+    <a href="#iletisim">İletişim</a>
   </div>
 
-  <footer class="footer" id="contact">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Tatlıcım Pastanesi</div>
-        <p class="footer-address">
-          Yeni Mahalle No: 113/A<br>
-          (Araç Hükümet Konağı Konumu)<br>
-          37800 Araç / Kastamonu
+  <header class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">Her gün taze üretim</div>
+        <h1>Tatlı bir<br><em>molayı</em><br>hak ettin.</h1>
+        <p>
+          Günün en güzel anlarını, taptaze pastalar, özenle hazırlanan tatlılar
+          ve sıcacık fırın lezzetleriyle biraz daha özel yapıyoruz.
         </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#lezzetler">Vitrine Göz At →</a>
+          <a class="btn ghost" href="#ozel">Özel Pasta Tasarla</a>
+        </div>
       </div>
-      <div>
-        <div class="footer-title">Çalışma Saatleri</div>
-        <ul class="footer-links">
-          <li>Pazartesi - Pazar</li>
-          <li>08:00 — 00:00</li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-title">İletişim</div>
-        <ul class="footer-links">
-          <li><a href="tel:05446563637">0544 656 36 37</a></li>
-          <li><a href="https://wa.me/905446563637">WhatsApp Hattı</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-title">Sosyal Medya</div>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="https://maps.google.com/?q=Araç,Kastamonu" target="_blank">Google Maps</a></li>
-        </ul>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=90" alt="Çikolatalı pasta">
+        </div>
+        <div class="hero-badge">Bugün de<br>taptaze.</div>
+        <div class="hero-stamp">
+          <b>197°</b>
+          <small>fırından mutluluk</small>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>&copy; 2026 Tatlıcım Pastanesi. Tüm hakları saklıdır.</div>
-      <div>Editorial Boutique Bakery Design</div>
+  </header>
+
+  <div class="marquee">
+    <div class="track">
+      <span>Yaş Pastalar <i>✦</i></span><span>Kurabiyeler <i>✦</i></span><span>Sütlü Tatlılar <i>✦</i></span><span>Şerbetli Tatlılar <i>✦</i></span><span>Tuzlular <i>✦</i></span><span>Kahvaltılıklar <i>✦</i></span>
+      <span>Yaş Pastalar <i>✦</i></span><span>Kurabiyeler <i>✦</i></span><span>Sütlü Tatlılar <i>✦</i></span><span>Şerbetli Tatlılar <i>✦</i></span><span>Tuzlular <i>✦</i></span><span>Kahvaltılıklar <i>✦</i></span>
+    </div>
+  </div>
+
+  <section class="categories" id="lezzetler">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Bugün vitrinde</div>
+          <h2>Gözüne kestir,<br>gerisini bize bırak.</h2>
+        </div>
+        <p>Her gün taze hazırlanan favorilerimiz. Klasiklerden özel reçetelere kadar vitrinin en sevilenlerini keşfet.</p>
+      </div>
+
+      <div class="cat-grid">
+        <a class="cat reveal" href="#">
+          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=90" alt="Yaş pastalar">
+          <div class="cat-info"><span>01 — Koleksiyon</span><h3>Yaş Pastalar</h3></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=90" alt="Kurabiyeler">
+          <div class="cat-info"><span>02 — Günlük</span><h3>Kurabiyeler</h3></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=90" alt="Tatlılar">
+          <div class="cat-info"><span>03 — Favoriler</span><h3>Tatlılar</h3></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=90" alt="Fırından">
+          <div class="cat-info"><span>04 — Sıcacık</span><h3>Fırından Çıkanlar</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="imza">
+    <div class="wrap sig-grid">
+      <div class="sig-copy reveal">
+        <div class="kicker" style="color:#e8a7b5">Tatlıcım imza lezzeti</div>
+        <h2>Bir dilimle<br>kalmak zor.</h2>
+        <p>
+          Yoğun çikolata, ipeksi krema ve dengeli dokular. Her katmanı ayrı hazırlanan
+          imza pastamız, vitrinde en hızlı kaybolanlardan.
+        </p>
+        <a class="btn" href="#iletisim">İmza Lezzetleri Gör →</a>
+      </div>
+      <div class="sig-photo reveal">
+        <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=1200&q=90" alt="İmza çikolatalı pasta">
+      </div>
+    </div>
+    <div class="sig-number">01</div>
+  </section>
+
+  <section class="specials" id="ozel">
+    <div class="wrap">
+      <div class="special-grid">
+        <div class="special-copy reveal">
+          <div class="kicker">Özel günler</div>
+          <h3>Sen hayal et.<br>Biz pastaya dönüştürelim.</h3>
+          <p>
+            Doğum günü, nişan, kutlama ve kurumsal etkinlikler için kişiye özel pastalar
+            hazırlıyoruz. Renk, tema, kişi sayısı ve lezzet tercihini söylemen yeterli.
+          </p>
+          <div>
+            <a class="btn primary" href="#iletisim">Özel Pasta Siparişi</a>
+          </div>
+        </div>
+        <div class="special-photo reveal">
+          <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1200&q=90" alt="Özel gün pastası">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="hikaye">
+    <div class="wrap story-grid">
+      <div class="story-photo reveal">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=90" alt="Pastane üretimi">
+      </div>
+      <div class="story-copy reveal">
+        <div class="kicker">Mutfağımızdan</div>
+        <h2>İyi malzeme.<br>Doğru tarif.<br>Bolca özen.</h2>
+        <p>
+          Bizim için güzel bir tatlının sırrı gösterişten önce malzemede başlıyor.
+          Günlük üretim, taze içerikler ve yıllardır değişmeyen o “bir tane daha”
+          dedirten lezzetin peşindeyiz.
+        </p>
+        <div class="facts">
+          <div class="fact"><b>100%</b><small>günlük üretim</small></div>
+          <div class="fact"><b>+40</b><small>vitrin lezzeti</small></div>
+          <div class="fact"><b>7/7</b><small>tatlı bahanesi</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="iletisim">
+    <div class="wrap">
+      <div class="visit-card reveal">
+        <div>
+          <div class="kicker" style="color:#ffd4dd">Tatlıcım Pastanesi</div>
+          <h2>Canın tatlı çektiyse,<br>doğru yerdesin.</h2>
+          <p>
+            Sipariş, özel pasta veya güncel vitrin için bize ulaş. Adres, telefon ve çalışma saatlerini gerçek işletme bilgileriyle kolayca güncelleyebilirsin.
+          </p>
+        </div>
+        <a class="btn" href="tel:+900000000000">Bizi Ara →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Tatlıcım</div>
+          <p>Her gün taze, her lokmada biraz daha mutlu.</p>
+        </div>
+        <div>
+          <h4>Menü</h4>
+          <a href="#lezzetler">Lezzetler</a>
+          <a href="#ozel">Özel Pastalar</a>
+          <a href="#hikaye">Hakkımızda</a>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <a href="tel:+900000000000">+90 000 000 00 00</a>
+          <a href="#">Instagram</a>
+          <a href="#">Google Maps</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Tatlıcım Pastanesi. Tüm hakları saklıdır.</span>
+        <span>Tatlı bir gün için tasarlandı.</span>
+      </div>
     </div>
   </footer>
 
-  <div class="mobile-sticky-bar">
-    <a href="https://wa.me/905446563637" class="mobile-action-btn highlight">WhatsApp</a>
-    <a href="tel:05446563637" class="mobile-action-btn">Ara</a>
-    <a href="https://maps.google.com/?q=Araç,Kastamonu" target="_blank" class="mobile-action-btn">Yol Tarifi</a>
-  </div>
-
   <script>
-    // Sticky Navbar Transition
-    const navbar = id = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+    const nav = document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+
+    const menuBtn = document.getElementById('menuBtn');
+    const panel = document.getElementById('mobilePanel');
+    menuBtn.addEventListener('click',()=>{
+      panel.classList.toggle('open');
+      menuBtn.textContent = panel.classList.contains('open') ? '×' : '☰';
     });
+    panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      panel.classList.remove('open');
+      menuBtn.textContent='☰';
+    }));
 
-    // Parallax Effect for Hero Image
-    const heroImg = document.getElementById('heroImg');
-    window.addEventListener('scroll', () => {
-      const scrollValue = window.scrollY;
-      if (scrollValue < window.innerHeight) {
-        heroImg.style.transform = `translateY(${scrollValue * 0.12}px)`;
-      }
-    });
-
-    // Scroll Reveal Intersection Observer
-    const observerOptions = {
-      root: null,
-      threshold: 0.15
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('show');
+          io.unobserve(e.target);
         }
-      });
-    }, observerOptions);
+      })
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    document.querySelectorAll('.reveal').forEach(el => {
-      observer.observe(el);
+    const heroCard = document.querySelector('.hero-card');
+    addEventListener('scroll',()=>{
+      if(scrollY < innerHeight * 1.1){
+        heroCard.style.transform = `rotate(2.3deg) translateY(${scrollY*.06}px) scale(${1 - Math.min(scrollY/9000,.05)})`;
+      }
     });
   </script>
 </body>
