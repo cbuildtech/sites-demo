@@ -1,0 +1,31 @@
+# Duygu Şahin Beauty
+
+Duygu Şahin Beauty, Bağcılar/İstanbul bölgesinde güzellik merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Duygu Şahin Beauty
+- Category: güzellik merkezi
+- Location: Bağcılar, İstanbul
+- Address: Üsküp Cd. 1340. Sok 1 İstanbul, Bağcılar Bagcılar, 34000 Bağcılar/İstanbul 
+- Phone: 05057074439
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
