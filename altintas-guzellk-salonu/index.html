@@ -938,142 +938,7 @@ body.menu-open{overflow:hidden}
 
 
 
-/* MOBILE VISIBILITY & FLOW FIX — keep desktop unchanged */
-@media(max-width:768px){
-  html,body{overflow-x:hidden}
 
-  /* Mobile: content must never stay hidden because of scroll animations */
-  .reveal,
-  .section-head .reveal,
-  .service-card.reveal,
-  .step.reveal,
-  .trust-left.reveal,
-  .metric.reveal,
-  .quote.reveal,
-  .cta-box.reveal,
-  .signal,
-  .kline{
-    opacity:1!important;
-    visibility:visible!important;
-    transform:none!important;
-  }
-
-  /* Hero copy should stay readable on mobile */
-  .hero-copy{
-    opacity:1!important;
-    transform:none!important;
-  }
-
-  /* "Her Cilt Biriciktir" ticker */
-  .marquee{
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-    min-height:49px;
-    position:relative;
-    z-index:6;
-    background:#09070b;
-  }
-  .marquee-track{
-    display:inline-flex!important;
-    visibility:visible!important;
-    opacity:1!important;
-    animation-duration:34s;
-  }
-  .marquee-track span{
-    display:inline-block!important;
-    font-size:10px;
-    letter-spacing:.17em;
-  }
-
-  /* Mobile sticky story — stable on iOS/Android browser chrome changes */
-  .story{
-    min-height:0!important;
-    height:340dvh;
-    padding:0;
-    margin:0;
-    background:#09070b;
-    position:relative;
-    overflow:visible;
-  }
-  .story-sticky{
-    position:sticky!important;
-    top:0;
-    height:100dvh!important;
-    min-height:100dvh!important;
-    overflow:hidden!important;
-    isolation:isolate;
-  }
-  .panel{
-    position:absolute!important;
-    inset:0!important;
-    height:100dvh!important;
-    display:grid!important;
-    place-items:center!important;
-    padding:calc(env(safe-area-inset-top) + 56px) 22px calc(env(safe-area-inset-bottom) + 62px)!important;
-    overflow:hidden;
-    will-change:opacity,transform;
-    backface-visibility:hidden;
-  }
-  .panel .inner{
-    width:min(100%,520px);
-    max-height:calc(100dvh - 150px);
-    overflow:hidden;
-  }
-  .panel .eyebrow{font-size:10px;letter-spacing:.17em}
-  .panel h2{font-size:clamp(42px,13vw,66px)!important;line-height:.94!important;margin:10px 0 16px!important}
-  .panel p{font-size:14px!important;line-height:1.62!important;max-width:420px!important}
-  .symbol{font-size:52px!important;margin-bottom:6px}
-  .progress{display:block!important;left:18px;right:18px;bottom:calc(env(safe-area-inset-bottom) + 16px)}
-
-  /* Keep all important sections in normal mobile flow */
-  .intro,.metaphor,.process,.services,.trust,.faq,.cta{
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-  }
-
-  .intro{padding:86px 0 70px}
-  .process{padding:82px 0}
-  .services{padding:82px 0}
-  .trust{padding:82px 0}
-  .faq{padding:82px 0}
-
-  /* Needs section: avoid floating pills covering the central text */
-  .needs{
-    min-height:auto!important;
-    padding:95px 14px;
-    display:block!important;
-  }
-  .need-center{margin:auto;padding:40px 0 185px}
-  .need-center h2{font-size:clamp(48px,14vw,74px)}
-  .need{
-    opacity:1!important;
-    visibility:visible!important;
-    transform:none!important;
-    font-size:10px;
-    padding:8px 10px;
-  }
-  .n1{left:4%;top:auto;bottom:132px}
-  .n2{right:4%;top:auto;bottom:132px}
-  .n3{left:6%;bottom:84px}
-  .n4{right:6%;bottom:84px}
-  .n5{left:13%;top:auto;bottom:36px}
-  .n6{left:auto;right:13%;bottom:36px}
-
-  /* Kinetic statement should not enter from off-screen on mobile */
-  .kinetic{min-height:auto!important;padding:88px 0!important}
-  .kline{opacity:1!important;transform:none!important}
-
-  /* Metaphor content safety */
-  .metaphor-stage,.metaphor-layout,.metaphor-content,.metaphor-diagnostic{
-    visibility:visible!important;
-    opacity:1!important;
-  }
-
-  /* Footer and booking remain accessible above floating WhatsApp */
-  footer{padding-bottom:92px}
-}
 
 </style>
 
@@ -2189,37 +2054,24 @@ body.menu-open{overflow:hidden}
 gsap.registerPlugin(ScrollTrigger);
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const mobileLayout = window.matchMedia("(max-width: 768px)").matches;
 
 /* Header */
 const header = document.getElementById("header");
 window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>25));
 
-if(mobileLayout){
-  let refreshTimer;
-  const refreshStory=()=>{
-    clearTimeout(refreshTimer);
-    refreshTimer=setTimeout(()=>ScrollTrigger.refresh(),180);
-  };
-  window.addEventListener("orientationchange",refreshStory);
-  window.addEventListener("resize",refreshStory);
-}
-
 /* Snow */
-const glyphs=["✦","✧","⋆","•"];
+const glyphs=["❄","❅","✦","•"];
 const snow=document.getElementById("snow");
-const isMobileSnow = window.matchMedia("(max-width: 768px)").matches;
-const snowCount = isMobileSnow ? 34 : 120;
-for(let i=0;i<snowCount;i++){
+for(let i=0;i<120;i++){
   const f=document.createElement("span");
   f.className="flake";
   f.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
   f.style.setProperty("--x",Math.random()*100+"vw");
-  f.style.setProperty("--s",(isMobileSnow ? 5 : 7)+Math.random()*(isMobileSnow ? 8 : 14)+"px");
-  f.style.setProperty("--o",isMobileSnow ? (.25+Math.random()*.34) : (.38+Math.random()*.55));
-  f.style.setProperty("--d",(isMobileSnow ? 11 : 8)+Math.random()*(isMobileSnow ? 8 : 10)+"s");
+  f.style.setProperty("--s",(7+Math.random()*14)+"px");
+  f.style.setProperty("--o",(.38+Math.random()*.55));
+  f.style.setProperty("--d",(8+Math.random()*10)+"s");
   f.style.setProperty("--delay",(-Math.random()*18)+"s");
-  f.style.setProperty("--drift",(isMobileSnow ? -44 : -80)+Math.random()*(isMobileSnow ? 88 : 160)+"px");
+  f.style.setProperty("--drift",(-80+Math.random()*160)+"px");
   snow.appendChild(f);
 }
 
@@ -2247,16 +2099,12 @@ document.querySelectorAll(".magnetic").forEach(el=>{
 });
 
 /* Generic reveals */
-if(!mobileLayout){
-  gsap.utils.toArray(".reveal").forEach(el=>{
-    gsap.from(el,{
-      scrollTrigger:{trigger:el,start:"top 88%"},
-      y:42,opacity:0,duration:.85,ease:"power3.out"
-    });
+gsap.utils.toArray(".reveal").forEach(el=>{
+  gsap.from(el,{
+    scrollTrigger:{trigger:el,start:"top 88%"},
+    y:42,opacity:0,duration:.85,ease:"power3.out"
   });
-}else{
-  gsap.set(".reveal",{opacity:1,y:0,clearProps:"transform"});
-}
+});
 
 /* Metaphor diagnostic motion */
 gsap.to(".diagnostic-core",{
@@ -2274,14 +2122,10 @@ gsap.to(".dr2",{
   ease:"none",
   scrollTrigger:{trigger:".metaphor",start:"top 80%",end:"bottom 20%",scrub:1}
 });
-if(!mobileLayout){
-  gsap.from(".signal",{
-    scrollTrigger:{trigger:".metaphor-stage",start:"top 72%"},
-    y:18,opacity:0,stagger:.12,duration:.65,ease:"power3.out"
-  });
-}else{
-  gsap.set(".signal",{opacity:1,y:0});
-}
+gsap.from(".signal",{
+  scrollTrigger:{trigger:".metaphor-stage",start:"top 72%"},
+  y:18,opacity:0,stagger:.12,duration:.65,ease:"power3.out"
+});
 
 /* Needs floating */
 gsap.utils.toArray(".need").forEach((el,i)=>{
@@ -2296,66 +2140,27 @@ gsap.utils.toArray(".need").forEach((el,i)=>{
 });
 
 /* Kinetic */
-if(!mobileLayout){
-  gsap.from(".k1",{scrollTrigger:{trigger:".kinetic",start:"top 76%"},x:-70,opacity:0,duration:1,ease:"power3.out"});
-  gsap.from(".k2",{scrollTrigger:{trigger:".kinetic",start:"top 73%"},x:70,opacity:0,duration:1,ease:"power3.out"});
-  gsap.from(".k3",{scrollTrigger:{trigger:".kinetic",start:"top 70%"},y:40,opacity:0,duration:1,ease:"power3.out"});
-}else{
-  gsap.set(".k1,.k2,.k3",{opacity:1,x:0,y:0});
-}
+gsap.from(".k1",{scrollTrigger:{trigger:".kinetic",start:"top 76%"},x: -70,opacity:0,duration:1,ease:"power3.out"});
+gsap.from(".k2",{scrollTrigger:{trigger:".kinetic",start:"top 73%"},x: 70,opacity:0,duration:1,ease:"power3.out"});
+gsap.from(".k3",{scrollTrigger:{trigger:".kinetic",start:"top 70%"},y:40,opacity:0,duration:1,ease:"power3.out"});
 
-/* Scroll story — desktop keeps the cinematic timeline; mobile uses a viewport-stable crossfade */
+/* Scroll story */
 const panels=[".p1",".p2",".p3",".p4"];
-gsap.set(panels,{scale:1});
-gsap.set(panels.slice(1),{opacity:0});
-gsap.set(panels[0],{opacity:1});
-
-if(mobileLayout){
-  ScrollTrigger.create({
+const storyTl=gsap.timeline({
+  scrollTrigger:{
     trigger:".story",
     start:"top top",
     end:"bottom bottom",
-    scrub:.45,
-    invalidateOnRefresh:true,
-    onUpdate:self=>{
-      const p=self.progress;
-      gsap.set(".bar",{width:(p*100)+"%"});
-      const pos=p*3;
-      const current=Math.min(3,Math.floor(pos+0.0001));
-      const local=pos-current;
-
-      panels.forEach((selector,index)=>{
-        let opacity=0;
-        let scale=.965;
-        if(index===current){
-          opacity=current===3 ? 1 : 1-Math.max(0,(local-.58)/.42);
-          scale=1-(1-opacity)*.025;
-        }else if(index===current+1){
-          opacity=Math.max(0,(local-.58)/.42);
-          scale=.975+opacity*.025;
-        }
-        gsap.set(selector,{opacity,scale,pointerEvents:opacity>.5?"auto":"none"});
-      });
-    }
-  });
-}else{
-  const storyTl=gsap.timeline({
-    scrollTrigger:{
-      trigger:".story",
-      start:"top top",
-      end:"bottom bottom",
-      scrub:1,
-      invalidateOnRefresh:true,
-      onUpdate:s=>gsap.set(".bar",{width:(s.progress*100)+"%"})
-    }
-  });
-  panels.forEach((p,i)=>{
-    if(i>0){
-      storyTl.to(panels[i-1],{opacity:0,scale:.94,duration:.5})
-             .to(p,{opacity:1,scale:1,duration:.5},"<");
-    }
-  });
-}
+    scrub:1,
+    onUpdate:s=>gsap.set(".bar",{width:(s.progress*100)+"%"})
+  }
+});
+panels.forEach((p,i)=>{
+  if(i>0){
+    storyTl.to(panels[i-1],{opacity:0,scale:.94,duration:.5})
+           .to(p,{opacity:1,scale:1,duration:.5},"<");
+  }
+});
 
 /* THREE.JS HERO */
 const mount=document.getElementById("three");
@@ -2376,7 +2181,7 @@ const geo=new THREE.IcosahedronGeometry(1.72,40);
 const original=geo.attributes.position.array.slice();
 
 const mat=new THREE.MeshPhysicalMaterial({
-  color:0xcba4ff,
+  color:0xd8b66a,
   roughness:.22,
   metalness:.1,
   transmission:.2,
@@ -2385,7 +2190,7 @@ const mat=new THREE.MeshPhysicalMaterial({
   clearcoatRoughness:.12,
   ior:1.35,
   sheen:1,
-  sheenColor:new THREE.Color(0xf0b7cf),
+  sheenColor:new THREE.Color(0xe6c895),
   iridescence:1,
   iridescenceIOR:1.35,
   iridescenceThicknessRange:[100,450]
@@ -2397,7 +2202,7 @@ scene.add(blob);
 
 /* orbit rings */
 const ringGeo=new THREE.TorusGeometry(2.35,.008,10,220);
-const ringMat=new THREE.MeshBasicMaterial({color:0xe8d6ff,transparent:true,opacity:.26});
+const ringMat=new THREE.MeshBasicMaterial({color:0xe6c67a,transparent:true,opacity:.26});
 const ring=new THREE.Mesh(ringGeo,ringMat);
 ring.position.copy(blob.position);
 ring.rotation.set(1.05,.18,-.3);
@@ -2423,7 +2228,7 @@ for(let i=0;i<count;i++){
   pos[i*3+2]=r*Math.cos(phi);
 }
 pGeo.setAttribute("position",new THREE.BufferAttribute(pos,3));
-const pMat=new THREE.PointsMaterial({color:0xe7d8f2,size:.018,transparent:true,opacity:.36,depthWrite:false});
+const pMat=new THREE.PointsMaterial({color:0xf1dfb0,size:.018,transparent:true,opacity:.36,depthWrite:false});
 const particles=new THREE.Points(pGeo,pMat);
 scene.add(particles);
 
@@ -2514,14 +2319,10 @@ window.addEventListener("resize",resize);
 resize();
 
 /* hero text parallax */
-if(!mobileLayout){
-  gsap.to(".hero-copy",{
-    yPercent:18,opacity:.25,ease:"none",
-    scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}
-  });
-}else{
-  gsap.set(".hero-copy",{opacity:1,yPercent:0});
-}
+gsap.to(".hero-copy",{
+  yPercent:18,opacity:.25,ease:"none",
+  scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}
+});
 </script>
 <script>
 
