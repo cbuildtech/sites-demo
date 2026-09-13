@@ -1,0 +1,31 @@
+# Rassa
+
+Rassa, Bağcılar/İstanbul bölgesinde güzellik merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Rassa
+- Category: güzellik merkezi
+- Location: Bağcılar, İstanbul
+- Address: Sancaktepe, Çarşı Cd. No:14/21, 34200 Bağcılar/İstanbul 
+- Phone: 05327801904
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
