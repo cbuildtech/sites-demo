@@ -986,30 +986,45 @@ body.menu-open{overflow:hidden}
     letter-spacing:.17em;
   }
 
-  /* Preserve the original sticky scroll story on mobile. */
+  /* Mobile sticky story — stable on iOS/Android browser chrome changes */
   .story{
-    min-height:400vh;
+    min-height:0!important;
+    height:340dvh;
     padding:0;
+    margin:0;
     background:#09070b;
+    position:relative;
+    overflow:visible;
   }
   .story-sticky{
-    position:sticky;
+    position:sticky!important;
     top:0;
-    height:100svh;
-    overflow:hidden;
+    height:100dvh!important;
+    min-height:100dvh!important;
+    overflow:hidden!important;
+    isolation:isolate;
   }
   .panel{
-    position:absolute;
-    inset:0;
-    display:grid;
-    place-items:center;
-    padding:24px 20px 46px;
+    position:absolute!important;
+    inset:0!important;
+    height:100dvh!important;
+    display:grid!important;
+    place-items:center!important;
+    padding:calc(env(safe-area-inset-top) + 56px) 22px calc(env(safe-area-inset-bottom) + 62px)!important;
+    overflow:hidden;
+    will-change:opacity,transform;
+    backface-visibility:hidden;
   }
-  .panel .inner{max-width:560px}
-  .panel h2{font-size:clamp(48px,14vw,76px);line-height:.95}
-  .panel p{font-size:15px;line-height:1.7}
-  .symbol{font-size:62px}
-  .progress{display:block!important;left:18px;right:18px;bottom:18px}
+  .panel .inner{
+    width:min(100%,520px);
+    max-height:calc(100dvh - 150px);
+    overflow:hidden;
+  }
+  .panel .eyebrow{font-size:10px;letter-spacing:.17em}
+  .panel h2{font-size:clamp(42px,13vw,66px)!important;line-height:.94!important;margin:10px 0 16px!important}
+  .panel p{font-size:14px!important;line-height:1.62!important;max-width:420px!important}
+  .symbol{font-size:52px!important;margin-bottom:6px}
+  .progress{display:block!important;left:18px;right:18px;bottom:calc(env(safe-area-inset-bottom) + 16px)}
 
   /* Keep all important sections in normal mobile flow */
   .intro,.metaphor,.process,.services,.trust,.faq,.cta{
@@ -2180,6 +2195,16 @@ const mobileLayout = window.matchMedia("(max-width: 768px)").matches;
 const header = document.getElementById("header");
 window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>25));
 
+if(mobileLayout){
+  let refreshTimer;
+  const refreshStory=()=>{
+    clearTimeout(refreshTimer);
+    refreshTimer=setTimeout(()=>ScrollTrigger.refresh(),180);
+  };
+  window.addEventListener("orientationchange",refreshStory);
+  window.addEventListener("resize",refreshStory);
+}
+
 /* Snow */
 const glyphs=["✦","✧","⋆","•"];
 const snow=document.getElementById("snow");
@@ -2279,27 +2304,58 @@ if(!mobileLayout){
   gsap.set(".k1,.k2,.k3",{opacity:1,x:0,y:0});
 }
 
-/* Scroll story — keep the original effect on desktop and mobile */
+/* Scroll story — desktop keeps the cinematic timeline; mobile uses a viewport-stable crossfade */
 const panels=[".p1",".p2",".p3",".p4"];
 gsap.set(panels,{scale:1});
 gsap.set(panels.slice(1),{opacity:0});
 gsap.set(panels[0],{opacity:1});
-const storyTl=gsap.timeline({
-  scrollTrigger:{
+
+if(mobileLayout){
+  ScrollTrigger.create({
     trigger:".story",
     start:"top top",
     end:"bottom bottom",
-    scrub:1,
+    scrub:.45,
     invalidateOnRefresh:true,
-    onUpdate:s=>gsap.set(".bar",{width:(s.progress*100)+"%"})
-  }
-});
-panels.forEach((p,i)=>{
-  if(i>0){
-    storyTl.to(panels[i-1],{opacity:0,scale:.94,duration:.5})
-           .to(p,{opacity:1,scale:1,duration:.5},"<");
-  }
-});
+    onUpdate:self=>{
+      const p=self.progress;
+      gsap.set(".bar",{width:(p*100)+"%"});
+      const pos=p*3;
+      const current=Math.min(3,Math.floor(pos+0.0001));
+      const local=pos-current;
+
+      panels.forEach((selector,index)=>{
+        let opacity=0;
+        let scale=.965;
+        if(index===current){
+          opacity=current===3 ? 1 : 1-Math.max(0,(local-.58)/.42);
+          scale=1-(1-opacity)*.025;
+        }else if(index===current+1){
+          opacity=Math.max(0,(local-.58)/.42);
+          scale=.975+opacity*.025;
+        }
+        gsap.set(selector,{opacity,scale,pointerEvents:opacity>.5?"auto":"none"});
+      });
+    }
+  });
+}else{
+  const storyTl=gsap.timeline({
+    scrollTrigger:{
+      trigger:".story",
+      start:"top top",
+      end:"bottom bottom",
+      scrub:1,
+      invalidateOnRefresh:true,
+      onUpdate:s=>gsap.set(".bar",{width:(s.progress*100)+"%"})
+    }
+  });
+  panels.forEach((p,i)=>{
+    if(i>0){
+      storyTl.to(panels[i-1],{opacity:0,scale:.94,duration:.5})
+             .to(p,{opacity:1,scale:1,duration:.5},"<");
+    }
+  });
+}
 
 /* THREE.JS HERO */
 const mount=document.getElementById("three");
