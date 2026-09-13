@@ -464,40 +464,45 @@ header.scrolled{
 }
 @media(max-width:560px){
   .service-card{
-    padding:22px 18px 160px;
+    padding:22px 18px 146px;
     border-radius:20px;
   }
   .service-card:after{
     left:18px;
     right:18px;
-    bottom:66px;
+    bottom:62px;
   }
   .service-card small{font-size:10px}
   .service-card h3{
-    margin:28px 0 14px;
-    font-size:clamp(38px,12vw,46px);
+    margin:24px 0 12px;
+    font-size:clamp(34px,11vw,42px);
+    line-height:1.02;
   }
   .service-card p{
     font-size:15px;
-    line-height:1.65;
+    line-height:1.62;
   }
   .service-tag{
     left:18px;
-    bottom:20px;
-    max-width:52%;
+    bottom:18px;
+    max-width:56%;
     font-size:11px;
   }
   .service-art{
-    right:12px;
-    bottom:14px;
-    width:108px;
-    height:82px;
-    opacity:.72;
+    right:10px;
+    bottom:12px;
+    width:84px;
+    height:62px;
+    opacity:.46;
   }
-  .skin-art{width:112px;height:86px}
-  .laser-art{width:100px;height:82px}
-  .glow-art{width:102px;height:82px}
-  .body-art{width:94px;height:88px}
+  .service-art .s-line{stroke-width:1.1}
+  .service-art .s-soft{stroke-width:.8;opacity:.78}
+  .service-art .s-dot{opacity:.9}
+  .skin-art{width:84px;height:62px}
+  .laser-art{width:84px;height:62px}
+  .glow-art{width:84px;height:62px}
+  .body-art{width:84px;height:62px}
+  .snow-overlay{opacity:.42}
 }
 
 /* NEEDS */
@@ -1048,8 +1053,8 @@ body.menu-open{overflow:hidden}
 
 <body style="">
 
-<div class="cursor" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(858px, 464px);"></div>
-<div class="cursor-dot" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(858px, 464px);"></div>
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
 
 <header id="header" class="">
   <div class="container nav">
@@ -1108,7 +1113,7 @@ body.menu-open{overflow:hidden}
 <section class="hero" id="hero">
   <div id="three"></div>
   <div class="hero-vignette"></div>
-  <div class="snow-overlay" id="snow"><span class="flake" style="--x: 0.5632251831035773vw; --s: 11.385225470548637px; --o: 0.6838125236042039; --d: 9.714635439285834s; --delay: -11.175410001607082s; --drift: 38.97094512186723px;">•</span><span class="flake" style="--x: 78.06708527062052vw; --s: 12.732824299972133px; --o: 0.5945898746971771; --d: 14.56683605703041s; --delay: -11.29181106485542s; --drift: 59.77447566330471px;">✦</span><span class="flake" style="--x: 72.5972102122388vw; --s: 12.188109225551788px; --o: 0.670695505271186; --d: 11.252506598949598s; --delay: -11.202984583229533s; --drift: 40.43314251576763px;">✦</span><span class="flake" style="--x: 80.74721524618629vw; --s: 12.561289233380963px; --o: 0.6611532716786188; --d: 17.115881305008443s; --delay: -1.1611491802596694s; --drift: 26.991552648906833px;">❅</span><span class="flake" style="--x: 91.59801782661138vw; --s: 17.46026083194366px; --o: 0.5047438205755297; --d: 10.877048713180047s; --delay: -9.016461988581675s; --drift: 52.44573785290606px;">❅</span><span class="flake" style="--x: 74.32965838958248vw; --s: 19.289423646722664px; --o: 0.7706785482111479; --d: 14.935211401279116s; --delay: -17.58576160572745s; --drift: -32.16295497165311px;">✦</span><span class="flake" style="--x: 97.11783314437726vw; --s: 15.822931199145795px; --o: 0.5750308137700636; --d: 8.978646293341752s; --delay: -0.9354989532092175s; --drift: 74.70195892428916px;">•</span><span class="flake" style="--x: 84.31588390417986vw; --s: 10.388507592180177px; --o: 0.6090651225932034; --d: 12.372208048851999s; --delay: -10.143662680221615s; --drift: -30.44939595822644px;">•</span><span class="flake" style="--x: 90.94981002269182vw; --s: 14.8289019090228px; --o: 0.7848732604248121; --d: 8.20778188205621s; --delay: -7.1254454374476275s; --drift: 12.767200036844287px;">❅</span><span class="flake" style="--x: 38.39147844279572vw; --s: 13.315874099278211px; --o: 0.6171061109955422; --d: 15.163059655693889s; --delay: -7.713652118835968s; --drift: 6.4727469923502525px;">•</span><span class="flake" style="--x: 80.39407073348707vw; --s: 7.135255442417484px; --o: 0.8005530641571263; --d: 8.78117206028047s; --delay: -13.825229464300385s; --drift: 10.659512293934569px;">✦</span><span class="flake" style="--x: 75.55691070349724vw; --s: 10.153987741938632px; --o: 0.6162429106587571; --d: 9.446505664367761s; --delay: -8.318388104033922s; --drift: -45.74445961960271px;">•</span><span class="flake" style="--x: 99.33344157737079vw; --s: 16.09785140246619px; --o: 0.5484843743913191; --d: 15.42149843824321s; --delay: -14.524192597739992s; --drift: -50.900247614277205px;">❄</span><span class="flake" style="--x: 69.20289835653804vw; --s: 15.401366371584789px; --o: 0.5831696383527775; --d: 10.801585531308142s; --delay: -1.170904700836487s; --drift: -59.296135109303606px;">❄</span><span class="flake" style="--x: 78.18059704092795vw; --s: 14.333138834642366px; --o: 0.4161721220154291; --d: 12.470099348283645s; --delay: -2.5789258656733236s; --drift: 52.32383012781531px;">❄</span><span class="flake" style="--x: 32.02088515390913vw; --s: 16.027530808986775px; --o: 0.852067666060925; --d: 16.08522703394943s; --delay: -14.380772129456417s; --drift: -79.98323938939771px;">❅</span><span class="flake" style="--x: 36.920064234681405vw; --s: 7.080825327228229px; --o: 0.46737786379114127; --d: 15.176738984195612s; --delay: -0.7974877030304701s; --drift: -23.100807111460483px;">✦</span><span class="flake" style="--x: 81.73864543863623vw; --s: 11.296568873926791px; --o: 0.41072701047548565; --d: 13.98009928694934s; --delay: -8.517962840257429s; --drift: 79.27912048481838px;">✦</span><span class="flake" style="--x: 27.23398724527414vw; --s: 16.256142731363568px; --o: 0.9027648080191285; --d: 8.916230061361745s; --delay: -15.569622038112373s; --drift: -38.9765475283933px;">❄</span><span class="flake" style="--x: 23.758480552031536vw; --s: 10.472227168332815px; --o: 0.7662628865952168; --d: 11.388011820108163s; --delay: -9.935852124923386s; --drift: 60.49081290004702px;">❄</span><span class="flake" style="--x: 48.79271529617751vw; --s: 16.00488822181008px; --o: 0.5221338534191888; --d: 9.500837413884803s; --delay: -10.53435636510449s; --drift: 52.21994272328314px;">✦</span><span class="flake" style="--x: 10.733674486624324vw; --s: 16.063279677716782px; --o: 0.607345412741296; --d: 14.44634085365147s; --delay: -15.50059542860207s; --drift: 7.619320639239575px;">•</span><span class="flake" style="--x: 9.168410043421682vw; --s: 13.292638888985753px; --o: 0.5714900507401124; --d: 17.11954091436514s; --delay: -10.854362882109811s; --drift: -42.4544977391981px;">✦</span><span class="flake" style="--x: 80.95218889916845vw; --s: 8.771728420330398px; --o: 0.6686411948517923; --d: 10.77815825007903s; --delay: -7.678913914291126s; --drift: -58.175897367581726px;">❅</span><span class="flake" style="--x: 28.70035263207341vw; --s: 17.927061231491052px; --o: 0.6786592706345774; --d: 12.759741706629827s; --delay: -6.247418742831614s; --drift: -57.892738073606495px;">•</span><span class="flake" style="--x: 53.067991314812325vw; --s: 11.700953875533287px; --o: 0.6854855236432038; --d: 10.638739620202504s; --delay: -9.476072689120656s; --drift: 77.91634371360209px;">•</span><span class="flake" style="--x: 8.231954028581544vw; --s: 12.459631349300539px; --o: 0.5088925893734283; --d: 8.836969847106667s; --delay: -1.0762215855625574s; --drift: 43.88551356983591px;">✦</span><span class="flake" style="--x: 89.4292001812045vw; --s: 20.72754771088418px; --o: 0.45651816395664324; --d: 11.64018148697933s; --delay: -15.733097426671986s; --drift: 73.10951814213891px;">✦</span><span class="flake" style="--x: 58.505221353737824vw; --s: 13.276875228576351px; --o: 0.46330553020388343; --d: 10.11809365754302s; --delay: -15.084097487694896s; --drift: 58.63710655235033px;">❅</span><span class="flake" style="--x: 9.196070563077551vw; --s: 13.405139301651728px; --o: 0.47824079296678196; --d: 11.49332028445276s; --delay: -3.148927060074553s; --drift: -78.6277074749342px;">❄</span><span class="flake" style="--x: 60.704571561958474vw; --s: 8.557410905531231px; --o: 0.47497866580867293; --d: 10.703205655244442s; --delay: -1.6127997358113573s; --drift: 9.799055310376716px;">❅</span><span class="flake" style="--x: 16.497958498387387vw; --s: 18.14828839149747px; --o: 0.759426074642256; --d: 11.751859683179578s; --delay: -12.149515718942382s; --drift: -29.602562458398758px;">✦</span><span class="flake" style="--x: 20.29085167860033vw; --s: 17.784860485624776px; --o: 0.7046511731843441; --d: 11.16749972223257s; --delay: -3.328657883133592s; --drift: -77.45499935363677px;">✦</span><span class="flake" style="--x: 36.74246715897418vw; --s: 10.411494291552177px; --o: 0.5582387604778345; --d: 13.4868420222869s; --delay: -7.1568594259440665s; --drift: 65.81600741308776px;">•</span><span class="flake" style="--x: 45.246704927105064vw; --s: 16.957348657324907px; --o: 0.9145351883890401; --d: 13.026815637389896s; --delay: -1.1150062989093426s; --drift: 75.59517137077509px;">❄</span><span class="flake" style="--x: 39.820510379937545vw; --s: 8.69926724308347px; --o: 0.4961446590931786; --d: 15.115151932668944s; --delay: -10.68673374729387s; --drift: 74.3767232500029px;">✦</span><span class="flake" style="--x: 5.63214044997734vw; --s: 13.103246871710443px; --o: 0.41948674926555196; --d: 13.922597625986556s; --delay: -17.374663591192274s; --drift: -27.482490454317556px;">•</span><span class="flake" style="--x: 13.408280047287535vw; --s: 10.329384384871979px; --o: 0.41450988989115617; --d: 11.616418024049414s; --delay: -11.599387424813827s; --drift: 79.674663712517px;">❅</span><span class="flake" style="--x: 8.130145313762327vw; --s: 10.39850391253798px; --o: 0.44150507839967873; --d: 14.807839212203772s; --delay: -15.465760822893293s; --drift: 76.90142728562097px;">❄</span><span class="flake" style="--x: 78.20551889561649vw; --s: 7.964206808476566px; --o: 0.8001137824749073; --d: 10.295365398401641s; --delay: -17.74176452148645s; --drift: 11.811666362393197px;">❄</span><span class="flake" style="--x: 61.13715285410189vw; --s: 9.466265418501798px; --o: 0.7409318686223227; --d: 17.3938597046133s; --delay: -16.615947918453482s; --drift: -38.371301459746725px;">✦</span><span class="flake" style="--x: 90.3290207090548vw; --s: 20.47640827908508px; --o: 0.6470696872620139; --d: 13.327232197683736s; --delay: -14.29760845630459s; --drift: -78.52945607139847px;">❅</span><span class="flake" style="--x: 38.89271857544323vw; --s: 13.200870182300816px; --o: 0.5207225985333123; --d: 12.323972584520082s; --delay: -5.3818085552764945s; --drift: -45.110373683724646px;">•</span><span class="flake" style="--x: 7.222108247317383vw; --s: 16.024971958921476px; --o: 0.6140534012730208; --d: 10.135137477949272s; --delay: -3.039098940349874s; --drift: -65.9266227273779px;">✦</span><span class="flake" style="--x: 37.26888873044859vw; --s: 12.39496819135207px; --o: 0.9229281371183266; --d: 14.555285908158663s; --delay: -9.214399446614557s; --drift: -8.865139843572479px;">❄</span><span class="flake" style="--x: 47.729721911920095vw; --s: 15.31173039437919px; --o: 0.5358285618878497; --d: 13.68703316513626s; --delay: -13.988147305125874s; --drift: -76.73551444757032px;">✦</span><span class="flake" style="--x: 29.54602808563733vw; --s: 9.32613802005228px; --o: 0.571427764886587; --d: 9.81422249685943s; --delay: -16.27054861546982s; --drift: 53.43496747919798px;">❄</span><span class="flake" style="--x: 13.995722697215351vw; --s: 18.601458771592213px; --o: 0.5169004921989097; --d: 12.339256335749226s; --delay: -17.701907275406505s; --drift: -5.565582003919502px;">❄</span><span class="flake" style="--x: 47.030504054906785vw; --s: 13.366876368507885px; --o: 0.5773626007910624; --d: 17.022503194060455s; --delay: -14.14306118927568s; --drift: -58.36711297534842px;">✦</span><span class="flake" style="--x: 85.65044330980318vw; --s: 12.69965412016547px; --o: 0.5787183275545855; --d: 13.206869385258805s; --delay: -7.124590760060585s; --drift: 0.2007843222879444px;">✦</span><span class="flake" style="--x: 52.48158907999081vw; --s: 8.727211913835635px; --o: 0.8287455396749085; --d: 11.683884610517545s; --delay: -0.9040213412870006s; --drift: -32.653617088017874px;">❄</span><span class="flake" style="--x: 38.27034729694423vw; --s: 9.601745719026635px; --o: 0.4571277460222487; --d: 11.193340671625265s; --delay: -11.867434490821566s; --drift: 44.71993659026536px;">✦</span><span class="flake" style="--x: 93.6881363509319vw; --s: 18.904495664633117px; --o: 0.6079161619478681; --d: 9.047863081816832s; --delay: -6.099259174349499s; --drift: -10.453758829786693px;">•</span><span class="flake" style="--x: 51.973758366129054vw; --s: 12.166230992043346px; --o: 0.5058275465315828; --d: 14.199996307060886s; --delay: -10.006684100036042s; --drift: -71.07856956390555px;">•</span><span class="flake" style="--x: 41.89236143498153vw; --s: 10.453668416442312px; --o: 0.8267676841361459; --d: 11.151707116297665s; --delay: -10.632093559783591s; --drift: 26.145384767974505px;">•</span><span class="flake" style="--x: 76.60766855660721vw; --s: 19.401075843491597px; --o: 0.8671549210132043; --d: 11.228638352585513s; --delay: -13.277602501959887s; --drift: -39.10212763885562px;">•</span><span class="flake" style="--x: 7.42449635805521vw; --s: 19.06777297037994px; --o: 0.7164124826272613; --d: 17.376455884713017s; --delay: -6.697146058566128s; --drift: 24.907929028742302px;">✦</span><span class="flake" style="--x: 69.59557100971706vw; --s: 14.541196389787501px; --o: 0.9064852276868366; --d: 17.94704669717254s; --delay: -12.624074730759919s; --drift: -39.94728875296774px;">✦</span><span class="flake" style="--x: 83.57378680340602vw; --s: 7.259373997857561px; --o: 0.683271737077499; --d: 16.127694463766005s; --delay: -3.4444446365144077s; --drift: -4.229800335894993px;">•</span><span class="flake" style="--x: 77.35113421686135vw; --s: 16.11107318288886px; --o: 0.47866274047948393; --d: 17.398876246193645s; --delay: -1.5584711603774641s; --drift: 68.98965710010503px;">✦</span><span class="flake" style="--x: 55.31126851505523vw; --s: 17.5925429093432px; --o: 0.7683056983961498; --d: 11.745014179478952s; --delay: -0.16943969754816335s; --drift: -72.83217319027466px;">✦</span><span class="flake" style="--x: 5.608806436730019vw; --s: 14.059167490550625px; --o: 0.7402458066177622; --d: 12.916388952796456s; --delay: -9.975111615162662s; --drift: -65.19484908761206px;">❅</span><span class="flake" style="--x: 13.497626946120878vw; --s: 13.72144550902566px; --o: 0.5408679062509176; --d: 16.440712536207833s; --delay: -11.785597182399428s; --drift: 30.387657316063837px;">❅</span><span class="flake" style="--x: 42.427740406245604vw; --s: 7.048778156242603px; --o: 0.7895091969342509; --d: 8.331825434220988s; --delay: -0.24464985846885923s; --drift: 20.991919936374472px;">✦</span><span class="flake" style="--x: 93.56118275987664vw; --s: 12.183819846430502px; --o: 0.5597191967382754; --d: 10.15902245078137s; --delay: -8.024287725250257s; --drift: 46.07676524790739px;">❅</span><span class="flake" style="--x: 17.573954713816896vw; --s: 11.373973752050764px; --o: 0.6362269851438358; --d: 8.67132273380861s; --delay: -16.610179129358848s; --drift: -56.1211019294462px;">❅</span><span class="flake" style="--x: 75.62362472512157vw; --s: 9.80511671756303px; --o: 0.4545326605954862; --d: 10.72864205221989s; --delay: -8.297233672036548s; --drift: 3.3159114357226827px;">•</span><span class="flake" style="--x: 20.03811825571722vw; --s: 11.823067670311747px; --o: 0.4225490883809421; --d: 15.302257292603853s; --delay: -6.224316741348573s; --drift: -55.21835266846553px;">•</span><span class="flake" style="--x: 3.0391399418745135vw; --s: 20.161900367686385px; --o: 0.5738934206217547; --d: 10.474260990833194s; --delay: -2.1490992919955194s; --drift: -51.81600506548637px;">❄</span><span class="flake" style="--x: 89.32909783479114vw; --s: 11.745934231554171px; --o: 0.5328091996987038; --d: 15.334182752080853s; --delay: -15.305784308775456s; --drift: 0.16894615318959438px;">❄</span><span class="flake" style="--x: 55.04148761465011vw; --s: 20.988441520623176px; --o: 0.827460524294263; --d: 11.680509812434359s; --delay: -16.084709659960016s; --drift: -50.82972259244798px;">❄</span><span class="flake" style="--x: 37.988019741493254vw; --s: 13.348819134333535px; --o: 0.38538719198036553; --d: 9.927187196888138s; --delay: -11.75454371237897s; --drift: -32.55538316471359px;">❄</span><span class="flake" style="--x: 80.0798132517413vw; --s: 18.604920536057868px; --o: 0.5868008150071355; --d: 11.14945977793765s; --delay: -0.4403510520936633s; --drift: -31.74918698499038px;">•</span><span class="flake" style="--x: 79.30917168531833vw; --s: 20.768965870475526px; --o: 0.7837644998172255; --d: 10.950578009679111s; --delay: -10.533064765843575s; --drift: -75.57624248594612px;">•</span><span class="flake" style="--x: 18.470994681710696vw; --s: 14.253603410100503px; --o: 0.4738805219014183; --d: 16.388957164991844s; --delay: -13.018717883356167s; --drift: -48.22079105670461px;">✦</span><span class="flake" style="--x: 44.6977206612768vw; --s: 10.521508387858184px; --o: 0.7767403882639536; --d: 8.0079479784316s; --delay: -1.9480060662982996s; --drift: -23.36136703172123px;">•</span><span class="flake" style="--x: 45.657830937130285vw; --s: 10.313599138569437px; --o: 0.554269372162062; --d: 12.122301131401578s; --delay: -1.7336881722389923s; --drift: -73.55033633484817px;">❅</span><span class="flake" style="--x: 2.693363494937928vw; --s: 14.545624470297312px; --o: 0.7717491520189407; --d: 17.820849057103246s; --delay: -7.337448628266307s; --drift: -39.845798172713586px;">✦</span><span class="flake" style="--x: 56.524983938187525vw; --s: 19.323616142911625px; --o: 0.9208765780655616; --d: 11.820103483310952s; --delay: -17.271769158732038s; --drift: 22.038497065771935px;">❅</span><span class="flake" style="--x: 54.01890511605531vw; --s: 17.228473978253483px; --o: 0.6693764681902069; --d: 12.669090399302451s; --delay: -0.46969506585067244s; --drift: 34.57119884129567px;">❄</span><span class="flake" style="--x: 24.062069930184705vw; --s: 10.594405034037486px; --o: 0.8215021221962389; --d: 15.505544154156828s; --delay: -11.831017333173328s; --drift: 10.998423962000729px;">❅</span><span class="flake" style="--x: 18.38998358076781vw; --s: 19.73168801872881px; --o: 0.9235327054668668; --d: 10.149252790439274s; --delay: -17.80437705958002s; --drift: 51.19318317863244px;">✦</span><span class="flake" style="--x: 89.21170583399199vw; --s: 17.24183899306287px; --o: 0.3928323027763623; --d: 15.610002682063957s; --delay: -4.843188611914026s; --drift: 11.376748331130798px;">✦</span><span class="flake" style="--x: 42.841304205049354vw; --s: 18.974895341591473px; --o: 0.4588797814666137; --d: 12.738691132252761s; --delay: -7.854614382330099s; --drift: 36.467169825474286px;">✦</span><span class="flake" style="--x: 90.87733229839026vw; --s: 10.191510792546602px; --o: 0.44141267099537335; --d: 11.813284314334597s; --delay: -5.677984799888995s; --drift: 16.326234455622327px;">✦</span><span class="flake" style="--x: 37.49704327130594vw; --s: 8.281095291523748px; --o: 0.7552628027943646; --d: 11.670252114991781s; --delay: -16.39722568705619s; --drift: 26.953907911812323px;">✦</span><span class="flake" style="--x: 97.99366935364327vw; --s: 11.002804203569081px; --o: 0.8929257529892404; --d: 10.654575377803923s; --delay: -6.859845487458667s; --drift: 21.70879260006076px;">✦</span><span class="flake" style="--x: 11.578637035908578vw; --s: 16.94882603542826px; --o: 0.40422237656484655; --d: 10.027936383631527s; --delay: -3.26876352970984s; --drift: -37.34310947432952px;">•</span><span class="flake" style="--x: 95.34673542311985vw; --s: 18.55220643224401px; --o: 0.926829888074857; --d: 13.048905542632228s; --delay: -1.8689588452485533s; --drift: -13.976020859756844px;">❅</span><span class="flake" style="--x: 88.49711518482813vw; --s: 13.313340740158859px; --o: 0.7287842619758944; --d: 17.946603669180867s; --delay: -12.890026814312563s; --drift: 58.64621058141739px;">❅</span><span class="flake" style="--x: 71.09315934143208vw; --s: 10.572218723409643px; --o: 0.40784670221304076; --d: 11.270702403524668s; --delay: -10.487714489501462s; --drift: -33.4643231760446px;">❄</span><span class="flake" style="--x: 99.2531245522604vw; --s: 16.36759192691217px; --o: 0.5026721757852208; --d: 17.401446353013228s; --delay: -1.02212036565724s; --drift: -33.24717043145583px;">•</span><span class="flake" style="--x: 8.344580393659474vw; --s: 12.069769517284524px; --o: 0.8672131983904356; --d: 16.70673902575148s; --delay: -16.909869313654635s; --drift: 21.2887069790456px;">✦</span><span class="flake" style="--x: 15.388913651823533vw; --s: 17.64569063911611px; --o: 0.6365806573202635; --d: 16.498111353378732s; --delay: -6.263050863481212s; --drift: -77.15437276255408px;">•</span><span class="flake" style="--x: 74.52558653735906vw; --s: 17.239479078039142px; --o: 0.4744846743026071; --d: 16.787132040524412s; --delay: -15.075977624223418s; --drift: 5.280589967715258px;">❅</span><span class="flake" style="--x: 42.569853465229144vw; --s: 14.671619292167422px; --o: 0.4245167620509706; --d: 11.696393695395642s; --delay: -12.780147385500262s; --drift: -61.942189465816035px;">•</span><span class="flake" style="--x: 74.45295674410752vw; --s: 16.758675197048547px; --o: 0.8686346479648747; --d: 13.61906008475003s; --delay: -14.220611315669341s; --drift: -1.5674815979996737px;">•</span><span class="flake" style="--x: 87.07262381084861vw; --s: 13.168468749990033px; --o: 0.6467136160381288; --d: 17.466099127399012s; --delay: -9.193206098907831s; --drift: -67.95173448814211px;">✦</span><span class="flake" style="--x: 90.48077268335308vw; --s: 19.033004998200322px; --o: 0.8233952943185341; --d: 10.703383782555129s; --delay: -0.3052532786992914s; --drift: -69.43528745096768px;">•</span><span class="flake" style="--x: 83.27398429014171vw; --s: 15.777045162548152px; --o: 0.6026611886228859; --d: 16.693109354779075s; --delay: -0.48231446614649687s; --drift: -8.687112897543301px;">✦</span><span class="flake" style="--x: 26.408667207623836vw; --s: 10.679523668379414px; --o: 0.8990959591765032; --d: 16.090959643095026s; --delay: -4.382127871399727s; --drift: 10.028192512624386px;">✦</span><span class="flake" style="--x: 24.939056154386265vw; --s: 7.990582385833729px; --o: 0.6144787962822948; --d: 17.660107886755796s; --delay: -8.373818142831254s; --drift: 16.334895138035463px;">•</span><span class="flake" style="--x: 18.81007545289437vw; --s: 10.946238012070795px; --o: 0.7098559083827979; --d: 13.468925609344819s; --delay: -14.460581628303691s; --drift: -69.0379488991207px;">✦</span><span class="flake" style="--x: 62.687637913597115vw; --s: 7.465460681687161px; --o: 0.4563034977705827; --d: 9.983546551015383s; --delay: -2.712432863455323s; --drift: -36.254516850854834px;">✦</span><span class="flake" style="--x: 24.877056305087862vw; --s: 8.135504348770759px; --o: 0.7071782478556519; --d: 10.709406613902223s; --delay: -1.6798538603541882s; --drift: 51.53767742779456px;">❅</span><span class="flake" style="--x: 8.915694954223785vw; --s: 16.241192472183663px; --o: 0.45928852451814045; --d: 14.832777961110262s; --delay: -5.400065847194376s; --drift: -48.08373035855471px;">❅</span><span class="flake" style="--x: 14.539284670227026vw; --s: 8.48874783509989px; --o: 0.5831294263694753; --d: 12.862149804985059s; --delay: -3.4272263040800786s; --drift: 12.610444312282496px;">✦</span><span class="flake" style="--x: 3.3224157542309563vw; --s: 9.319137126264934px; --o: 0.6913644563180112; --d: 13.924629176619748s; --delay: -4.376040900935787s; --drift: -3.5659580116746383px;">❄</span><span class="flake" style="--x: 96.8591707163877vw; --s: 7.663353273222002px; --o: 0.7741410586043315; --d: 16.01627271837129s; --delay: -14.513982400796376s; --drift: -73.11607111468307px;">❅</span><span class="flake" style="--x: 74.82120657980676vw; --s: 16.175146807817043px; --o: 0.7252751383663726; --d: 8.863611627377903s; --delay: -16.20742930743764s; --drift: 26.00290718897709px;">❄</span><span class="flake" style="--x: 94.95024147308932vw; --s: 8.108822246005293px; --o: 0.7550638627996169; --d: 15.615674909464275s; --delay: -10.453365909887802s; --drift: -15.903863204274117px;">❅</span><span class="flake" style="--x: 21.729440082414897vw; --s: 20.833341237355437px; --o: 0.5148852397899378; --d: 12.020961661150455s; --delay: -9.40480393288549s; --drift: 35.375467275013065px;">❄</span><span class="flake" style="--x: 25.27081997752085vw; --s: 8.831416694289722px; --o: 0.7367710356363454; --d: 10.506892051911347s; --delay: -10.379567341821957s; --drift: 46.598717217955px;">❅</span><span class="flake" style="--x: 10.843975222242685vw; --s: 17.107751630418402px; --o: 0.4157855201515531; --d: 8.619426425628621s; --delay: -11.6229130926344s; --drift: -69.10075346375652px;">❄</span><span class="flake" style="--x: 98.20819116554995vw; --s: 14.797452238649973px; --o: 0.5947280237702659; --d: 14.698423508874646s; --delay: -17.331692656720023s; --drift: -28.258031763522723px;">✦</span><span class="flake" style="--x: 18.713251334226776vw; --s: 10.4819563861499px; --o: 0.5265740123187233; --d: 13.34998985917996s; --delay: -4.289527090781066s; --drift: -23.712393187007507px;">❄</span><span class="flake" style="--x: 87.98318769615149vw; --s: 11.56086324717881px; --o: 0.43681433128706315; --d: 8.877805384486827s; --delay: -17.867774622178096s; --drift: -22.221426088422177px;">✦</span><span class="flake" style="--x: 21.96131882907696vw; --s: 14.937311489055597px; --o: 0.5951844592613684; --d: 16.8510884032644s; --delay: -0.050367480161592315s; --drift: -77.0165499023709px;">•</span><span class="flake" style="--x: 26.30954791844201vw; --s: 10.450934095664401px; --o: 0.4555560631195289; --d: 12.612856712923108s; --delay: -9.168235199285123s; --drift: -22.8385392597362px;">❄</span><span class="flake" style="--x: 95.18968610248145vw; --s: 12.44446161460471px; --o: 0.8121117651133776; --d: 8.616504235972846s; --delay: -10.825523822361896s; --drift: 18.554791062288672px;">•</span></div>
+  <div class="snow-overlay" id="snow"><span class="flake" style="--x: 53.06354738722967vw; --s: 11.905892933500152px; --o: 0.3160528598194526; --d: 11.446672775992273s; --delay: -6.118339345241433s; --drift: -1.2317742978495971px;">❅</span><span class="flake" style="--x: 88.58546727844774vw; --s: 7.354913667265216px; --o: 0.4460115726747912; --d: 15.051572770074543s; --delay: -2.360373232021484s; --drift: -8.262646165665409px;">❅</span><span class="flake" style="--x: 78.08290072375368vw; --s: 6.280692318743081px; --o: 0.4218651056974605; --d: 17.30405566888208s; --delay: -11.631179262622814s; --drift: -17.422237486514714px;">✦</span><span class="flake" style="--x: 42.62927080429366vw; --s: 5.952598413413133px; --o: 0.22659355720475258; --d: 18.89529034941915s; --delay: -12.655246311881445s; --drift: 18.612185184367362px;">❄</span><span class="flake" style="--x: 32.33173556955513vw; --s: 10.355309115956121px; --o: 0.42523591618427203; --d: 14.014134033055251s; --delay: -14.250541289331835s; --drift: 18.161141432533363px;">❅</span><span class="flake" style="--x: 17.314214738156743vw; --s: 9.16431876109328px; --o: 0.43228934273256725; --d: 18.174416513813643s; --delay: -16.955093674230223s; --drift: 39.56673750449846px;">❅</span><span class="flake" style="--x: 57.458398642381304vw; --s: 9.671937935298928px; --o: 0.3199390502314303; --d: 16.928576047417685s; --delay: -17.764929907910282s; --drift: 15.696532770781886px;">✦</span><span class="flake" style="--x: 9.847338043496867vw; --s: 10.351335311129745px; --o: 0.3041242087045657; --d: 14.22356059626976s; --delay: -9.103656266284261s; --drift: 27.985764630179503px;">❄</span><span class="flake" style="--x: 74.24017692274501vw; --s: 7.69804012227617px; --o: 0.5198271999740276; --d: 15.34130759096296s; --delay: -13.767520784876343s; --drift: -28.11568929352679px;">•</span><span class="flake" style="--x: 34.34028641216682vw; --s: 9.409378345271728px; --o: 0.2851193116490653; --d: 17.89627891974427s; --delay: -17.285890180576164s; --drift: 13.990779245348236px;">✦</span><span class="flake" style="--x: 28.063762034784247vw; --s: 9.451577034325751px; --o: 0.29947166167195854; --d: 13.953005934466223s; --delay: -11.645218929853412s; --drift: 14.296654827263453px;">✦</span><span class="flake" style="--x: 69.73035096342008vw; --s: 11.849772585938625px; --o: 0.3952649631270547; --d: 15.70021180156179s; --delay: -10.137375535472595s; --drift: 27.163105808377452px;">✦</span><span class="flake" style="--x: 16.80091010393756vw; --s: 11.154200108842755px; --o: 0.24883414439004625; --d: 14.83436163670996s; --delay: -4.336823783027196s; --drift: -29.75696752233305px;">❅</span><span class="flake" style="--x: 23.511621482077683vw; --s: 5.381317723850622px; --o: 0.48864391401736484; --d: 14.763770296864447s; --delay: -6.2274639037131285s; --drift: -39.85681691016859px;">❄</span><span class="flake" style="--x: 56.97706153976739vw; --s: 7.991409351283182px; --o: 0.28268874288414286; --d: 18.358662048763968s; --delay: -2.1907065436403927s; --drift: 24.49524359224087px;">❅</span><span class="flake" style="--x: 92.66904633554708vw; --s: 8.427067259686261px; --o: 0.3597418403911382; --d: 16.015158418715238s; --delay: -15.11722349109778s; --drift: 41.0705811077858px;">•</span><span class="flake" style="--x: 26.634377395693676vw; --s: 9.73501418082402px; --o: 0.43404353983857485; --d: 13.801433108978959s; --delay: -16.7484899576628s; --drift: -34.89362993104173px;">❅</span><span class="flake" style="--x: 96.77895071499265vw; --s: 7.159989355397644px; --o: 0.3637615804315473; --d: 12.688014537053153s; --delay: -10.55246956074822s; --drift: -41.21048770467208px;">❅</span><span class="flake" style="--x: 64.01890573068529vw; --s: 11.54898187309771px; --o: 0.29686868828806073; --d: 16.7410184409629s; --delay: -13.953776208985008s; --drift: 37.076234668223975px;">❄</span><span class="flake" style="--x: 87.21825804756233vw; --s: 11.168197354531031px; --o: 0.25222078307724555; --d: 15.610886408127913s; --delay: -3.7062102610095433s; --drift: 1.9793345546609942px;">❄</span><span class="flake" style="--x: 36.88727747496963vw; --s: 10.13303614700587px; --o: 0.33408927360522944; --d: 12.824541891433356s; --delay: -2.896145113346768s; --drift: 36.243713171825604px;">❄</span><span class="flake" style="--x: 65.36957445100914vw; --s: 6.1242563583880445px; --o: 0.32599744234745825; --d: 14.662253850172402s; --delay: -16.52150122625935s; --drift: 40.3826047444084px;">❅</span><span class="flake" style="--x: 82.24029240354707vw; --s: 12.745221683956206px; --o: 0.33793372627667184; --d: 11.476406942373103s; --delay: -11.978662572509414s; --drift: -2.257288278762495px;">❄</span><span class="flake" style="--x: 15.76110852878898vw; --s: 5.143078631316233px; --o: 0.2865798563781197; --d: 11.112349773614778s; --delay: -2.4711654399576983s; --drift: -8.477328545292131px;">❅</span></div>
 
   <div class="container hero-grid">
     <div class="hero-copy">
@@ -1146,7 +1151,7 @@ body.menu-open{overflow:hidden}
 
 <section class="story" id="story">
   <div class="story-sticky">
-    <div class="panel p1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+    <div class="panel p1">
       <div class="inner">
         <div class="symbol">❄</div>
         <div class="eyebrow">01 · Farklılık</div>
@@ -1155,7 +1160,7 @@ body.menu-open{overflow:hidden}
       </div>
     </div>
 
-    <div class="panel p2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 0;">
+    <div class="panel p2">
       <div class="inner">
         <div class="symbol">◎</div>
         <div class="eyebrow">02 · Analiz</div>
@@ -1164,7 +1169,7 @@ body.menu-open{overflow:hidden}
       </div>
     </div>
 
-    <div class="panel p3" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 0;">
+    <div class="panel p3">
       <div class="inner">
         <div class="symbol">✦</div>
         <div class="eyebrow">03 · Plan</div>
@@ -1173,7 +1178,7 @@ body.menu-open{overflow:hidden}
       </div>
     </div>
 
-    <div class="panel p4" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 0;">
+    <div class="panel p4">
       <div class="inner">
         <div class="symbol">○</div>
         <div class="eyebrow">04 · Takip</div>
@@ -1182,7 +1187,7 @@ body.menu-open{overflow:hidden}
       </div>
     </div>
 
-    <div class="progress"><div class="bar" style="width: 0%;"></div></div>
+    <div class="progress"><div class="bar"></div></div>
   </div>
 </section>
 
@@ -1190,18 +1195,18 @@ body.menu-open{overflow:hidden}
 <section class="intro">
   <div class="container">
     <div class="intro-grid">
-      <div><span class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Our Philosophy</span></div>
+      <div><span class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">Our Philosophy</span></div>
       <div>
-        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Güzellik standart değil,<br>kişiseldir.</h2>
-        <p class="lead reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">Güzellik standart değil,<br>kişiseldir.</h2>
+        <p class="lead reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
           Profesyonel bakım bizim için yalnızca bir uygulama adı değildir. Cildin mevcut durumu, bakım rutini,
           mevsimsel ihtiyaçları ve kişinin hedefleri birlikte değerlendirilir; uygulanacak yöntem, yoğunluk ve takip planı buna göre şekillenir.
         </p>
 
         <div class="stats">
-          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><strong>01</strong><span>Her danışan için ayrı değerlendirme</span></div>
-          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><strong>∞</strong><span>Tek kalıba sığmayan cilt ihtiyaçları</span></div>
-          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><strong>100%</strong><span>Kişiye göre şekillenen yaklaşım</span></div>
+          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><strong>01</strong><span>Her danışan için ayrı değerlendirme</span></div>
+          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><strong>∞</strong><span>Tek kalıba sığmayan cilt ihtiyaçları</span></div>
+          <div class="stat reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><strong>100%</strong><span>Kişiye göre şekillenen yaklaşım</span></div>
         </div>
       </div>
     </div>
@@ -1219,10 +1224,10 @@ body.menu-open{overflow:hidden}
           <div class="diagnostic-ring dr2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div>
           <div class="diagnostic-ring dr3"></div>
 
-          <div class="signal sg1" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><i></i> Nem dengesi</div>
-          <div class="signal sg2" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><i></i> Hassasiyet</div>
-          <div class="signal sg3" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><i></i> Doku görünümü</div>
-          <div class="signal sg4" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><i></i> Bakım hedefi</div>
+          <div class="signal sg1" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 18px);"><i></i> Nem dengesi</div>
+          <div class="signal sg2" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 18px);"><i></i> Hassasiyet</div>
+          <div class="signal sg3" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 18px);"><i></i> Doku görünümü</div>
+          <div class="signal sg4" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 18px);"><i></i> Bakım hedefi</div>
 
           <div class="diagnostic-core" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
             <div class="diagnostic-center"></div>
@@ -1299,20 +1304,20 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <div class="process-head">
       <div>
-        <div class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Kişisel Bakım Yolculuğu</div>
-        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Standart paket yok.<br>Doğru süreç var.</h2>
+        <div class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">Kişisel Bakım Yolculuğu</div>
+        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">Standart paket yok.<br>Doğru süreç var.</h2>
       </div>
-      <p class="reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <p class="reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         İlk görüşmeden sonraki seansa kadar her adımın amacı nettir: ihtiyacı doğru anlamak,
         uygun uygulamayı seçmek, bakımın yoğunluğunu kişiye göre belirlemek ve süreci takip etmek.
       </p>
     </div>
 
     <div class="timeline">
-      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><span class="dot"></span><div class="num">01</div><h3>Analiz</h3><p>Cilt görünümü, nem dengesi, hassasiyet, mevcut bakım rutini ve daha önce yapılan uygulamalar değerlendirilir.</p></article>
-      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><span class="dot"></span><div class="num">02</div><h3>Planlama</h3><p>Lazer epilasyon, cilt bakımı, bölgesel incelme, kalıcı makyaj, tırnak, kirpik, makyaj veya saç hizmetlerinden hangisinin tercih edildiği netleştirilir ve randevu planı oluşturulur.</p></article>
-      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><span class="dot"></span><div class="num">03</div><h3>Uygulama</h3><p>Uygulama sırasında cildin konforu ve toleransı gözetilir; işlem adımları önceden oluşturulan plana göre ilerletilir.</p></article>
-      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><span class="dot"></span><div class="num">04</div><h3>Takip</h3><p>Seanslar arasında cildin verdiği yanıt, kişinin geri bildirimi ve değişen ihtiyaçlar değerlendirilerek plan güncellenir.</p></article>
+      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><span class="dot"></span><div class="num">01</div><h3>Analiz</h3><p>Cilt görünümü, nem dengesi, hassasiyet, mevcut bakım rutini ve daha önce yapılan uygulamalar değerlendirilir.</p></article>
+      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><span class="dot"></span><div class="num">02</div><h3>Planlama</h3><p>Lazer epilasyon, cilt bakımı, bölgesel incelme, kalıcı makyaj, tırnak, kirpik, makyaj veya saç hizmetlerinden hangisinin tercih edildiği netleştirilir ve randevu planı oluşturulur.</p></article>
+      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><span class="dot"></span><div class="num">03</div><h3>Uygulama</h3><p>Uygulama sırasında cildin konforu ve toleransı gözetilir; işlem adımları önceden oluşturulan plana göre ilerletilir.</p></article>
+      <article class="step reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><span class="dot"></span><div class="num">04</div><h3>Takip</h3><p>Seanslar arasında cildin verdiği yanıt, kişinin geri bildirimi ve değişen ihtiyaçlar değerlendirilerek plan güncellenir.</p></article>
     </div>
   </div>
 </section>
@@ -1321,216 +1326,216 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">TYANA Hizmetleri</div>
-        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Güzellik rutininiz için<br>tek adreste 12 hizmet.</h2>
+        <div class="eyebrow reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">TYANA Hizmetleri</div>
+        <h2 class="display reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">Güzellik rutininiz için<br>tek adreste 12 hizmet.</h2>
       </div>
-      <p class="reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <p class="reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         Lazer epilasyondan cilt bakımına; tırnak ve kirpik uygulamalarından profesyonel makyaj ve gelin saçına kadar
         TYANA GÜZELLİK BAĞCILAR'ın sunduğu hizmetleri aşağıda inceleyebilirsiniz.
       </p>
     </div>
 
     <div class="service-grid">
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>01 · Epilasyon</small>
         <h3>Lazer Epilasyon</h3>
         <p>İstenmeyen tüy görünümüne yönelik lazer epilasyon uygulaması. Uygunluk, bölge ve randevu detayları için salonla iletişime geçebilirsiniz.</p>
         <div class="service-tag">Bölge ve randevu bilgisi için iletişime geç</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(17 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(17 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>02 · Cilt</small>
         <h3>Cilt Bakımı</h3>
         <p>Cildin bakım ihtiyacına yönelik profesyonel cilt bakım uygulamaları. Uygulama detayları randevu öncesinde salon tarafından paylaşılır.</p>
         <div class="service-tag">Bakım seçeneklerini öğren</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(34 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(34 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>03 · Vücut</small>
         <h3>Bölgesel İncelme</h3>
         <p>Belirli bölgeleri hedefleyen bölgesel incelme uygulamaları. Seans ve uygulama detayları kişisel ihtiyaca göre görüşülür.</p>
         <div class="service-tag">Bölgesel uygulama seçenekleri</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(51 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(51 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>04 · Beauty</small>
         <h3>Kalıcı Makyaj</h3>
         <p>Kalıcı makyaj uygulamalarıyla günlük görünümü destekleyen, uzun süreli güzellik çözümleri sunulur.</p>
         <div class="service-tag">Uygulama ve randevu bilgisi</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(68 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(68 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>05 · Nail</small>
         <h3>Protez Tırnak</h3>
         <p>Tırnak görünümünü uzatmak, şekillendirmek ve daha düzenli bir görünüm kazandırmak için protez tırnak uygulaması.</p>
         <div class="service-tag">Model ve randevu için iletişime geç</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(85 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(85 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>06 · Hands</small>
         <h3>Medikal Manikür</h3>
         <p>El ve tırnak bakımına yönelik medikal manikür hizmeti. Uygulama detayları randevu sırasında belirlenir.</p>
         <div class="service-tag">El ve tırnak bakımı</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(12 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(12 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>07 · Feet</small>
         <h3>Medikal Pedikür</h3>
         <p>Ayak ve tırnak bakımına yönelik medikal pedikür hizmeti. Detaylı bilgi için salonla görüşebilirsiniz.</p>
         <div class="service-tag">Ayak ve tırnak bakımı</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(29 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(29 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>08 · Lash</small>
         <h3>İpek Kirpik</h3>
         <p>Kirpik görünümünü daha belirgin hale getirmeye yönelik ipek kirpik uygulaması.</p>
         <div class="service-tag">Kirpik uygulaması</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(46 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(46 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>09 · Makeup</small>
         <h3>Profesyonel Makyaj</h3>
         <p>Profesyonel makyaj uygulamalarıyla davet, çekim ve özel gün görünümleri hazırlanır.</p>
         <div class="service-tag">Profesyonel makyaj randevusu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(63 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(63 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>10 · Bridal</small>
         <h3>Gelin Saçı</h3>
         <p>Düğün günü görünümünü tamamlamak için gelin saçı uygulaması ve randevu planlaması.</p>
         <div class="service-tag">Gelin saçı için randevu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(80 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(80 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>11 · Brow</small>
         <h3>Altın Oran Kaş Alımı</h3>
         <p>Kaş formunu yüz oranlarıyla uyumlu şekilde düzenlemeye yönelik altın oran kaş alımı hizmeti.</p>
         <div class="service-tag">Kaş tasarımı ve bakım</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(7 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(7 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
 
-      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <article class="service-card reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <small>12 · Lifting</small>
         <h3>Kirpik Lifting</h3>
         <p>Kirpiklere daha kalkık ve belirgin bir görünüm kazandırmaya yönelik kirpik lifting uygulaması.</p>
         <div class="service-tag">Kirpik lifting randevusu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
-            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
-            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(24 145 95)"></path>
-            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-soft" cx="154" cy="96" r="42"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="24"></circle>
+            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(24 145 95)"></path>
+            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"></path>
             <circle class="s-dot" cx="154" cy="96" r="3"></circle>
-            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
+            <circle class="s-dot" cx="190" cy="46" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1539,12 +1544,12 @@ body.menu-open{overflow:hidden}
 </section>
 
 <section class="needs">
-  <div class="need n1" style="translate: none; rotate: none; scale: none; transform: translate3d(-0.0331px, -0.0663px, 0px);"><b>❄</b>Nem</div>
-  <div class="need n2" style="translate: none; rotate: none; scale: none; transform: translate3d(9.7987px, 19.5974px, 0px);"><b>❅</b>Denge</div>
-  <div class="need n3" style="translate: none; rotate: none; scale: none; transform: translate3d(0.1784px, -0.3569px, 0px);"><b>✦</b>Işıltı</div>
-  <div class="need n4" style="translate: none; rotate: none; scale: none; transform: translate3d(-9.977px, 19.954px, 0px);"><b>❄</b>Arınma</div>
-  <div class="need n5" style="translate: none; rotate: none; scale: none; transform: translate3d(1.3495px, -2.699px, 0px);"><b>❅</b>Yenilenme</div>
-  <div class="need n6" style="translate: none; rotate: none; scale: none; transform: translate3d(4.5686px, 9.1371px, 0px);"><b>✦</b>Koruma</div>
+  <div class="need n1" style="translate: none; rotate: none; scale: none; transform: translate3d(-4.086px, -8.1719px, 0px);"><b>❄</b>Nem</div>
+  <div class="need n2" style="translate: none; rotate: none; scale: none; transform: translate3d(8.9401px, 17.8801px, 0px);"><b>❅</b>Denge</div>
+  <div class="need n3" style="translate: none; rotate: none; scale: none; transform: translate3d(9.777px, -19.554px, 0px);"><b>✦</b>Işıltı</div>
+  <div class="need n4" style="translate: none; rotate: none; scale: none; transform: translate3d(-7.016px, 14.0319px, 0px);"><b>❄</b>Arınma</div>
+  <div class="need n5" style="translate: none; rotate: none; scale: none; transform: translate3d(3.2813px, -6.5625px, 0px);"><b>❅</b>Yenilenme</div>
+  <div class="need n6" style="translate: none; rotate: none; scale: none; transform: translate3d(0.6874px, 1.3749px, 0px);"><b>✦</b>Koruma</div>
 
   <div class="need-center">
     <div class="eyebrow">Cilt ihtiyaçları aynı değildir</div>
@@ -1558,7 +1563,7 @@ body.menu-open{overflow:hidden}
 
 <section class="trust">
   <div class="container trust-grid">
-    <div class="trust-left reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+    <div class="trust-left reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
       <div>
         <div class="eyebrow">Güven + Takip</div>
         <h2 class="display">Sonuç, doğru yaklaşımın doğal devamıdır.</h2>
@@ -1571,9 +1576,9 @@ body.menu-open{overflow:hidden}
     </div>
 
     <div class="trust-right">
-      <div class="metric reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><strong>01</strong><span>Her danışan için ayrı değerlendirme</span></div>
-      <div class="metric reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><strong>∞</strong><span>Tek kalıba sığmayan cilt ihtiyaçları</span></div>
-      <div class="quote reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+      <div class="metric reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><strong>01</strong><span>Her danışan için ayrı değerlendirme</span></div>
+      <div class="metric reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);"><strong>∞</strong><span>Tek kalıba sığmayan cilt ihtiyaçları</span></div>
+      <div class="quote reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
         <p>“İyi bakım, en popüler uygulamayı seçmek değil; doğru kişiye doğru bakım planını oluşturmaktır.”</p>
         <div class="eyebrow">TYANA yaklaşımı</div>
       </div>
@@ -1583,9 +1588,9 @@ body.menu-open{overflow:hidden}
 
 <section class="kinetic" aria-labelledby="kinetic-title">
   <div class="kinetic-stack">
-    <div class="kline k1" id="kinetic-title" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Her cilt <span class="accent">biriciktir.</span></div>
-    <div class="kline k2" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Bu yüzden hazır paket değil,</div>
-    <div class="kline k3" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><span class="accent">kişiye özel bakım planı</span> oluştururuz.</div>
+    <div class="kline k1" id="kinetic-title" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(-70px, 0px);">Her cilt <span class="accent">biriciktir.</span></div>
+    <div class="kline k2" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(70px, 0px);">Bu yüzden hazır paket değil,</div>
+    <div class="kline k3" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 40px);"><span class="accent">kişiye özel bakım planı</span> oluştururuz.</div>
     <p class="kinetic-sub">
       <strong>Cilt analizi → ihtiyaç değerlendirmesi → uygun uygulama → takip.</strong>
       Kişiselleştirme bizim için görsel bir slogan değil, bakım sürecinin nasıl ilerlediğini belirleyen çalışma biçimidir.
@@ -1660,7 +1665,7 @@ body.menu-open{overflow:hidden}
 
 <section class="cta" id="booking" aria-labelledby="booking-title">
   <div class="container">
-    <div class="cta-box reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+    <div class="cta-box reveal" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 42px);">
       <div class="cta-grid">
 
         <div class="cta-copy">
@@ -1746,16 +1751,18 @@ window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.s
 /* Snow */
 const glyphs=["❄","❅","✦","•"];
 const snow=document.getElementById("snow");
-for(let i=0;i<120;i++){
+const isMobileSnow = window.matchMedia("(max-width: 768px)").matches;
+const snowCount = isMobileSnow ? 24 : 120;
+for(let i=0;i<snowCount;i++){
   const f=document.createElement("span");
   f.className="flake";
   f.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
   f.style.setProperty("--x",Math.random()*100+"vw");
-  f.style.setProperty("--s",(7+Math.random()*14)+"px");
-  f.style.setProperty("--o",(.38+Math.random()*.55));
-  f.style.setProperty("--d",(8+Math.random()*10)+"s");
+  f.style.setProperty("--s",(isMobileSnow ? 5 : 7)+Math.random()*(isMobileSnow ? 8 : 14)+"px");
+  f.style.setProperty("--o",isMobileSnow ? (.22+Math.random()*.30) : (.38+Math.random()*.55));
+  f.style.setProperty("--d",(isMobileSnow ? 11 : 8)+Math.random()*(isMobileSnow ? 8 : 10)+"s");
   f.style.setProperty("--delay",(-Math.random()*18)+"s");
-  f.style.setProperty("--drift",(-80+Math.random()*160)+"px");
+  f.style.setProperty("--drift",(isMobileSnow ? -44 : -80)+Math.random()*(isMobileSnow ? 88 : 160)+"px");
   snow.appendChild(f);
 }
 
