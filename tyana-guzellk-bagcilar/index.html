@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="tr">
-<head>
+<html lang="tr"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#09070b">
@@ -18,8 +17,8 @@
 <meta name="twitter:description" content="Cilt analiziyle başlayan, ihtiyaçlarınıza göre şekillenen kişisel bakım yolculuğu.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=Italiana&amp;display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -466,45 +465,40 @@ header.scrolled{
 }
 @media(max-width:560px){
   .service-card{
-    padding:22px 18px 146px;
+    padding:22px 18px 160px;
     border-radius:20px;
   }
   .service-card:after{
     left:18px;
     right:18px;
-    bottom:62px;
+    bottom:66px;
   }
   .service-card small{font-size:10px}
   .service-card h3{
-    margin:24px 0 12px;
-    font-size:clamp(34px,11vw,42px);
-    line-height:1.02;
+    margin:28px 0 14px;
+    font-size:clamp(38px,12vw,46px);
   }
   .service-card p{
     font-size:15px;
-    line-height:1.62;
+    line-height:1.65;
   }
   .service-tag{
     left:18px;
-    bottom:18px;
-    max-width:56%;
+    bottom:20px;
+    max-width:52%;
     font-size:11px;
   }
   .service-art{
-    right:10px;
-    bottom:12px;
-    width:84px;
-    height:62px;
-    opacity:.46;
+    right:12px;
+    bottom:14px;
+    width:108px;
+    height:82px;
+    opacity:.72;
   }
-  .service-art .s-line{stroke-width:1.1}
-  .service-art .s-soft{stroke-width:.8;opacity:.78}
-  .service-art .s-dot{opacity:.9}
-  .skin-art{width:84px;height:62px}
-  .laser-art{width:84px;height:62px}
-  .glow-art{width:84px;height:62px}
-  .body-art{width:84px;height:62px}
-  .snow-overlay{opacity:.42}
+  .skin-art{width:112px;height:86px}
+  .laser-art{width:100px;height:82px}
+  .glow-art{width:102px;height:82px}
+  .body-art{width:94px;height:88px}
 }
 
 /* NEEDS */
@@ -736,56 +730,7 @@ footer{border-top:1px solid var(--line);padding:35px 0 48px;color:#8d838e;font-s
   .container{width:min(100% - 28px,1200px)}
   .hero-actions,.cta-actions{flex-direction:column;align-items:stretch}
   .stats{grid-template-columns:1fr}
-
-  /* RANDEVU — mobilde her zaman görünür ve tek kolon */
-  .cta{padding:88px 0 78px}
-  .cta-box{
-    display:block!important;
-    padding:0!important;
-    min-height:0!important;
-    overflow:hidden;
-  }
-  .cta-box.reveal{
-    opacity:1!important;
-    visibility:visible!important;
-    transform:none!important;
-  }
-  .cta-grid{
-    display:block!important;
-    min-height:0!important;
-  }
-  .cta-copy{
-    display:block!important;
-    padding:38px 22px 26px!important;
-  }
-  .cta-copy h2{
-    font-size:clamp(43px,12vw,62px)!important;
-    line-height:.98;
-    margin:16px 0 20px;
-  }
-  .cta-copy>p{
-    font-size:15px;
-    line-height:1.7;
-  }
-  .cta-actions{
-    display:grid!important;
-    grid-template-columns:1fr;
-    gap:10px;
-    margin-top:26px;
-  }
-  .cta-actions .btn{width:100%;min-height:52px}
-  .consult-card{
-    display:flex!important;
-    width:auto!important;
-    margin:0 14px 14px!important;
-    padding:20px!important;
-    min-height:0!important;
-  }
-  .consult-head{gap:10px;padding-bottom:17px}
-  .consult-item{grid-template-columns:38px 1fr;gap:11px;padding:15px 0}
-  .consult-no{width:30px;height:30px}
-  .consult-foot{margin-top:0;padding-top:17px}
-
+  .cta-box{padding:34px 24px;min-height:520px}
   .trust-left{padding:30px}
   .kline{white-space:normal}
   .need{padding:9px 12px}
@@ -912,130 +857,6 @@ body.menu-open{overflow:hidden}
     padding:0 15px;
   }
   .whatsapp-float small{display:none}
-}
-
-
-
-/* MOBILE VISIBILITY & FLOW FIX — keep desktop unchanged */
-@media(max-width:768px){
-  html,body{overflow-x:hidden}
-
-  /* Mobile: content must never stay hidden because of scroll animations */
-  .reveal,
-  .section-head .reveal,
-  .service-card.reveal,
-  .step.reveal,
-  .trust-left.reveal,
-  .metric.reveal,
-  .quote.reveal,
-  .cta-box.reveal,
-  .signal,
-  .kline{
-    opacity:1!important;
-    visibility:visible!important;
-    transform:none!important;
-  }
-
-  /* Hero copy should stay readable on mobile */
-  .hero-copy{
-    opacity:1!important;
-    transform:none!important;
-  }
-
-  /* "Her Cilt Biriciktir" ticker */
-  .marquee{
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-    min-height:49px;
-    position:relative;
-    z-index:6;
-    background:#09070b;
-  }
-  .marquee-track{
-    display:inline-flex!important;
-    visibility:visible!important;
-    opacity:1!important;
-    animation-duration:34s;
-  }
-  .marquee-track span{
-    display:inline-block!important;
-    font-size:10px;
-    letter-spacing:.17em;
-  }
-
-  /* Preserve the original sticky scroll story on mobile. */
-  .story{
-    min-height:400vh;
-    padding:0;
-    background:#09070b;
-  }
-  .story-sticky{
-    position:sticky;
-    top:0;
-    height:100svh;
-    overflow:hidden;
-  }
-  .panel{
-    position:absolute;
-    inset:0;
-    display:grid;
-    place-items:center;
-    padding:24px 20px 46px;
-  }
-  .panel .inner{max-width:560px}
-  .panel h2{font-size:clamp(48px,14vw,76px);line-height:.95}
-  .panel p{font-size:15px;line-height:1.7}
-  .symbol{font-size:62px}
-  .progress{display:block!important;left:18px;right:18px;bottom:18px}
-
-  /* Keep all important sections in normal mobile flow */
-  .intro,.metaphor,.process,.services,.trust,.faq,.cta{
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-  }
-
-  .intro{padding:86px 0 70px}
-  .process{padding:82px 0}
-  .services{padding:82px 0}
-  .trust{padding:82px 0}
-  .faq{padding:82px 0}
-
-  /* Needs section: avoid floating pills covering the central text */
-  .needs{
-    min-height:auto!important;
-    padding:95px 14px;
-    display:block!important;
-  }
-  .need-center{margin:auto;padding:40px 0 185px}
-  .need-center h2{font-size:clamp(48px,14vw,74px)}
-  .need{
-    opacity:1!important;
-    visibility:visible!important;
-    transform:none!important;
-    font-size:10px;
-    padding:8px 10px;
-  }
-  .n1{left:4%;top:auto;bottom:132px}
-  .n2{right:4%;top:auto;bottom:132px}
-  .n3{left:6%;bottom:84px}
-  .n4{right:6%;bottom:84px}
-  .n5{left:13%;top:auto;bottom:36px}
-  .n6{left:auto;right:13%;bottom:36px}
-
-  /* Kinetic statement should not enter from off-screen on mobile */
-  .kinetic{min-height:auto!important;padding:88px 0!important}
-  .kline{opacity:1!important;transform:none!important}
-
-  /* Metaphor content safety */
-  .metaphor-stage,.metaphor-layout,.metaphor-content,.metaphor-diagnostic{
-    visibility:visible!important;
-    opacity:1!important;
-  }
-
-  /* Footer and booking remain accessible above floating WhatsApp */
-  footer{padding-bottom:92px}
 }
 
 </style>
@@ -1267,7 +1088,7 @@ body.menu-open{overflow:hidden}
 
     <div class="mobile-menu-cta">
       <a class="btn primary" href="tel:+905052498101">Cilt Analizi Randevusu</a>
-      <a class="btn whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+      <a class="btn whatsapp-link" href="https://wa.me/905052498101?text=Merhaba%2C%20TYANA%20G%C3%9CZELL%C4%B0K%20BA%C4%9ECILAR%20web%20sitesinden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20ve%20randevu%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
     </div>
 
     <div class="mobile-menu-foot">
@@ -1276,7 +1097,7 @@ body.menu-open{overflow:hidden}
   </div>
 </div>
 
-<a class="whatsapp-float whatsapp-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp'tan iletişime geç">
+<a class="whatsapp-float whatsapp-link" href="https://wa.me/905052498101?text=Merhaba%2C%20TYANA%20G%C3%9CZELL%C4%B0K%20BA%C4%9ECILAR%20web%20sitesinden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20ve%20randevu%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp'tan iletişime geç">
   <i></i>
   WhatsApp
   <small>Hızlı bilgi al</small>
@@ -1409,28 +1230,28 @@ body.menu-open{overflow:hidden}
             <svg viewBox="0 0 200 200">
               <g transform="translate(100 100)">
                 <g class="main-stroke">
-                  <path d="M0-76 V76"/>
-                  <path d="M0-76 l-13 18 M0-76 l13 18"/>
-                  <path d="M0-43 l-16 15 M0-43 l16 15"/>
-                  <path d="M0 76 l-13-18 M0 76 l13-18"/>
-                  <path d="M0 43 l-16-15 M0 43 l16-15"/>
+                  <path d="M0-76 V76"></path>
+                  <path d="M0-76 l-13 18 M0-76 l13 18"></path>
+                  <path d="M0-43 l-16 15 M0-43 l16 15"></path>
+                  <path d="M0 76 l-13-18 M0 76 l13-18"></path>
+                  <path d="M0 43 l-16-15 M0 43 l16-15"></path>
                 </g>
                 <g class="main-stroke" transform="rotate(60)">
-                  <path d="M0-76 V76"/>
-                  <path d="M0-76 l-13 18 M0-76 l13 18"/>
-                  <path d="M0-43 l-16 15 M0-43 l16 15"/>
-                  <path d="M0 76 l-13-18 M0 76 l13-18"/>
-                  <path d="M0 43 l-16-15 M0 43 l16-15"/>
+                  <path d="M0-76 V76"></path>
+                  <path d="M0-76 l-13 18 M0-76 l13 18"></path>
+                  <path d="M0-43 l-16 15 M0-43 l16 15"></path>
+                  <path d="M0 76 l-13-18 M0 76 l13-18"></path>
+                  <path d="M0 43 l-16-15 M0 43 l16-15"></path>
                 </g>
                 <g class="main-stroke" transform="rotate(120)">
-                  <path d="M0-76 V76"/>
-                  <path d="M0-76 l-13 18 M0-76 l13 18"/>
-                  <path d="M0-43 l-16 15 M0-43 l16 15"/>
-                  <path d="M0 76 l-13-18 M0 76 l13-18"/>
-                  <path d="M0 43 l-16-15 M0 43 l16-15"/>
+                  <path d="M0-76 V76"></path>
+                  <path d="M0-76 l-13 18 M0-76 l13 18"></path>
+                  <path d="M0-43 l-16 15 M0-43 l16 15"></path>
+                  <path d="M0 76 l-13-18 M0 76 l13-18"></path>
+                  <path d="M0 43 l-16-15 M0 43 l16-15"></path>
                 </g>
-                <circle class="soft-stroke" r="31"/>
-                <circle class="soft-stroke" r="53"/>
+                <circle class="soft-stroke" r="31"></circle>
+                <circle class="soft-stroke" r="53"></circle>
               </g>
             </svg>
           </div>
@@ -1518,12 +1339,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Bölge ve randevu bilgisi için iletişime geç</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(17 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(17 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1535,12 +1356,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Bakım seçeneklerini öğren</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(34 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(34 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1552,12 +1373,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Bölgesel uygulama seçenekleri</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(51 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(51 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1569,12 +1390,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Uygulama ve randevu bilgisi</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(68 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(68 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1586,12 +1407,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Model ve randevu için iletişime geç</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(85 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(85 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1603,12 +1424,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">El ve tırnak bakımı</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(12 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(12 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1620,12 +1441,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Ayak ve tırnak bakımı</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(29 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(29 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1637,12 +1458,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Kirpik uygulaması</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(46 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(46 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1654,12 +1475,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Profesyonel makyaj randevusu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(63 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(63 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1671,12 +1492,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Gelin saçı için randevu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(80 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(80 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1688,12 +1509,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Kaş tasarımı ve bakım</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(7 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(7 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1705,12 +1526,12 @@ body.menu-open{overflow:hidden}
         <div class="service-tag">Kirpik lifting randevusu</div>
         <div class="service-art" aria-hidden="true">
           <svg viewBox="0 0 220 170">
-            <circle class="s-soft" cx="154" cy="96" r="42"/>
-            <circle class="s-soft" cx="154" cy="96" r="24"/>
-            <path class="s-line" d="M86 126 C111 109,130 95,145 75 C157 58,171 49,190 46" transform="rotate(24 145 95)"/>
-            <path class="s-soft" d="M108 142 C129 130,153 122,179 114"/>
-            <circle class="s-dot" cx="154" cy="96" r="3"/>
-            <circle class="s-dot" cx="190" cy="46" r="2.4"/>
+            <circle class="s-soft" cx="154" cy="96" r="48"></circle>
+            <circle class="s-soft" cx="154" cy="96" r="31"></circle>
+            <path class="s-line" d="M78 132 C104 118,121 102,133 78 C142 60,157 49,184 42" transform="rotate(24 145 95)"></path>
+            <path class="s-soft" d="M95 145 C122 135,148 128,181 112"></path>
+            <circle class="s-dot" cx="154" cy="96" r="3"></circle>
+            <circle class="s-dot" cx="184" cy="42" r="2.4"></circle>
           </svg>
         </div>
       </article>
@@ -1844,7 +1665,7 @@ body.menu-open{overflow:hidden}
       <div class="cta-grid">
 
         <div class="cta-copy">
-          <div class="eyebrow">İlk Görüşme & Cilt Analizi</div>
+          <div class="eyebrow">İlk Görüşme &amp; Cilt Analizi</div>
           <h2 class="display" id="booking-title">Size uygun bakımı birlikte belirleyelim.</h2>
           <p>
             Hangi uygulamanın size uygun olduğuna yalnızca hizmet adına bakarak karar vermeyelim.
@@ -1853,7 +1674,7 @@ body.menu-open{overflow:hidden}
           </p>
           <div class="cta-actions">
             <a class="btn primary magnetic" href="tel:+905052498101">Cilt Analizi Randevusu</a>
-            <a class="btn whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp'tan Bilgi Al</a>
+            <a class="btn whatsapp-link" href="https://wa.me/905052498101?text=Merhaba%2C%20TYANA%20G%C3%9CZELL%C4%B0K%20BA%C4%9ECILAR%20web%20sitesinden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20ve%20randevu%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Bilgi Al</a>
           </div>
         </div>
 
@@ -1918,7 +1739,6 @@ body.menu-open{overflow:hidden}
 gsap.registerPlugin(ScrollTrigger);
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const mobileLayout = window.matchMedia("(max-width: 768px)").matches;
 
 /* Header */
 const header = document.getElementById("header");
@@ -1927,18 +1747,16 @@ window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.s
 /* Snow */
 const glyphs=["❄","❅","✦","•"];
 const snow=document.getElementById("snow");
-const isMobileSnow = window.matchMedia("(max-width: 768px)").matches;
-const snowCount = isMobileSnow ? 34 : 120;
-for(let i=0;i<snowCount;i++){
+for(let i=0;i<120;i++){
   const f=document.createElement("span");
   f.className="flake";
   f.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
   f.style.setProperty("--x",Math.random()*100+"vw");
-  f.style.setProperty("--s",(isMobileSnow ? 5 : 7)+Math.random()*(isMobileSnow ? 8 : 14)+"px");
-  f.style.setProperty("--o",isMobileSnow ? (.25+Math.random()*.34) : (.38+Math.random()*.55));
-  f.style.setProperty("--d",(isMobileSnow ? 11 : 8)+Math.random()*(isMobileSnow ? 8 : 10)+"s");
+  f.style.setProperty("--s",(7+Math.random()*14)+"px");
+  f.style.setProperty("--o",(.38+Math.random()*.55));
+  f.style.setProperty("--d",(8+Math.random()*10)+"s");
   f.style.setProperty("--delay",(-Math.random()*18)+"s");
-  f.style.setProperty("--drift",(isMobileSnow ? -44 : -80)+Math.random()*(isMobileSnow ? 88 : 160)+"px");
+  f.style.setProperty("--drift",(-80+Math.random()*160)+"px");
   snow.appendChild(f);
 }
 
@@ -1966,16 +1784,12 @@ document.querySelectorAll(".magnetic").forEach(el=>{
 });
 
 /* Generic reveals */
-if(!mobileLayout){
-  gsap.utils.toArray(".reveal").forEach(el=>{
-    gsap.from(el,{
-      scrollTrigger:{trigger:el,start:"top 88%"},
-      y:42,opacity:0,duration:.85,ease:"power3.out"
-    });
+gsap.utils.toArray(".reveal").forEach(el=>{
+  gsap.from(el,{
+    scrollTrigger:{trigger:el,start:"top 88%"},
+    y:42,opacity:0,duration:.85,ease:"power3.out"
   });
-}else{
-  gsap.set(".reveal",{opacity:1,y:0,clearProps:"transform"});
-}
+});
 
 /* Metaphor diagnostic motion */
 gsap.to(".diagnostic-core",{
@@ -1993,14 +1807,10 @@ gsap.to(".dr2",{
   ease:"none",
   scrollTrigger:{trigger:".metaphor",start:"top 80%",end:"bottom 20%",scrub:1}
 });
-if(!mobileLayout){
-  gsap.from(".signal",{
-    scrollTrigger:{trigger:".metaphor-stage",start:"top 72%"},
-    y:18,opacity:0,stagger:.12,duration:.65,ease:"power3.out"
-  });
-}else{
-  gsap.set(".signal",{opacity:1,y:0});
-}
+gsap.from(".signal",{
+  scrollTrigger:{trigger:".metaphor-stage",start:"top 72%"},
+  y:18,opacity:0,stagger:.12,duration:.65,ease:"power3.out"
+});
 
 /* Needs floating */
 gsap.utils.toArray(".need").forEach((el,i)=>{
@@ -2015,26 +1825,18 @@ gsap.utils.toArray(".need").forEach((el,i)=>{
 });
 
 /* Kinetic */
-if(!mobileLayout){
-  gsap.from(".k1",{scrollTrigger:{trigger:".kinetic",start:"top 76%"},x:-70,opacity:0,duration:1,ease:"power3.out"});
-  gsap.from(".k2",{scrollTrigger:{trigger:".kinetic",start:"top 73%"},x:70,opacity:0,duration:1,ease:"power3.out"});
-  gsap.from(".k3",{scrollTrigger:{trigger:".kinetic",start:"top 70%"},y:40,opacity:0,duration:1,ease:"power3.out"});
-}else{
-  gsap.set(".k1,.k2,.k3",{opacity:1,x:0,y:0});
-}
+gsap.from(".k1",{scrollTrigger:{trigger:".kinetic",start:"top 76%"},x: -70,opacity:0,duration:1,ease:"power3.out"});
+gsap.from(".k2",{scrollTrigger:{trigger:".kinetic",start:"top 73%"},x: 70,opacity:0,duration:1,ease:"power3.out"});
+gsap.from(".k3",{scrollTrigger:{trigger:".kinetic",start:"top 70%"},y:40,opacity:0,duration:1,ease:"power3.out"});
 
-/* Scroll story — keep the original effect on desktop and mobile */
+/* Scroll story */
 const panels=[".p1",".p2",".p3",".p4"];
-gsap.set(panels,{scale:1});
-gsap.set(panels.slice(1),{opacity:0});
-gsap.set(panels[0],{opacity:1});
 const storyTl=gsap.timeline({
   scrollTrigger:{
     trigger:".story",
     start:"top top",
     end:"bottom bottom",
     scrub:1,
-    invalidateOnRefresh:true,
     onUpdate:s=>gsap.set(".bar",{width:(s.progress*100)+"%"})
   }
 });
@@ -2202,14 +2004,10 @@ window.addEventListener("resize",resize);
 resize();
 
 /* hero text parallax */
-if(!mobileLayout){
-  gsap.to(".hero-copy",{
-    yPercent:18,opacity:.25,ease:"none",
-    scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}
-  });
-}else{
-  gsap.set(".hero-copy",{opacity:1,yPercent:0});
-}
+gsap.to(".hero-copy",{
+  yPercent:18,opacity:.25,ease:"none",
+  scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}
+});
 </script>
 <script>
 
@@ -2252,5 +2050,6 @@ document.querySelectorAll(".whatsapp-link").forEach(link=>{
 });
 
 </script>
-</body>
-</html>
+
+
+</body></html>
