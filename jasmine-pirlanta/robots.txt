@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/sitemap.xml

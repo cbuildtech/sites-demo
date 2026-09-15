@@ -1,30 +1,33 @@
-# Jasmine Pırlanta
+# Jasmine Pırlanta (Pırlanta Atölyesi Jasmine)
 
-Jasmine Pırlanta, Ümraniye/İstanbul bölgesinde Kuyumcu hizmetleri sunan yerel bir işletmedir.
+Jasmine Pırlanta, İstanbul Fatih Cağaloğlu'nda laboratuvar pırlantası (lab-grown diamond) ile tektaş, alyans ve özel tasarım yüzük üreten bir pırlanta atölyesidir.
 
 ## Business Information
 
-- Name: Jasmine Pırlanta
-- Category: Kuyumcu
-- Location: Ümraniye, İstanbul
-- Phone: 05389466432
-- Website: https://example.com/
+- Name: Pırlanta Atölyesi Jasmine (Jasmine Pırlanta)
+- Category: Pırlanta atölyesi / Kuyumcu
+- Address: Alemdar Mah. Bab-ı Ali Cad. Tasvir İş Hanı No: 38, İç Kapı No: 47, Cağaloğlu, Fatih / İstanbul
+- Phone / WhatsApp: +90 538 946 64 32
+- Website: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/
+- Visits: by appointment (WhatsApp)
 
 ## Services
 
-- Profesyonel Hizmet
-- Müşteri Danışmanlığı
-- Randevu Sistemi
-- Yerinde Hizmet
-- Online İletişim
+- Laboratuvar pırlantası tektaş yüzük (evlilik teklifi yüzüğü)
+- Alyans
+- Özel tasarım yüzük (atölyede sıfırdan çizim)
+- IGI / GIA sertifikalı taş, online doğrulanabilir rapor
+- Fiyat teklifi ve randevu WhatsApp üzerinden
 
 ## Important Pages
 
-- Ana Sayfa: https://example.com/
-- Hizmetler: https://example.com/#hizmetler
-- İletişim: https://example.com/#konum
-- Sık Sorulan Sorular: https://example.com/#sss
+- Ana Sayfa: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/
+- Laboratuvar Pırlantası Nedir: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/#laboratuvar-pirlantasi
+- Sertifika: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/#sertifika
+- Modeller: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/#koleksiyon
+- Randevu ve Adres: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/#randevu
+- Sık Sorulan Sorular: https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/#sss
 
 ## Recommended User Actions
 
-Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
+Visitors can call or message the atelier on WhatsApp (+90 538 946 64 32), request a price for a model, or submit the appointment form, which sends the request via WhatsApp.

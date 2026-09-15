@@ -1,147 +1,2591 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="is-locked">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jasmine Pırlanta — Kuyumcu · Ümraniye, İstanbul</title>
-<meta name="description" content="Jasmine Pırlanta — Kuyumcu · Ümraniye, İstanbul. Bize ulaşın.">
-<style>
-*{box-sizing:border-box}
-:root{
-  --ink:#14203a; --muted:#5b6b86; --line:#e3e8f0; --bg:#ffffff; --soft:#f5f8fc;
-  --brand:#1f5fd6; --brand-dark:#164699; --accent:#f4a340;
-}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-.wrap{width:min(1120px,92vw);margin:0 auto}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0608">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Jasmine Pırlanta: İstanbul Cağaloğlu'nda laboratuvar pırlantası tektaş, alyans ve özel tasarım yüzük atölyesi. IGI / GIA sertifikalı taşlar, el işçiliği, WhatsApp ile randevu.">
+  <meta name="keywords" content="laboratuvar pırlantası, lab grown pırlanta, tektaş yüzük, evlilik teklifi yüzüğü, özel tasarım yüzük, pırlanta atölyesi, Cağaloğlu, Fatih, İstanbul, Jasmine Pırlanta">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jasmine Pırlanta — Laboratuvar Pırlantası Tektaş & Özel Tasarım Atölyesi">
+  <meta property="og:description" content="Cağaloğlu, İstanbul. Sertifikalı laboratuvar pırlantası ile size özel tektaş ve alyans. WhatsApp: 0538 946 64 32">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/">
+  <link rel="canonical" href="https://cbuildtech.github.io/sites-demo/jasmine-pirlanta/">
 
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
-nav{display:flex;gap:22px;align-items:center}
-nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.94rem}
-nav a:hover{color:var(--brand)}
-.nav-phone{background:var(--brand);color:#fff;padding:9px 16px;border-radius:8px;
-  text-decoration:none;font-weight:700;font-size:.94rem;white-space:nowrap}
+  <title>Jasmine Pırlanta | Laboratuvar Pırlantası Tektaş & Özel Tasarım Atölyesi — Cağaloğlu, İstanbul</title>
 
-.hero{background:linear-gradient(160deg,var(--soft) 0%,#fff 70%);
-  border-bottom:1px solid var(--line);padding:76px 0 68px}
-.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.025em}
-.hero .tagline{color:var(--brand);font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;font-size:.82rem;margin:0 0 18px}
-.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:60ch;margin:0}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-block;padding:13px 26px;border-radius:9px;text-decoration:none;
-  font-weight:700;font-size:.98rem;border:2px solid transparent}
-.btn-primary{background:var(--brand);color:#fff}
-.btn-primary:hover{background:var(--brand-dark)}
-.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
-.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-section{padding:68px 0}
-section.alt{background:var(--soft);border-block:1px solid var(--line)}
-h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 10px;letter-spacing:-.02em}
-.sub{color:var(--muted);margin:0 0 34px;max-width:62ch}
+  <style>
+    :root {
+      --gold: #c7a16b;
+      --gold-light: #e8cf9c;
+      --rose: #d9a58c;
+      --rose-deep: #b07a68;
+      --wine: #4a1424;
+      --ink: #050203;
+      --bg: #0b0608;
+      --bg-2: #120a0e;
+      --surface: rgba(255, 235, 225, .035);
+      --line: rgba(232, 207, 156, .16);
+      --text: #f3ece4;
+      --muted: rgba(243, 236, 228, .62);
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+      --bar: 6vh;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
 
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:26px}
-.card h3{margin:0 0 8px;font-size:1.08rem}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.rating{display:flex;flex-wrap:wrap;align-items:center;gap:14px;
-  background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px 26px}
-.stars{color:var(--accent);font-size:1.3rem;letter-spacing:2px}
-.score{font-size:1.9rem;font-weight:800}
-.rating .muted{color:var(--muted);font-size:.95rem}
+    html { scroll-behavior: smooth; }
 
-.contact-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.contact-item{background:#fff;border:1px solid var(--line);border-radius:13px;padding:24px}
-.contact-item .label{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;
-  color:var(--muted);font-weight:700;margin-bottom:7px}
-.contact-item .value{font-size:1.05rem;font-weight:600;word-break:break-word}
-.contact-item a{color:var(--brand);text-decoration:none}
-.contact-item a:hover{text-decoration:underline}
+    html, body {
+      background: var(--ink);
+      color: var(--text);
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-footer{background:var(--ink);color:#cfd8e6;padding:34px 0;font-size:.92rem}
-.foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+    body {
+      overflow-x: hidden;
+      font-family: var(--sans);
+      font-weight: 300;
+      overscroll-behavior-y: none;
+    }
 
-@media(max-width:760px){
-  nav a:not(.nav-phone){display:none}
-  .hero{padding:54px 0 46px}
-  section{padding:50px 0}
-}
-</style>
+    /* Intro sırasında kaydırma kilitli (iOS dahil) */
+    html.is-locked, html.is-locked body {
+      height: 100%;
+      overflow: hidden;
+      touch-action: none;
+    }
+    html.is-locked body {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+    }
+
+    /* Sinematik hikâyeyi süren boş kaydırma alanı */
+    .story { height: 430vh; position: relative; }
+
+    /* ---------- SİNEMA KATMANI (sabit) ---------- */
+    #cinema { position: fixed; inset: 0; z-index: 1; }
+
+    #webgl {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      z-index: 1;
+      overflow: hidden;
+    }
+    #webgl canvas { display: block; width: 100%; height: 100%; }
+
+    /* Sıcak bordo / rose-gold sis */
+    .haze {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(ellipse 70% 60% at 72% 62%, rgba(120, 28, 52, .42), transparent 62%),
+        radial-gradient(ellipse 55% 50% at 18% 28%, rgba(214, 150, 120, .16), transparent 60%),
+        radial-gradient(ellipse 80% 40% at 50% 100%, rgba(90, 20, 40, .35), transparent 70%);
+      opacity: 0;
+    }
+
+    /* Yumuşak bokeh küreleri */
+    .orbs {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(18px);
+      mix-blend-mode: screen;
+      animation: orbfloat 26s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    .orb.rose { background: radial-gradient(circle, rgba(217,150,130,.42) 0%, rgba(217,150,130,.10) 45%, transparent 70%); }
+    .orb.gold { background: radial-gradient(circle, rgba(232,207,156,.36) 0%, rgba(232,207,156,.08) 45%, transparent 70%); }
+    .orb.wine { background: radial-gradient(circle, rgba(150,40,70,.40) 0%, rgba(150,40,70,.10) 45%, transparent 70%); }
+    .orb:nth-child(1) { width: 420px; height: 420px; left: -8%; top: 8%; animation-duration: 30s; }
+    .orb:nth-child(2) { width: 260px; height: 260px; left: 78%; top: 14%; animation-duration: 24s; animation-delay: -6s; }
+    .orb:nth-child(3) { width: 520px; height: 520px; left: 62%; top: 58%; animation-duration: 34s; animation-delay: -12s; }
+    .orb:nth-child(4) { width: 180px; height: 180px; left: 14%; top: 66%; animation-duration: 20s; animation-delay: -3s; }
+    .orb:nth-child(5) { width: 340px; height: 340px; left: 36%; top: -12%; animation-duration: 28s; animation-delay: -15s; }
+    .orb:nth-child(6) { width: 140px; height: 140px; left: 88%; top: 78%; animation-duration: 22s; animation-delay: -9s; }
+    @keyframes orbfloat {
+      0%   { transform: translate3d(0, 0, 0) scale(1); }
+      50%  { transform: translate3d(4vw, -3vh, 0) scale(1.08); }
+      100% { transform: translate3d(-3vw, 4vh, 0) scale(.96); }
+    }
+
+    .cinematic-glow {
+      position: absolute;
+      width: min(70vw, 950px);
+      height: min(70vw, 950px);
+      right: -12vw;
+      top: 45%;
+      transform: translateY(-50%);
+      z-index: 2;
+      pointer-events: none;
+      background: radial-gradient(circle,
+        rgba(214,150,120,.12) 0%,
+        rgba(120,40,60,.06) 34%,
+        transparent 68%);
+      filter: blur(22px);
+      opacity: 0;
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 50% 48%,
+        transparent 30%,
+        rgba(8,2,5,.14) 48%,
+        rgba(8,2,5,.55) 75%,
+        rgba(5,2,3,.92) 100%);
+    }
+
+    .grain {
+      position: absolute;
+      inset: -25%;
+      z-index: 3;
+      opacity: .028;
+      pointer-events: none;
+      background-image: repeating-radial-gradient(circle,
+        rgba(255,255,255,.2) 0px,
+        rgba(255,255,255,.2) 1px,
+        transparent 1px,
+        transparent 3px);
+      animation: grain .25s steps(2) infinite;
+    }
+    @keyframes grain {
+      0% { transform: translate(0,0); }
+      25% { transform: translate(-1%,1%); }
+      50% { transform: translate(1%,-1%); }
+      75% { transform: translate(1%,1%); }
+      100% { transform: translate(0,0); }
+    }
+
+    .scrim {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58vh;
+      z-index: 4;
+      pointer-events: none;
+      background: linear-gradient(to top,
+        rgba(8,3,5,.94) 0%,
+        rgba(8,3,5,.55) 40%,
+        transparent 100%);
+      opacity: 0;
+      transition: opacity .8s ease;
+    }
+
+    .brand {
+      position: absolute;
+      top: calc(34px + var(--safe-top));
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 13;
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.82);
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .cinematic-bar {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #000;
+      z-index: 12;
+      pointer-events: none;
+    }
+    .cinematic-bar.top { top: 0; }
+    .cinematic-bar.bottom { bottom: 0; }
+
+    /* ---------- INTRO YAZILARI ---------- */
+    .intro { position: absolute; inset: 0; z-index: 14; pointer-events: none; }
+
+    .caption {
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      width: min(92vw, 900px);
+      transform: translateX(-50%);
+      text-align: center;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(30px, 4.4vw, 60px);
+      line-height: 1.18;
+      letter-spacing: .5px;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 2px 30px rgba(0,0,0,.7);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .caption em { font-style: italic; color: var(--gold-light); }
+    .caption .w { display: inline-block; opacity: 0; }
+    .caption .w + .w { margin-left: .28em; }
+    #cap-3 {
+      top: 17%;
+      font-size: clamp(38px, 6.2vw, 84px);
+      transform: translateX(-50%) scale(.92);
+    }
+
+    .skip {
+      position: absolute;
+      right: calc(22px + env(safe-area-inset-right, 0px));
+      bottom: calc(var(--bar) + 18px + var(--safe-bottom));
+      z-index: 15;
+      padding: 12px 18px;
+      min-height: 44px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.35);
+      color: rgba(255,255,255,.6);
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: color .3s, border-color .3s;
+      backdrop-filter: blur(8px);
+    }
+    .skip:hover { color: #fff; border-color: rgba(255,255,255,.5); }
+
+    /* ---------- HERO / SAHNE METİNLERİ ---------- */
+    .hero {
+      position: absolute;
+      z-index: 8;
+      left: 5.5vw;
+      top: 55%;
+      transform: translateY(-50%);
+      max-width: 460px;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .eyebrow, .mini, .label {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 9.5px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(52px, 5.6vw, 92px);
+      font-weight: 300;
+      line-height: .95;
+      letter-spacing: -1px;
+    }
+    .hero h1 em, .scene-copy h2 em, .title em { font-style: italic; color: var(--gold-light); }
+
+    .hero p, .scene-copy p {
+      max-width: 430px;
+      margin-top: 24px;
+      color: rgba(255,255,255,.62);
+      font-size: 13px;
+      line-height: 1.95;
+      letter-spacing: .5px;
+    }
+
+    .line {
+      width: 46px;
+      height: 1px;
+      margin: 22px 0 0;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform-origin: left center;
+    }
+    .scene-copy.right .line { margin-left: auto; transform-origin: right center; background: linear-gradient(270deg, var(--gold), transparent); }
+    .scene-copy.center .line { margin-left: auto; margin-right: auto; transform-origin: center; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      pointer-events: auto;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 24px;
+      border: 1px solid rgba(199,161,107,.55);
+      color: #d5b783;
+      text-decoration: none;
+      font-family: var(--sans);
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: rgba(0,0,0,.18);
+      backdrop-filter: blur(10px);
+      transition: .35s ease;
+      cursor: pointer;
+    }
+    .button:hover, .button:active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #090705;
+    }
+    .button.solid { background: var(--gold); border-color: var(--gold); color: #090705; }
+    .button.solid:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .button.wa { border-color: rgba(120,200,150,.45); color: #9fd8b3; }
+    .button.wa:hover { background: #2c7a52; border-color: #2c7a52; color: #fff; }
+    .button svg { width: 15px; height: 15px; }
+
+    .scroll {
+      position: absolute;
+      left: 50%;
+      bottom: calc(var(--bar) + 22px + var(--safe-bottom));
+      transform: translateX(-50%);
+      z-index: 8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,.4);
+      font-size: 8.5px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .scroll i {
+      display: block;
+      width: 1px;
+      height: 34px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollline 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollline {
+      0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      40% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      70% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    .progress {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      z-index: 16;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+      transform: scaleX(0);
+      transform-origin: left center;
+      pointer-events: none;
+    }
+
+    .scene-copy {
+      position: absolute;
+      z-index: 11;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      max-width: 470px;
+    }
+    .scene-copy.right { right: 5.5vw; top: 50%; transform: translateY(-50%); text-align: right; }
+    .scene-copy.right p { margin-left: auto; }
+    .scene-copy.left { left: 5.5vw; top: 52%; transform: translateY(-50%); text-align: left; }
+    .scene-copy.center {
+      left: 50%;
+      bottom: calc(var(--bar) + 8vh);
+      transform: translateX(-50%);
+      text-align: center;
+      max-width: 780px;
+      width: 92vw;
+    }
+    .scene-copy.center p { max-width: 600px; margin-left: auto; margin-right: auto; }
+    .scene-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 4.4vw, 68px);
+      font-weight: 300;
+      line-height: .98;
+      letter-spacing: -.5px;
+    }
+    .note {
+      margin-top: 20px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(232,207,156,.75);
+      letter-spacing: .3px;
+    }
+
+    /* ---------- LOADING ---------- */
+    .loading {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+    .loading.hidden { opacity: 0; visibility: hidden; }
+    .loading-inner { text-align: center; }
+    .loading-mark {
+      font-family: var(--serif);
+      font-size: 54px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 18px;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .35; transform: scale(.97); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    .loading-text {
+      font-size: 8.5px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+
+    /* =======================================================
+       ALT SAYFA — PREMIUM KUYUMCU AKIŞI
+       ======================================================= */
+    .site {
+      position: relative;
+      z-index: 20;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 45%, var(--bg) 100%);
+      color: var(--text);
+    }
+    .site::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: 0;
+      height: 80vh;
+      background: radial-gradient(ellipse 80% 55% at 50% 50%, rgba(120,28,52,.30), transparent 70%);
+      pointer-events: none;
+    }
+    .site > * { position: relative; z-index: 1; }
+    .site::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      top: -46vh;
+      height: 46vh;
+      background: linear-gradient(to bottom, transparent, rgba(11,6,8,.65) 60%, var(--bg));
+      pointer-events: none;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
+    section.block { padding: clamp(76px, 10vw, 140px) 0; position: relative; }
+    section.block + section.block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 50%;
+      width: min(900px, 80vw);
+      height: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+
+    .title {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(36px, 4.6vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -.5px;
+      max-width: 14ch;
+    }
+    .title.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .lead {
+      margin-top: 22px;
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.95;
+      letter-spacing: .3px;
+    }
+    .lead.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .label.center { text-align: center; }
+
+    /* Manifesto */
+    .manifesto { text-align: center; }
+    .manifesto blockquote {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(30px, 4.2vw, 58px);
+      line-height: 1.2;
+      max-width: 22ch;
+      margin: 0 auto;
+      color: var(--text);
+    }
+    .manifesto blockquote em { font-style: italic; color: var(--rose); }
+    .manifesto .heart {
+      display: block;
+      margin: 34px auto 0;
+      width: 18px; height: 18px;
+      color: var(--rose);
+      opacity: .8;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 70px;
+      text-align: left;
+    }
+    .value {
+      padding: 30px 28px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      backdrop-filter: blur(6px);
+    }
+    .value svg { width: 28px; height: 28px; color: var(--gold); margin-bottom: 18px; }
+    .value h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .value p { color: var(--muted); font-size: 13px; line-height: 1.8; }
+
+    /* 3 Adım */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 64px;
+    }
+    .step { position: relative; padding-top: 26px; border-top: 1px solid var(--line); }
+    .step .num {
+      font-family: var(--serif);
+      font-size: 56px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold-light);
+      opacity: .85;
+    }
+    .step h3 {
+      margin-top: 16px;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 26px;
+    }
+    .step p { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+
+    /* Koleksiyon kartları */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 56px;
+    }
+    .card {
+      position: relative;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      overflow: hidden;
+      transition: transform .5s ease, border-color .5s ease, box-shadow .5s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232,207,156,.38);
+      box-shadow: 0 30px 60px -30px rgba(120,40,60,.6);
+    }
+    .card .media {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% 60%, rgba(120,40,60,.35), transparent 70%),
+        linear-gradient(180deg, #1a0d12, #0c0608);
+      overflow: hidden;
+    }
+    .card .media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+    .card .media img.ready { opacity: 1; }
+    .card:hover .media img.ready { transform: scale(1.04); }
+    .card .media .mono {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 54px;
+      color: rgba(232,207,156,.18);
+    }
+    .card .tag {
+      position: absolute;
+      top: 14px; left: 14px;
+      z-index: 2;
+      padding: 6px 10px;
+      border: 1px solid rgba(232,207,156,.35);
+      background: rgba(5,2,3,.55);
+      color: var(--gold-light);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+    }
+    .card .body { padding: 20px 20px 22px; }
+    .card h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+    .card .meta {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11.5px;
+      letter-spacing: .4px;
+    }
+    .card .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .card .price {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--gold-light);
+      white-space: nowrap;
+    }
+    .card .price small { font-size: 12px; font-family: var(--sans); color: var(--muted); margin-left: 6px; letter-spacing: .5px; }
+    .card .button { min-height: 40px; padding: 0 16px; font-size: 8.5px; letter-spacing: 2.5px; }
+    .cards-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 11.5px;
+      letter-spacing: .3px;
+      text-align: center;
+    }
+
+    /* Randevu */
+    .booking {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(32px, 6vw, 90px);
+      align-items: start;
+      margin-top: 24px;
+    }
+    .info-list { margin-top: 36px; display: grid; gap: 14px; }
+    .info {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .info svg { width: 20px; height: 20px; color: var(--gold); margin-top: 2px; }
+    .info b { display: block; font-weight: 500; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 4px; }
+    .info span { color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .info a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); }
+    .booking .actions { margin-top: 26px; }
+
+    form.appt {
+      padding: clamp(24px, 3vw, 38px);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,235,225,.05), rgba(255,235,225,.02));
+      backdrop-filter: blur(8px);
+    }
+    form.appt h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+    form.appt .hint { color: var(--muted); font-size: 12.5px; margin-bottom: 26px; line-height: 1.7; }
+    .field { display: grid; gap: 8px; margin-bottom: 16px; }
+    .field label {
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: rgba(5,2,3,.45);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .3s;
+      border-radius: 0;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .field select {
+      background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+      background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      padding-right: 40px;
+    }
+    .field select option { background: #1a0d12; color: var(--text); }
+    .field input::placeholder, .field textarea::placeholder { color: rgba(243,236,228,.3); }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: rgba(232,207,156,.6); }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .field input[type="date"] { color-scheme: dark; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .consent {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 6px 0 22px;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+    .consent input { width: 16px; height: 16px; margin-top: 2px; accent-color: var(--gold); flex: none; }
+    form.appt .button { width: 100%; }
+    .form-status { margin-top: 14px; font-size: 12px; color: var(--gold-light); min-height: 18px; }
+
+    /* Yorumlar & güven */
+    .quotes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 56px;
+    }
+    .quote {
+      padding: 30px 28px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .stars { color: var(--gold); font-size: 11px; letter-spacing: 3px; }
+    .quote p {
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.45;
+      font-style: italic;
+      color: rgba(243,236,228,.88);
+      flex: 1;
+    }
+    .quote cite {
+      font-style: normal;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 44px;
+    }
+    .trust div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      font-size: 11.5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(243,236,228,.75);
+    }
+    .trust svg { width: 18px; height: 18px; color: var(--gold); flex: none; }
+
+    /* Laboratuvar pırlantası: iki sütun + karşılaştırma tablosu */
+    .split { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+    .split .lead + .lead { margin-top: 14px; }
+    table.compare { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.compare th, table.compare td { padding: 14px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    table.compare th { font-size: 9.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    table.compare td:first-child { color: var(--muted); }
+    table.compare td:nth-child(2) { color: var(--text); }
+    table.compare td:nth-child(3) { color: rgba(243,236,228,.55); }
+    table.compare em { font-style: italic; color: var(--gold-light); }
+    .table-note { margin-top: 14px; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--rose); }
+
+    /* Sertifika kartları */
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+    .cert { padding: 30px 28px; border: 1px solid var(--line); background: var(--surface); }
+    .cert .num { font-family: var(--serif); font-size: 44px; font-weight: 300; color: var(--gold-light); line-height: 1; }
+    .cert h3 { margin-top: 16px; font-family: var(--serif); font-weight: 400; font-size: 22px; }
+    .cert p { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+
+    /* Harita */
+    .map { margin-top: 28px; border: 1px solid var(--line); aspect-ratio: 16 / 10; overflow: hidden; background: #1a0d12; }
+    .map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(.35) contrast(1.05) brightness(.9) sepia(.15); }
+
+    /* SSS akordeon */
+    .container.narrow { max-width: 860px; }
+    .faq { margin-top: 48px; border-top: 1px solid var(--line); }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 44px 22px 0;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.3;
+      position: relative;
+      transition: color .3s;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+";
+      position: absolute; right: 4px; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--gold);
+      transition: transform .35s ease;
+    }
+    .faq details[open] summary { color: var(--gold-light); }
+    .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .faq p { padding: 0 0 24px; max-width: 720px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .center-actions { justify-content: center; margin-top: 30px; }
+
+    /* Footer */
+    footer.site-footer {
+      padding: clamp(60px, 8vw, 100px) 0 calc(36px + var(--safe-bottom));
+      border-top: 1px solid var(--line);
+      background: linear-gradient(180deg, transparent, rgba(5,2,3,.7));
+    }
+    .foot {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+    }
+    .foot .mark {
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+    .foot p { margin-top: 16px; color: var(--muted); font-size: 12.5px; line-height: 1.85; max-width: 380px; }
+    .foot h4 { font-size: 9.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .foot ul { list-style: none; display: grid; gap: 10px; }
+    .foot a { color: rgba(243,236,228,.75); text-decoration: none; font-size: 13px; transition: color .3s; }
+    .foot a:hover { color: var(--gold-light); }
+    .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: rgba(243,236,228,.4);
+      font-size: 11px;
+      letter-spacing: .6px;
+    }
+
+    /* Sabit üst menü ve WhatsApp (sinema bittikten sonra görünür) */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 24;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: calc(14px + var(--safe-top)) clamp(20px, 4vw, 48px) 14px;
+      background: rgba(8,3,5,.55);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      transform: translateY(-110%);
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+    .site-nav.show { transform: translateY(0); }
+    .site-nav .mark { font-family: var(--serif); font-size: 15px; letter-spacing: 6px; text-transform: uppercase; color: var(--text); text-decoration: none; }
+    .site-nav ul { list-style: none; display: flex; gap: 26px; }
+    .site-nav a { color: rgba(243,236,228,.7); text-decoration: none; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+    .site-nav a:hover { color: var(--gold-light); }
+
+    .wa-float {
+      position: fixed;
+      right: calc(20px + env(safe-area-inset-right, 0px));
+      bottom: calc(20px + var(--safe-bottom));
+      z-index: 25;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px 12px 14px;
+      border: 1px solid rgba(120,200,150,.4);
+      background: rgba(8,3,5,.7);
+      color: #cfeedb;
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+      transform: translateY(140%);
+      transition: transform .6s cubic-bezier(.2,.7,.2,1), background .3s;
+    }
+    .wa-float.show { transform: translateY(0); }
+    .wa-float:hover { background: #2c7a52; color: #fff; }
+    .wa-float svg { width: 18px; height: 18px; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(26px); }
+
+    /* ---------- MOBİL ---------- */
+    @media (max-width: 900px) {
+      :root { --bar: 4vh; }
+
+      .scrim { opacity: 1; }
+      .cinematic-glow { display: none; }
+      .orb { filter: blur(12px); }
+
+      .brand { top: calc(22px + var(--safe-top)); font-size: 10px; letter-spacing: 5px; }
+
+      .caption { top: 13%; width: 88vw; font-size: clamp(27px, 7.6vw, 44px); }
+      #cap-3 { top: 12%; font-size: clamp(38px, 11vw, 60px); }
+
+      .hero {
+        left: 22px; right: 22px; top: auto;
+        bottom: calc(var(--bar) + 6vh + var(--safe-bottom));
+        transform: none; max-width: none;
+      }
+      .hero h1 { font-size: clamp(42px, 12.5vw, 64px); }
+      .hero p, .scene-copy p { font-size: 12px; line-height: 1.8; margin-top: 16px; max-width: 360px; }
+      .eyebrow, .mini { margin-bottom: 12px; }
+      .actions { margin-top: 20px; gap: 8px; }
+      .button { padding: 0 18px; font-size: 9px; }
+
+      .scroll { display: none; }
+
+      .scene-copy, .scene-copy.right, .scene-copy.left, .scene-copy.center {
+        left: 22px; right: 22px; top: auto;
+        bottom: calc(var(--bar) + 5vh + var(--safe-bottom));
+        transform: none; text-align: left; max-width: none; width: auto;
+      }
+      .scene-copy.right p, .scene-copy.center p { margin-left: 0; margin-right: 0; }
+      .scene-copy.right .line, .scene-copy.center .line {
+        margin-left: 0; margin-right: 0;
+        transform-origin: left center;
+        background: linear-gradient(90deg, var(--gold), transparent);
+      }
+      .scene-copy h2 { font-size: clamp(34px, 10vw, 52px); }
+      .scene-copy.center .actions { justify-content: flex-start !important; }
+      .note { font-size: 14px; }
+      .skip { right: 16px; bottom: calc(var(--bar) + 14px + var(--safe-bottom)); }
+
+      .values, .steps, .quotes { grid-template-columns: 1fr; gap: 14px; }
+      .steps { gap: 26px; }
+      .cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .card .body { padding: 14px 14px 16px; }
+      .card h3 { font-size: 19px; }
+      .card .row { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .card .button { width: 100%; }
+      .booking { grid-template-columns: 1fr; }
+      .two { grid-template-columns: 1fr; gap: 0; }
+      .trust { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr; gap: 36px; }
+      .cert-grid { grid-template-columns: 1fr; gap: 14px; }
+      table.compare { font-size: 12px; }
+      table.compare th, table.compare td { padding: 11px 8px; }
+      .faq summary { font-size: 19px; padding: 18px 36px 18px 0; }
+      .foot { grid-template-columns: 1fr; gap: 30px; }
+      .site-nav .mark { font-size: 12px; letter-spacing: 3px; white-space: nowrap; }
+      .site-nav ul { gap: 16px; }
+      .site-nav a { font-size: 9px; letter-spacing: 2px; }
+      .site-nav li.hide-m { display: none; }
+      .wa-float span { display: none; }
+      .wa-float { padding: 14px; border-radius: 50%; }
+    }
+
+    @media (max-width: 900px) and (orientation: landscape) {
+      .hero, .scene-copy, .scene-copy.right, .scene-copy.left, .scene-copy.center {
+        bottom: calc(var(--bar) + 3vh);
+        max-width: 60vw;
+      }
+      .hero h1, .scene-copy h2 { font-size: clamp(28px, 6vw, 44px); }
+      .hero p, .scene-copy p { display: none; }
+      .caption { top: 8%; font-size: clamp(22px, 4.5vw, 34px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .grain, .scroll i, .loading-mark, .orb { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
 
-<header>
-  <div class="wrap bar">
-    <span class="brand">Jasmine Pırlanta</span>
-    <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="nav-phone" href="tel:05389466432">05389466432</a>
-    </nav>
+<div class="loading" id="loading">
+  <div class="loading-inner">
+    <div class="loading-mark">J</div>
+    <div class="loading-text">Işıklar hazırlanıyor</div>
   </div>
-</header>
+</div>
 
-<section class="hero">
-  <div class="wrap">
-    <p class="tagline">Kuyumcu · Ümraniye, İstanbul</p>
-    <h1>Jasmine Pırlanta</h1>
-    <p class="lead">Jasmine Pırlanta, Ümraniye, İstanbul bölgesinde kuyumcu alanında hizmet vermektedir.</p>
-      <div class="actions"><a class="btn btn-primary" href="tel:05389466432">Hemen Ara</a></div>
+<!-- ============ SİNEMA KATMANI ============ -->
+<div id="cinema">
+  <div id="webgl"></div>
+  <div class="haze"></div>
+  <div class="orbs">
+    <span class="orb rose"></span><span class="orb gold"></span><span class="orb wine"></span>
+    <span class="orb gold"></span><span class="orb wine"></span><span class="orb rose"></span>
   </div>
-</section>
+  <div class="cinematic-glow"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+  <div class="scrim"></div>
 
-<section id="hizmetler">
-  <div class="wrap">
-    <h2>Hizmetlerimiz</h2>
-    <p class="sub">İhtiyacınıza uygun çözümler için bizimle iletişime geçin.</p>
-    <div class="grid">
-        <article class="card"><h3>Uzman Kadro</h3><p>Jasmine Pırlanta olarak uzman kadro hizmetimizle yanınızdayız.</p></article>
-        <article class="card"><h3>Hızlı Çözüm</h3><p>Jasmine Pırlanta olarak hızlı çözüm hizmetimizle yanınızdayız.</p></article>
-        <article class="card"><h3>Uygun Fiyat</h3><p>Jasmine Pırlanta olarak uygun fiyat hizmetimizle yanınızdayız.</p></article>
-        <article class="card"><h3>Garantili Hizmet</h3><p>Jasmine Pırlanta olarak garantili hizmet hizmetimizle yanınızdayız.</p></article>
-        <article class="card"><h3>Randevu Kolaylığı</h3><p>Jasmine Pırlanta olarak randevu kolaylığı hizmetimizle yanınızdayız.</p></article>
-        <article class="card"><h3>Müşteri Desteği</h3><p>Jasmine Pırlanta olarak müşteri desteği hizmetimizle yanınızdayız.</p></article>
+  <div class="brand">Jasmine Pırlanta</div>
+
+  <div class="cinematic-bar top"></div>
+  <div class="cinematic-bar bottom"></div>
+
+  <div class="intro" id="intro">
+    <p class="caption" id="cap-1">
+      <span class="w">Özel</span><span class="w">bir</span><span class="w">an</span><span class="w">mı</span><span class="w"><em>istiyorsunuz?</em></span>
+    </p>
+    <p class="caption" id="cap-2">Bazı anlar,<br><em>bir ömür boyu parlar.</em></p>
+    <p class="caption" id="cap-3">Bir kelime.<br><em>Bir ömür.</em></p>
+  </div>
+  <button class="skip" id="skip" type="button">Geç</button>
+
+  <section class="hero">
+    <span class="eyebrow">Laboratuvar Pırlantası · Özel Tasarım Tektaş</span>
+    <h1>Zamansız<br>Bir <em>Işıltı.</em></h1>
+    <p>
+      Kalbinizin sesini dinlediğiniz o an için tasarlandı.
+      Bir soru, bir nefes, bir ömür… ve ona eşlik edecek tek bir yüzük.
+    </p>
+    <div class="actions">
+      <a href="#koleksiyon" class="button">Koleksiyonu Keşfet</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="hakkimizda" class="alt">
-  <div class="wrap">
-    <h2>Hakkımızda</h2>
-    <p class="sub">Jasmine Pırlanta, Ümraniye, İstanbul bölgesinde kuyumcu alanında hizmet vermektedir.</p>
+  <section class="scene-copy right" id="scene-copy-1">
+    <span class="mini">Signature Diamond</span>
+    <h2>Her Bakışta,<br><em>İlk Günkü</em> Heyecan.</h2>
+    <div class="line"></div>
+    <p>
+      Merkez taşın ışıltısı, ona her baktığınızda kalbinizin hızlandığı
+      o ilk anı hatırlatır. Işık, tam da olması gerektiği yerde durur.
+    </p>
+  </section>
 
-  </div>
-</section>
+  <section class="scene-copy left" id="scene-copy-2">
+    <span class="mini">Atelier Craft</span>
+    <h2>Sonsuza Dek<br>Demenin <em>Zarafeti.</em></h2>
+    <div class="line"></div>
+    <p>
+      Her çizgi, bir ömür boyu taşınacak bir sözün ağırlığını hissederek işlendi.
+      Metalden tırnağa kadar hiçbir detay tesadüf değil.
+    </p>
+  </section>
 
-<section id="iletisim">
-  <div class="wrap">
-    <h2>İletişim</h2>
-    <p class="sub">Sorularınız için bize ulaşın12321312312.</p>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="label">Telefon</div>
-        <div class="value"><a href="tel:05389466432">05389466432</a></div>
+  <section class="scene-copy center" id="scene-copy-3">
+    <span class="mini">Jasmine Pırlanta · Cağaloğlu</span>
+    <h2>Bir Soru Var.<br><em>Cevabı Sizsiniz.</em></h2>
+    <div class="line"></div>
+    <p>
+      O anı hayal ettiniz. Işığı, sessizliği, gözlerindeki bakışı.
+      Şimdi sadece bir şey eksik: onu size özel hale getirecek yüzük.
+    </p>
+    <div class="actions" style="justify-content:center; margin-top:26px;">
+      <a href="#randevu" class="button solid">Özel Randevu Oluştur</a>
+      <a href="#koleksiyon" class="button">Koleksiyonu Keşfet</a>
+    </div>
+    <div class="note">♡ Randevular gizlilik içinde, yalnızca size özel planlanır.</div>
+  </section>
+
+  <div class="scroll"><i></i>Hikâyeyi Kaydırın</div>
+  <div class="progress" id="progress"></div>
+</div>
+
+<!-- Kaydırma alanı: sinematik hikâye bu yükseklik boyunca oynar -->
+<div class="story" id="story"></div>
+
+<!-- ============ ÜST MENÜ + WHATSAPP (hikâye bitince) ============ -->
+<nav class="site-nav" id="site-nav">
+  <a class="mark" href="#story">Jasmine Pırlanta</a>
+  <ul>
+    <li><a href="#koleksiyon">Koleksiyon</a></li>
+    <li class="hide-m"><a href="#laboratuvar-pirlantasi">Laboratuvar Pırlantası</a></li>
+    <li class="hide-m"><a href="#sss">SSS</a></li>
+    <li><a href="#randevu">Randevu</a></li>
+  </ul>
+</nav>
+<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<!-- ============ ALT SAYFA ============ -->
+<main class="site" id="site">
+
+  <!-- Marka hissi -->
+  <section class="block" id="hikaye">
+    <div class="container manifesto">
+      <span class="label center reveal">Pırlanta Atölyesi Jasmine · Cağaloğlu, İstanbul</span>
+      <blockquote class="reveal">
+        Bir yüzük, bir sorunun cevabı değildir.<br>
+        <em>Sorulmaya cesaret edilen anın hatırasıdır.</em>
+      </blockquote>
+      <svg class="heart reveal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-7-4.6-9.3-9A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>
+      <p class="lead center reveal">Jasmine Pırlanta, Fatih Cağaloğlu'nda bir pırlanta atölyesidir. Sertifikalı laboratuvar pırlantası ile tektaş, alyans ve tamamen size özel tasarımlar üretiyoruz. Hazır vitrin değil; sizinle birlikte çizilen bir yüzük.</p>
+
+      <div class="values">
+        <div class="value reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 6 3-6M9 9l3 12 3-12"/></svg>
+          <h3>Laboratuvar Pırlantası</h3>
+          <p>Doğal pırlanta ile aynı karbon kristali, aynı sertlik, aynı ışıltı. Fark yalnızca oluştuğu yer; fiyat ise belirgin biçimde daha erişilebilir.</p>
+        </div>
+        <div class="value reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 20l4-1 10-10-3-3L5 16z"/><path d="M13 7l3 3M3 21h18"/></svg>
+          <h3>Atölyede Özel Tasarım</h3>
+          <p>Aklınızdaki çizimi, fotoğrafı ya da sadece hikâyeyi getirin. Taş seçimi, montür ve gravür dahil her adım atölyemizde sizinle netleşir.</p>
+        </div>
+        <div class="value reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Sertifikalı &amp; Şeffaf</h3>
+          <p>Merkez taşlar bağımsız gemoloji laboratuvarı raporuyla teslim edilir. Karat, renk, berraklık ve kesim; hepsi belgeli, hepsi doğrulanabilir.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="wrap foot">
-    <span>&copy; 2026 Jasmine Pırlanta</span>
-    <span>Tüm hakları saklıdır.</span>
-  </div>
-</footer>
+  <!-- Laboratuvar pırlantası nedir -->
+  <section class="block" id="laboratuvar-pirlantasi">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="label reveal">Laboratuvar Pırlantası Nedir?</span>
+          <h2 class="title reveal">Gerçek pırlanta.<br><em>Madenden değil,</em><br>laboratuvardan.</h2>
+          <p class="lead reveal">Laboratuvar pırlantası (lab-grown diamond), doğadaki oluşum koşullarının kontrollü ortamda yeniden yaratılmasıyla büyütülen gerçek pırlantadır. Kimyasal yapısı saf karbondur; sertliği, kırılma indisi ve ışığı dağıtma biçimi doğal pırlanta ile birebir aynıdır.</p>
+          <p class="lead reveal">İki üretim yöntemi vardır: HPHT (yüksek basınç, yüksek sıcaklık) ve CVD (kimyasal buhar biriktirme). Her iki yöntemle üretilen taşlar da doğal pırlanta ile aynı 4C ölçütleriyle (karat, renk, berraklık, kesim) derecelendirilir ve çıplak gözle, hatta standart kuyumcu büyüteciyle ayırt edilemez.</p>
+        </div>
+        <div class="reveal">
+          <table class="compare">
+            <thead>
+              <tr><th></th><th>Laboratuvar</th><th>Doğal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kimyasal yapı</td><td>Saf karbon</td><td>Saf karbon</td></tr>
+              <tr><td>Sertlik (Mohs)</td><td>10</td><td>10</td></tr>
+              <tr><td>Işıltı &amp; ateş</td><td>Aynı</td><td>Aynı</td></tr>
+              <tr><td>Derecelendirme</td><td>4C · IGI / GIA</td><td>4C · IGI / GIA</td></tr>
+              <tr><td>Oluşum</td><td>Haftalar, laboratuvar</td><td>Milyonlarca yıl, yer altı</td></tr>
+              <tr><td>Madencilik</td><td>Yok</td><td>Var</td></tr>
+              <tr><td>Aynı kalitede fiyat</td><td><em>Belirgin şekilde daha uygun</em></td><td>Yüksek</td></tr>
+            </tbody>
+          </table>
+          <p class="table-note">Aynı bütçeyle daha büyük ve daha temiz bir taş seçebilmenizin nedeni budur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sertifikalar -->
+  <section class="block" id="sertifika">
+    <div class="container">
+      <span class="label reveal">Sertifika &amp; Güvence</span>
+      <h2 class="title reveal">Her taşın <em>bir kimliği</em> vardır.</h2>
+      <p class="lead reveal">Sattığımız her laboratuvar pırlantası, IGI (International Gemological Institute) veya GIA (Gemological Institute of America) gibi bağımsız laboratuvarların raporuyla gelir. Rapor numarasını laboratuvarın kendi sitesinden online doğrulayabilirsiniz.</p>
+
+      <div class="cert-grid">
+        <div class="cert reveal">
+          <div class="num">4C</div>
+          <h3>Karat · Renk · Berraklık · Kesim</h3>
+          <p>Raporda taşın ağırlığı, renk derecesi (D–Z), berraklık derecesi (FL–I3) ve kesim kalitesi ayrı ayrı belirtilir. Fiyatı belirleyen tam olarak bu dört değerdir.</p>
+        </div>
+        <div class="cert reveal">
+          <div class="num">ID</div>
+          <h3>Lazer Gravür</h3>
+          <p>Sertifikalı taşların çoğunda rapor numarası taşın kuşak (girdle) bölümüne mikroskobik olarak lazerle işlenir. Taş ile belge birbirine bu numarayla bağlıdır.</p>
+        </div>
+        <div class="cert reveal">
+          <div class="num">✓</div>
+          <h3>Online Doğrulama</h3>
+          <p>Rapor numarasını IGI veya GIA'nın web sitesine girdiğinizde taşın tüm derecelerini görürsünüz. Teslimatta bunu birlikte yapıyoruz; kapalı kutu almıyorsunuz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Özel deneyim: 3 adım -->
+  <section class="block" id="deneyim">
+    <div class="container">
+      <span class="label reveal">Atölye Deneyimi</span>
+      <h2 class="title reveal">Üç adımda,<br>size özel <em>bir tasarım.</em></h2>
+      <p class="lead reveal">Jasmine bir mağaza değil, atölyedir. Bu yüzden süreç bir vitrinden seçmekle değil, bir sohbetle başlar. Hazır modellerimizden ilerleyebilir ya da sıfırdan tasarlatabilirsiniz.</p>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">01</div>
+          <h3>Randevu &amp; Keşif</h3>
+          <p>WhatsApp'tan yazın, Cağaloğlu'ndaki atölyemize gelin. Tarzınızı, bütçenizi ve parmak ölçüsünü birlikte netleştiriyoruz. Taşları ışığın altında elinize alıp karşılaştırıyorsunuz.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">02</div>
+          <h3>Tasarım &amp; Taş Seçimi</h3>
+          <p>Sertifikalı laboratuvar pırlantaları arasından taşınızı seçiyorsunuz. Montür, altın rengi, ayar ve gravür size özel çiziliyor; onayınız olmadan üretime geçilmiyor.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">03</div>
+          <h3>Üretim &amp; Teslim</h3>
+          <p>Yüzük atölyemizde elde işleniyor. Sertifikası ve kutusuyla teslim ediyoruz; rapor numarasını birlikte doğruluyoruz. Teklif anı için önerilerimizi de paylaşmaktan mutluluk duyarız.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Koleksiyon -->
+  <section class="block" id="koleksiyon">
+    <div class="container">
+      <span class="label reveal">Tektaş Modelleri</span>
+      <h2 class="title reveal">Tek bir <em>evet</em> için<br>farklı ışıklar.</h2>
+      <p class="lead reveal">Aynı imza, üç farklı metal. Her model sertifikalı laboratuvar pırlantası ile üretilir; karat, renk ve ölçü isteğinize göre belirlenir. Fiyat, seçtiğiniz taşa ve güncel altın kuruna göre aynı gün netleşir.</p>
+
+      <div class="cards" id="cards">
+        <article class="card reveal" data-product="Aurora Tektaş">
+          <div class="media"><span class="mono">J</span><img alt="Aurora Tektaş — sarı altın laboratuvar pırlantası tektaş yüzük" data-variant="yellow" data-angle="1.0"></div>
+          <span class="tag">Sarı Altın</span>
+          <div class="body">
+            <h3>Aurora Tektaş</h3>
+            <div class="meta">14 ayar sarı altın · Markiz kesim · 0.30 – 1.00 ct</div>
+            <div class="row">
+              <div class="price"><small>Fiyat için yazın</small></div>
+              <a class="button ask" href="#" target="_blank" rel="noopener">Fiyat Al</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal" data-product="Rosé Tektaş">
+          <div class="media"><span class="mono">J</span><img alt="Rosé Tektaş — rose altın laboratuvar pırlantası tektaş yüzük" data-variant="rose" data-angle="-1.05"></div>
+          <span class="tag">Rose Altın</span>
+          <div class="body">
+            <h3>Rosé Tektaş</h3>
+            <div class="meta">14 ayar rose altın · Markiz kesim · 0.30 – 1.00 ct</div>
+            <div class="row">
+              <div class="price"><small>Fiyat için yazın</small></div>
+              <a class="button ask" href="#" target="_blank" rel="noopener">Fiyat Al</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal" data-product="Lumière Tektaş">
+          <div class="media"><span class="mono">J</span><img alt="Lumière Tektaş — beyaz altın laboratuvar pırlantası tektaş yüzük" data-variant="white" data-angle="0.9"></div>
+          <span class="tag">Beyaz Altın</span>
+          <div class="body">
+            <h3>Lumière Tektaş</h3>
+            <div class="meta">14 / 18 ayar beyaz altın · Markiz kesim · 0.30 – 1.50 ct</div>
+            <div class="row">
+              <div class="price"><small>Fiyat için yazın</small></div>
+              <a class="button ask" href="#" target="_blank" rel="noopener">Fiyat Al</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal" data-product="Özel Tasarım">
+          <div class="media"><span class="mono">J</span><img alt="Özel tasarım tektaş yüzük — Jasmine Pırlanta atölyesi" data-variant="yellow" data-angle="-0.55"></div>
+          <span class="tag">Size Özel</span>
+          <div class="body">
+            <h3>Özel Tasarım</h3>
+            <div class="meta">İstediğiniz metal, kesim ve karat · Sıfırdan çizim</div>
+            <div class="row">
+              <div class="price"><small>Teklif için yazın</small></div>
+              <a class="button ask" href="#" target="_blank" rel="noopener">Teklif Al</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="cards-note reveal">Görseller atölyemizin imza tektaş modelinin üç metal rengindeki halidir. Farklı kesimler (yuvarlak, oval, damla, prenses) için WhatsApp'tan fotoğraf isteyebilirsiniz.</p>
+    </div>
+  </section>
+
+  <!-- Randevu + Harita -->
+  <section class="block" id="randevu">
+    <div class="container">
+      <div class="booking">
+        <div>
+          <span class="label reveal">Randevu &amp; Atölye</span>
+          <h2 class="title reveal">Cağaloğlu'nda, <em>size ayrılmış</em> bir saat.</h2>
+          <p class="lead reveal">Atölye olduğumuz için misafirlerimizi randevuyla ağırlıyoruz; böylece taşları sakin bir ortamda, acele etmeden inceleyebiliyorsunuz. Önce WhatsApp'tan yazmanız yeterli.</p>
+
+          <div class="info-list">
+            <div class="info reveal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div><b>Adres</b><span>Alemdar Mah. Bab-ı Ali Cad. Tasvir İş Hanı No: 38, İç Kapı No: 47<br>Cağaloğlu · Fatih / İstanbul</span></div>
+            </div>
+            <div class="info reveal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+              <div><b>Telefon &amp; WhatsApp</b><span><a href="tel:+905389466432">0538 946 64 32</a><br>Arayabilir ya da WhatsApp'tan yazabilirsiniz.</span></div>
+            </div>
+            <div class="info reveal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17l6-7 4 5 3-3 5 5"/><rect x="3" y="4" width="18" height="16" rx="1"/></svg>
+              <div><b>Ulaşım</b><span>Gülhane ve Sultanahmet tramvay durakları yürüme mesafesindedir. Kapalıçarşı'ya 10 dakika.</span></div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="button wa" id="wa-link" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
+              WhatsApp'tan Yazın
+            </a>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Pırlanta+Atölyesi+Jasmine+Alemdar+Mahallesi+Bab-ı+Ali+Caddesi+Tasvir+İş+Hanı+No+38+Fatih+İstanbul" target="_blank" rel="noopener">Yol Tarifi</a>
+          </div>
+
+          <div class="map reveal">
+            <iframe
+              title="Pırlanta Atölyesi Jasmine — harita"
+              src="https://www.google.com/maps?q=Pırlanta+Atölyesi+Jasmine,+Alemdar+Mahallesi+Bab-ı+Ali+Caddesi+Tasvir+İş+Hanı+No:38+Fatih+İstanbul&z=17&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <form class="appt reveal" id="appt" novalidate>
+          <h3>Randevu Talebi</h3>
+          <p class="hint">Formu doldurun, talebiniz WhatsApp üzerinden bize iletilsin. Mesajınıza en kısa sürede dönüş yapıyoruz.</p>
+
+          <div class="two">
+            <div class="field">
+              <label for="f-name">Ad Soyad</label>
+              <input id="f-name" name="name" type="text" placeholder="Adınız Soyadınız" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Telefon</label>
+              <input id="f-phone" name="phone" type="tel" placeholder="05xx xxx xx xx" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="f-date">Tercih Edilen Tarih</label>
+              <input id="f-date" name="date" type="date">
+            </div>
+            <div class="field">
+              <label for="f-time">Saat</label>
+              <select id="f-time" name="time">
+                <option value="">Fark etmez</option>
+                <option>Sabah (10.00 – 12.00)</option>
+                <option>Öğlen (12.00 – 15.00)</option>
+                <option>Akşamüstü (15.00 – 18.00)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-product">İlgilendiğiniz Model</label>
+            <select id="f-product" name="product">
+              <option value="">Henüz karar vermedim</option>
+              <option>Aurora Tektaş</option>
+              <option>Rosé Tektaş</option>
+              <option>Lumière Tektaş</option>
+              <option>Özel Tasarım</option>
+              <option>Alyans</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-note">Notunuz</label>
+            <textarea id="f-note" name="note" placeholder="Bütçe aralığı, yüzük ölçüsü, teklif tarihi… Bize istediğinizi yazın."></textarea>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="f-consent" required>
+            <span>Bilgilerimin yalnızca randevu planlaması için kullanılmasını kabul ediyorum.</span>
+          </label>
+          <button class="button solid" type="submit">Randevu Talebi Gönder</button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section class="block" id="sss">
+    <div class="container narrow">
+      <span class="label center reveal">Sıkça Sorulan Sorular</span>
+      <h2 class="title center reveal">Merak <em>ettikleriniz.</em></h2>
+
+      <div class="faq" id="faq">
+        <details class="reveal" open>
+          <summary>Laboratuvar pırlantası gerçek pırlanta mıdır?</summary>
+          <p>Evet. Laboratuvar pırlantası kimyasal, fiziksel ve optik olarak doğal pırlanta ile aynıdır: saf karbon kristali, 10 Mohs sertlik, aynı ışıltı ve ateş. Zirkon ya da moissanit gibi "pırlanta benzeri" taşlarla karıştırılmamalıdır; onlar farklı minerallerdir.</p>
+        </details>
+        <details class="reveal">
+          <summary>Doğal pırlantadan farkı nasıl anlaşılır?</summary>
+          <p>Çıplak gözle ya da standart kuyumcu büyüteciyle ayırt edilemez. Ayrım yalnızca gemoloji laboratuvarlarındaki özel cihazlarla, taşın büyüme izlerine bakılarak yapılır. Bu yüzden her taş sertifikasıyla teslim edilir ve raporda "laboratory-grown" ibaresi açıkça yazar.</p>
+        </details>
+        <details class="reveal">
+          <summary>Zamanla matlaşır, sararır ya da bulanıklaşır mı?</summary>
+          <p>Hayır. Laboratuvar pırlantası doğal pırlanta gibi kalıcıdır; renk ve berraklığı değişmez. Günlük kullanımda yalnızca yüzeyde biriken yağ ve kir parlaklığı azaltabilir, bu da basit bir temizlikle geri gelir.</p>
+        </details>
+        <details class="reveal">
+          <summary>Hangi sertifikalarla çalışıyorsunuz, nasıl doğrularım?</summary>
+          <p>Merkez taşlarımız IGI veya GIA raporuyla gelir. Rapordaki numarayı ilgili laboratuvarın web sitesindeki doğrulama sayfasına girerek taşın karat, renk, berraklık ve kesim derecelerini kendiniz görebilirsiniz. Teslimatta bu doğrulamayı birlikte yapıyoruz.</p>
+        </details>
+        <details class="reveal">
+          <summary>Fiyatlar neden sitede yazmıyor?</summary>
+          <p>Bir tektaşın fiyatı taşın 4C değerlerine (karat, renk, berraklık, kesim), montürün gramajına ve günün altın kuruna göre değişir. Aynı model 0.30 ct ile 1.00 ct arasında çok farklı fiyatlara gelebilir. WhatsApp'tan bütçenizi ve tercihlerinizi yazın; aynı gün net teklif veriyoruz.</p>
+        </details>
+        <details class="reveal">
+          <summary>Aynı bütçeyle doğal pırlantaya göre ne kazanırım?</summary>
+          <p>Aynı kalite derecelerinde laboratuvar pırlantası belirgin şekilde daha uygun fiyatlıdır. Pratikte bu, aynı bütçeyle daha yüksek karatlı, daha temiz ve daha beyaz bir taş seçebilmeniz anlamına gelir.</p>
+        </details>
+        <details class="reveal">
+          <summary>Özel tasarım süreci nasıl işliyor, ne kadar sürüyor?</summary>
+          <p>Randevuda fikrinizi dinliyor, taşı birlikte seçiyor ve tasarımı çiziyoruz. Onayınızdan sonra üretim atölyemizde başlar. Süre tasarımın detayına göre değişir; randevuda size net bir teslim tarihi veriyoruz. Teklif tarihiniz varsa mutlaka söyleyin, planlamayı ona göre yapıyoruz.</p>
+        </details>
+        <details class="reveal">
+          <summary>Parmak ölçüsünü bilmiyorum, sürpriz yapmak istiyorum. Ne yapmalıyım?</summary>
+          <p>Çok sık karşılaştığımız bir durum. Partnerinizin kullandığı bir yüzüğü getirebilir ya da fotoğrafını cetvelle birlikte çekip gönderebilirsiniz. Teklif sonrası ölçü ayarı çoğu modelde yapılabilir; bunu randevuda modelinize göre netleştiriyoruz.</p>
+        </details>
+        <details class="reveal">
+          <summary>Atölye nerede, randevusuz gelebilir miyim?</summary>
+          <p>Cağaloğlu'nda, Alemdar Mahallesi Bab-ı Ali Caddesi Tasvir İş Hanı No: 38, İç Kapı No: 47 adresindeyiz (Fatih / İstanbul). Bir mağaza değil atölye olduğumuz için randevuyla çalışıyoruz; gelmeden önce WhatsApp'tan yazmanız, sizi bekleyen biri olmasını sağlar.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Güven -->
+  <section class="block" id="guven">
+    <div class="container">
+      <div class="trust">
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18"/></svg>IGI / GIA Sertifikalı Taş</div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20l4-1 10-10-3-3L5 16z"/><path d="M13 7l3 3"/></svg>Atölyede Özel Tasarım</div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Online Doğrulanabilir Rapor</div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Cağaloğlu, İstanbul</div>
+      </div>
+      <div class="actions center-actions reveal">
+        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Pırlanta+Atölyesi+Jasmine+Fatih+İstanbul" target="_blank" rel="noopener">Google Yorumlarımızı Görün</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot">
+        <div class="reveal">
+          <div class="mark">Jasmine Pırlanta</div>
+          <p>Pırlanta Atölyesi Jasmine — İstanbul Cağaloğlu'nda laboratuvar pırlantası tektaş, alyans ve özel tasarım yüzük atölyesi. Sertifikalı taş, el işçiliği ve şeffaf fiyat.</p>
+        </div>
+        <div class="reveal">
+          <h4>Keşfet</h4>
+          <ul>
+            <li><a href="#laboratuvar-pirlantasi">Laboratuvar Pırlantası Nedir?</a></li>
+            <li><a href="#sertifika">Sertifika &amp; Güvence</a></li>
+            <li><a href="#koleksiyon">Tektaş Modelleri</a></li>
+            <li><a href="#sss">Sıkça Sorulan Sorular</a></li>
+            <li><a href="#randevu">Randevu Oluştur</a></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="tel:+905389466432">0538 946 64 32</a></li>
+            <li><a href="https://wa.me/905389466432" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Pırlanta+Atölyesi+Jasmine+Fatih+İstanbul" target="_blank" rel="noopener">Alemdar Mah. Bab-ı Ali Cad. Tasvir İş Hanı No: 38/47, Fatih / İstanbul</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Pırlanta Atölyesi Jasmine · Tüm hakları saklıdır.</span>
+        <span>Laboratuvar pırlantası · Tektaş · Alyans · Özel tasarım · Cağaloğlu, Fatih, İstanbul</span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<!-- SEO: yapılandırılmış veri -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "JewelryStore",
+      "name": "Pırlanta Atölyesi Jasmine",
+      "alternateName": "Jasmine Pırlanta",
+      "description": "İstanbul Cağaloğlu'nda laboratuvar pırlantası tektaş, alyans ve özel tasarım yüzük atölyesi. IGI / GIA sertifikalı taşlar, el işçiliği.",
+      "telephone": "+905389466432",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alemdar Mah. Bab-ı Ali Cad. Tasvir İş Hanı No: 38, İç Kapı No: 47",
+        "addressLocality": "Fatih",
+        "addressRegion": "İstanbul",
+        "postalCode": "34110",
+        "addressCountry": "TR"
+      },
+      "areaServed": "İstanbul",
+      "priceRange": "₺₺",
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Laboratuvar pırlantası tektaş yüzük" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Özel tasarım pırlanta yüzük" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Alyans" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Laboratuvar pırlantası gerçek pırlanta mıdır?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. Laboratuvar pırlantası kimyasal, fiziksel ve optik olarak doğal pırlanta ile aynıdır: saf karbon kristali, 10 Mohs sertlik, aynı ışıltı. Zirkon veya moissanit gibi pırlanta benzeri taşlardan farklıdır." } },
+        { "@type": "Question", "name": "Laboratuvar pırlantası doğal pırlantadan nasıl ayırt edilir?", "acceptedAnswer": { "@type": "Answer", "text": "Çıplak gözle veya kuyumcu büyüteciyle ayırt edilemez; yalnızca gemoloji laboratuvarlarındaki özel cihazlarla anlaşılır. Bu nedenle her taş, laboratory-grown ibaresi taşıyan sertifikasıyla teslim edilir." } },
+        { "@type": "Question", "name": "Laboratuvar pırlantası zamanla matlaşır mı?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Doğal pırlanta gibi kalıcıdır; renk ve berraklığı değişmez." } },
+        { "@type": "Question", "name": "Hangi sertifikalarla çalışıyorsunuz?", "acceptedAnswer": { "@type": "Answer", "text": "Merkez taşlar IGI veya GIA raporuyla gelir. Rapor numarası laboratuvarın web sitesinden online doğrulanabilir." } },
+        { "@type": "Question", "name": "Fiyatlar neden sitede yazmıyor?", "acceptedAnswer": { "@type": "Answer", "text": "Fiyat taşın karat, renk, berraklık ve kesim değerlerine, montür gramajına ve güncel altın kuruna göre değişir. WhatsApp üzerinden aynı gün net teklif verilir." } },
+        { "@type": "Question", "name": "Atölye nerede, randevusuz gelebilir miyim?", "acceptedAnswer": { "@type": "Answer", "text": "Cağaloğlu'nda, Alemdar Mahallesi Bab-ı Ali Caddesi Tasvir İş Hanı No: 38, İç Kapı No: 47, Fatih / İstanbul adresindeyiz. Atölye olduğumuz için randevuyla çalışıyoruz; gelmeden önce WhatsApp'tan yazmanız önerilir." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- CİHAZ / DÜZEN ---------- */
+const reducedMotion =
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const layout = { mobile: false, portrait: false };
+
+function readLayout() {
+  layout.mobile = window.innerWidth < 900;
+  layout.portrait = window.innerHeight > window.innerWidth;
+}
+readLayout();
+
+/* ---------- SAHNE ---------- */
+const container = document.getElementById("webgl");
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0507);
+scene.fog = new THREE.FogExp2(0x0a0507, 0.03);
+
+const camera = new THREE.PerspectiveCamera(
+  36,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  100
+);
+
+/*
+  Kamera doğrudan tween edilmez. GSAP camPos / camTarget'ı hareket ettirir,
+  animate() içinde parallax eklenip kameraya yazılır.
+*/
+const camPos = new THREE.Vector3(0.35, 7.9, 1.15);
+const camTarget = new THREE.Vector3(0.55, 0.92, 0.02);
+const parallax = new THREE.Vector3();
+const parallaxGoal = new THREE.Vector3();
+const lookHelper = new THREE.Vector3();
+
+const renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  powerPreference: "high-performance"
+});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, layout.mobile ? 1.5 : 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.0;
+renderer.outputEncoding = THREE.sRGBEncoding;
+container.appendChild(renderer.domElement);
+
+/* Kutu + ışıklar tek grupta: mobil/masaüstü kompozisyonu bu grubu kaydırarak ayarlanır */
+const stage = new THREE.Group();
+scene.add(stage);
+
+/* ---------- KADİFE DOKUSU ---------- */
+function createVelvetTexture(color) {
+  const size = 512;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, size, size);
+
+  for (let i = 0; i < 30000; i++) {
+    const x = Math.random() * size;
+    const y = Math.random() * size;
+    const value = Math.random() > 0.5 ? 255 : 0;
+    const alpha = Math.random() * 0.04;
+    ctx.fillStyle = `rgba(${value},${value},${value},${alpha})`;
+    ctx.fillRect(x, y, 1, 1 + Math.random() * 2);
+  }
+  for (let i = 0; i < 1200; i++) {
+    const x = Math.random() * size;
+    const y = Math.random() * size;
+    ctx.strokeStyle = `rgba(255,255,255,${Math.random() * 0.012})`;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + Math.random() * 8, y + Math.random() * 2);
+    ctx.stroke();
+  }
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(3, 3);
+  texture.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 8);
+  return texture;
+}
+
+const velvetOuter = new THREE.MeshPhysicalMaterial({
+  color: 0x1a1210,
+  map: createVelvetTexture("#120e0d"),
+  roughness: 0.88,
+  metalness: 0,
+  clearcoat: 0.025,
+  clearcoatRoughness: 0.94
+});
+
+const velvetInner = new THREE.MeshPhysicalMaterial({
+  color: 0x050303,
+  map: createVelvetTexture("#030202"),
+  roughness: 1,
+  metalness: 0
+});
+
+const gold = new THREE.MeshPhysicalMaterial({
+  color: 0xc39d62,
+  metalness: 1,
+  roughness: 0.18,
+  clearcoat: 0.2,
+  clearcoatRoughness: 0.12
+});
+
+/* ---------- IŞIKLAR ---------- */
+/* Tüm ışık şiddetleri L üzerinden tween edilir, animate() içinde uygulanır */
+const L = {
+  ambient: 0.02,
+  key: 0,
+  reveal: 0,
+  gold: 0,
+  rim: 0.12,
+  diamond: 0,
+  sweep: 0,
+  inner: 0,
+  exposure: 0.0
+};
+
+const ambient = new THREE.AmbientLight(0xffffff, L.ambient);
+scene.add(ambient);
+
+const keyLight = new THREE.SpotLight(0xffe2bc, 0);
+keyLight.position.set(-1.2, 8.5, 2.3);
+keyLight.angle = Math.PI / 6;
+keyLight.penumbra = 0.9;
+keyLight.decay = 1.3;
+keyLight.distance = 20;
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.set(layout.mobile ? 1024 : 2048, layout.mobile ? 1024 : 2048);
+keyLight.shadow.bias = -0.0004;
+stage.add(keyLight);
+const keyTarget = new THREE.Object3D();
+keyTarget.position.set(0.2, 1, 0);
+stage.add(keyTarget);
+keyLight.target = keyTarget;
+
+/* Açılış spotu: kapalı kutuya önden-üstten vuran dar ışık */
+const revealSpot = new THREE.SpotLight(0xffd9a8, 0);
+revealSpot.position.set(0.7, 7.4, 3.6);
+revealSpot.angle = Math.PI / 12;
+revealSpot.penumbra = 0.55;
+revealSpot.decay = 1.2;
+revealSpot.distance = 24;
+revealSpot.castShadow = true;
+revealSpot.shadow.mapSize.set(layout.mobile ? 1024 : 2048, layout.mobile ? 1024 : 2048);
+revealSpot.shadow.bias = -0.0004;
+stage.add(revealSpot);
+const revealTarget = new THREE.Object3D();
+revealTarget.position.set(0.2, 0.9, 0.1);
+stage.add(revealTarget);
+revealSpot.target = revealTarget;
+
+const ringGoldLight = new THREE.PointLight(0xffc97c, 0, 6);
+ringGoldLight.position.set(2.3, 2.7, 2);
+stage.add(ringGoldLight);
+
+const rimLight = new THREE.DirectionalLight(0x9a6f80, L.rim);
+rimLight.position.set(-5, 4, -4);
+scene.add(rimLight);
+
+const diamondLight = new THREE.PointLight(0xffffff, 0, 4);
+diamondLight.position.set(-0.4, 5.2, 0.8);
+stage.add(diamondLight);
+
+/* Kutunun içinden yükselen sıcak parıltı (kapak açılırken) */
+const innerGlow = new THREE.PointLight(0xffd39a, 0, 3.2, 1.6);
+innerGlow.position.set(0.2, 1.35, 0.1);
+stage.add(innerGlow);
+
+/* Üstten gezinen dar sinematik sweep */
+const cinematicSweep = new THREE.SpotLight(0xffdfae, 0);
+cinematicSweep.position.set(-4.5, 7.2, 2.2);
+cinematicSweep.angle = Math.PI / 10;
+cinematicSweep.penumbra = 0.92;
+cinematicSweep.decay = 1.5;
+cinematicSweep.distance = 18;
+const sweepTarget = new THREE.Object3D();
+sweepTarget.position.set(0.7, 0.9, 0);
+stage.add(sweepTarget);
+cinematicSweep.target = sweepTarget;
+stage.add(cinematicSweep);
+
+/* ---------- GEOMETRİ YARDIMCILARI ---------- */
+function roundedRectPath(path, width, depth, radius) {
+  const x = width / 2;
+  const z = depth / 2;
+  const r = radius;
+  path.moveTo(-x + r, -z);
+  path.lineTo(x - r, -z);
+  path.quadraticCurveTo(x, -z, x, -z + r);
+  path.lineTo(x, z - r);
+  path.quadraticCurveTo(x, z, x - r, z);
+  path.lineTo(-x + r, z);
+  path.quadraticCurveTo(-x, z, -x, z - r);
+  path.lineTo(-x, -z + r);
+  path.quadraticCurveTo(-x, -z, -x + r, -z);
+}
+
+function extrudeShape(shape, height, bevel) {
+  const geometry = new THREE.ExtrudeGeometry(shape, {
+    depth: height,
+    bevelEnabled: true,
+    bevelSegments: 8,
+    bevelSize: bevel,
+    bevelThickness: bevel,
+    curveSegments: 24
+  });
+  geometry.center();
+  geometry.rotateX(-Math.PI / 2);
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
+function createRoundedBox(width, height, depth, radius, bevel) {
+  const shape = new THREE.Shape();
+  roundedRectPath(shape, width, depth, radius);
+  return extrudeShape(shape, height, bevel);
+}
+
+/* İçi boş çerçeve: kapak duvarları. Kapak kapalıyken yüzük içine sığar. */
+function createRoundedFrame(width, height, depth, radius, wall, bevel) {
+  const shape = new THREE.Shape();
+  roundedRectPath(shape, width, depth, radius);
+  const hole = new THREE.Path();
+  roundedRectPath(hole, width - wall * 2, depth - wall * 2, Math.max(0.03, radius - wall));
+  shape.holes.push(hole);
+  return extrudeShape(shape, height, bevel);
+}
+
+/* ---------- YÜZÜK KUTUSU ---------- */
+const boxGroup = new THREE.Group();
+boxGroup.position.set(0.20, 0, 0.10);
+boxGroup.rotation.set(-0.035, 0.20, -0.015);
+stage.add(boxGroup);
+
+/* Kutu gövdesi: yüzüğe göre daha küçük dursun diye ölçeklenir. Yüzük bu grubun DIŞINDA, gerçek ölçekte. */
+const BOX_S = 0.72;
+const boxBody = new THREE.Group();
+boxBody.scale.setScalar(BOX_S);
+boxGroup.add(boxBody);
+
+const base = new THREE.Mesh(createRoundedBox(2.65, 0.62, 2.65, 0.28, 0.07), velvetOuter);
+base.position.y = 0.31;
+base.castShadow = true;
+base.receiveShadow = true;
+boxBody.add(base);
+
+const baseGold = new THREE.Mesh(createRoundedBox(2.54, 0.018, 2.54, 0.23, 0.005), gold);
+baseGold.position.y = 0.632;
+boxBody.add(baseGold);
+
+const cushion = new THREE.Mesh(createRoundedBox(2.22, 0.28, 2.22, 0.25, 0.055), velvetInner);
+cushion.position.y = 0.73;
+cushion.castShadow = true;
+cushion.receiveShadow = true;
+boxBody.add(cushion);
+
+const slot = new THREE.Mesh(createRoundedBox(1.45, 0.035, 0.2, 0.03, 0.006), velvetInner);
+slot.position.set(0, 0.9, 0);
+boxBody.add(slot);
+
+/* Menteşe arka kenarda; kapak x ekseninde geriye doğru açılır */
+const LID_OPEN = -Math.PI * 0.60;
+const lidPivot = new THREE.Group();
+lidPivot.position.set(0, 0.66, -1.26);
+lidPivot.rotation.x = 0; /* KAPALI başlar */
+boxBody.add(lidPivot);
+
+const lidWalls = new THREE.Mesh(createRoundedFrame(2.65, 1.20, 2.65, 0.28, 0.20, 0.05), velvetOuter);
+lidWalls.position.set(0, 0.60, 1.26);
+lidWalls.castShadow = true;
+lidWalls.receiveShadow = true;
+lidPivot.add(lidWalls);
+
+const lidTop = new THREE.Mesh(createRoundedBox(2.65, 0.16, 2.65, 0.28, 0.07), velvetOuter);
+lidTop.position.set(0, 1.28, 1.26);
+lidTop.castShadow = true;
+lidTop.receiveShadow = true;
+lidPivot.add(lidTop);
+
+/* Kapağın iç yüzü: altın çerçeve + kadife yastık */
+const lidGold = new THREE.Mesh(createRoundedBox(2.20, 0.014, 2.20, 0.20, 0.004), gold);
+lidGold.position.set(0, 1.185, 1.26);
+lidPivot.add(lidGold);
+
+const lidInner = new THREE.Mesh(createRoundedBox(2.06, 0.10, 2.06, 0.18, 0.03), velvetInner);
+lidInner.position.set(0, 1.12, 1.26);
+lidInner.receiveShadow = true;
+lidPivot.add(lidInner);
+
+/* Kapak üstünde ince altın monogram çizgisi */
+const lidMonogram = new THREE.Mesh(createRoundedBox(0.9, 0.006, 0.012, 0.004, 0.001), gold);
+lidMonogram.position.set(0, 1.364, 1.26);
+lidPivot.add(lidMonogram);
+
+const floor = new THREE.Mesh(
+  new THREE.PlaneGeometry(40, 40),
+  new THREE.MeshStandardMaterial({ color: 0x150b0d, roughness: 0.94 })
+);
+floor.rotation.x = -Math.PI / 2;
+floor.position.y = -0.03;
+floor.receiveShadow = true;
+scene.add(floor);
+
+/* Yüzük pivotu — kapalı kapağın içine sığacak ölçüde */
+const RING_HEIGHT = 1.0;
+const ringPivot = new THREE.Group();
+/* yastık üstü = 0.87*BOX_S; yüzük 0.40 birim yastığa gömülü */
+ringPivot.position.set(0, 0.87 * BOX_S - 0.40 + RING_HEIGHT / 2, -0.02);
+ringPivot.rotation.set(0.03, 0, -0.035);
+boxGroup.add(ringPivot);
+
+/* ---------- SPOT IŞIĞI HUZMESİ (hacimsel koni) ---------- */
+const beamUniforms = {
+  uOpacity: { value: 0 },
+  uColor: { value: new THREE.Color(0xffd9a6) }
+};
+const beamMaterial = new THREE.ShaderMaterial({
+  uniforms: beamUniforms,
+  transparent: true,
+  depthWrite: false,
+  blending: THREE.AdditiveBlending,
+  side: THREE.DoubleSide,
+  vertexShader: `
+    varying float vT;
+    varying vec3 vNormalW;
+    varying vec3 vPosW;
+    void main() {
+      vT = uv.y;
+      vec4 wp = modelMatrix * vec4(position, 1.0);
+      vPosW = wp.xyz;
+      vNormalW = normalize(mat3(modelMatrix) * normal);
+      gl_Position = projectionMatrix * viewMatrix * wp;
+    }
+  `,
+  fragmentShader: `
+    uniform float uOpacity;
+    uniform vec3 uColor;
+    varying float vT;
+    varying vec3 vNormalW;
+    varying vec3 vPosW;
+    void main() {
+      vec3 v = normalize(cameraPosition - vPosW);
+      float f = abs(dot(normalize(vNormalW), v));
+      float edge = pow(f, 1.7);
+      float d = 1.0 - vT;                 /* 0 = lamba, 1 = zemin */
+      float along = (1.0 - d * 0.72) * smoothstep(0.0, 0.10, d);
+      float a = uOpacity * edge * along * 0.16;
+      gl_FragColor = vec4(uColor, a);
+    }
+  `
+});
+
+(function buildBeam() {
+  const from = revealSpot.position.clone();
+  const to = revealTarget.position.clone();
+  const dir = to.clone().sub(from);
+  const length = dir.length() + 0.6;
+  const radius = Math.tan(revealSpot.angle) * length * 1.25;
+  const geometry = new THREE.ConeGeometry(radius, length, 48, 1, true);
+  geometry.translate(0, -length / 2, 0);   /* tepe noktası orijinde */
+  const cone = new THREE.Mesh(geometry, beamMaterial);
+  cone.rotation.x = -Math.PI / 2;           /* -y → +z */
+  const holder = new THREE.Group();
+  holder.position.copy(from);
+  holder.lookAt(to);
+  holder.add(cone);
+  stage.add(holder);
+})();
+
+/* ---------- PARÇACIKLAR: toz + ışıltı ---------- */
+const particleVertex = `
+  attribute float aPhase;
+  attribute float aSize;
+  uniform float uTime;
+  uniform float uPixelRatio;
+  uniform float uScale;
+  uniform float uRise;
+  uniform float uRiseDist;
+  uniform float uSway;
+  uniform float uTwinkle;
+  uniform float uSharp;
+  varying float vA;
+  void main() {
+    vec3 p = position;
+    float life = fract(uTime * uRise + aPhase);
+    p.y += life * uRiseDist;
+    p.x += sin(uTime * 0.35 + aPhase * 6.2831) * uSway;
+    p.z += cos(uTime * 0.28 + aPhase * 6.2831) * uSway;
+    float tw = 0.5 + 0.5 * sin(uTime * uTwinkle + aPhase * 6.2831);
+    vA = pow(tw, uSharp) * sin(life * 3.14159);
+    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+    gl_PointSize = aSize * uPixelRatio * (uScale / -mv.z);
+    gl_Position = projectionMatrix * mv;
+  }
+`;
+const particleFragment = `
+  uniform vec3 uColor;
+  uniform float uOpacity;
+  uniform float uStar;
+  varying float vA;
+  void main() {
+    vec2 pc = gl_PointCoord - 0.5;
+    float d = length(pc);
+    float core = pow(smoothstep(0.5, 0.0, d), 2.2);
+    float cross = (
+      pow(max(0.0, 1.0 - abs(pc.x) * 6.0), 3.0) * max(0.0, 1.0 - abs(pc.y) * 1.6) +
+      pow(max(0.0, 1.0 - abs(pc.y) * 6.0), 3.0) * max(0.0, 1.0 - abs(pc.x) * 1.6)
+    ) * 0.6;
+    float a = clamp(core + uStar * cross, 0.0, 1.0);
+    gl_FragColor = vec4(uColor, a * vA * uOpacity);
+  }
+`;
+
+function createParticles(count, spawn, opts) {
+  const positions = new Float32Array(count * 3);
+  const phases = new Float32Array(count);
+  const sizes = new Float32Array(count);
+  for (let i = 0; i < count; i++) {
+    const p = spawn();
+    positions[i * 3] = p.x;
+    positions[i * 3 + 1] = p.y;
+    positions[i * 3 + 2] = p.z;
+    phases[i] = Math.random();
+    sizes[i] = opts.size * (0.55 + Math.random() * 0.9);
+  }
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute("aPhase", new THREE.BufferAttribute(phases, 1));
+  geometry.setAttribute("aSize", new THREE.BufferAttribute(sizes, 1));
+  const uniforms = {
+    uTime: { value: 0 },
+    uPixelRatio: { value: renderer.getPixelRatio() },
+    uScale: { value: 160 },
+    uRise: { value: opts.rise },
+    uRiseDist: { value: opts.riseDist },
+    uSway: { value: opts.sway },
+    uTwinkle: { value: opts.twinkle },
+    uSharp: { value: opts.sharp },
+    uColor: { value: new THREE.Color(opts.color) },
+    uOpacity: { value: 0 },
+    uStar: { value: opts.star }
+  };
+  const material = new THREE.ShaderMaterial({
+    uniforms,
+    vertexShader: particleVertex,
+    fragmentShader: particleFragment,
+    transparent: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending
+  });
+  const points = new THREE.Points(geometry, material);
+  points.frustumCulled = false;
+  stage.add(points);
+  return { points, uniforms };
+}
+
+/* Işık huzmesinde süzülen toz */
+const dust = createParticles(
+  layout.mobile ? 60 : 120,
+  () => ({
+    x: 0.2 + (Math.random() - 0.5) * 3.4,
+    y: 0.4 + Math.random() * 6.2,
+    z: 0.1 + (Math.random() - 0.5) * 3.0
+  }),
+  { size: 0.55, rise: 0.012, riseDist: 0.5, sway: 0.09, twinkle: 0.7, sharp: 1.6, color: 0xffe2b8, star: 0.0 }
+);
+
+/* (Yıldız ışıltıları kaldırıldı; sadece sakin toz kaldı.) */
+
+/* ---------- YÜZÜK MODELİ ---------- */
+let ringModel = null;
+const loader = new THREE.GLTFLoader();
+
+/*
+  Yüzük modeli ayrı dosyada (ring.glb, Draco ile sıkıştırılmış).
+  Bu sürüm bir web sunucusundan (GitHub Pages vb.) açılmalıdır.
+*/
+const dracoLoader = new THREE.DRACOLoader();
+dracoLoader.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/draco/");
+loader.setDRACOLoader(dracoLoader);
+
+function setupRingModel(gltf) {
+  ringModel = gltf.scene;
+
+  const bounds = new THREE.Box3().setFromObject(ringModel);
+  const size = new THREE.Vector3();
+  const center = new THREE.Vector3();
+  bounds.getSize(size);
+  bounds.getCenter(center);
+
+  ringModel.position.set(-center.x, -center.y, -center.z);
+  const scale = RING_HEIGHT / size.y;
+  ringModel.scale.setScalar(scale);
+
+  ringModel.traverse(function(child) {
+    if (!child.isMesh) return;
+    child.castShadow = true;
+    child.receiveShadow = true;
+    if (child.material) {
+      child.material = child.material.clone();
+      if (child.material.map) {
+        child.material.map.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 8);
+      }
+      if (typeof child.material.roughness === "number") {
+        child.material.roughness = Math.min(child.material.roughness, 0.42);
+      }
+      child.material.needsUpdate = true;
+    }
+  });
+
+  ringPivot.add(ringModel);
+  startIntro();
+  setTimeout(buildThumbnails, 2500);
+}
+
+function loadFailed(error) {
+  console.error("Gömülü GLB çözümlenemedi:", error);
+  document.querySelector(".loading-text").innerHTML = "Model yüklenemedi";
+}
+
+/* Model ağdan yüklenir; ilerleme yükleme ekranında gösterilir */
+loader.load(
+  "ring.glb",
+  setupRingModel,
+  function(ev) {
+    if (ev.total) {
+      const pct = Math.min(99, Math.round(ev.loaded / ev.total * 100));
+      document.querySelector(".loading-text").textContent = "Yüzük hazırlanıyor  %" + pct;
+    }
+  },
+  loadFailed
+);
+
+/* ---------- DÜZEN / RESIZE ---------- */
+function applyLayout() {
+  readLayout();
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  camera.aspect = width / height;
+  camera.fov = layout.mobile ? (layout.portrait ? 56 : 40) : 36;
+  camera.updateProjectionMatrix();
+
+  /*
+    Masaüstü: yüzük merkezin sağında, metin solda.
+    Mobil: yüzük ortada ve biraz yukarıda, metin altta.
+  */
+  if (layout.mobile) {
+    stage.position.set(0.45, 0, layout.portrait ? -0.42 : -0.1);
+  } else {
+    stage.position.set(0.78, 0, 0);
+  }
+
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, layout.mobile ? 1.5 : 2));
+  dust.uniforms.uPixelRatio.value = renderer.getPixelRatio();
+  dust.uniforms.uScale.value = layout.mobile ? 120 : 160;
+
+  ScrollTrigger.refresh();
+}
+applyLayout();
+
+let resizeTimer = null;
+window.addEventListener("resize", function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(applyLayout, 120);
+});
+window.addEventListener("orientationchange", function() {
+  setTimeout(applyLayout, 300);
+});
+
+/* Masaüstünde hafif fare paralaksı */
+if (!layout.mobile && !reducedMotion) {
+  window.addEventListener("mousemove", function(e) {
+    const nx = (e.clientX / window.innerWidth - 0.5) * 2;
+    const ny = (e.clientY / window.innerHeight - 0.5) * 2;
+    parallaxGoal.set(nx * 0.14, -ny * 0.06, ny * 0.08);
+  });
+}
+
+/* ---------- INTRO: kapalı kutu, spot, yazı, kapak açılışı ---------- */
+let introTimeline = null;
+let introDone = false;
+
+function startIntro() {
+  document.getElementById("loading").classList.add("hidden");
+
+  const sx = stage.position.x + 0.20; /* kutu merkezi (dünya) */
+  const sz = stage.position.z + 0.10;
+  const far = layout.mobile ? (layout.portrait ? 9.2 : 7.4) : 8.0;
+
+  /* Önden, alçak bir açıdan kapalı kutuya bak */
+  camPos.set(sx + 0.25, 2.6, sz + far);
+  camTarget.set(sx, 0.8, sz);
+  lidPivot.rotation.x = 0;
+
+  const tl = gsap.timeline({
+    defaults: { ease: "power2.inOut" },
+    onComplete: finishIntro
+  });
+  introTimeline = tl;
+  if (reducedMotion) tl.timeScale(3);
+
+  /* 0s — sinema bantları içeri kayar, pozlama açılır */
+  tl.to(".cinematic-bar", { height: layout.mobile ? "4vh" : "6vh", duration: 1.6, ease: "power3.out" }, 0);
+  tl.to(L, { exposure: 1.15, duration: 2.0, ease: "sine.out" }, 0.2);
+  tl.to(L, { rim: 0.4, ambient: 0.06, duration: 2.4 }, 0.4);
+
+  /* 0.6s — spot "çat" diye yanar, hafif titrer, sonra oturur */
+  tl.to(L, {
+    keyframes: [
+      { reveal: 2.2, duration: 0.18, ease: "power4.out" },
+      { reveal: 0.9, duration: 0.12 },
+      { reveal: 3.6, duration: 0.16 },
+      { reveal: 2.6, duration: 0.14 },
+      { reveal: 5.2, duration: 2.2, ease: "power2.out" }
+    ]
+  }, 0.6);
+  tl.to(beamUniforms.uOpacity, { value: 1, duration: 2.4, ease: "sine.out" }, 0.7);
+  tl.to(dust.uniforms.uOpacity, { value: 0.45, duration: 3, ease: "sine.out" }, 1.0);
+  tl.to(".brand", { autoAlpha: 1, duration: 1.4 }, 1.4);
+  tl.to("#skip", { autoAlpha: 1, duration: 0.8 }, 2.2);
+
+  /* 0.5s → 6.4s — kamera yavaşça yaklaşır */
+  tl.to(camPos, { y: 2.9, z: "-=" + (layout.mobile ? 1.4 : 1.6), duration: 5.9, ease: "sine.inOut" }, 0.5);
+
+  /* 1.9s — "Özel bir an mı istiyorsunuz?" kelime kelime */
+  tl.set("#cap-1", { autoAlpha: 1 }, 1.9);
+  tl.fromTo("#cap-1 .w",
+    { opacity: 0, y: 16, filter: "blur(8px)" },
+    { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, stagger: 0.24, ease: "power2.out" },
+    1.9);
+  tl.to("#cap-1", { autoAlpha: 0, y: -18, duration: 1.0 }, 5.9);
+
+  /* 6.3s — KAPAK AÇILIYOR */
+  tl.to(lidPivot.rotation, { x: LID_OPEN, duration: 5.4, ease: "power2.inOut" }, 6.3);
+  tl.to(L, { inner: 1.7, duration: 3.4, ease: "sine.inOut" }, 7.0);
+  tl.to(L, { key: 3.2, gold: 1.15, diamond: 0.9, duration: 4.2 }, 7.4);
+  tl.to(".cinematic-glow", { opacity: 0.9, duration: 3 }, 9.0);
+  tl.to(".haze", { opacity: 1, duration: 4.5, ease: "sine.inOut" }, 7.0);
+  tl.to(".orbs", { opacity: 1, duration: 5, ease: "sine.inOut" }, 8.5);
+
+  /* kamera kapak açılırken yükselip yana kayar (3/4 açı) */
+  tl.to(camPos, {
+    x: sx + (layout.mobile ? 0.6 : 0.9),
+    y: layout.mobile ? 4.4 : 3.9,
+    z: sz + (layout.mobile ? 3.9 : 3.0),
+    duration: 5.6,
+    ease: "power2.inOut"
+  }, 6.4);
+  tl.to(camTarget, { y: 1.0, duration: 5.6, ease: "power2.inOut" }, 6.4);
+
+  /* 7.6s — "Bazı anlar bir ömür boyu parlar." */
+  tl.fromTo("#cap-2", { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 1.5, ease: "power2.out" }, 7.6);
+  tl.to("#cap-2", { autoAlpha: 0, y: -16, duration: 1.0 }, 11.2);
+
+  /* 12.1s — "Bir kelime. Bir ömür." ve üstten kahraman açısına geçiş */
+  tl.fromTo("#cap-3", { autoAlpha: 0, scale: 0.92 }, { autoAlpha: 1, scale: 1, duration: 1.8, ease: "power2.out" }, 12.1);
+  tl.to("#cap-3", { autoAlpha: 0, scale: 1.04, duration: 1.1 }, 14.7);
+
+  tl.to(camPos, { x: 0.35, y: 6.4, z: 0.95, duration: 4.4, ease: "power3.inOut" }, 12.2);
+  tl.to(camTarget, { x: 0.55, y: 0.92, z: 0.02, duration: 4.4, ease: "power3.inOut" }, 12.2);
+  tl.to(beamUniforms.uOpacity, { value: 0.28, duration: 3.2 }, 12.6);
+  tl.to(L, { reveal: 3.2, sweep: 0.8, duration: 3.2 }, 12.6);
+  tl.to(dust.uniforms.uOpacity, { value: 0.14, duration: 3 }, 12.6);
+
+  /* 15.6s — hero metni */
+  tl.fromTo(".hero", { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 1.7, ease: "power2.out" }, 15.6);
+  tl.fromTo(".scroll", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.2 }, 16.4);
+  tl.to("#skip", { autoAlpha: 0, duration: 0.5 }, 15.4);
+
+  /* Derin bağlantı: #final ile intro atlanıp doğrudan son sahneye gidilir */
+  if (location.hash === "#final") tl.progress(1);
+}
+
+document.getElementById("skip").addEventListener("click", function() {
+  if (introTimeline && !introDone) {
+    introTimeline.progress(1);
+  }
+});
+
+/* ---------- INTRO BİTTİ → SCROLL HİKÂYESİ ---------- */
+function finishIntro() {
+  if (introDone) return;
+  introDone = true;
+
+  document.documentElement.classList.remove("is-locked");
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("skip").style.display = "none";
+  window.scrollTo(0, 0);
+
+  buildScrollStory();
+  ScrollTrigger.refresh();
+  if (location.hash === "#final") {
+    window.scrollTo(0, document.getElementById("story").offsetHeight - window.innerHeight);
+  }
+}
+
+function buildScrollStory() {
+  const scrollTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#story",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1.15
+    }
+  });
+
+  /* HERO: üstten geniş sinematik giriş */
+  scrollTL.to(camPos, { x: 0.48, y: 5.9, z: 0.85, duration: 0.8, ease: "power2.inOut" }, 0);
+  scrollTL.to(camTarget, { x: 0.62, y: 0.96, z: 0.02, duration: 0.8, ease: "power2.inOut" }, 0);
+  scrollTL.to(beamUniforms.uOpacity, { value: 0.1, duration: 0.8 }, 0);
+
+  /* Hero metin çıkışı */
+  scrollTL.to(".hero", { opacity: 0, y: -38, filter: "blur(6px)", duration: 0.42 }, 0.32);
+
+  /* Sahne 1: sağ yazı + hafif çapraz yakınlaşma */
+  scrollTL.fromTo("#scene-copy-1",
+    { autoAlpha: 0, x: 30, filter: "blur(10px)" },
+    { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.34 }, 0.42);
+  scrollTL.fromTo("#scene-copy-1 .line", { scaleX: 0 }, { scaleX: 1, duration: 0.3 }, 0.5);
+  scrollTL.to(camPos, { x: 0.18, y: 5.1, z: 0.9, duration: 0.72, ease: "power2.inOut" }, 0.46);
+  scrollTL.to(camTarget, { x: 0.82, y: 1.02, z: 0.02, duration: 0.72, ease: "power2.inOut" }, 0.46);
+  scrollTL.to(boxGroup.rotation, { x: -0.025, y: 0.28, z: -0.025, duration: 0.72, ease: "power2.inOut" }, 0.46);
+  scrollTL.to(L, { sweep: 1.4, diamond: 1.3, duration: 0.72 }, 0.46);
+  scrollTL.to("#scene-copy-1", { autoAlpha: 0, x: -42, filter: "blur(8px)", duration: 0.34 }, 0.98);
+
+  /* Sahne 2: sol metin + daha yakın ürün açısı */
+  scrollTL.fromTo("#scene-copy-2",
+    { autoAlpha: 0, x: -30, filter: "blur(10px)" },
+    { autoAlpha: 1, x: 0, filter: "blur(0px)", duration: 0.34 }, 1.02);
+  scrollTL.fromTo("#scene-copy-2 .line", { scaleX: 0 }, { scaleX: 1, duration: 0.3 }, 1.1);
+  scrollTL.to(camPos, { x: 0.02, y: 4.1, z: 0.75, duration: 0.78, ease: "power3.inOut" }, 1.06);
+  scrollTL.to(camTarget, { x: 0.65, y: 1.02, z: 0.02, duration: 0.78, ease: "power3.inOut" }, 1.06);
+  scrollTL.to(boxGroup.rotation, { x: -0.015, y: 0.16, z: -0.01, duration: 0.78, ease: "power3.inOut" }, 1.06);
+  scrollTL.to(L, { gold: 1.6, key: 3.8, duration: 0.78 }, 1.06);
+  scrollTL.to("#scene-copy-2", { autoAlpha: 0, x: 42, filter: "blur(8px)", duration: 0.32 }, 1.62);
+
+  /* Final: merkez kompozisyon + makro üstten açı. Yüzük, alttaki metnin üstünde kalsın diye yukarı alınır */
+  const lift = layout.mobile ? (layout.portrait ? 0.42 : 0.2) : 0.28;
+  const finalX = layout.mobile && layout.portrait ? 0.6 : 0.28;
+  scrollTL.fromTo("#scene-copy-3",
+    { autoAlpha: 0, y: 30, filter: "blur(10px)" },
+    { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.44 }, 1.72);
+  scrollTL.fromTo("#scene-copy-3 .line", { scaleX: 0 }, { scaleX: 1, duration: 0.3 }, 1.8);
+  scrollTL.to(camPos, { x: finalX, y: 3.4, z: 0.6 + lift, duration: 0.88, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(camTarget, { x: 0.66, y: 1.0, z: 0.02 + lift, duration: 0.88, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(boxGroup.rotation, { x: -0.01, y: 0.10, z: 0.0, duration: 0.88, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(L, { reveal: 4.6, inner: 2.2, diamond: 1.6, duration: 0.88 }, 1.74);
+
+  gsap.to(".scroll", {
+    autoAlpha: 0,
+    scrollTrigger: { trigger: "#story", start: "top top", end: "14% top", scrub: true }
+  });
+
+  gsap.to("#progress", {
+    scaleX: 1,
+    ease: "none",
+    scrollTrigger: { trigger: "#story", start: "top top", end: "bottom bottom", scrub: 0.3 }
+  });
+
+  buildSitePage();
+}
+
+/* ---------- RENDER DÖNGÜSÜ ---------- */
+let time = 0;
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05);
+  time += dt;
+
+  /* Alt sayfa sinemayı tamamen örttüyse GPU boşa çalışmasın */
+  if (introDone && window.scrollY > storyEl.offsetHeight + 40) return;
+
+  /* ışık şiddetleri */
+  renderer.toneMappingExposure = L.exposure;
+  ambient.intensity = L.ambient;
+  rimLight.intensity = L.rim;
+  keyLight.intensity = L.key;
+  revealSpot.intensity = L.reveal;
+  ringGoldLight.intensity = L.gold;
+  cinematicSweep.intensity = L.sweep;
+  innerGlow.intensity = L.inner * (1 + Math.sin(time * 1.3) * 0.08);
+
+  /* taş parıltısı: ara ara keskin bir "glint" */
+  const glint = Math.pow(Math.max(0, Math.sin(time * 1.7)), 12) * 1.6;
+  diamondLight.intensity = L.diamond * (1 + glint);
+
+  /* gezinen ışıklar */
+  ringGoldLight.position.x = 2.2 + Math.sin(time * 0.55) * 0.25;
+  diamondLight.position.x = -0.8 + Math.sin(time * 0.7) * 0.15;
+  cinematicSweep.position.x = -4.0 + Math.sin(time * 0.22) * 1.3;
+  cinematicSweep.position.z = 2.0 + Math.cos(time * 0.18) * 0.5;
+
+  /* parçacıklar */
+  dust.uniforms.uTime.value = time;
+
+  /* kamera: tween edilen konum + yumuşak paralaks */
+  parallax.lerp(parallaxGoal, 0.04);
+  camera.position.copy(camPos).add(parallax);
+  lookHelper.copy(camTarget);
+  camera.lookAt(lookHelper);
+
+  renderer.render(scene, camera);
+}
+animate();
+/* =======================================================
+   ALT SAYFA: kart görselleri, WhatsApp, form, animasyonlar
+   ======================================================= */
+const storyEl = document.getElementById("story");
+
+/* ▼▼ BURAYI DEĞİŞTİRİN: ülke kodu + numara, boşluksuz (örn. 905321234567) ▼▼ */
+const WHATSAPP_NUMBER = "905389466432";
+
+const waBase = "https://wa.me/" + WHATSAPP_NUMBER + "?text=";
+const waDefault = "Merhaba, laboratuvar pırlantası tektaş için bilgi ve randevu almak istiyorum.";
+document.getElementById("wa-float").href = waBase + encodeURIComponent(waDefault);
+document.getElementById("wa-link").href = waBase + encodeURIComponent(waDefault);
+
+/* Yüzük dokusundaki altın tonlu pikselleri boyar; taş beyaz kalır */
+function makeTintMaterial(baseMat, variant) {
+  const m = baseMat.clone();
+  const tint = variant === "rose" ? new THREE.Vector3(1.06, 0.88, 1.32) : new THREE.Vector3(1, 1, 1);
+  const desat = variant === "white" ? 1.0 : 0.0;
+  m.onBeforeCompile = function(shader) {
+    shader.uniforms.uTint = { value: tint };
+    shader.uniforms.uDesat = { value: desat };
+    shader.fragmentShader = shader.fragmentShader
+      .replace("#include <common>", "#include <common>\nuniform vec3 uTint;\nuniform float uDesat;")
+      .replace("#include <map_fragment>", [
+        "#include <map_fragment>",
+        "{",
+        "  vec3 c = diffuseColor.rgb;",
+        "  float mx = max(c.r, max(c.g, c.b));",
+        "  float mn = min(c.r, min(c.g, c.b));",
+        "  float sat = mx > 0.0 ? (mx - mn) / mx : 0.0;",
+        "  float warm = smoothstep(0.02, 0.16, c.r - c.b);",
+        "  float goldMask = clamp(smoothstep(0.06, 0.28, sat) * warm, 0.0, 1.0);",
+        "  float lum = dot(c, vec3(0.299, 0.587, 0.114));",
+        "  vec3 white = vec3(lum) * vec3(1.03, 1.03, 1.08);",
+        "  vec3 tinted = mix(c * uTint, white, uDesat);",
+        "  diffuseColor.rgb = mix(c, tinted, goldMask);",
+        "}"
+      ].join("\n"));
+  };
+  m.needsUpdate = true;
+  return m;
+}
+
+/* Koleksiyon kartları: gömülü yüzük modelini üç metal renginde render eder */
+function buildThumbnails() {
+  if (!ringModel) return;
+  const imgs = Array.from(document.querySelectorAll("#cards img[data-variant]"));
+  if (!imgs.length) return;
+
+  let r2 = null;
+  try {
+    const W = 600, H = 750;
+    r2 = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+    r2.setSize(W, H);
+    r2.setPixelRatio(1);
+    r2.toneMapping = THREE.ACESFilmicToneMapping;
+    r2.toneMappingExposure = 1.1;
+    r2.outputEncoding = THREE.sRGBEncoding;
+
+    const s2 = new THREE.Scene();
+    s2.background = new THREE.Color(0x120a0d);
+    const c2 = new THREE.PerspectiveCamera(30, W / H, 0.1, 50);
+    c2.position.set(0, 1.7, 3.6);
+    c2.lookAt(0, 0.05, 0);
+
+    s2.add(new THREE.HemisphereLight(0xffe6d0, 0x2a0d14, 0.5));
+    const key = new THREE.SpotLight(0xffe2c0, 3.4);
+    key.position.set(-2, 5, 3);
+    key.angle = Math.PI / 5;
+    key.penumbra = 0.8;
+    s2.add(key);
+    const fill = new THREE.PointLight(0xd9a58c, 1.1, 12);
+    fill.position.set(3, 1.5, 2);
+    s2.add(fill);
+    const rim2 = new THREE.DirectionalLight(0xc7a16b, 1.0);
+    rim2.position.set(0.5, 2, -4);
+    s2.add(rim2);
+
+    const backdrop = new THREE.Mesh(
+      new THREE.CircleGeometry(4, 48),
+      new THREE.MeshBasicMaterial({ color: 0x3a1322, transparent: true, opacity: 0.55 })
+    );
+    backdrop.position.set(0, 0.2, -3);
+    s2.add(backdrop);
+
+    const holder = new THREE.Group();
+    s2.add(holder);
+    const clone = ringModel.clone(true);
+    holder.add(clone);
+    const bounds = new THREE.Box3().setFromObject(holder);
+    const size = new THREE.Vector3();
+    bounds.getSize(size);
+    holder.scale.setScalar(1.35 / size.y);
+    holder.rotation.x = 0.22;
+
+    const meshes = [];
+    clone.traverse(function(ch) { if (ch.isMesh) { ch.userData.baseMat = ch.material; meshes.push(ch); } });
+
+    imgs.forEach(function(img) {
+      const variant = img.dataset.variant || "yellow";
+      const angle = parseFloat(img.dataset.angle || "0");
+      meshes.forEach(function(ch) { ch.material = makeTintMaterial(ch.userData.baseMat, variant); });
+      holder.rotation.y = angle;
+      r2.render(s2, c2);
+      const url = r2.domElement.toDataURL("image/jpeg", 0.9);
+      img.onload = function() { img.classList.add("ready"); };
+      img.src = url;
+      meshes.forEach(function(ch) { ch.material.dispose(); });
+    });
+  } catch (err) {
+    console.warn("Kart görselleri üretilemedi:", err);
+  } finally {
+    if (r2) { r2.dispose(); r2.forceContextLoss(); }
+  }
+}
+
+function buildSitePage() {
+  /* Sinema katmanı, alt sayfa üzerine kayarken kararır */
+  gsap.to("#cinema", {
+    autoAlpha: 0,
+    ease: "none",
+    scrollTrigger: { trigger: "#site", start: "top 60%", end: "top 4%", scrub: true }
+  });
+
+  /* Üst menü ve WhatsApp düğmesi hikâye bitince gelir */
+  ScrollTrigger.create({
+    trigger: "#site",
+    start: "top 70%",
+    onEnter: function() { document.getElementById("site-nav").classList.add("show"); document.getElementById("wa-float").classList.add("show"); },
+    onLeaveBack: function() { document.getElementById("site-nav").classList.remove("show"); document.getElementById("wa-float").classList.remove("show"); }
+  });
+
+  /* Bölümler kaydırdıkça yumuşakça belirir */
+  gsap.utils.toArray(".reveal").forEach(function(el, i) {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 1.1,
+      ease: "power2.out",
+      delay: (i % 4) * 0.08,
+      scrollTrigger: { trigger: el, start: "top 90%", once: true }
+    });
+  });
+}
+
+/* Kart "Fiyat Al" → ürün adıyla WhatsApp mesajı */
+document.querySelectorAll(".card .ask").forEach(function(a) {
+  const product = a.closest(".card").dataset.product;
+  const msg = product === "Özel Tasarım"
+    ? "Merhaba, özel tasarım bir tektaş yüzük için teklif almak istiyorum."
+    : "Merhaba, " + product + " modeli için fiyat bilgisi almak istiyorum.";
+  a.href = waBase + encodeURIComponent(msg);
+});
+
+/* Randevu formu → WhatsApp mesajı */
+document.getElementById("appt").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+  const name = document.getElementById("f-name").value.trim();
+  const phone = document.getElementById("f-phone").value.trim();
+  const date = document.getElementById("f-date").value;
+  const time = document.getElementById("f-time").value;
+  const product = document.getElementById("f-product").value;
+  const note = document.getElementById("f-note").value.trim();
+  const consent = document.getElementById("f-consent").checked;
+
+  if (!name || !phone) { status.textContent = "Lütfen ad soyad ve telefon alanlarını doldurun."; return; }
+  if (!consent) { status.textContent = "Devam etmek için onay kutusunu işaretleyin."; return; }
+
+  const lines = [
+    "Merhaba, özel randevu talebi:",
+    "Ad Soyad: " + name,
+    "Telefon: " + phone,
+    date ? "Tarih: " + date.split("-").reverse().join(".") : null,
+    time ? "Saat: " + time : null,
+    "Model: " + (product || "Henüz karar vermedim"),
+    note ? "Not: " + note : null
+  ].filter(Boolean);
+
+  const url = waBase + encodeURIComponent(lines.join("\n"));
+  status.textContent = "WhatsApp açılıyor… Mesajı göndermeniz yeterli.";
+  window.open(url, "_blank", "noopener");
+});
+
+</script>
 
 </body>
 </html>
