@@ -1,0 +1,30 @@
+# Jasmine Pırlanta
+
+Jasmine Pırlanta, Ümraniye/İstanbul bölgesinde Kuyumcu hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Jasmine Pırlanta
+- Category: Kuyumcu
+- Location: Ümraniye, İstanbul
+- Phone: 05389466432
+- Website: https://example.com/
+
+## Services
+
+- Profesyonel Hizmet
+- Müşteri Danışmanlığı
+- Randevu Sistemi
+- Yerinde Hizmet
+- Online İletişim
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
