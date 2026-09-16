@@ -2413,17 +2413,20 @@ function buildScrollStory() {
   scrollTL.to(L, { gold: 1.6, key: 3.8, duration: 0.78 }, 1.06);
   scrollTL.to("#scene-copy-2", { autoAlpha: 0, x: 42, filter: "blur(8px)", duration: 0.32 }, 1.62);
 
-  /* Final: merkez kompozisyon + makro üstten açı. Yüzük, alttaki metnin üstünde kalsın diye yukarı alınır */
-  const lift = layout.mobile ? (layout.portrait ? 0.42 : 0.2) : 0.62;
-  const finalY = layout.mobile ? 3.4 : 4.5;
-  const finalX = layout.mobile && layout.portrait ? 0.6 : 0.28;
+  /* Final: kamera üstten inip yüzüğün tam karşısına geçer, taşa doğru yaklaşır.
+     Hedef yüzüğün biraz altında tutulur ki yüzük ekranın üst yarısında, metin altta kalsın. */
+  const fsx = stage.position.x + 0.20;
+  const fsz = stage.position.z + 0.10;
+  const frontDist = layout.mobile ? (layout.portrait ? 3.3 : 3.0) : 3.4;
+  const frontHeight = layout.mobile ? 1.1 : 1.25;
+  const frontAim = layout.mobile ? 0.3 : 0.35;
   scrollTL.fromTo("#scene-copy-3",
     { autoAlpha: 0, y: 30, filter: "blur(10px)" },
     { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.44 }, 1.72);
   scrollTL.fromTo("#scene-copy-3 .line", { scaleX: 0 }, { scaleX: 1, duration: 0.3 }, 1.8);
-  scrollTL.to(camPos, { x: finalX, y: finalY, z: 0.6 + lift, duration: 0.88, ease: "power3.inOut" }, 1.74);
-  scrollTL.to(camTarget, { x: 0.66, y: 1.0, z: 0.02 + lift, duration: 0.88, ease: "power3.inOut" }, 1.74);
-  scrollTL.to(boxGroup.rotation, { x: -0.01, y: 0.10, z: 0.0, duration: 0.88, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(camPos, { x: fsx + 0.12, y: frontHeight, z: fsz + frontDist, duration: 0.92, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(camTarget, { x: fsx, y: frontAim, z: fsz, duration: 0.92, ease: "power3.inOut" }, 1.74);
+  scrollTL.to(boxGroup.rotation, { x: -0.02, y: 0.0, z: 0.0, duration: 0.92, ease: "power3.inOut" }, 1.74);
   scrollTL.to(L, { reveal: 4.6, inner: 2.2, diamond: 1.6, duration: 0.88 }, 1.74);
 
   gsap.to(".scroll", {
