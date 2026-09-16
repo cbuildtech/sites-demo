@@ -1,0 +1,31 @@
+# Neu Güzellik Merkezi - Bağcılar
+
+Neu Güzellik Merkezi - Bağcılar, Bağcılar/İstanbul bölgesinde güzellik merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Neu Güzellik Merkezi - Bağcılar
+- Category: güzellik merkezi
+- Location: Bağcılar, İstanbul
+- Address: Merkez, 674. Sk No:3-7C, 34200 Bağcılar/İstanbul 
+- Phone: 05339682633
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
