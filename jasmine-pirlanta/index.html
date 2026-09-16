@@ -2411,7 +2411,6 @@ function buildScrollStory() {
   scrollTL.to(camTarget, { x: 0.65, y: 1.02, z: 0.02, duration: 0.78, ease: "power3.inOut" }, 1.06);
   scrollTL.to(boxGroup.rotation, { x: -0.015, y: 0.16, z: -0.01, duration: 0.78, ease: "power3.inOut" }, 1.06);
   scrollTL.to(L, { gold: 1.6, key: 3.8, duration: 0.78 }, 1.06);
-  scrollTL.to(ringPivot.rotation, { y: 0.55, duration: 0.78, ease: "power2.inOut" }, 1.06);
   scrollTL.to("#scene-copy-2", { autoAlpha: 0, x: 42, filter: "blur(8px)", duration: 0.32 }, 1.62);
 
   /* Final: merkez kompozisyon + makro üstten açı. Yüzük, alttaki metnin üstünde kalsın diye yukarı alınır */
@@ -2426,7 +2425,6 @@ function buildScrollStory() {
   scrollTL.to(camTarget, { x: 0.66, y: 1.0, z: 0.02 + lift, duration: 0.88, ease: "power3.inOut" }, 1.74);
   scrollTL.to(boxGroup.rotation, { x: -0.01, y: 0.10, z: 0.0, duration: 0.88, ease: "power3.inOut" }, 1.74);
   scrollTL.to(L, { reveal: 4.6, inner: 2.2, diamond: 1.6, duration: 0.88 }, 1.74);
-  scrollTL.to(ringPivot.rotation, { y: 0.25, duration: 0.88, ease: "power2.inOut" }, 1.74);
 
   gsap.to(".scroll", {
     autoAlpha: 0,
