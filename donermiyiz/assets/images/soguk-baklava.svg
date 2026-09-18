@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440">
+    <defs><radialGradient id="g"><stop stop-color="#c58b35"/><stop offset="1" stop-color="#654018"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity=".45"/></filter></defs>
+    <rect width="400" height="440" rx="38" fill="url(#g)"/>
+    <circle cx="315" cy="75" r="85" fill="#f3d38a" opacity=".12"/>
+    <circle cx="75" cy="365" r="105" fill="#f3d38a" opacity=".08"/>
+    <g filter="url(#s)"><path d="M80 285L150 135L320 210L250 350Z" fill="#c58b35" stroke="#f3d38a" stroke-width="8"/>
+        <path d="M105 278L155 175L285 225L235 315Z" fill="#f0c978" opacity=".85"/>
+        <path d="M120 255l145 40M135 220l120 35M150 190l95 30" stroke="#f3d38a" stroke-width="9"/></g>
+    <text x="200" y="78" text-anchor="middle" fill="#fff7ed" font-family="Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="2">SOĞUK BAKLAVA</text>
+    <text x="200" y="400" text-anchor="middle" fill="#f3d38a" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">TATLI · DÖNERMİYİZ?</text>
+    </svg>

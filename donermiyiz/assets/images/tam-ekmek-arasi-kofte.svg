@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440">
+    <defs><radialGradient id="g"><stop stop-color="#9b3b20"/><stop offset="1" stop-color="#542014"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity=".45"/></filter></defs>
+    <rect width="400" height="440" rx="38" fill="url(#g)"/>
+    <circle cx="315" cy="75" r="85" fill="#d97936" opacity=".12"/>
+    <circle cx="75" cy="365" r="105" fill="#d97936" opacity=".08"/>
+    <g filter="url(#s)"><ellipse cx="200" cy="285" rx="150" ry="72" fill="#21100c" stroke="#d97936" stroke-width="7"/>
+        <ellipse cx="105" cy="240" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/><ellipse cx="143" cy="202" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/><ellipse cx="181" cy="240" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/><ellipse cx="219" cy="202" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/><ellipse cx="257" cy="240" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/><ellipse cx="295" cy="202" rx="27" ry="18" fill="#9b3b20" stroke="#d97936" stroke-width="5"/>
+        <circle cx="200" cy="305" r="7" fill="#7bc96f"/><circle cx="175" cy="320" r="6" fill="#7bc96f"/><circle cx="225" cy="322" r="6" fill="#7bc96f"/></g>
+    <text x="200" y="78" text-anchor="middle" fill="#fff7ed" font-family="Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="2">TAM EKMEK ARASI KÖFTE</text>
+    <text x="200" y="400" text-anchor="middle" fill="#d97936" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">KÖFTE · DÖNERMİYİZ?</text>
+    </svg>

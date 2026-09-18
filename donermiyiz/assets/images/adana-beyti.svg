@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440">
+    <defs><radialGradient id="g"><stop stop-color="#b9431e"/><stop offset="1" stop-color="#6e2414"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity=".45"/></filter></defs>
+    <rect width="400" height="440" rx="38" fill="url(#g)"/>
+    <circle cx="315" cy="75" r="85" fill="#f0a04b" opacity=".12"/>
+    <circle cx="75" cy="365" r="105" fill="#f0a04b" opacity=".08"/>
+    <g filter="url(#s)"><ellipse cx="200" cy="285" rx="150" ry="72" fill="#21100c" stroke="#f0a04b" stroke-width="7"/>
+        <path d="M80 245 l30-35 l28 18 l-24 38z" fill="#b9431e" stroke="#f0a04b" stroke-width="5"/><path d="M125 220 l30-35 l28 18 l-24 38z" fill="#b9431e" stroke="#f0a04b" stroke-width="5"/><path d="M170 245 l30-35 l28 18 l-24 38z" fill="#b9431e" stroke="#f0a04b" stroke-width="5"/><path d="M215 220 l30-35 l28 18 l-24 38z" fill="#b9431e" stroke="#f0a04b" stroke-width="5"/><path d="M260 245 l30-35 l28 18 l-24 38z" fill="#b9431e" stroke="#f0a04b" stroke-width="5"/>
+        <circle cx="200" cy="305" r="7" fill="#7bc96f"/><circle cx="175" cy="320" r="6" fill="#7bc96f"/><circle cx="225" cy="322" r="6" fill="#7bc96f"/></g>
+    <text x="200" y="78" text-anchor="middle" fill="#fff7ed" font-family="Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="2">ADANA BEYTI</text>
+    <text x="200" y="400" text-anchor="middle" fill="#f0a04b" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">IZGARA · DÖNERMİYİZ?</text>
+    </svg>
