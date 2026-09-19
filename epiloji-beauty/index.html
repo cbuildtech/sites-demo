@@ -1120,7 +1120,262 @@ body{background:
   .mini-service .num{font-size:7px}
 }
 
-</style></head>
+</style>
+<style id="cbuildtech-responsive-fixes">
+/* CBuildTech footer credit + mobile responsive final overrides */
+html{scroll-padding-top:104px;overflow-x:hidden}
+#services,#location,#hours,#contact,.faq-wrap{scroll-margin-top:104px}
+
+/* Service label correction: first group must not read BODY on mobile */
+.service-group .mini-service .num::before{content:'' !important}
+.service-section .service-group:nth-of-type(3) .mini-service .num::before{content:'BODY · ' !important}
+.service-section .service-group:nth-of-type(4) .mini-service .num::before{content:'FACE · ' !important}
+
+.cbuild-credit{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:4px;
+  flex-wrap:wrap;
+}
+.cbuild-brand{
+  display:inline-flex;
+  align-items:baseline;
+  font-family:Inter,sans-serif;
+  font-weight:800;
+  letter-spacing:-.035em;
+  text-decoration:none;
+  line-height:1;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.cbuild-brand:hover{
+  transform:translateY(-1px);
+  opacity:.88;
+}
+.cbuild-brand .cbuild-main{color:#3B325C;}
+.cbuild-brand .cbuild-tech{color:#89849C;}
+
+@media(max-width:900px){
+  body{padding-bottom:0 !important}
+  section{padding:76px 0}
+  .wrap{width:calc(100% - 34px) !important;max-width:1180px}
+  nav{width:calc(100% - 20px) !important}
+  .mobile-menu{
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:88px 14px 24px;
+  }
+  .mobile-box{
+    width:100%;
+    max-height:calc(100svh - 112px);
+    overflow-y:auto;
+  }
+  .geo-grid,.split,.contact-grid,.faq-list{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+  .panel{padding:28px}
+  .map,
+  .map iframe,
+  .map-ep{
+    width:100% !important;
+    min-height:330px !important;
+    height:330px !important;
+  }
+  .contact-actions{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:10px;
+  }
+  .contact-actions .btn{width:100%}
+  .bottom{align-items:flex-start}
+}
+
+@media(max-width:560px){
+  html{scroll-padding-top:88px}
+  #services,#location,#hours,#contact,.faq-wrap{scroll-margin-top:88px}
+
+  .wrap{
+    width:calc(100% - 28px) !important;
+    max-width:1180px !important;
+  }
+  section{padding:62px 0}
+  .title{
+    font-size:clamp(32px,10.4vw,40px) !important;
+    line-height:1.03 !important;
+    overflow-wrap:anywhere;
+  }
+  .lead{
+    font-size:15px;
+    line-height:1.72;
+  }
+  .panel{
+    padding:23px !important;
+    border-radius:26px !important;
+  }
+
+  .hero{
+    padding:96px 0 54px !important;
+  }
+  .hero h1,
+  h1{
+    font-size:clamp(52px,16vw,68px) !important;
+    line-height:.88 !important;
+  }
+  .hero-copy{
+    font-size:15px !important;
+    line-height:1.7 !important;
+  }
+  .hero-actions .btn{
+    white-space:normal;
+    text-align:center;
+    line-height:1.25;
+  }
+  .visual{
+    min-height:auto !important;
+    margin-top:28px !important;
+    gap:12px !important;
+  }
+  .visual-main{
+    width:100% !important;
+    height:270px !important;
+    min-height:270px !important;
+    border-radius:26px !important;
+  }
+  .visual-main img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .float-card,
+  .hours-card{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+  }
+  .float-card{
+    padding:20px !important;
+    border-radius:22px !important;
+  }
+  .float-card b{font-size:25px !important}
+  .hours-card{
+    padding:20px !important;
+    border-radius:22px !important;
+  }
+  .hours-card b{font-size:29px !important}
+  .hours-card p{font-size:15px !important;line-height:1.65 !important}
+
+  .service-section{padding-top:64px !important}
+  .service-section .section-head .title{
+    font-size:clamp(32px,10.4vw,40px) !important;
+  }
+  .service-section .section-head .lead{
+    max-width:none !important;
+    margin-top:14px;
+  }
+  .service-group::before{
+    right:-18px;
+    opacity:.72;
+  }
+  .mini-service{
+    min-width:0;
+    overflow:hidden;
+  }
+  .mini-service h4{
+    overflow-wrap:anywhere;
+    hyphens:auto;
+  }
+
+  .geo-grid{gap:18px}
+  .geo .chips{gap:8px}
+  .geo .chips span{
+    font-size:12px;
+    padding:9px 11px;
+  }
+  .geo .contact-actions{
+    margin-top:20px;
+    width:100%;
+  }
+  .map,
+  .map iframe,
+  .map-ep{
+    min-height:280px !important;
+    height:280px !important;
+    border-radius:24px !important;
+  }
+
+  #hours .split{gap:14px}
+  #hours .panel .lead{
+    font-size:16px;
+    line-height:1.9;
+    overflow-wrap:anywhere;
+  }
+
+  .faq-wrap{padding:58px 0 !important}
+  .faq-list{gap:10px !important}
+  .faq-item{border-radius:16px}
+  .faq-item summary{
+    padding:18px 18px;
+    font-size:14px;
+    line-height:1.35;
+  }
+  .faq-item p{
+    padding:0 18px 18px;
+    font-size:13px;
+  }
+
+  .cta{padding:66px 0 72px !important}
+  .cta .lead{
+    max-width:100%;
+    margin:16px auto 24px;
+  }
+
+  footer{padding:44px 0 24px}
+  .foot{gap:25px}
+  .foot-brand{font-size:32px}
+  footer p,footer a{
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  .bottom{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:15px;
+    margin-top:30px;
+    padding-top:18px;
+  }
+  .cbuild-credit{
+    display:grid;
+    grid-template-columns:auto auto;
+    justify-content:start;
+    align-items:center;
+    gap:7px 8px;
+  }
+  .cbuild-credit > span:last-child{
+    grid-column:1 / -1;
+  }
+}
+
+@media(max-width:340px){
+  nav{padding-left:16px}
+  .logo::after{font-size:10px !important;letter-spacing:.08em !important}
+  .logo img{width:35px !important;height:35px !important}
+  .nav-toggle{width:44px;height:44px}
+}
+
+@media(max-width:560px){
+  .bottom{gap:12px !important;}
+  .cbuild-credit{
+    width:100%;
+    justify-content:flex-start;
+    gap:4px;
+    font-size:12px;
+    line-height:1.55;
+  }
+  .cbuild-brand{font-size:13px;}
+}
+</style>
+
+</head>
 <body class="neon">
 <div class="preloader"><div><div class="pre-logo">Epiloji Beauty</div><div class="pre-sub">Güneşli · Bağcılar · İstanbul</div></div></div>
 <canvas id="webgl"></canvas>
@@ -1139,7 +1394,7 @@ body{background:
 <section id="hours"><div class="wrap split"><div class="panel reveal"><p class="kicker">Çalışma Saatleri</p><h2 class="title">Haftanın her günü randevu için buradayız.</h2></div><div class="panel reveal"><p class="lead">Pazartesi - Cuma: <strong>09:30 - 19:30</strong><br>Cumartesi - Pazar: <strong>09:30 - 20:00</strong><br>Telefon: <a href="tel:+905405207419">0540 520 74 19</a></p></div></div></section>
 <section class="faq-wrap"><div class="wrap"><p class="kicker">SSS</p><h2 class="title">Merak edilenler.</h2><div class="faq-list" style="margin-top:28px"><details class="faq-item"><summary>Randevu nasıl oluşturabilirim?</summary><p>WhatsApp butonuna dokunarak hizmet adını, istediğiniz günü ve uygun saat aralığını iletebilirsiniz.</p></details><details class="faq-item"><summary>Lazer epilasyonda hangi sistem kullanılıyor?</summary><p>Lazer epilasyon hizmetinde Diode Soprano Titanium teknolojisi sunulmaktadır.</p></details><details class="faq-item"><summary>Çalışma saatleriniz nedir?</summary><p>Pazartesi-Cuma 09:30-19:30, Cumartesi-Pazar 09:30-20:00.</p></details><details class="faq-item"><summary>Adresiniz nerede?</summary><p>Güneşli Mahallesi Üsküp Caddesi, 1340. Sk No:1 Kat:1 D:1, 34212 Bağcılar / İstanbul.</p></details></div></div></section>
 <section id="contact" class="cta"><div class="wrap"><p class="kicker reveal">Randevu</p><h2 class="title reveal">Hazırsanız, güzellik rutininizi Epiloji ile başlatalım.</h2><p class="lead reveal">Hizmet seçiminizi birlikte netleştirelim. WhatsApp’tan yazın, size uygun randevu akışını oluşturalım.</p><div class="hero-actions reveal" style="justify-content:center"><a href="https://wa.me/905405207419?text=Merhaba%20Epiloji%20Beauty%2C%20randevu%20almak%20istiyorum." target="_blank" class="btn whatsapp">WhatsApp’tan Randevu Al</a><a href="tel:+905405207419" class="btn accent">Hemen Ara</a><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank" class="btn">Yol Tarifi</a></div></div></section>
-<footer><div class="wrap"><div class="foot"><div><div class="foot-brand">Epiloji Beauty</div><p>Güneşli / Bağcılar’da premium güzellik ve bakım deneyimi.</p></div><div><h4>Hizmetler</h4><ul><li><a href="#services">Cilt Bakımı</a></li><li><a href="#services">Epilasyon & Vücut</a></li><li><a href="#services">Kalıcı Makyaj</a></li><li><a href="#services">Kaş & Kirpik</a></li></ul></div><div><h4>Konum</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Bağcılar</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Güneşli</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Üsküp Caddesi</a></li></ul></div><div><h4>İletişim</h4><p>Güneşli Mahallesi Üsküp Caddesi, 1340. Sk No:1 Kat:1 D:1, 34212 Bağcılar/İstanbul</p><p><a href="tel:+905405207419">0540 520 74 19</a></p><p><a href="https://wa.me/905405207419?text=Merhaba%20Epiloji%20Beauty%2C%20randevu%20almak%20istiyorum." target="_blank">WhatsApp’tan yaz</a></p></div></div><div class="bottom"><span>© 2026 Epiloji Beauty</span><span>Premium beauty studio demo</span></div></div></footer>
+<footer><div class="wrap"><div class="foot"><div><div class="foot-brand">Epiloji Beauty</div><p>Güneşli / Bağcılar’da premium güzellik ve bakım deneyimi.</p></div><div><h4>Hizmetler</h4><ul><li><a href="#services">Cilt Bakımı</a></li><li><a href="#services">Epilasyon & Vücut</a></li><li><a href="#services">Kalıcı Makyaj</a></li><li><a href="#services">Kaş & Kirpik</a></li></ul></div><div><h4>Konum</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Bağcılar</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Güneşli</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Üsküp Caddesi</a></li></ul></div><div><h4>İletişim</h4><p>Güneşli Mahallesi Üsküp Caddesi, 1340. Sk No:1 Kat:1 D:1, 34212 Bağcılar/İstanbul</p><p><a href="tel:+905405207419">0540 520 74 19</a></p><p><a href="https://wa.me/905405207419?text=Merhaba%20Epiloji%20Beauty%2C%20randevu%20almak%20istiyorum." target="_blank">WhatsApp’tan yaz</a></p></div></div><div class="bottom"><span>© 2026 Epiloji Beauty</span><div class="cbuild-credit"><span>Bu site</span><a class="cbuild-brand" href="https://cbuildtech.com/" target="_blank" rel="noopener noreferrer" aria-label="CBuildTech web sitesini aç"><span class="cbuild-main">CBuild</span><span class="cbuild-tech">Tech</span></a><span>tarafından oluşturulmuştur.</span></div></div></div></footer>
 </div><a class="wa-float" href="https://wa.me/905405207419?text=Merhaba%20Epiloji%20Beauty%2C%20randevu%20almak%20istiyorum." target="_blank" aria-label="WhatsApp">✆</a><div class="mobile-bar"><a href="https://www.google.com/maps/search/?api=1&query=Epiloji%20Beauty%20G%C3%BCne%C5%9Fli%20Mahallesi%20%C3%9Csk%C3%BCp%20Caddesi%201340.%20Sk%20No%3A1%20Kat%3A1%20D%3A1%20Ba%C4%9Fc%C4%B1lar%20%C4%B0stanbul" target="_blank">Yol Tarifi</a><a href="https://wa.me/905405207419?text=Merhaba%20Epiloji%20Beauty%2C%20randevu%20almak%20istiyorum." target="_blank">WhatsApp</a></div>
 <script>
 gsap.registerPlugin(ScrollTrigger);
