@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epiloji Beauty | Güzellik Merkezi</title>
+    <style>
+        :root{
+            --primary:#6a11cb;
+            --secondary:#2575fc;
+            --bg:#f9f9ff;
+            --text:#333;
+            --light:#fff;
+            --shadow:0 4px 12px rgba(0,0,0,0.1);
+            --radius:12px;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family:'Segoe UI',Tahoma,Helvetica,Arial,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.6;
+        }
+        a{text-decoration:none;color:inherit;}
+        header{
+            background:linear-gradient(135deg,var(--primary),var(--secondary));
+            color:var(--light);
+            padding:2rem 1rem;
+            text-align:center;
+            position:relative;
+            overflow:hidden;
+        }
+        header::after{
+            content:"";
+            position:absolute;
+            bottom:-30%;
+            left:0;
+            width:100%;
+            height:60%;
+            background:radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        header h1{font-size:2.2rem;margin-bottom:0.5rem;}
+        header p{font-size:1.1rem;opacity:0.9;}
+        .container{width:90%;max-width:1200px;margin:auto;padding:2rem 0;}
+        section{margin-bottom:3rem;}
+        .section-title{
+            font-size:1.8rem;
+            margin-bottom:1.5rem;
+            display:flex;
+            align-items:center;
+            gap:0.5rem;
+        }
+        .section-title::after{
+            content:"";
+            flex:1;
+            height:4px;
+            background:linear-gradient(to right,var(--primary),var(--secondary));
+            border-radius:2px;
+        }
+        /* Asymmetric grid */
+        .asym-grid{
+            display:grid;
+            gap:1.5rem;
+            grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+        }
+        .asym-grid>div:nth-child(odd){grid-column:span 1;}
+        .asym-grid>div:nth-child(even){grid-column:span 2;background:var(--light);padding:1.5rem;border-radius:var(--radius);box-shadow:var(--shadow);}
+        .card{
+            background:var(--light);
+            border-radius:var(--radius);
+            padding:1.5rem;
+            box-shadow:var(--shadow);
+            transition:transform .3s ease,box-shadow .3s ease;
+        }
+        .card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+        .icon{font-size:2rem;margin-bottom:1rem;display:block;color:var(--primary);}
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:var(--light);
+            padding:0.8rem 1.5rem;
+            border-radius:var(--radius);
+            font-weight:600;
+            margin-top:1rem;
+            transition:background .3s;
+        }
+        .btn:hover{background:var(--secondary);}
+        footer{
+            background:var(--primary);
+            color:var(--light);
+            text-align:center;
+            padding:1.5rem 0;
+            font-size:0.9rem;
+        }
+        @media(max-width:768px){
+            .asym-grid>div:nth-child(even){grid-column:span 1;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Epiloji Beauty</h1>
+        <p>Bağcılar / İstanbul – Profesyonel Güzellik Hizmetleri</p>
+    </header>
+
+    <div class="container">
+        <section id="hakkımda">
+            <h2 class="section-title"><span class="icon">ℹ️</span>Hakkımızda</h2>
+            <p>Epiloji Beauty, modern teknikler ve deneyimli uzmanlarımızla sizin güzelliğinizi en üst seviyeye taşıyan bir güzellik merkeziyiz. İstanbul Bağcılar’da Güneşli mahallesi, Üsküp Caddesi’nde hizmet veriyoruz.</p>
+        </section>
+
+        <section id="hizmetler">
+            <h2 class="section-title"><span class="icon">💅</span>Hizmetlerimiz</h2>
+            <div class="asym-grid">
+                <div class="card">
+                    <span class="icon">🧖‍♀️</span>
+                    <h3>Cilt Bakımı</h3>
+                    <p>Derin temizleme, hidratasyon ve anti‑aging uygulamaları.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">💇‍♀️</span>
+                    <h3>Saç Modelleme & Boyama</h3>
+                    <p>Trend kesimler, renk teknikleri ve keratin bakımı.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">💅</span>
+                    <h3>El & Ayak Bakımı</h3>
+                    <p>Manikür, pedikür ve paraffin terapisi.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🌿</span>
+                    <h3>Doğru Epilasyon</h3>
+                    <p>Şeker, lazer ve IPL ile uzun süreli sonuçlar.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">💆‍♀️</span>
+                    <h3>Masaj & Rahatlatıcı Terapiler</h3>
+                    <p>Sviss, aromateravi ve refleksiyoloji.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">👁️</span>
+                    <h3>Göz & Braş Enstitüsü</h3>
+                    <p>Kırpık uzatımı, microblading ve braş tasarımı.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim">
+            <h2 class="section-title"><span class="icon">📞</span>İletişim</h2>
+            <div class="asym-grid">
+                <div class="card">
+                    <span class="icon">📍</span>
+                    <h3>Adres</h3>
+                    <p>Güneşli mahallesi Üsküp Caddesi, 1340. Sk no:1 kat:1 d:1<br>34212 Bağcılar / İstanbul</p>
+                </div>
+                <div class="card">
+                    <span class="icon">📞</span>
+                    <h3>Telefon</h3>
+                    <p>0540 520 74 19</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🗺️</span>
+                    <h3>Yol Tarifi</h3>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=Güneşli+mahallesi+Üsküp+Caddesi+1340.+Sk+no:1+Bağcılar/İstanbul" target="_blank">Haritada Görüntüle</a></p>
+                </div>
+                <div class="card">
+                    <span class="icon">✉️</span>
+                    <h3>E-posta</h3>
+                    <p>info@epilojibeauty.com.tr</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Epiloji Beauty. Tüm hakları saklıdır. | İstanbul, Bağcılar
+    </footer>
+</body>
+</html>
