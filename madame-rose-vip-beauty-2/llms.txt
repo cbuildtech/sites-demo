@@ -1,0 +1,31 @@
+# Madame Rose Vip Beauty
+
+Madame Rose Vip Beauty, Bağcılar/İstanbul bölgesinde güzellik merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Madame Rose Vip Beauty
+- Category: güzellik merkezi
+- Location: Bağcılar, İstanbul
+- Address: Güneşli, 1306. Sk. No:1 D:54, 34212 Bağcılar/İstanbul 
+- Phone: 05056225452
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
