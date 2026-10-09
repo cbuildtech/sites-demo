@@ -1,0 +1,31 @@
+# Duru Estetik ve Güzellik Merkezi
+
+Duru Estetik ve Güzellik Merkezi, Bağcılar/İstanbul bölgesinde güzellik merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Duru Estetik ve Güzellik Merkezi
+- Category: güzellik merkezi
+- Location: Bağcılar, İstanbul
+- Address: Fevzi Çakmak Mah. Fatih Cad, Yürüyüş Yolu No:22 Kat:2, 34200 Bağcılar 
+- Phone: 05524501034
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Duru Estetik ve Güzellik Merkezi | Bağcılar: https://example.com/
+- Hizmetlerimiz: https://example.com/hizmetlerimiz/
+- Hakkımızda: https://example.com/hakkimizda/
+- İletişim: https://example.com/iletisim/
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
