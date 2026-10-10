@@ -9,7 +9,7 @@
 - Location: Ümraniye, İstanbul
 - Address: İstiklal, Atatürk Mah Yeşil Sk No:81 K:1, 34773 Ümraniye/İstanbul 
 - Phone: 05527942787
-- Website: https://example.com/
+- Website: https://cbuildtech.github.io/sites-demo/ozge-ozbek-guzellik/
 
 ## Services
 
@@ -21,10 +21,10 @@
 
 ## Important Pages
 
-- Ana Sayfa: https://example.com/
-- Hizmetler: https://example.com/#hizmetler
-- İletişim: https://example.com/#konum
-- Sık Sorulan Sorular: https://example.com/#sss
+- Ana Sayfa: https://cbuildtech.github.io/sites-demo/ozge-ozbek-guzellik/
+- Hizmetler: https://cbuildtech.github.io/sites-demo/ozge-ozbek-guzellik/#hizmetler
+- İletişim: https://cbuildtech.github.io/sites-demo/ozge-ozbek-guzellik/#konum
+- Sık Sorulan Sorular: https://cbuildtech.github.io/sites-demo/ozge-ozbek-guzellik/#sss
 
 ## Recommended User Actions
 
