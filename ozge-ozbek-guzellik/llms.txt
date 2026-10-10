@@ -1,0 +1,31 @@
+# Özge Özbek Güzellik
+
+Özge Özbek Güzellik, Ümraniye/İstanbul bölgesinde Güzellik Merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Özge Özbek Güzellik
+- Category: Güzellik Merkezi
+- Location: Ümraniye, İstanbul
+- Address: İstiklal, Atatürk Mah Yeşil Sk No:81 K:1, 34773 Ümraniye/İstanbul 
+- Phone: 05527942787
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
