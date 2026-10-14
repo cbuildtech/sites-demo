@@ -1,0 +1,31 @@
+# Pınar Ös Kuaför & Güzellik Merkezi
+
+Pınar Ös Kuaför & Güzellik Merkezi, Ümraniye/İstanbul bölgesinde Güzellik Merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Pınar Ös Kuaför & Güzellik Merkezi
+- Category: Güzellik Merkezi
+- Location: Ümraniye, İstanbul
+- Address: Namık Kemal, Aile Sk. no:5/A, 34762 Ümraniye/İstanbul
+- Phone: 05541555662
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
