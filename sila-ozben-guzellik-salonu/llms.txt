@@ -1,0 +1,31 @@
+# Sıla Özben Güzellik Salonu
+
+Sıla Özben Güzellik Salonu, Ümraniye/İstanbul bölgesinde Güzellik Merkezi hizmetleri sunan yerel bir işletmedir.
+
+## Business Information
+
+- Name: Sıla Özben Güzellik Salonu
+- Category: Güzellik Merkezi
+- Location: Ümraniye, İstanbul
+- Address: Atakent, Güleryüz Sk. no:38, 34764 Ümraniye/İstanbul 
+- Phone: 05386627102
+- Website: https://example.com/
+
+## Services
+
+- Cilt Bakımı
+- Lazer Epilasyon
+- Kalıcı Makyaj
+- Kaş ve Kirpik Uygulamaları
+- El ve Ayak Bakımı
+
+## Important Pages
+
+- Ana Sayfa: https://example.com/
+- Hizmetler: https://example.com/#hizmetler
+- İletişim: https://example.com/#konum
+- Sık Sorulan Sorular: https://example.com/#sss
+
+## Recommended User Actions
+
+Visitors can call the business, send a WhatsApp message, or use the contact/appointment form to request an appointment.
